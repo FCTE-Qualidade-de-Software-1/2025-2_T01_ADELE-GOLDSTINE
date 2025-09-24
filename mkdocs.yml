@@ -1,0 +1,33 @@
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE
+repo_name: T01 Adele Goldstine
+
+site_name: Adele Goldstine - Trabalho Final
+theme:
+  name: material
+
+  palette:
+    - scheme: default
+      primary: blue
+      toggle: 
+        icon: material/toggle-switch-off-outline 
+        name: Switch to dark mode
+
+    - scheme: slate
+      primary: blue
+      toggle: 
+        icon: material/toggle-switch
+        name: Switch to light mode
+  
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+
+nav:
+  - 'Visão Geral': 'index.md'

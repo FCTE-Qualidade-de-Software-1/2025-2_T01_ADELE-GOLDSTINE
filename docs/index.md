@@ -8,7 +8,7 @@ Esta página é dedicada à documentação de todos os artefatos criados pelo gr
 
 O i-Educar é um software livre que descomplica e torna mais eficaz a gestão dos processos escolares, matrículas e dados de alunos. Como principais funcionalidades pode-se destacar a gestão de servidores, controle de transporte escolar, gestão completa do acervo das bibliotecas e geração de relatórios, atestados, boletins e históricos.
 
-A plataforma é utilizada por mais de 80 municípios brasileiros, atende mais de 2050 alunos e impacta mais de 500000 alunos. Por conta de sua relevância e do contexto educacional que ele visa impactar, o grupo teve forte interesse em utilizá-lo como software de análise na disciplina.
+A plataforma é utilizada por mais de 80 municípios brasileiros, atende mais de 2050 alunos e impacta mais de 500.000 alunos. Por conta de sua relevância e do contexto educacional que ele visa impactar, o grupo teve forte interesse em utilizá-lo como software de análise na disciplina.
 
 ## Biografia – Adele Goldstine
 

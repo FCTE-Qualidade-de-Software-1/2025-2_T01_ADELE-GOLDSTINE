@@ -30,4 +30,4 @@ theme:
     - content.code.copy
 
 nav:
-  - 'Visão Geral': 'index.md'
+  - 'Home': 'index.md'

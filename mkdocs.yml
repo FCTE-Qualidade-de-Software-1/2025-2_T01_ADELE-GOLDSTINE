@@ -7,6 +7,7 @@ theme:
 
   palette:
     - scheme: default
+      accent: indigo
       primary: blue
       toggle: 
         icon: material/toggle-switch-off-outline 
@@ -14,6 +15,7 @@ theme:
 
     - scheme: slate
       primary: blue
+      accent: indigo
       toggle: 
         icon: material/toggle-switch
         name: Switch to light mode
@@ -30,4 +32,7 @@ theme:
     - content.code.copy
 
 nav:
-  - 'Home': 'index.md'
+  - Home: "index.md"
+  - Fase 1: "fase_1/processo_avaliacao.md"
+  - Contribuições:
+    - Fase 1: "contribuicoes/fase_1.md"

@@ -6,7 +6,7 @@
 
 O **i-Educar** é um software livre de gestão escolar totalmente on-line que permite secretários escolares, professores, coordenadores e gestores da área possam utilizar uma ferramenta que produz informações e estatísticas em tempo real, com um banco de dados centralizado e de fácil acesso, diminuindo a necessidade de uso de papel, a duplicidade de documentos, o tempo de atendimento ao cidadão e racionalizando o trabalho do servidor público. Ele foi originalmente desenvolvido pela prefeitura de Itajaí - SC e disponibilizado no Portal do Software Público do Governo Federal em 2008, com o objetivo de atender às necessidades das Secretarias de Educação e Escolas Públicas de todo o Brasil.
 
-📽️ **Vídeo:** [Conheça o i-Educar](https://www.youtube.com/watch?v=AHZn3vDDijQ)
+**Vídeo:** [Conheça o i-Educar](https://www.youtube.com/watch?v=AHZn3vDDijQ)
 
 ### Tecnologias utilizadas
 
@@ -18,12 +18,12 @@ Além disso, também faz uso de algumas bibliotecas **JavaScript**, como o frame
 
 ### Links úteis
 
-* 📂 [Repositório no GitHub](https://github.com/portabilis/i-educar)
-* 💬 [Fórum da Comunidade](https://forum.ieducar.org/)
-* 📱 [Telegram da Comunidade](https://t.me/ieducar)
-* 📘 [Guia de Contribuição](https://github.com/portabilis/i-educar/blob/2.9/CONTRIBUTING.md)
-* ⚙️ [Guia de Instalação](https://github.com/portabilis/i-educar/blob/2.9/INSTALL.md)
-* 📜 [Código de Conduta](https://github.com/portabilis/i-educar/blob/2.9/CODE-OF-CONDUCT.md)
+* [Repositório no GitHub](https://github.com/portabilis/i-educar)
+* [Fórum da Comunidade](https://forum.ieducar.org/)
+* [Telegram da Comunidade](https://t.me/ieducar)
+* [Guia de Contribuição](https://github.com/portabilis/i-educar/blob/2.9/CONTRIBUTING.md)
+* [Guia de Instalação](https://github.com/portabilis/i-educar/blob/2.9/INSTALL.md)
+* [Código de Conduta](https://github.com/portabilis/i-educar/blob/2.9/CODE-OF-CONDUCT.md)
 
 ---
 ## Classificação e Ênfase das Características de Qualidade
@@ -59,7 +59,6 @@ A partir das características apresentadas no documento do i-Educar e alinhadas 
 #### 2.3 Manutenibilidade
 - Por ser software livre e colaborativo, a arquitetura do sistema deve permitir fácil atualização, evolução e correção de falhas, garantindo que comunidades locais possam adaptá-lo às suas necessidades.  
 
----
 
 ### 3. Estratégias de Avaliação
 Para avaliar cada dimensão, serão utilizadas técnicas de medições automáticas:  
@@ -77,7 +76,6 @@ Para avaliar cada dimensão, serão utilizadas técnicas de medições automáti
 - **Métricas de Código**: monitorar acoplamento entre módulos, tamanho de classes e funções, cobertura de testes nos módulos mais críticos.  
 - **Revisões de Código**: padronizar *code reviews* com checklist de manutenibilidade (clareza de nomes, padrões de projeto, documentação mínima, tratamento de erros).  
 
----
 
 ### 4. Métricas de Qualidade
 As métricas propostas permitem acompanhar a evolução do software em ciclos de melhoria contínua:  
@@ -95,7 +93,6 @@ As métricas propostas permitem acompanhar a evolução do software em ciclos de
 - **Número de “Code Smells” Reportados** – más práticas detectadas automaticamente.  
 - **Cobertura de Testes nos Módulos Críticos (%)** – quanto maior, mais confiável a manutenção futura.  
 
----
 
 ### 5. Plano de Melhoria
 Com base nas avaliações, propõem-se as seguintes ações de melhoria:  
@@ -111,34 +108,133 @@ Com base nas avaliações, propõem-se as seguintes ações de melhoria:
 
 
 ---
-## ODS da ONU
+## Objetivos de Desenvolvimento Sustentável da ONU
 
+### 1. Objetivo
+
+Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-Educar se conecta, com metas/indicadores relevantes e justificativas de como o software pode contribuir para alcançá-los.
+
+### 2. ODS e conexão com o *i-educar*
+
+#### 2.1 ODS 4 — Educação de Qualidade  
+
+
+<div style="display: table; border-collapse: collapse; width: auto; max-width: 40%;">
+  <div style="display: table-row;">
+    <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
+      <img src="../assets/ODS_4.png" alt="ODS 4" style="max-width: 100px; height: auto; border-radius: 8px;">
+      <p><b>Figura 1:<br>ODS 4</b></p>
+    </div>
+    <div style="display: table-cell; vertical-align: top; padding: 10px;">
+      <p><b>Descrição: </b> Assegurar educação inclusiva, equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos. 
+      [<a href="https://www.ipea.gov.br/ods/ods4.html">1</a>]</p>
+    </div>
+  </div>
+</div>
+
+
+**Metas relevantes (Brasil / IPEA):**  
+- Meta 4.1: Até 2030, garantir que todas as meninas e meninos completem o ensino primário e secundário gratuito, equitativo e de qualidade, com resultados de aprendizagem eficazes.  
+- Meta 4.3: Assegurar igualdade de acesso para todos os gêneros à educação técnica, profissional e superior de qualidade, a preços acessíveis, incluindo universidade.  
+- Meta 4.4: Aumentar substancialmente o número de jovens e adultos com habilidades relevantes, inclusive competências técnicas e profissionais, para emprego, trabalho decente e empreendedorismo.  
+- Meta 4.a: Construir e melhorar instalações físicas para educação, apropriadas para crianças, sensíveis às deficiências e ao gênero, e que proporcionem ambientes de aprendizagem seguros, inclusivos e eficazes.  
+
+**Indicadores relacionados:**  
+- Proporção de jovens de 15-17 anos matriculados no ensino médio.  
+- Proficiência em leitura e matemática em diferentes fases do ensino fundamental.  
+- Infraestrutura escolar (acessibilidade, segurança, salas e equipamentos).  
+
+**Relação com o i-Educar:**  
+- Fornece dados precisos sobre matrícula, frequência, conclusão e desempenho acadêmico, apoiando o monitoramento das metas 4.1 e 4.3.  
+- Identifica desigualdades regionais e socioeconômicas, permitindo intervenções mais justas.  
+- Apoia a gestão de recursos e relatórios que evidenciem deficiências de infraestrutura.  
+
+
+#### 2.2 ODS 10 — Redução das Desigualdades 
+
+
+<div style="display: table; border-collapse: collapse; width: auto; max-width: 40%;">
+  <div style="display: table-row;">
+    <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
+      <img src="../assets/ODS_10.png" alt="ODS 10" style="max-width: 100px; height: auto; border-radius: 8px;">
+      <p><b>Figura 2:<br>ODS 10</b></p>
+    </div>
+    <div style="display: table-cell; vertical-align: top; padding: 10px;">
+      <p><b>Descrição: </b>Reduzir a desigualdade dentro dos países e entre eles.  
+      [<a href="https://www.ipea.gov.br/ods/ods10.html">2</a>]</p>
+    </div>
+  </div>
+</div>
+
+**Metas relevantes (Brasil / IPEA):**  
+- Meta 10.1: Até 2030, sustentar o crescimento da renda dos 40% mais pobres a uma taxa maior que a média nacional.  
+- Meta 10.2: Empoderar e promover inclusão social, econômica e política de todos, independentemente de idade, gênero, deficiência, raça, etnia ou condição econômica.  
+
+**Indicadores relacionados:**  
+- Taxa de crescimento da renda dos 40% mais pobres em comparação à média nacional.  
+- Medidas de inclusão em acesso à educação, conectividade digital e recursos de gestão.  
+
+**Relação com o i-Educar:**  
+- Reduz desigualdades de acesso à informação e gestão entre redes escolares.  
+- Identifica grupos vulneráveis (por localização, deficiência ou condição socioeconômica), apoiando políticas inclusivas.  
+- Democratiza acesso à tecnologia por ser um sistema **open source**, sem custos de licenciamento.  
+
+
+#### 2.3  ODS 16 — Paz, Justiça e Instituições Eficazes  
+
+<div style="display: table; border-collapse: collapse; width: auto; max-width: 40%;">
+  <div style="display: table-row;">
+    <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
+      <img src="../assets/ODS_16.jpg" alt="ODS 16" style="max-width: 100px; height: auto; border-radius: 8px;">
+      <p><b>Figura 3:<br>ODS 16</b></p>
+    </div>
+    <div style="display: table-cell; vertical-align: top; padding: 10px;">
+      <p><b>Descrição: </b>Promover sociedades pacíficas e inclusivas, garantir acesso à justiça para todos e construir instituições eficazes, responsáveis e transparentes.  
+      [<a href="https://www.ipea.gov.br/ods/ods16.html">3</a>]</p>
+    </div>
+  </div>
+</div>
+  
+
+**Meta relevante (Brasil / IPEA):**  
+- Meta 16.6: Desenvolver instituições eficazes, responsáveis e transparentes em todos os níveis.  
+
+**Relação com o i-Educar:**  
+- Mantém registros escolares auditáveis e confiáveis, fortalecendo a transparência.  
+- Apoia a eficiência administrativa, reduz duplicidades e melhora o controle institucional.  
+- Favorece a confiança pública ao disponibilizar informações de forma organizada e acessível.  
+
+
+
+### 3. Conclusão 
+
+O i-Educar demonstra alinhamento direto com os Objetivos de Desenvolvimento Sustentável, em especial os ODS 4, 10 e 16. Ao promover inclusão digital, organização e acesso à informação, o sistema contribui para uma educação de qualidade mais eficiente e transparente (ODS 4). Por ser uma solução open source, possibilita sua adoção em redes públicas de ensino sem custos de licenciamento, democratizando o acesso à tecnologia e reduzindo desigualdades (ODS 10). Além disso, fortalece a governança e a eficiência institucional no setor educacional, garantindo maior transparência e confiança nos processos de gestão (ODS 16). Essa integração reflete o princípio central da Agenda 2030 — *não deixar ninguém para trás* — ao favorecer a equidade por meio do monitoramento de desempenho escolar, a inclusão ao ampliar o acesso a ferramentas de gestão e a transparência ao assegurar registros auditáveis e acessíveis.
 
 ---
-## Referências
 
-1. **BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter.** The Goal Question Metric Approach. In: Encyclopedia of Software Engineering. New York: Wiley, 1994.
+## Bibliografia
 
-2. **CAMPIONE, Eric; SUBRAMANIAN, S.** SonarQube in Action. Manning Publications, 2013.
+> **BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter.** The Goal Question Metric Approach. In: Encyclopedia of Software Engineering. New York: Wiley, 1994.
+> **CAMPIONE, Eric; SUBRAMANIAN, S.** SonarQube in Action. Manning Publications, 2013.
+> **FENTON, Norman E.; PFLEEGER, Shari Lawrence.** Software Metrics: A Rigorous and Practical Approach. 3. ed. Boca Raton: CRC Press, 2014.
+> **ISO.** ISO/IEC 12207:2017 – Systems and software engineering — Software life cycle processes. Geneva: International Organization for Standardization, 2017.
+> **ISO.** ISO/IEC 25010:2011 – Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. Geneva: International Organization for Standardization, 2011.
+> **OWASP FOUNDATION.** OWASP Top Ten. Disponível em: <https://owasp.org/www-project-top-ten/>. Acesso em: 28 set. 2025.
+> **PRESSMAN, Roger S.; MAXIM, Bruce R.** Engenharia de Software: uma abordagem profissional. 8. ed. Porto Alegre: McGraw Hill, 2016.
+> **SOMMERVILLE, Ian.** Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
 
-3. **FENTON, Norman E.; PFLEEGER, Shari Lawrence.** Software Metrics: A Rigorous and Practical Approach. 3. ed. Boca Raton: CRC Press, 2014.
+## Referências Bibliográficas
 
-4. **ISO.** ISO/IEC 12207:2017 – Systems and software engineering — Software life cycle processes. Geneva: International Organization for Standardization, 2017.
-
-5. **ISO.** ISO/IEC 25010:2011 – Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. Geneva: International Organization for Standardization, 2011.
-
-6. **OWASP FOUNDATION.** OWASP Top Ten. Disponível em: <https://owasp.org/www-project-top-ten/>. Acesso em: 28 set. 2025.
-
-7. **PRESSMAN, Roger S.; MAXIM, Bruce R.** Engenharia de Software: uma abordagem profissional. 8. ed. Porto Alegre: McGraw Hill, 2016.
-
-8. **SOMMERVILLE, Ian.** Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
-
-
+> [1] Objetivo de Desenvolvimento Sustentável 4 - IPEA. Disponível em: <[ODS 4](https://www.ipea.gov.br/ods/ods4.html)>. Acessado em 28/09/2025.
+> [2] Objetivo de Desenvolvimento Sustentável 10 - IPEA. Disponível em: <[ODS 10](https://www.ipea.gov.br/ods/ods10.html)>. Acessado em 28/09/2025.
+> [3] Objetivo de Desenvolvimento Sustentável 16 - IPEA. Disponível em: <[ODS 16](https://www.ipea.gov.br/ods/ods16.html)>. Acessado em 28/09/2025.
+> 
 ---
 ## Histórico de versão
 
 | Versão |    Data    | Descrição                                               | Autor                                                    | Revisor                                                  |
 |:------:|:----------:|:--------------------------------------------------------|:---------------------------------------------------------|:---------------------------------------------------------|
 | `1.0`  | 28/09/2025 |     Criação do documento e adição da sessão de "Proposta de Avaliação e Melhoria"   | [Carla Clementino](https://github.com/ccarlaa)      | [Caio Antônio](http://github.com/)            |
-| `1.1`  | 28/09/2025 |     Adição da sessão de "Classificação e Ênfase das Características de Qualidade"   | [Marcos Marinho](https://github.com/devMarcosVM)| [manuella](http://github.com/manuvaladares)            |
-| `1.2`  | 28/09/2025 |     Adição da sessão de "Aplicação escolhida" com as informações do projeto   | [manuella](https://github.com/manuvaladares)| []()            |
+| `1.1`  | 28/09/2025 |     Adição da sessão de "Classificação e Ênfase das Características de Qualidade"   | [Marcos Marinho](https://github.com/devMarcosVM)| [Manuella Valadares](http://github.com/manuvaladares)            |
+| `1.2`  | 28/09/2025 |     Adição da sessão de "Aplicação escolhida" com as informações do projeto   | [Manuella Valadares](https://github.com/manuvaladares)| [Marcos Marinho](https://github.com/devMarcosVM)            |
+| `1.3`  | 28/09/2025 | Adição dos ODS, conexões e referências bibliográficas                         | [Zenilda Vieira](https://github.com/ZenildaVieira) | [André Maia](http://github.com/andre-maia51) |

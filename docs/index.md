@@ -10,6 +10,8 @@ O i-Educar é um software livre que descomplica e torna mais eficaz a gestão do
 
 A plataforma é utilizada por mais de 80 municípios brasileiros, atende mais de 2050 alunos e impacta mais de 500.000 alunos. Por conta de sua relevância e do contexto educacional que ele visa impactar, o grupo teve forte interesse em utilizá-lo como software de análise na disciplina.
 
+---
+
 ## Biografia – Adele Goldstine
 
 Adele Goldstine foi uma das pioneiras da programação de computadores no século XX. Ela é lembrada principalmente por escrever o **manual de operação lógica do ENIAC**, o primeiro computador digital totalmente eletrônico, e por treinar as primeiras mulheres programadoras que trabalharam com essa máquina histórica.
@@ -41,6 +43,8 @@ Adele Goldstine é reconhecida como uma das figuras fundamentais da história da
     style=" max-width: 80%; height: auto; margin-bottom: 20px;"
     >
 </div>
+
+---
 
 ## Equipe
 
@@ -95,10 +99,11 @@ Adele Goldstine é reconhecida como uma das figuras fundamentais da história da
 
 > i-Educar. *Sobre o i-Educar*. Disponível em: <[i-educar](https://ieducar.org/)>
 
+---
+
 ## Histórico de Versões
 
 |Versão|Data|Descrição|Autor|Revisor|
 |:----:|----|---------|-----|:-------:|
 |`1.0`|26/09/2025|Adição da Biografia da Adele|[Zenilda Vieira](https://github.com/ZenildaVieira)|[André Maia](http://github.com/andre-maia51)|
 |`1.1`|27/09/2025|Adição das informações gerais do projeto e do i-Educar|[André Maia](http://github.com/andre-maia51)|[Zenilda Vieira](https://github.com/ZenildaVieira)|
-|`1.2`|28/09/2025|Revisão|[Zenilda Vieira](https://github.com/ZenildaVieira)| - |

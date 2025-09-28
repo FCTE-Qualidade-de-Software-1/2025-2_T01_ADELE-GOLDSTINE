@@ -34,4 +34,5 @@ theme:
 nav:
   - Home: "index.md"
   - Fase 1: "fase_1/processo_avaliacao.md"
-  - Contribuições: "contribuicoes/fase_1.md"
+  - Contribuições:
+    - Fase 1: "contribuicoes/fase_1.md"

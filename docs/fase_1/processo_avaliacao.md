@@ -1,12 +1,12 @@
 # Fase 1 - Processo de Avaliação
 
-## 📌 Aplicação escolhida 
+## Aplicação escolhida 
 
 ---
-## 📌 Classificação e Ênfase das Características de Qualidade
+## Classificação e Ênfase das Características de Qualidade
 
 ---
-## 📌 Proposta de Avaliação e Melhoria
+## Proposta de Avaliação e Melhoria
 
 ### 1. Objetivo
 O objetivo desta proposta é estabelecer um processo de **avaliação contínua e sistemática** da qualidade do software i-Educar, identificando pontos fortes e aspectos a serem melhorados.  
@@ -73,15 +73,15 @@ Com base nas avaliações, propõem-se as seguintes ações de melhoria:
 ---
 
 
-## 📌 Especificação do Modelo
+## Especificação do Modelo
 
 
 ---
-## 📌 ODS da ONU
+## ODS da ONU
 
 
 ---
-## 📌 Referências
+## Referências
 
 1. **BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter.** The Goal Question Metric Approach. In: Encyclopedia of Software Engineering. New York: Wiley, 1994.
 
@@ -101,7 +101,7 @@ Com base nas avaliações, propõem-se as seguintes ações de melhoria:
 
 
 ---
-## 📌 Histórico de versão
+## Histórico de versão
 
 | Versão |    Data    | Descrição                                               | Autor                                                    | Revisor                                                  |
 |:------:|:----------:|:--------------------------------------------------------|:---------------------------------------------------------|:---------------------------------------------------------|

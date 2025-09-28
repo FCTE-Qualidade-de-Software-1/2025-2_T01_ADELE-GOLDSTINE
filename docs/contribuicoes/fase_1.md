@@ -1,10 +1,10 @@
 # Contribuições - Fase 1
 
-## 📊 Tabela de Contribuições
+## Tabela de Contribuições
 
 | Matrícula |                 Nome do Aluno                 |       Atividade Realizada        | % de Contribuição |
 |:---------:|:----------------------------------------------|:---------------------------------|:-----------------:|
-| 180030736 | [Carla Clementino](https://github.com/ccarlaa)| Proposta de avaliação e melhoria |        20%        |
+| 180030736 | [Carla Clementino](https://github.com/ccarlaa)| Proposta de avaliação e melhoria |       16,67%      |
 |           |                                               |                                  |                   |
 |           |                                               |                                  |                   |
 |           |                                               |                                  |                   |
@@ -13,7 +13,7 @@
 
 **Total:** 100%
 
-## 📌 Histórico de versão
+## Histórico de versão
 
 | Versão |    Data    | Descrição                                               | Autor                                                    | Revisor                                                  |
 |:------:|:----------:|:--------------------------------------------------------|:---------------------------------------------------------|:---------------------------------------------------------|

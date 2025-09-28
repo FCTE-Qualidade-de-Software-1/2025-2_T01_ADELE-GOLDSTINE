@@ -276,3 +276,4 @@ O i-Educar demonstra alinhamento direto com os Objetivos de Desenvolvimento Sust
 | `1.1`  | 28/09/2025 |     Adição da sessão de "Classificação e Ênfase das Características de Qualidade"   | [Marcos Marinho](https://github.com/devMarcosVM)| [Manuella Valadares](http://github.com/manuvaladares)            |
 | `1.2`  | 28/09/2025 |     Adição da sessão de "Aplicação escolhida" com as informações do projeto   | [Manuella Valadares](https://github.com/manuvaladares)| [Marcos Marinho](https://github.com/devMarcosVM)            |
 | `1.3`  | 28/09/2025 | Adição dos ODS, conexões e referências bibliográficas                         | [Zenilda Vieira](https://github.com/ZenildaVieira) | [André Maia](http://github.com/andre-maia51) |
+| `1.4`  | 28/09/2025 | Adição da especificação do modelo de qualidade                                | [Caio Antônio](http://github.com/) | [Carla Clementino](https://github.com/ccarlaa) |

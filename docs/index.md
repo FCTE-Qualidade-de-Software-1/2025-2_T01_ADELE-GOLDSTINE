@@ -87,13 +87,13 @@ Adele Goldstine é reconhecida como uma das figuras fundamentais da história da
 
 ---
 
-## Referências
+## Bibliografia
 
-> [1] Autumn Stanley. *Mães e Filhas da Invenção: Notas para uma História Revisada da Tecnologia*. Rutgers University Press, 1995. 
+> Autumn Stanley. *Mães e Filhas da Invenção: Notas para uma História Revisada da Tecnologia*. Rutgers University Press, 1995. 
 
-> [2] W. Barkley Fritz. *As Mulheres do ENIAC*. *IEEE Annals of the History of Computing*, v. 18, n. 3, 1996.
+> W. Barkley Fritz. *As Mulheres do ENIAC*. *IEEE Annals of the History of Computing*, v. 18, n. 3, 1996.
 
-> [3] i-Educar. *Sobre o i-Educar*. Disponível em: <[i-educar](https://ieducar.org/)>
+> i-Educar. *Sobre o i-Educar*. Disponível em: <[i-educar](https://ieducar.org/)>
 
 ## Histórico de Versões
 
@@ -101,3 +101,4 @@ Adele Goldstine é reconhecida como uma das figuras fundamentais da história da
 |:----:|----|---------|-----|:-------:|
 |`1.0`|26/09/2025|Adição da Biografia da Adele|[Zenilda Vieira](https://github.com/ZenildaVieira)|[André Maia](http://github.com/andre-maia51)|
 |`1.1`|27/09/2025|Adição das informações gerais do projeto e do i-Educar|[André Maia](http://github.com/andre-maia51)|[Zenilda Vieira](https://github.com/ZenildaVieira)|
+|`1.2`|28/09/2025|Revisão|[Zenilda Vieira](https://github.com/ZenildaVieira)| - |

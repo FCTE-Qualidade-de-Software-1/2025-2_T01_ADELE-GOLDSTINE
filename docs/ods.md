@@ -18,14 +18,11 @@ Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-E
     </div>
     <div style="display: table-cell; vertical-align: top; padding: 10px;">
       <p><b>Descrição: </b> Assegurar educação inclusiva, equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos. 
-      (<a href="https://www.ipea.gov.br/ods/ods4.html">IPEA - ODS 4</a>)</p>
+      [<a href="https://www.ipea.gov.br/ods/ods4.html">1</a>]</p>
     </div>
   </div>
 </div>
 
-
-
-**Descrição:** Assegurar educação inclusiva, equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos. ([IPEA - ODS 4](https://www.ipea.gov.br/ods/ods4.html))  
 
 **Metas relevantes (Brasil / IPEA):**  
 - Meta 4.1: Até 2030, garantir que todas as meninas e meninos completem o ensino primário e secundário gratuito, equitativo e de qualidade, com resultados de aprendizagem eficazes.  
@@ -56,7 +53,7 @@ Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-E
     </div>
     <div style="display: table-cell; vertical-align: top; padding: 10px;">
       <p><b>Descrição: </b>Reduzir a desigualdade dentro dos países e entre eles.  
-      (<a href="https://www.ipea.gov.br/ods/ods10.html">IPEA - ODS 10</a>)</p>
+      [<a href="https://www.ipea.gov.br/ods/ods10.html">2</a>]</p>
     </div>
   </div>
 </div>
@@ -86,7 +83,7 @@ Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-E
     </div>
     <div style="display: table-cell; vertical-align: top; padding: 10px;">
       <p><b>Descrição: </b>Promover sociedades pacíficas e inclusivas, garantir acesso à justiça para todos e construir instituições eficazes, responsáveis e transparentes.  
-      (<a href="https://www.ipea.gov.br/ods/ods16.html">IPEA - ODS 16</a>)</p>
+      [<a href="https://www.ipea.gov.br/ods/ods16.html">3</a>]</p>
     </div>
   </div>
 </div>
@@ -109,3 +106,15 @@ Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-E
 
 O i-Educar demonstra alinhamento direto com os Objetivos de Desenvolvimento Sustentável, em especial os ODS 4, 10 e 16. Ao promover inclusão digital, organização e acesso à informação, o sistema contribui para uma educação de qualidade mais eficiente e transparente (ODS 4). Por ser uma solução open source, possibilita sua adoção em redes públicas de ensino sem custos de licenciamento, democratizando o acesso à tecnologia e reduzindo desigualdades (ODS 10). Além disso, fortalece a governança e a eficiência institucional no setor educacional, garantindo maior transparência e confiança nos processos de gestão (ODS 16). Essa integração reflete o princípio central da Agenda 2030 — *não deixar ninguém para trás* — ao favorecer a equidade por meio do monitoramento de desempenho escolar, a inclusão ao ampliar o acesso a ferramentas de gestão e a transparência ao assegurar registros auditáveis e acessíveis.
  
+## Referências Bibliográficas
+
+> [1] Objetivo de Desenvolvimento Sustentável 4 - IPEA. Disponível em: <[ODS 4](https://www.ipea.gov.br/ods/ods4.html)>. Acessado em 28/09/2025.
+> [2] Objetivo de Desenvolvimento Sustentável 10 - IPEA. Disponível em: <[ODS 10](https://www.ipea.gov.br/ods/ods10.html)>. Acessado em 28/09/2025.
+> [3] Objetivo de Desenvolvimento Sustentável 16 - IPEA. Disponível em: <[ODS 16](https://www.ipea.gov.br/ods/ods16.html)>. Acessado em 28/09/2025.
+
+## Histórico de Versões
+
+| Versão | Data       | Descrição                                     | Autor                                              |                   Revisor                    |
+| :----: | ---------- | --------------------------------------------- | -------------------------------------------------- | :------------------------------------------: |
+| `1.0`  | 28/09/2025 | Adição dos ODS e conexões                     | [Zenilda Vieira](https://github.com/ZenildaVieira) | [André Maia](http://github.com/andre-maia51) |
+| `1.1`  | 28/09/2025 | Adição das referências e histórico de versões | [Zenilda Vieira](https://github.com/ZenildaVieira) | [André Maia](http://github.com/andre-maia51) |

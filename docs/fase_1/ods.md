@@ -13,7 +13,7 @@ Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-E
 <div style="display: table; border-collapse: collapse; width: auto; max-width: 40%;">
   <div style="display: table-row;">
     <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
-      <img src="assets/ODS_4.png" alt="ODS 4" style="max-width: 150px; height: auto; border-radius: 8px;">
+      <img src="../assets/ODS_4.png" alt="ODS 4" style="max-width: 150px; height: auto; border-radius: 8px;">
       <p><b>Figura 1: ODS 4</b></p>
     </div>
     <div style="display: table-cell; vertical-align: top; padding: 10px;">
@@ -48,7 +48,7 @@ Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-E
 <div style="display: table; border-collapse: collapse; width: auto; max-width: 40%;">
   <div style="display: table-row;">
     <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
-      <img src="assets/ODS_10.png" alt="ODS 10" style="max-width: 150px; height: auto; border-radius: 8px;">
+      <img src="../assets/ODS_10.png" alt="ODS 10" style="max-width: 150px; height: auto; border-radius: 8px;">
       <p><b>Figura 2: ODS 10</b></p>
     </div>
     <div style="display: table-cell; vertical-align: top; padding: 10px;">
@@ -78,7 +78,7 @@ Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-E
 <div style="display: table; border-collapse: collapse; width: auto; max-width: 40%;">
   <div style="display: table-row;">
     <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
-      <img src="assets/ODS_16.jpg" alt="ODS 16" style="max-width: 150px; height: auto; border-radius: 8px;">
+      <img src="../assets/ODS_16.jpg" alt="ODS 16" style="max-width: 150px; height: auto; border-radius: 8px;">
       <p><b>Figura 3: ODS 16</b></p>
     </div>
     <div style="display: table-cell; vertical-align: top; padding: 10px;">

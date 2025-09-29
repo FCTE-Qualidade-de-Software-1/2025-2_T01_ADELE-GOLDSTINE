@@ -22,6 +22,7 @@ theme:
   
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.sections
     - toc.integrate
     - navigation.top
@@ -30,9 +31,17 @@ theme:
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
+  markdown_extensions:
+    - attr_list
 
 nav:
   - Home: "index.md"
-  - Fase 1: "fase_1/processo_avaliacao.md"
+  - Fase 1 - Processo de Avaliação:
+    - Aplicação Escolhida: "fase_1/aplicacao-escolhida.md"
+    - Classificação e Ênfase das Características de Qualidade: "fase_1/classificacao-caracteristicas.md"
+    - Proposta de Avaliação e Melhoria: "fase_1/proposta-avaliacao.md"
+    - Especificação do Modelo: "fase_1/especificacao-modelo.md"
+    - Objetivos de Desenvolvimento Sustentável da ONU: "fase_1/relacao-ods.md"
+    - Conclusão: "fase_1/conclusao.md"
   - Contribuições:
     - Fase 1: "contribuicoes/fase_1.md"

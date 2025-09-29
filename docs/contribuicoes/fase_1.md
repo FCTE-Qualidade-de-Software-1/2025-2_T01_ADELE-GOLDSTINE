@@ -11,7 +11,6 @@
 | 222021906 | [Marcos Marinho](https://github.com/devMarcosVM)       | Classificação e Ênfase das Características de Qualidade    |      16,67%       |
 | 212002907 | [Zenilda Vieira](https://github.com/ZenildaVieira)     | Objetivos de Desenvolvimento Sustentável da ONU e conexões |      16,67%       |
 
-
 **Total:** 100%
 
 ## Histórico de versão
@@ -23,3 +22,4 @@
 | `1.2`  | 28/09/2025 | Adição da seção de "Aplicação escolhida" com as informações do projeto          | [Manuella Valadares](https://github.com/manuvaladares) |
 | `1.3`  | 28/09/2025 | Adição da seção de "Objetivos de Desenvolvimento Sustentável da ONU e conexões" | [Zenilda Vieira](https://github.com/ZenildaVieira) |
 | `1.4`  | 28/09/2025 | Adição da especificação do modelo de qualidade                                | [Caio Antônio](https://github.com/Caio-Antonio) |
+| `1.5`  | 28/09/2025 | Correção de erros e reestruturação da página                               | [André Maia](http://github.com/andre-maia51) |

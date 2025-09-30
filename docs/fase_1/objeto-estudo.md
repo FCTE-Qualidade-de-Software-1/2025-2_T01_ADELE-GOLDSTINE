@@ -1,30 +1,36 @@
-# Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA
-
-***Há orientações gerais sobre a escrita e uso de IA na página inicial, por favor deêm uma lida!***
-
----
-
 # Objeto de Estudo (Software)
 
-## Descrição Estruturada:
-***Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA***
-* *Apresenta o software a ser avaliado de forma estruturada.*
-* *Resultados esperados: Descrição estruturada do software selecionado para avaliação*
-* *Critério de avaliação 3 - Tipo de produto e descrição estruturada do software - Classifica corretamente o tipo de produto e descreve o sistema de forma organizada (módulos, interfaces, dependências).*
-    * *Presente/não contraditório.*
-    * *Descrição não pode ser fragmentada; tipo de produto não pode ser ambíguo; não podem faltar elementos essenciais.*
-    * *Descrição clara e consistente, cobrindo módulos, interfaces e restrições; impacto disso na avaliação é mencionado.*
-    * *Descrição completa com diagrama(s) (ex.: contexto/arquitetura), e implicações diretas para a avaliação (o que dá/ não dá para medir agora).*
+## Aplicação escolhida
 
-### Aplicação escolhida
+O **i-Educar** é um software livre de gestão escolar, totalmente online, projetado para otimizar a administração de redes de ensino municipais. A plataforma centraliza informações pedagógicas e de ensino, permitindo que secretários escolares, professores, coordenadores e gestores acessem dados em tempo real. Com isso, o i-Educar contribui para a redução do uso de papel, a eliminação da duplicidade de documentos e a racionalização do trabalho dos servidores públicos.
 
-> Lançando o maior software livre educacional do Brasil!
-
-O **i-Educar** é um software livre de gestão escolar totalmente on-line que permite secretários escolares, professores, coordenadores e gestores da área possam utilizar uma ferramenta que produz informações e estatísticas em tempo real, com um banco de dados centralizado e de fácil acesso, diminuindo a necessidade de uso de papel, a duplicidade de documentos, o tempo de atendimento ao cidadão e racionalizando o trabalho do servidor público. Ele foi originalmente desenvolvido pela prefeitura de Itajaí - SC e disponibilizado no Portal do Software Público do Governo Federal em 2008, com o objetivo de atender às necessidades das Secretarias de Educação e Escolas Públicas de todo o Brasil.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/AHZn3vDDijQ?si=zFnXepYp0GUotFzv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Desenvolvido originalmente pela prefeitura de Itajaí (SC) e disponibilizado no Portal do Software Público do Governo Federal em 2008, o i-Educar atende às necessidades das Secretarias de Educação e das escolas públicas de todo o Brasil.
 
 **Link para o YouTube:** [Conheça o i-Educar](https://www.youtube.com/watch?v=AHZn3vDDijQ)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AHZn3vDDijQ?si=e0AkwHmUcb4irTsB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Módulos e Funcionalidades
+
+O i-Educar é organizado em módulos que abrangem todas as áreas da gestão escolar:
+
+* **Endereçamento:** Cadastro e gerenciamento de informações de endereço, como ruas, bairros e CEPs.
+* **Pessoas:** Cadastro de pessoas físicas e jurídicas, incluindo pais, alunos e professores, além de informações como deficiências, religião e cor/raça.
+* **Escola:** O módulo central do sistema, onde são gerenciados os cadastros de escolas, alunos, matrículas, cursos, séries e turmas.
+* **Servidores:** Cadastro de todos os servidores da rede de ensino, incluindo docentes e outros funcionários. O módulo também permite o gerenciamento do quadro de horários das turmas.
+* **Educacenso:** Módulo dedicado à exportação de dados para o Censo Escolar e à importação de informações para a atualização do sistema.
+* **Configurações:** Permite o gerenciamento de permissões de usuários, a realização de backups e o acesso a outras ferramentas administrativas.
+
+### Arquitetura e Implicações para a Avaliação
+
+A arquitetura do i-Educar é modular, o que facilita a análise de componentes específicos do sistema. O diagrama abaixo representa a estrutura de alto nível do software.
+
+![Arquitetura do i-Educar](../assets/arquitetura.png)
+
+Essa estrutura de código aberto tem implicações diretas na nossa avaliação:
+
+* **O que é possível medir:** Dado o acesso completo ao código-fonte no GitHub, podemos realizar uma análise estática aprofundada da **Manutenibilidade** do software, utilizando ferramentas para medir a complexidade do código, a duplicação e a aderência a padrões de desenvolvimento. Da mesma forma, a **Segurança** pode ser avaliada através da busca por vulnerabilidades conhecidas no código.
+* **O que não é possível medir (Limitações):** A avaliação da **Confiabilidade** será limitada. Não temos acesso aos ambientes de produção das prefeituras que utilizam o sistema, o que nos impede de medir métricas de campo, como o Tempo Médio Entre Falhas (MTBF). Nossa análise se concentrará em indicadores preventivos, como a cobertura de testes automatizados presentes no repositório.
 
 ### Tecnologias utilizadas
 
@@ -33,6 +39,7 @@ O projeto utiliza majoritariamente **PHP**, com o uso de bibliotecas como:
 * [Laravel](https://laravel.com/)
 * [PHPUnit](https://phpunit.de/)
 * [PestPHP](https://pestphp.com/)
+
 Além disso, também faz uso de algumas bibliotecas **JavaScript**, como o framework **Bootstrap**.
 
 ### Links úteis
@@ -47,58 +54,25 @@ Além disso, também faz uso de algumas bibliotecas **JavaScript**, como o frame
 ---
 
 ## Classificação do Produto:
-***Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA***
-* *Identifica o tipo de produto de software.*
-* *Objetivo: Executar a Fase 1 para definir os requisitos de avaliação da qualidade do software selecionado pela equipe, incluindo a Identificação do tipo de produto*
-* *Resultados esperados: Classificação do tipo de produto*
-* *Critério de avaliação 3 - Tipo de produto e descrição estruturada do software - Classifica corretamente o tipo de produto e descreve o sistema de forma organizada (módulos, interfaces, dependências).*
-    * *Presente/não contraditório.*
-    * *Descrição não pode ser fragmentada; tipo de produto não pode ser ambíguo; não podem faltar elementos essenciais.*
-    * *Descrição clara e consistente, cobrindo módulos, interfaces e restrições; impacto disso na avaliação é mencionado.*
-    * *Descrição completa com diagrama(s) (ex.: contexto/arquitetura), e implicações diretas para a avaliação (o que dá/ não dá para medir agora).*
+
+O i-Educar se classifica como um **Sistema de Gestão Educacional (SGE)** de código aberto. Ele é projetado para ser uma solução completa para a administração de redes de ensino, com foco em usabilidade, centralização de dados e conformidade com as regulamentações educacionais do Brasil, como o Censo Escolar.
 
 ---
 
-
 ## ODS Relacionados:
-***Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA***
-* *Lista os Objetivos de Desenvolvimento Sustentável, suas metas e a justificativa do vínculo com o software.*
-* *Indicar os ODS conectados ao software avaliado no nível de metas e indicadores relevantes.*
-* *Resultados esperados: ODS relacionados, e metas associadas ao software; breve justificativa do vínculo.*
-* *Critério de avaliação 7 - ODS, metas e indicadores relacionados - Relaciona o projeto a ODS relevantes, com metas/indicadores e justificativa.*
-    * *Tem que relacionar ODS.*
-    * *Citar ODS com coerência.*
-    * *Vínculo correto e básico (ODS + meta).*
-    * *Vínculo bem justificado com metas/indicadores; explica pertinência ao software.*
-
-
-### Objetivos de Desenvolvimento Sustentável da ONU
-
-#### Objetivo
 
 Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-Educar se conecta, com metas/indicadores relevantes e justificativas de como o software pode contribuir para alcançá-los.
 
-#### ODS e conexão com o *i-educar*
+![ODS relacionada](../assets/ods.png)
 
-##### ODS 4 — Educação de Qualidade  
+### ODS 4 — Educação de Qualidade
 
-<div style="display: table; border-collapse: collapse; width: auto; max-width: 70%;">
-  <div style="display: table-row;">
-    <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
-      <img src="../assets/ODS_4.png" alt="ODS 4" style="max-width: 100px; height: auto; border-radius: 8px;">
-      <p><b>Figura 1:<br>ODS 4</b></p>
-    </div>
-    <div style="display: table-cell; vertical-align: top; padding: 10px;">
-      <p><b>Descrição: </b> Assegurar educação inclusiva, equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos. 
-      [<a href="https://www.ipea.gov.br/ods/ods4.html">1</a>]</p>
-    </div>
-  </div>
-</div>
+> **Descrição:** Assegurar educação inclusiva, equitativa e de qualidade, e promover oportunidades de aprendizagem ao longo da vida para todos. [1]
 
-**Metas relevantes (Brasil / IPEA):**  
+**Metas relevantes (Brasil / IPEA):**
 
-* **Meta 4.1:** Até 2030, garantir que todas as meninas e meninos completem o ensino primário e secundário gratuito, equitativo e de qualidade, com resultados de aprendizagem eficazes.  
-* **Meta 4.3:** Assegurar igualdade de acesso para todos os gêneros à educação técnica, profissional e superior de qualidade, a preços acessíveis, incluindo universidade.  
+* **Meta 4.1:** Até 2030, garantir que todas as meninas e meninos completem o ensino primário e secundário gratuito, equitativo e de qualidade, com resultados de aprendizagem eficazes.
+* **Meta 4.3:** Assegurar igualdade de acesso para todos os gêneros à educação técnica, profissional e superior de qualidade, a preços acessíveis, incluindo universidade.
 * **Meta 4.4:** Aumentar substancialmente o número de jovens e adultos com habilidades relevantes, inclusive competências técnicas e profissionais, para emprego, trabalho decente e empreendedorismo.  
 * **Meta 4.a:** Construir e melhorar instalações físicas para educação, apropriadas para crianças, sensíveis às deficiências e ao gênero, e que proporcionem ambientes de aprendizagem seguros, inclusivos e eficazes.  
 
@@ -108,66 +82,42 @@ Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-E
 * Proficiência em leitura e matemática em diferentes fases do ensino fundamental.  
 * Infraestrutura escolar (acessibilidade, segurança, salas e equipamentos).  
 
-**Relação com o i-Educar:**  
+**Relação com o i-Educar:**
 
-* Fornece dados precisos sobre matrícula, frequência, conclusão e desempenho acadêmico, apoiando o monitoramento das metas 4.1 e 4.3.  
-* Identifica desigualdades regionais e socioeconômicas, permitindo intervenções mais justas.  
-* Apoia a gestão de recursos e relatórios que evidenciem deficiências de infraestrutura.  
+* Fornece dados precisos sobre matrícula, frequência, conclusão e desempenho acadêmico, apoiando o monitoramento das metas 4.1 e 4.3.
+* Identifica desigualdades regionais e socioeconômicas, permitindo intervenções mais justas.
+* Apoia a gestão de recursos e relatórios que evidenciem deficiências de infraestrutura.
 
-##### ODS 10 — Redução das Desigualdades
+### ODS 10 — Redução das Desigualdades
 
-<div style="display: table; border-collapse: collapse; width: auto; max-width: 70%;">
-  <div style="display: table-row;">
-    <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
-      <img src="../assets/ODS_10.png" alt="ODS 10" style="max-width: 100px; height: auto; border-radius: 8px;">
-      <p><b>Figura 2:<br>ODS 10</b></p>
-    </div>
-    <div style="display: table-cell; vertical-align: top; padding: 10px;">
-      <p><b>Descrição: </b>Reduzir a desigualdade dentro dos países e entre eles.  
-      [<a href="https://www.ipea.gov.br/ods/ods10.html">2</a>]</p>
-    </div>
-  </div>
-</div>
+> **Descrição:** Reduzir a desigualdade dentro dos países e entre eles. [2]
 
-**Metas relevantes (Brasil / IPEA):**  
+**Metas relevantes (Brasil / IPEA):**
 
-* **Meta 10.1:** Até 2030, sustentar o crescimento da renda dos 40% mais pobres a uma taxa maior que a média nacional.  
-* **Meta 10.2:** Empoderar e promover inclusão social, econômica e política de todos, independentemente de idade, gênero, deficiência, raça, etnia ou condição econômica.  
+* **Meta 10.1:** Até 2030, sustentar o crescimento da renda dos 40% mais pobres a uma taxa maior que a média nacional. 
+* **Meta 10.2:** Empoderar e promover inclusão social, econômica e política de todos, independentemente de idade, gênero, deficiência, raça, etnia ou condição econômica.
 
 **Indicadores relacionados:**  
 
 * Taxa de crescimento da renda dos 40% mais pobres em comparação à média nacional.  
 * Medidas de inclusão em acesso à educação, conectividade digital e recursos de gestão.  
 
-**Relação com o i-Educar:**  
+**Relação com o i-Educar:**
 
-* Reduz desigualdades de acesso à informação e gestão entre redes escolares.  
-* Identifica grupos vulneráveis (por localização, deficiência ou condição socioeconômica), apoiando políticas inclusivas.  
-* Democratiza acesso à tecnologia por ser um sistema **open source**, sem custos de licenciamento.  
+* Reduz desigualdades de acesso à informação e gestão entre redes escolares.
+* Identifica grupos vulneráveis (por localização, deficiência ou condição socioeconômica), apoiando políticas inclusivas.
+* Democratiza acesso à tecnologia por ser um sistema **open source**, sem custos de licenciamento.
 
-#####  ODS 16 — Paz, Justiça e Instituições Eficazes  
+### ODS 16 — Paz, Justiça e Instituições Eficazes
 
-<div style="display: table; border-collapse: collapse; width: auto; max-width: 70%;">
-  <div style="display: table-row;">
-    <div style="display: table-cell; vertical-align: top; padding: 10px; text-align: center;">
-      <img src="../assets/ODS_16.jpg" alt="ODS 16" style="max-width: 100px; height: auto; border-radius: 8px;">
-      <p><b>Figura 3:<br>ODS 16</b></p>
-    </div>
-    <div style="display: table-cell; vertical-align: top; padding: 10px;">
-      <p><b>Descrição: </b>Promover sociedades pacíficas e inclusivas, garantir acesso à justiça para todos e construir instituições eficazes, responsáveis e transparentes.  
-      [<a href="https://www.ipea.gov.br/ods/ods16.html">3</a>]</p>
-    </div>
-  </div>
-</div>
-  
-**Meta relevante (Brasil / IPEA):**  
+> **Descrição:** Promover sociedades pacíficas e inclusivas, garantir acesso à justiça para todos e construir instituições eficazes, responsáveis e transparentes. [3]
 
-* **Meta 16.6:** Desenvolver instituições eficazes, responsáveis e transparentes em todos os níveis.  
+**Meta relevante (Brasil / IPEA):**
 
-**Relação com o i-Educar:**  
+* **Meta 16.6:** Desenvolver instituições eficazes, responsáveis e transparentes em todos os níveis.
 
-* Mantém registros escolares auditáveis e confiáveis, fortalecendo a transparência.  
-* Apoia a eficiência administrativa, reduz duplicidades e melhora o controle institucional.  
-* Favorece a confiança pública ao disponibilizar informações de forma organizada e acessível. 
-  
----
+**Relação com o i-Educar:**
+
+* Mantém registros escolares auditáveis e confiáveis, fortalecendo a transparência.
+* Apoia a eficiência administrativa, reduz duplicidades e melhora o controle institucional.
+* Favorece a confiança pública ao disponibilizar informações de forma organizada e acessível.

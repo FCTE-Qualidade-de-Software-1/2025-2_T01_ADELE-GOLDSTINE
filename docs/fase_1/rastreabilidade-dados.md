@@ -1,20 +1,7 @@
-# Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA
-
-***Há orientações gerais sobre a escrita e uso de IA na página inicial, por favor deêm uma lida!***
-
----
-
-
 # Rastreabilidade e Dados
 
-## Auditoria:
-***Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA***
-* *Link para os dados brutos e consolidados no repositório.*
-    * *Dados auditáveis: Os dados brutos e consolidados devem estar disponíveis para consulta/auditoria no próprio repositório do projeto;*
-* *Link para gravações de entrevistas (quando aplicável).*
-    * *Entrevistas, quando aplicável, devem ser gravadas e estar disponíveis;*
 
-### Bibliografia
+## Bibliografia
 
 > **BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter.** The Goal Question Metric Approach. In: Encyclopedia of Software Engineering. New York: Wiley, 1994.
 
@@ -45,11 +32,7 @@
 ---
 
 
-### Contribuições:
-***Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA***
-   * *Tabela de contribuição da equipe.*
-
-#### Histórico de versão
+### Histórico de versão
 
 | Versão |    Data    | Descrição                                                                     | Autor                                                  | Revisor                                               |
 | :----: | :--------: | :---------------------------------------------------------------------------- | :----------------------------------------------------- | :---------------------------------------------------- |
@@ -60,7 +43,7 @@
 | `1.4`  | 28/09/2025 | Adição da especificação do modelo de qualidade                                | [Caio Antônio](http://github.com/Caio-Antonio)         | [Carla Clementino](https://github.com/ccarlaa)        |
 | `1.5`  | 28/09/2025 | Correção de erros e reestruturação da página                                  | [André Maia](http://github.com/andre-maia51)           | ---                                                   |
 | `1.6`  | 30/09/2025 | Reestruturação dos documentos após ponto de controle 1                        | [Zenilda Vieira](https://github.com/ZenildaVieira)     | [André Maia](http://github.com/andre-maia51)          |
-| `1.7`  | 30/09/2025 | Adição da seção "Contexto da Avaliação" no Pages                       | [André Maia](http://github.com/andre-maia51)  |    |
-
+| `1.7`  | 30/09/2025 | Adição da seção "Contexto da Avaliação" no Pages                       | [André Maia](http://github.com/andre-maia51)  |  [Manuella Valadares](http://github.com/manuvaladares)  |
+| `1.8`  | 30/09/2025 | Adição da seção "Objeto de estudo" no Pages   | [Manuella Valadares](http://github.com/manuvaladares)  |    |
 
 ---

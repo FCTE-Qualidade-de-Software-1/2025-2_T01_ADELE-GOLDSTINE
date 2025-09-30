@@ -37,11 +37,10 @@ theme:
 nav:
   - Home: "index.md"
   - Fase 1 - Processo de Avaliação:
-    - Aplicação Escolhida: "fase_1/aplicacao-escolhida.md"
-    - Classificação e Ênfase das Características de Qualidade: "fase_1/classificacao-caracteristicas.md"
-    - Proposta de Avaliação e Melhoria: "fase_1/proposta-avaliacao.md"
-    - Especificação do Modelo: "fase_1/especificacao-modelo.md"
-    - Objetivos de Desenvolvimento Sustentável da ONU: "fase_1/relacao-ods.md"
+    - Contexto da Avaliação: "fase_1/contexto-avaliacao.md"
+    - Objeto de Estudo: "fase_1/objeto-estudo.md"
+    - Modelo de Qualidade: "fase_1/modelo-qualidade.md"
+    - Rastreabilidade dos Dados: "fase_1/rastreabilidade-dados.md"
     - Conclusão: "fase_1/conclusao.md"
   - Contribuições:
-    - Fase 1: "contribuicoes/fase_1.md"
+    - Fase 1: "contribuicoes/fase-1.md"

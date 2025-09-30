@@ -37,8 +37,8 @@ theme:
 nav:
   - Home: "index.md"
   - Fase 1 - Processo de Avaliação:
-    - Contexto da Avaliação: "fase_1/contexto-avaliacao.md"
     - Objeto de Estudo: "fase_1/objeto-estudo.md"
+    - Contexto da Avaliação: "fase_1/contexto-avaliacao.md"
     - Modelo de Qualidade: "fase_1/modelo-qualidade.md"
     - Rastreabilidade dos Dados: "fase_1/rastreabilidade-dados.md"
     - Conclusão: "fase_1/conclusao.md"

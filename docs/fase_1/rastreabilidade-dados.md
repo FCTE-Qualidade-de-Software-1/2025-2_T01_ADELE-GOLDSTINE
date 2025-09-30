@@ -40,6 +40,8 @@
 > 
 > [3] Objetivo de Desenvolvimento Sustentável 16 - IPEA. Disponível em: <[ODS 16](https://www.ipea.gov.br/ods/ods16.html)>. Acessado em 28/09/2025.
 
+> [4] Secretários escolares do DF enfrentam dificuldades com sistemas i-Educar e Educa DF: melhorias prometidas não foram cumpridas - SAEDF. Disponível em: <[SAEDF - Problemas com o i-Educar](https://www.saedf.org.br/index.php/destaques/secretarios-escolares-do-df-enfrentam-dificuldades-com-sistemas-i-educar-e-educa-df-melhorias-prometidas-nao-foram-cumpridas/)>. Acessado em 30/09/2025
+
 ---
 
 
@@ -58,6 +60,7 @@
 | `1.4`  | 28/09/2025 | Adição da especificação do modelo de qualidade                                | [Caio Antônio](http://github.com/Caio-Antonio)         | [Carla Clementino](https://github.com/ccarlaa)        |
 | `1.5`  | 28/09/2025 | Correção de erros e reestruturação da página                                  | [André Maia](http://github.com/andre-maia51)           | ---                                                   |
 | `1.6`  | 30/09/2025 | Reestruturação dos documentos após ponto de controle 1                        | [Zenilda Vieira](https://github.com/ZenildaVieira)     | [André Maia](http://github.com/andre-maia51)          |
+| `1.7`  | 30/09/2025 | Adição da seção "Contexto da Avaliação" no Pages                       | [André Maia](http://github.com/andre-maia51)  |    |
 
 
 ---

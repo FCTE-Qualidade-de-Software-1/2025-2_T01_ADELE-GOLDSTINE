@@ -12,4 +12,3 @@
 | 212002907 | [Zenilda Vieira](https://github.com/ZenildaVieira)     | Objetivos de Desenvolvimento Sustentável da ONU e conexões e reesstruturação dos documentos após ponto de controle 1 |      16,67%       |
 
 **Total:** 100%
-

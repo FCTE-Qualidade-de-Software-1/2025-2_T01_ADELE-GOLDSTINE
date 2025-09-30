@@ -1,3 +1,32 @@
+# Orientações da professora - APAGAR ANTES DA ENTREGA
+
+* *Critério de avaliação 8 - Organização lógica do relatório - Estrutura, encadeamento de ideias, seções, sumário, referências cruzadas, legibilidade.*
+  * *Organizado; com seções claras; fácil de seguir*
+  * *Estrutura básica com ordem não confusa; presença de referências cruzadas; boa navegação.*
+  * *Boa organização; seções e subtítulos coerentes; fluxo lógico; referências cruzadas suficientes (ex.: “ver Fig. 2”, “Seção 4”).*
+  * *Sumário/índice funcionando, hierarquia de seções consistente, storytelling claro; referências cruzadas completas e úteis.*
+
+* *Critério de avaliação 9 - Português, estilo e padronização - Correção gramatical e ortográfica; concisão; citações e referências; padronização visual(legendas, numeração, formatação).*
+  * *Sem erros; linguagem adequada; citações/referências presentes e corretas; figuras/tabelas com legenda/numeração.*
+  * *Sem erros; consistências de estilo e formatação; referências corretas; legendas completas.*
+  * *Sem erros; linguagem clara e objetiva; citações e referências corretas; figuras/tabelas numeradas com legendas legíveis; formatação  consistente.*
+  * *Redação impecável e concisa; lista de referências conferida; todas as figuras/tabelas têm legenda/fonte e são chamadas no texto; padrões visuais homogêneos.*
+
+* *Critério de avaliação 10 - Uso de IA (declaração, criticidade e integração) - Transparência sobre ferramentas de IA usadas (quais/para quê/quando), qualidade da revisão humana, integração ao contexto do projeto, ética (citações), e forma adequada (sem emojis/figurinhas/ícones de IA no relatório).*
+  * *Não pode ocorrer: uso não declarado; colagem bruta de texto/figuras da IA; presença de emojis/figurinhas/ícones no corpo do relatório; erros factuais claros; ausência de fontes ou trechos entre aspas quando há citação literal.*
+  * *Não pode ocorrer: declaração genérica (“usei IA”), sem dizer para quê; revisão humana pouco visível (texto com jargões genéricos).*
+  * *Declaração deve ser objetiva (ferramenta + tarefa: p.ex., “revisão de texto”, “sumário de requisitos”); texto ajustado ao contexto do projeto; sem ícones/figurinhas.*
+  * *Declaração deve ser clara e completa (ferramenta + tarefa + uma frase sobre como conferiu/ajustou); texto nitidamente revisado pela equipe; sem ícones/figurinhas.*
+
+* *Critério de avaliação 11 - GitPage da equipe (atualização, estrutura e rastreabilidade) - Qualidade da GitPage enquanto vitrine do projeto: atualizada, navegável, coerente com a Fase 1 e com links funcionais para repositório, release e evidências.*
+  * *O que não pode ocorrer: GitPage inexistente, inacessível ou desatualização grave; links quebrados; conteúdo irrelevante; presença de emojis/figurinhas/ícones de IA.*
+  * *O que não pode ocorrer: GitPage existe, mas confusa ou parcial: home pouco clara; seções mínimas; faltam links para repo/release ou menção à Fase 1; sem data de atualização.*
+  * *GitPage deve ser organizada e atualizada: menu claro; links funcionam, release e dados; sem ícones/figurinhas; última atualização indicada.*
+  * *GitPage deve ser exemplar e rastreável: narrativa para leitor externo; seção “Fase 1”; versão e data no rodapé; acessibilidade básica (alt-text em imagens); crosslinks entre páginas; ...*
+
+---
+
+
 # Grupo Adele Goldstine - Turma 1 (2025.2)
 
 ## Sobre o Projeto

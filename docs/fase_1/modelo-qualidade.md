@@ -1,4 +1,8 @@
 # Modelo de Qualidade
+
+### Visão Geral do Modelo:
+
+![Modelo de qualidade](../assets/modelo-qualidade.jpg)
    
 #### Especificação do Modelo
 

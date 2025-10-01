@@ -4,7 +4,6 @@ O i-Educar demonstra alinhamento direto com os Objetivos de Desenvolvimento Sust
 
 ---
 
-
 ## Bibliografia
 
 > **BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter.** The Goal Question Metric Approach. In: Encyclopedia of Software Engineering. New York: Wiley, 1994.
@@ -23,6 +22,8 @@ O i-Educar demonstra alinhamento direto com os Objetivos de Desenvolvimento Sust
 
 > **SOMMERVILLE, Ian.** Engenharia de Software. 10. ed. São Paulo: Pearson, 2019.
 
+---
+
 ## Referências Bibliográficas
 
 > [1] Objetivo de Desenvolvimento Sustentável 4 - IPEA. Disponível em: <[ODS 4](https://www.ipea.gov.br/ods/ods4.html)>. Acessado em 28/09/2025.
@@ -34,7 +35,6 @@ O i-Educar demonstra alinhamento direto com os Objetivos de Desenvolvimento Sust
 > [4] Secretários escolares do DF enfrentam dificuldades com sistemas i-Educar e Educa DF: melhorias prometidas não foram cumpridas - SAEDF. Disponível em: <[SAEDF - Problemas com o i-Educar](https://www.saedf.org.br/index.php/destaques/secretarios-escolares-do-df-enfrentam-dificuldades-com-sistemas-i-educar-e-educa-df-melhorias-prometidas-nao-foram-cumpridas/)>. Acessado em 30/09/2025
 
 ---
-
 
 ### Histórico de versão
 

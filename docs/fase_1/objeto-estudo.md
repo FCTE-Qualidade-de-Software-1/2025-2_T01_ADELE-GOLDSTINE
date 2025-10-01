@@ -53,13 +53,13 @@ Além disso, também faz uso de algumas bibliotecas **JavaScript**, como o frame
 
 ---
 
-## Classificação do Produto:
+## Classificação do Produto
 
 O i-Educar se classifica como um **Sistema de Gestão Educacional (SGE)** de código aberto. Ele é projetado para ser uma solução completa para a administração de redes de ensino, com foco em usabilidade, centralização de dados e conformidade com as regulamentações educacionais do Brasil, como o Censo Escolar.
 
 ---
 
-## ODS Relacionados:
+## ODS Relacionados
 
 Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-Educar se conecta, com metas/indicadores relevantes e justificativas de como o software pode contribuir para alcançá-los.
 

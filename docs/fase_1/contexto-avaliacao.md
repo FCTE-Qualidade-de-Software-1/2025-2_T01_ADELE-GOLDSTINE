@@ -10,9 +10,13 @@ O processo de avaliação de qualidade do i-Educar vem a partir de diferentes in
 
 Esses objetivos citados anteriormente foram estabelecidos a partir da leitura de uma série de reclamações encontradas em reportagens sobre a experiência de usuários do i-Educar em escolas da rede pública de ensino básico do Distrito Federal [<a href="https://www.saedf.org.br/index.php/destaques/secretarios-escolares-do-df-enfrentam-dificuldades-com-sistemas-i-educar-e-educa-df-melhorias-prometidas-nao-foram-cumpridas/">4</a>]
 
+---
+
 ## Requisitantes e Partes Interessadas
 
 O i-Educar é um projeto open-source e possui uma comunidade de desenvolvedores ativa em diversos meios de comunicação, como o GitHub e o Telegram. Por isso, as expectativas do grupo em relação ao processo de avaliação de qualidade do produto é que, esse documento, possua valor e utilidade para os desenvolvedores do i-Educar, visando a melhoria e evolução do sistema.
+
+---
 
 ## Escopo e Profundidade
 

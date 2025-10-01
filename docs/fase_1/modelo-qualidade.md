@@ -1,30 +1,6 @@
 # Modelo de Qualidade
 
-### Visão Geral do Modelo:
-
 ![Modelo de qualidade](../assets/modelo-qualidade.jpg)
-   
-#### Especificação do Modelo
-
-As características de qualidade de software escolhidas para esta avaliação do I-Educar são: Confiabilidade, Segurança e Manutenibilidade. Essas dimensões, como demonstrado abaixo, foram selecionadas por representarem aspectos críticos para o funcionamento contínuo, a proteção de dados sensíveis e a evolução da aplicação.
-
-#### Dimensões Avaliadas
-
-##### Confiabilidade
-
-* **Objetivo:** Garantir a estabilidade e disponibilidade do sistema em ambientes escolares.
-
-##### Segurança
-
-* **Objetivo:** Assegurar a proteção de dados sensíveis e a integridade das informações processadas pelo sistema.  
-
-##### Manutenibilidade
-
-* **Objetivo:** Garantir que o software seja facilmente compreensível, modificável e evolutivo, permitindo contribuições da comunidade e adaptações futuras.  
-
-
-### Justificativa para a adaptação do modelo para o software em questão
-A norma 25010 abrange diversas características de qualidade, mas analisar todas elas representaria um escopo muito amplo para este projeto. Por isso, utilizamos o método de priorização Risco × Impacto para selecionar as dimensões mais críticas ao contexto do sistema. Dessa forma, as seguintes caraterísticas foram selecionadas, por refletirem os maiores riscos e impactos para os stakeholders e para a sustentabilidade do sistema.
 
 ## Características de Qualidade
 
@@ -88,6 +64,32 @@ A priorização definida implica em decisões estratégicas e trade-offs conscie
 * **Adequação Funcional:** O i-Educar é um sistema maduro e consolidado no mercado. Assume-se que suas funcionalidades essenciais (core) já atendem às necessidades primárias da gestão educacional, tornando a avaliação de novas funcionalidades um objetivo secundário.
 
 * **Compatibilidade e Portabilidade:** O sistema possui uma base de usuários e um ambiente de implantação estáveis (servidores Linux, acesso via navegador web). Questões de interoperabilidade com outros sistemas ou a necessidade de migração para outras plataformas não representam um risco sistêmico ou uma demanda imediata, justificando suas baixas prioridades.
+
+---
+
+## Visão Geral do Modelo
+
+### Especificação do Modelo
+
+As características de qualidade de software escolhidas para esta avaliação do I-Educar são: Confiabilidade, Segurança e Manutenibilidade. Essas dimensões, como demonstrado abaixo, foram selecionadas por representarem aspectos críticos para o funcionamento contínuo, a proteção de dados sensíveis e a evolução da aplicação.
+
+### Dimensões Avaliadas
+
+#### Confiabilidade
+
+* **Objetivo:** Garantir a estabilidade e disponibilidade do sistema em ambientes escolares.
+
+#### Segurança
+
+* **Objetivo:** Assegurar a proteção de dados sensíveis e a integridade das informações processadas pelo sistema.  
+
+#### Manutenibilidade
+
+* **Objetivo:** Garantir que o software seja facilmente compreensível, modificável e evolutivo, permitindo contribuições da comunidade e adaptações futuras.  
+
+### Justificativa para a adaptação do modelo para o software em questão
+
+A norma 25010 abrange diversas características de qualidade, mas analisar todas elas representaria um escopo muito amplo para este projeto. Por isso, utilizamos o método de priorização Risco × Impacto para selecionar as dimensões mais críticas ao contexto do sistema. Dessa forma, as seguintes caraterísticas foram selecionadas, por refletirem os maiores riscos e impactos para os stakeholders e para a sustentabilidade do sistema.
 
 ---
 

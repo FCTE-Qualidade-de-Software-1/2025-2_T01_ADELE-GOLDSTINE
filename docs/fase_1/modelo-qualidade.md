@@ -12,27 +12,15 @@ As características de qualidade de software escolhidas para esta avaliação do
 
 ##### Confiabilidade
 
-* **Objetivo:** Garantir a estabilidade e disponibilidade do sistema em ambientes escolares.  
-* **Questões:** O sistema mantém operação contínua sem falhas críticas? A cobertura de testes é suficiente para prevenir regressões?  
-* **Métricas:**  
-  * Cobertura de testes automatizados.  
-  * Tempo médio entre falhas.  
+* **Objetivo:** Garantir a estabilidade e disponibilidade do sistema em ambientes escolares.
 
 ##### Segurança
 
 * **Objetivo:** Assegurar a proteção de dados sensíveis e a integridade das informações processadas pelo sistema.  
-* **Questões:** Existem vulnerabilidades conhecidas no código? Os mecanismos de autenticação e autorização são robustos? O tempo de resposta a incidentes é adequado?  
-* **Métricas:**  
-  * Número de vulnerabilidades identificadas em auditorias.  
-  * Tempo médio de resposta a incidentes de segurança.  
 
 ##### Manutenibilidade
 
 * **Objetivo:** Garantir que o software seja facilmente compreensível, modificável e evolutivo, permitindo contribuições da comunidade e adaptações futuras.  
-* **Questões:** O código apresenta complexidade adequada? Existem partes críticas com excesso de duplicação? As refatorações são incorporadas continuamente?  
-* **Métricas:**  
-  * Percentual de duplicação de código.  
-  * Número de code smells identificados por análise estática.  
 
 
 ### Justificativa para a adaptação do modelo para o software em questão

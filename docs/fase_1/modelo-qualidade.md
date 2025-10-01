@@ -100,6 +100,9 @@ A seleção das três características principais é justificada pelo contexto c
 | **2. Segurança** | A Segurança (Peso 10,0) é fundamental, pois o sistema processa um grande volume de dados pessoais e sensíveis de menores de idade, enquadrando-se diretamente nas exigências da Lei Geral de Proteção de Dados (LGPD). Uma falha de segurança exporia dados, resultaria em sanções legais e quebraria a confiança da comunidade. <br> **Stakeholders:** Essencial para **Gestores educacionais** (compliance regulatório), **Alunos/Responsáveis** (proteção de sua privacidade) e **Desenvolvedores** (uma única vulnerabilidade pode comprometer toda a aplicação). |
 | **3. Manutenibilidade**| A Manutenibilidade (Peso 8,0) é crucial para a sustentabilidade de um projeto de software livre como o i-Educar. Sua arquitetura legada exige esforço contínuo de evolução, correção de bugs e adaptação a novas regulamentações. Um código de fácil manutenção reduz o custo de propriedade a longo prazo e incentiva a colaboração. <br> **Stakeholders:** Facilita o trabalho da **Comunidade OSS** (contribuições e correções), reduz custos para os **Órgãos públicos** e viabiliza a customização por **Fornecedores** locais. |
 
+O diagrama abaixo representa o organograma das características e subcaracterísticas escolhidas para o processo de avaliação de qualidade do i-Educar:
+![Organograma das características e subcaracterísticas](../assets/caracteristicas-organograma%20.png)
+
 ### 4. Trade-offs Estratégicos Considerados
 
 A priorização definida implica em decisões estratégicas e trade-offs conscientes:

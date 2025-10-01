@@ -1,29 +1,8 @@
-# Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA
-
-***Há orientações gerais sobre a escrita e uso de IA na página inicial, por favor deêm uma lida!***
-
----
-
 # Modelo de Qualidade
    
-## Visão Geral do Modelo:
-
-### Representação gráfica e descrição do modelo de qualidade
-***Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA***
-* *Objetivo: Executar a Fase 1 para definir os requisitos de avaliação da qualidade do software selecionado pela equipe, incluindo a Especificação inicial do modelo de qualidade*
-* *Resultados esperados: Modelo de qualidade com descrição e representação gráfica*
-* *Critério de avaliação 4 - Modelo de qualidade (adaptação + representação gráfica) - Escolha/adaptação do modelo de qualidade ao software ediagrama correspondente.*
-    * *Existente e adequado; diagrama presente.*
-    * *Não pode ter uso “de prateleira” sem justificar adaptações; o diagrama não pode ser confuso.* 
-        * *Uso de prateleira => A equipe simplesmente usa um modelo pronto e tenta encaixá-lo na situação, sem explicar por que essa abordagem foi escolhida.*
-    * *Adequado, com pequenas adaptações mencionadas; diagrama legível.*
-    * *Excelente: adaptações justificadas por contexto e stakeholders; diagrama organizado, com ligações às métricas/itens priorizados.*
-
 #### Especificação do Modelo
 
-O modelo de qualidade adotado para a avaliação do i-Educar baseia-se na norma **ISO/IEC 25010**, priorizando três características fundamentais no contexto do sistema: Confiabilidade, Segurança e Manutenibilidade. Essas dimensões, como citado acima, foram selecionadas por representarem aspectos críticos para o funcionamento contínuo, a proteção de dados sensíveis e a evolução da aplicação.
-
-A abordagem metodológica seguirá os princípios do **GQM (Goal-Question-Metric)**, permitindo estruturar a avaliação por meio de objetivos claros, questões norteadoras e métricas específicas.
+As características de qualidade de software escolhidas para esta avaliação do I-Educar são: Confiabilidade, Segurança e Manutenibilidade. Essas dimensões, como demonstrado abaixo, foram selecionadas por representarem aspectos críticos para o funcionamento contínuo, a proteção de dados sensíveis e a evolução da aplicação.
 
 #### Dimensões Avaliadas
 
@@ -53,10 +32,7 @@ A abordagem metodológica seguirá os princípios do **GQM (Goal-Question-Metric
 
 
 ### Justificativa para a adaptação do modelo para o software em questão
-***Orientações da professora estão em itálico - APAGAR ANTES DA ENTREGA***
-* *Resultados esperados: A adaptação do modelo de qualidade deve refletir ausência/presença de componentes relevantes ao software avaliado.*
-  
---- 
+A norma 25010 abrange diversas características de qualidade, mas analisar todas elas representaria um escopo muito amplo para este projeto. Por isso, utilizamos o método de priorização Risco × Impacto para selecionar as dimensões mais críticas ao contexto do sistema. Dessa forma, as seguintes caraterísticas foram selecionadas, por refletirem os maiores riscos e impactos para os stakeholders e para a sustentabilidade do sistema.
 
 ## Características de Qualidade
 

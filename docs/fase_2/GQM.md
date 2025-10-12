@@ -1,7 +1,15 @@
 
 # Abordagem GQM
 
-<!-- acho que da pra colocar um texto aqui explicando a metodologia GQM -->
+A metodologia **GQM (Goal-Question-Metric)** é uma abordagem estruturada para definição e avaliação de métricas em projetos de software. Ela parte de objetivos claros de medição, desdobrando-os em perguntas específicas que ajudam a entender como alcançar esses objetivos. Por fim, essas perguntas são respondidas por meio de métricas objetivas, que fornecem dados concretos para análise.
+
+O GQM é amplamente utilizado para garantir que as métricas coletadas estejam alinhadas com os objetivos estratégicos do projeto, promovendo decisões baseadas em dados e melhorando a qualidade do produto final. A abordagem é composta por três níveis principais:
+
+1. **Objetivo (Goal):** Define o que se deseja alcançar, considerando o propósito, o objeto de estudo, o ponto de vista e o contexto.
+2. **Perguntas (Questions):** Identificam os aspectos específicos que precisam ser avaliados para atingir o objetivo.
+3. **Métricas (Metrics):** Fornecem os dados necessários para responder às perguntas, permitindo uma análise quantitativa ou qualitativa.
+
+Essa metodologia é especialmente útil em projetos complexos, onde a medição de características como confiabilidade, manutenibilidade e segurança é essencial para garantir o sucesso do sistema.
 
 ## Objetivo de Medição 1: Confiabilidade
 

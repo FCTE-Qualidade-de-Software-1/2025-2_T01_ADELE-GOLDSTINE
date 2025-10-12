@@ -1,7 +1,5 @@
 ## Objetivo de Medição 1: Confiabilidade
 
-**Tabela 1** - Objetivo de Medição 1: Confiabilidade.
-
 | **Analisar**          | o i-Educar |
 |------------------------|------------|
 | **Para o propósito de** | Identificar e caracterizar pontos do código que possam causar falhas|
@@ -9,6 +7,7 @@
 | **Do ponto de vista da** | Comunidade de desenvolvedores do i-Educar |
 | **No contexto da**     | Disciplina de Qualidade de Software |
 
+**Tabela 1** - Objetivo de Medição 1: Confiabilidade.
 ---
 
 ### Perguntas e Hipóteses de Medição

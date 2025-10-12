@@ -30,64 +30,81 @@ Esta análise contextualiza a segurança não apenas como um requisito técnico,
 
 ---
 
+
 ### Perguntas e Hipóteses de Medição
 
-**Questão 1: ...**
-> ...?
+**Questão 1: O sistema i-Educar possui mecanismos eficazes de autenticação, autorização e controle de acesso?**
 
-* **Hipótese 1.1 (H1.1):** ...
-* **Hipótese 1.2 (H1.2):** ...
-* ...
+* **Hipótese 1.1 (H1.1):** O sistema restringe adequadamente o acesso às funcionalidades de acordo com o perfil do usuário.  
+* **Hipótese 1.2 (H1.2):** As senhas são armazenadas de com hashing e criptografia.  
 
-**Questão 2: ...**
-> ...?
+---
 
-* **Hipótese 2.1 (H2.1):** ...
-* ...
+**Questão 2: O sistema i-Educar possui práticas e ferramentas eficazes de monitoramento e auditoria de segurança?**
 
-**Questão 3: ...**
-> ...?
+* **Hipótese 2.1 (H2.1):** As ações críticas dos usuários são registradas em logs de auditoria.  
+* **Hipótese 2.2 (H2.2):** O sistema permite rastrear atividades suspeitas ou tentativas de acesso indevido.  
+* **Hipótese 2.3 (H2.3):** Há mecanismos de alerta ou resposta automatizada a incidentes de segurança.  
 
-* **Hipótese 3.1 (H3.1):** ...
+---
+
+**Questão 3: O desenvolvimento do i-Educar segue práticas de desenvolvimento seguro e análise de vulnerabilidades?**
+
+* **Hipótese 3.1 (H3.1):** O código é periodicamente revisado para identificar vulnerabilidades conhecidas.  
+* **Hipótese 3.2 (H3.2):** Há cobertura de testes automatizados voltados à segurança.  
+* **Hipótese 3.3 (H3.3):** Ferramentas de análise estática são utilizadas durante o ciclo de desenvolvimento.  
 
 ---
 
 ### Seleção das Métricas
 
-**Questão 1: ...**
+**Questão 1: Mecanismos de Autenticação e Autorização**
 
-* **Métrica 1.1: ...**
-    * **Definição:** ...
-    * **Fórmula:** ...
-    * **Coleta:** ...
-    * **Propósito:** ...
+* **Métrica 1.1 – Presença de autenticação**  
+    * **Definição:** Verificação se o sistema exige login para acessar páginas protegidas.  
+    * **Coleta:** Teste manual: tentar acessar URLs sem estar autenticado e verificar se o sistema redireciona para a tela de login.  
+    * **Propósito:** Confirmar a existência de controle de autenticação básico.  
 
-* **Métrica 1.2: ...**
-
-    * **Definição:** ...
-    * **Fórmula:** ...
-    * **Coleta:** ...
-    * **Propósito:** ...
-
-**Questão 2: .**
-
-* **Métrica 2.1: ...**
-
-    * **Definição:** ...
-    * **Coleta:** ...
-    * **Propósito:** ...
-
-**Questão 3: ...**
-
-* **Métrica 3.1: ...**
-
-    * **Definição:** ...
-    * **Coleta:** ...
-    * **Propósito:** ...
+* **Métrica 1.2 – Existência de papéis/perfis de usuário**  
+    * **Definição:** Quantidade de perfis de usuário com permissões distintas.  
+    * **Coleta:** Análise documental (ex: listagem de perfis no painel de administração ou código fonte).  
+    * **Propósito:** Avaliar se há segregação de funções e autorização diferenciada.  
 
 ---
 
-### Relação entre a Confiabilidade, Perguntas e Métricas
+**Questão 2: Monitoramento e Auditoria**
 
-![Relação entre a Confiabilidade, Perguntas e Métricas]()
+* **Métrica 2.1 – Existência de logs de ações**  
+    * **Definição:** Verificação se o sistema armazena logs de ações como login, exclusão, alteração.  
+    * **Coleta:** Annálise com o grupo de mantenedores do sistema.  
+    * **Propósito:** Identificar se há rastreabilidade mínima de eventos de segurança.  
+
+* **Métrica 2.2 – Existência de registro de falhas de login**  
+    * **Definição:** Verificação se tentativas de login incorretas são registradas.  
+    * **Coleta:** Tentar efetuar logins inválidos e verificar se o evento é exibido em logs ou relatórios.  
+    * **Propósito:** Avaliar a capacidade de monitorar possíveis ataques de força bruta.  
+
+---
+
+**Questão 3: Desenvolvimento Seguro**
+
+* **Métrica 3.1 – Presença de testes automatizados**  
+    * **Definição:** Quantidade de testes automatizados existentes no projeto.  
+    * **Coleta:** Inspecionar repositório.  
+    * **Propósito:** Confirmar práticas básicas de validação de código.  
+
+* **Métrica 3.2 – Frequência de atualizações de dependências**  
+    * **Definição:** Intervalo médio entre atualizações de dependências do projeto.  
+    * **Coleta:** Analisar histórico de commits e datas de atualização.  
+    * **Propósito:** Avaliar se o projeto é mantido atualizado e protegido contra vulnerabilidades conhecidas.  
+
+---
+
+### Relação entre a Segurança, Perguntas e Métricas
+
+| **Questão** | **Métricas Simplificadas** | **Tipo de Coleta** |
+| ------------ | --------------------------- | ------------------ |
+| 1 – Autenticação e Autorização | Presença de autenticação; Perfis de usuário | Teste manual / Análise documental |
+| 2 – Monitoramento e Auditoria | Existência de logs; Registro de falhas de login | Teste funcional / Observação |
+| 3 – Desenvolvimento Seguro | Presença de testes; Frequência de atualização de dependências | Inspeção do repositório / Histórico de commits |
 

@@ -107,6 +107,8 @@ Para decompor o objetivo de análise da Confiabilidade, foram formuladas as segu
 
 ![Relação entre a Confiabilidade, Perguntas e Métricas](../assets/diagrama_confiabilidade.png)
 
+<p align="center"><b>Figura 1</b> - Diagrama ilustrando a relação entre a característica de Confiabilidade, as perguntas formuladas e as métricas definidas na abordagem GQM.</p>
+
 <!-- AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM SUAS RESPECTIVAS TABELAS, PERGUNTAS, HIPÓTESES, MÉTRICAS E DIAGRAMAS
 
 pensei que esse próximo tópico poderia ser o mesmo para os 3 objetivos de medição, já que a gente vai usar os mesmos níveis de pontuação e critérios de julgamento para todos, então ele fica no final -->

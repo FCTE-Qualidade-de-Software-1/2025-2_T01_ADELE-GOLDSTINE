@@ -1,9 +1,9 @@
 
 # Abordagem GQM
 
-A metodologia **GQM (Goal-Question-Metric)** é uma abordagem estruturada para definição e avaliação de métricas em projetos de software. Ela parte de objetivos claros de medição, desdobrando-os em perguntas específicas que ajudam a entender como alcançar esses objetivos. Por fim, essas perguntas são respondidas por meio de métricas objetivas, que fornecem dados concretos para análise.
+A metodologia GQM (Goal-Question-Metric) foi empregada para estruturar a avaliação de qualidade do software i-Educar, com foco na característica de Confiabilidade. A escolha desta característica foi motivada por inúmeros relatos de profissionais da educação sobre instabilidades e falhas no sistema, o que a torna um ponto crítico para a usabilidade e eficácia do produto em seu ambiente de operação.
 
-O GQM é amplamente utilizado para garantir que as métricas coletadas estejam alinhadas com os objetivos estratégicos do projeto, promovendo decisões baseadas em dados e melhorando a qualidade do produto final. A abordagem é composta por três níveis principais:
+A abordagem GQM garante que as métricas coletadas estejam diretamente alinhadas aos objetivos da avaliação, transformando um problema de negócio (baixa confiabilidade percebida) em um plano de medição concreto e orientado a dados.
 
 1. **Objetivo (Goal):** Define o que se deseja alcançar, considerando o propósito, o objeto de estudo, o ponto de vista e o contexto.
 2. **Perguntas (Questions):** Identificam os aspectos específicos que precisam ser avaliados para atingir o objetivo.
@@ -17,7 +17,7 @@ Essa metodologia é especialmente útil em projetos complexos, onde a medição 
 
 | **Analisar**          | o i-Educar |
 |------------------------|------------|
-| **Para o propósito de** | Identificar pontos do código que possam causar falhas |
+| **Para o propósito de** | Identificar e caracterizar pontos do código que possam causar falhas|
 | **Com respeito a**     | Confiabilidade |
 | **Do ponto de vista da** | Comunidade de desenvolvedores do i-Educar |
 | **No contexto da**     | Disciplina de Qualidade de Software |
@@ -26,21 +26,24 @@ Essa metodologia é especialmente útil em projetos complexos, onde a medição 
 
 ### Perguntas e Hipóteses de Medição
 
+Para decompor o objetivo de análise da Confiabilidade, foram formuladas as seguintes perguntas e hipóteses. As hipóteses tornam explícito o conhecimento atual sobre o sistema, que será validado pelas métricas.
+
 **Questão 1: Maturidade**
 > Com que frequência o código existente gera defeitos?
 
-* **Hipótese 1.1 (H1.1):** Os módulos priorizados (**Escola**, **Servidores** e **Educacenso**) apresentarão uma **densidade de defeitos** (bugs reportados por KLOC) superior à de outros módulos, indicando que as áreas mais críticas do sistema são também as mais propensas a falhas.
-* **Hipótese 1.2 (H1.2):** O **percentual de commits de correção** (cujas mensagens contêm termos como "fix", "bugfix", "corrige") será consistentemente alto no histórico do projeto, sugerindo que uma parcela significativa do esforço de desenvolvimento é dedicada à correção de falhas preexistentes.
+* **Hipótese 1.1 (H1.1):** Os módulos de maior importância para o negócio (**Escola**, **Servidores** e **Educacenso**) apresentarão uma **densidade de defeitos** (bugs por KLOC) pelo menos 20% superior à média dos demais módulos do sistema.
+
+* **Hipótese 1.2 (H1.2):** O **percentual de commits de correção** no histórico do projeto será superior a 15%, indicando que uma parcela significativa do esforço de desenvolvimento é reativa, focada na correção de falhas existentes.
 
 **Questão 2: Tolerância a Falhas**
 > O código está preparado para lidar com erros inesperados durante a execução?
 
-* **Hipótese 2.1 (H2.1):** Uma análise por amostragem revelará um baixo **índice de tratamento de exceções** (`try-catch`) em operações críticas, como conexões com banco de dados e manipulação de arquivos, indicando uma fragilidade na defesa contra erros em tempo de execução.
+* **Hipótese 2.1 (H2.1):** Menos de 50% das operações críticas de entrada/saída (I/O), como conexões com banco de dados e manipulação de arquivos nos módulos priorizados, possuirão um mecanismo adequado de tratamento de exceções (try-catch).
 
 **Questão 3: Recuperabilidade**
 > O sistema possui mecanismos de recuperação de dados que um desenvolvedor possa verificar e manter?
 
-* **Hipótese 3.1 (H3.1):** A **análise qualitativa das rotinas de backup** mostrará que o código é pouco documentado e de difícil compreensão, tornando a manutenção e validação desses mecanismos um processo de alto risco para os desenvolvedores da comunidade.
+* **Hipótese 3.1 (H3.1):** A **análise qualitativa das rotinas de backup** revelará uma baixa pontuação de manutenibilidade (inferior a 5 em 10), devido à falta de documentação clara e à complexidade do código, representando um risco para a manutenção desses mecanismos.
 
 ---
 
@@ -51,31 +54,52 @@ Essa metodologia é especialmente útil em projetos complexos, onde a medição 
 * **Métrica 1.1: Densidade de Defeitos no Código**
     * **Definição:** Número de *issues* com a label `bug` no repositório GitHub, normalizado por mil linhas de código (KLOC).
     * **Fórmula:** `(Número total de issues "bug") / (Total de linhas de código / 1000)`
-    * **Coleta:** Análise do repositório GitHub para contagem de *issues*; utilização de uma ferramenta como `cloc` para contar as linhas de código.
-    * **Propósito:** Identificar quais partes do sistema são mais propensas a erros.
+    * **Coleta:** 
+        1. Listar todas as issues com a label `bug` via API do GitHub ou busca manual.
+        2. Contar as linhas de código PHP (`.php`) para os módulos priorizados (Escola, Servidores, Educacenso) e para o restante do sistema separadamente, utilizando a ferramenta `cloc`.
+        3. Aplicar a fórmula para os dois escopos (prioritários vs. não prioritários) e comparar os resultados para validar a **H1.1**.
+    * **Propósito:** Identificar se as áreas mais críticas do sistema são também as que concentram mais defeitos reportados.
 
-* **Métrica 1.2: Análise de Commits de Correção**
+* **Métrica 1.2: Percentual de Commits de Correção**
 
-    * **Definição:** Percentual de *commits* cuja mensagem contém palavras-chave como "fix", "corrige" ou "bugfix".
+    * **Definição:** Percentual de **commits** cuja mensagem contém palavras-chave como "fix", "corrige" ou "bugfix".
     * **Fórmula:** `(Número de commits de correção / Número total de commits) * 100`
-    * **Coleta:** Análise do histórico de *logs* do Git (`git log`).
-    * **Propósito:** Avaliar se o esforço de desenvolvimento é mais reativo (corrigindo falhas) do que proativo.
+    * **Coleta:**
+        1. Definir um período de análise (ex: últimos 24 meses).
+        2. Contar o número total de commits com `git log --oneline | wc -l`
+        3. Contar o número de commits de correção com `git log --grep="fix\|bugfix\|corrige\|correção\|hotfix" --regexp-ignore-case --oneline | wc -l.`
+        4. Aplicar a fórmula para validar a **H1.2**.
+    * **Propósito:** Avaliar se o esforço de desenvolvimento é mais reativo (corrigindo falhas) do que proativo (desenvolvendo novas funcionalidades).
 
 **Questão 2: Tolerância a Falhas**
 
 * **Métrica 2.1: Índice de Tratamento de Exceções**
 
-    * **Definição:** Verificação (por amostragem ou script) da presença e do uso de blocos `try-catch` em operações críticas (ex: conexões com banco de dados, manipulação de arquivos) nos módulos priorizados.
+    * **Definição:** Percentual de operações de I/O críticas que estão contidas dentro de um bloco de tratamento de exceções (`try-catch`).
+    * **Fórmula:** `(Número de operações críticas com try-catch / Número total de operações críticas) * 100`
     * **Coleta:** Revisão manual de código ou uso de scripts de análise estática para buscar padrões de tratamento de exceções.
-    * **Propósito:** Medir a preparação do código para lidar com erros inesperados durante a execução.
+        1. Definir a lista de "operações críticas": chamadas de função/método para conexão com banco de dados ex:( `new PDO(`, `pg_connect`), manipulação de arquivos (ex: `fopen`, `file_put_contents`) etc.
+        2. Nos diretórios dos módulos priorizados, executar scripts de busca (`grep` ou `ack`) para contar o número total de ocorrências dessas operações.
+        3. Executar um segundo script para contar quantas dessas ocorrências estão sintaticamente dentro de um bloco `try { ... }`.
+        4. Aplicar a fórmula para validar a **H2.1**.
+    * **Propósito:** Medir a robustez do código contra erros em tempo de execução.
 
 **Questão 3: Recuperabilidade**
 
-* **Métrica 3.1: Revisão de Código de Backup/Restore**
+* **Métrica 3.1: Análise Qualitativa de Código de Backup**
 
-    * **Definição:** Análise qualitativa (baseada em checklist) das rotinas de backup para verificar se são compreensíveis, bem documentadas e se seguem boas práticas.
+    * **Definição:** Avaliação qualitativa, baseada em um checklist estruturado, das rotinas de backup para verificar sua compreensibilidade, documentação e aderência a boas práticas.
     * **Coleta:** Inspeção manual do código-fonte das funcionalidades de backup.
-    * **Propósito:** Avaliar a manutenibilidade e a confiabilidade dos mecanismos de recuperação de dados.
+        1. Identificar os arquivos/módulos responsáveis pela funcionalidade de backup/restauração no código-fonte.
+        2. Realizar uma inspeção manual do código aplicando o checklist abaixo. Cada item recebe uma nota de 0 (ausente) a 2 (excelente).
+        3. Checklist de Análise:
+            * **Documentação (Comentários):** O código possui comentários explicando a lóǵica geral e os passos críticos?
+            * **Clareza do Código:** Os nomes de variáveis e funções são intuitivos e seguem um padrão?
+            * **Tratamento de Erros:** O código verifica falhas potenciais (ex: falha de escrita em disco, permissões) e as reporta de forma adequada?
+            * **Configuração:** As configurações críticas (ex: caminhos de backup, credenciais) são externalizadas e não "hard-coded"?
+            * **Testabilidade:** A estrutura do código permite a criação de testes unitários ou de integração?
+        4. A pontuação final (0 a 10) será a soma dos pontos do checklist, usada para validar a **H3.1**.
+    * **Propósito:** Avaliar a manutenibilidade e a confiabilidade percebida dos mecanismos de recuperação de dados do ponto de vista de um desenvolvedor.
 
 ---
 

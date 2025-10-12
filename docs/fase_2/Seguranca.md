@@ -5,7 +5,6 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
  
 ## Objetivo de Medição 3 - Segurança
 
-### Objetivo de Análise: Segurança do i-Educar
 
 O objetivo principal da análise da característica Segurança do sistema i-Educar é assegurar a proteção eficaz dos dados pessoais e institucionais que são continuamente processados e armazenados pelo sistema, especialmente considerando sua implementação em redes públicas de ensino, onde a integridade, confidencialidade e disponibilidade da informação são imperativas. Essa avaliação visa identificar e quantificar aspectos vitais que possam afetar a confiança dos usuários e a conformidade com a Lei Geral de Proteção de Dados (LGPD), além de garantir que vulnerabilidades técnicas sejam mitigadas pela comunidade de desenvolvedores e mantenedores open-source.
 

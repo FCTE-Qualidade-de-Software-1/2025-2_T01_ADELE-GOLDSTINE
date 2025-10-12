@@ -36,10 +36,14 @@ theme:
 
 nav:
   - Home: "index.md"
-  - Fase 1 - Processo de Avaliação:
+  - Fase 1 - Propósito da Avaliação:
     - Objeto de Estudo: "fase_1/objeto-estudo.md"
     - Contexto da Avaliação: "fase_1/contexto-avaliacao.md"
     - Modelo de Qualidade: "fase_1/modelo-qualidade.md"
     - Conclusão: "fase_1/conclusao.md"
+  - Fase 2 - Especificação da Avaliação:
+    - Abordagem GQM: "fase_2/GQM.md"
+    - Conclusão: "fase_2/conclusao.md"
   - Contribuições:
     - Fase 1: "contribuicoes/fase-1.md"
+    - Fase 2: "contribuicoes/fase-2.md"

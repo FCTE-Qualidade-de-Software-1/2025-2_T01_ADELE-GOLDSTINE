@@ -26,4 +26,5 @@ SOLINGEN, Rini van; BERGHOUT, Egon. The Goal/Question/Metric Method: A Practical
 | :----: | :--------: | :---------------------------------------------------------------------------- | :----------------------------------------------------- | :---------------------------------------------------- |
 | `1.0`  | 12/10/2025 | Criação do documento e adição da seção Confiabilidade do método GQM | [Manuella Valadares](https://github.com/manuvaladares)         |       |
 | `1.1` | 12/10/2025 | Revisão e refinamento da seção Confiabilidade. As hipóteses foram tornadas mais específicas e o plano de coleta de cada métrica foi detalhado. | Marcos Marinho | [Marcos Marinho](https://github.com/devMarcosVM) |
+| `1.2`  | 12/10/2025 | Separação do documento e adição da seção Segurança (objetivos)  | [Zenilda Vieira](https://github.com/ZenildaVieira)         |       |
 ---

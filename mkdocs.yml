@@ -43,6 +43,10 @@ nav:
     - Conclusão: "fase_1/conclusao.md"
   - Fase 2 - Especificação da Avaliação:
     - Abordagem GQM: "fase_2/GQM.md"
+    - Medição 1 - Confiabilidade: "fase_2/Confiabilidade.md"
+    - Medição 2 - Manutenabilidade: "fase_2/Manutenabilidade.md"
+    - Medição 3 - Segurança: "fase_2/Seguranca.md"
+    - Níveis de Pontuação e critérios de julgamento: "fase_2/niveis_pontuacao_criterios_julgamento.md"
     - Conclusão: "fase_2/conclusao.md"
   - Contribuições:
     - Fase 1: "contribuicoes/fase-1.md"

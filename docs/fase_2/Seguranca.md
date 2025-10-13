@@ -108,3 +108,8 @@ Esta análise contextualiza a segurança não apenas como um requisito técnico,
 | 2 – Monitoramento e Auditoria | Existência de logs; Registro de falhas de login | Teste funcional / Observação |
 | 3 – Desenvolvimento Seguro | Presença de testes; Frequência de atualização de dependências | Inspeção do repositório / Histórico de commits |
 
+
+![Relação entre a Segurança, Perguntas e Métricas](../assets/diagrama_seguranca.png)
+
+<p align="center"><b>Figura 3</b> - Diagrama ilustrando a relação entre a característica de Segurança, as perguntas formuladas e as métricas definidas na abordagem GQM.</p>
+

@@ -8,8 +8,11 @@ A metodologia GQM (Goal-Question-Metric) foi empregada para estruturar a avalia�
 
 A abordagem GQM garante que a avaliação de cada uma dessas características esteja alinhada a objetivos claros, transformando desafios de negócio e operacionais em um plano de medição concreto e orientado a dados. A metodologia é composta por três níveis principais:
 
-1.  **Objetivo (Goal):** Define o que se deseja alcançar, considerando o propósito, o objeto de estudo, o ponto de vista e o contexto.
-2.  **Perguntas (Questions):** Identificam os aspectos específicos que precisam ser avaliados para atingir o objetivo.
-3.  **Métricas (Metrics):** Fornecem os dados necessários para responder às perguntas, permitindo uma análise quantitativa ou qualitativa.
+1. **Objetivo (Goal):** Define o que se deseja alcançar, considerando o propósito, o objeto de estudo, o ponto de vista e o contexto.
+2. **Perguntas (Questions):** Identificam os aspectos específicos que precisam ser avaliados para atingir o objetivo.
+3. **Métricas (Metrics):** Fornecem os dados necessários para responder às perguntas, permitindo uma análise quantitativa ou qualitativa.
 
 Essa metodologia é, portanto, essencial para analisar de forma aprofundada as características priorizadas e garantir o sucesso, a conformidade e a longevidade do sistema.
+
+![As quatro fases do GQM](../assets/fases_gqm.png)
+<figcaption>Figura 1: As Quatro Fases do GQM. Autor: Basili e Weiss, 1984</figcaption>

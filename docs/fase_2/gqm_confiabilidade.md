@@ -2,9 +2,9 @@
 
 | **Analisar**          | o i-Educar |
 |------------------------|------------|
-| **Para o propósito de** | Identificar e caracterizar pontos do código que possam causar falhas|
+| **Para o propósito de** | Avaliar|
 | **Com respeito a**     | Confiabilidade |
-| **Do ponto de vista da** | Comunidade de desenvolvedores do i-Educar |
+| **Do ponto de vista da** | Comunidade de desenvolvedores |
 | **No contexto da**     | Disciplina de Qualidade de Software |
 
 **Tabela 1** - Objetivo de Medição 1: Confiabilidade.
@@ -15,19 +15,33 @@
 Para decompor o objetivo de análise da Confiabilidade, foram formuladas as seguintes perguntas e hipóteses. As hipóteses tornam explícito o conhecimento atual sobre o sistema, que será validado pelas métricas.
 
 **Questão 1: Maturidade**
-> Com que frequência o código existente gera defeitos?
+<!--  Antiga pergunta
+a professora nao gostou da palavra frequencia e existente> 
+Com que frequência o código existente gera defeitos?
+ -->
+
+> Qual é a estabilidade do código em relação à ocorrência de defeitos?
 
 * **Hipótese 1.1 (H1.1):** Os módulos de maior importância para o negócio (**Escola**, **Servidores** e **Educacenso**) apresentarão uma **densidade de defeitos** (bugs por KLOC) pelo menos 20% superior à média dos demais módulos do sistema.
 
 * **Hipótese 1.2 (H1.2):** O **percentual de commits de correção** no histórico do projeto será superior a 15%, indicando que uma parcela significativa do esforço de desenvolvimento é reativa, focada na correção de falhas existentes.
 
 **Questão 2: Tolerância a Falhas**
-> O código está preparado para lidar com erros inesperados durante a execução?
+<!--  Antiga pergunta
+A professora nao falou sobre essa pergunta
+O código está preparado para lidar com erros inesperados durante a execução?
+ -->
+> Qual é o nível de robustez do código contra falhas em tempo de execução?
 
 * **Hipótese 2.1 (H2.1):** Menos de 50% das operações críticas de entrada/saída (I/O), como conexões com banco de dados e manipulação de arquivos nos módulos priorizados, possuirão um mecanismo adequado de tratamento de exceções (try-catch).
 
 **Questão 3: Recuperabilidade**
+<!--  Antiga pergunta
+A professora achou que tinha muita coisa
 > O sistema possui mecanismos de recuperação de dados que um desenvolvedor possa verificar e manter?
+ -->
+
+> Qual é a eficácia dos mecanismos de recuperação de dados do sistema?
 
 * **Hipótese 3.1 (H3.1):** A **análise qualitativa das rotinas de backup** revelará uma baixa pontuação de manutenibilidade (inferior a 5 em 10), devido à falta de documentação clara e à complexidade do código, representando um risco para a manutenção desses mecanismos.
 

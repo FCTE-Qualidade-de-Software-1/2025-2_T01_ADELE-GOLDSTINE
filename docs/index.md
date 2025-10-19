@@ -10,10 +10,6 @@ O i-Educar é um software livre que descomplica e torna mais eficaz a gestão do
 
 A plataforma é utilizada por mais de 80 municípios brasileiros, atende mais de 2050 alunos e impacta mais de 500.000 alunos. Por conta de sua relevância e do contexto educacional que ele visa impactar, o grupo teve forte interesse em utilizá-lo como software de análise na disciplina.
 
-<div align="center">
-  <font size="4"><p style="text-align: center; margin-bottom: 50px;"><b>Figura 1: Logo i-Educar</b></p></font>
-</div>
-
 <div
     align="center">
     <img
@@ -21,6 +17,10 @@ A plataforma é utilizada por mais de 80 municípios brasileiros, atende mais de
     alt="Logo do i-Educar"
     style=" max-width: 80%; height: auto; margin-bottom: 20px;"
     >
+</div>
+
+<div align="center">
+  <font size="4"><figcaption>Figura 1: Logo i-Educar</figcaption></font>
 </div>
 
 ---
@@ -44,10 +44,6 @@ Após a guerra, Herman Goldstine passou a integrar o **Instituto de Estudos Avan
 
 Adele Goldstine é reconhecida como uma das figuras fundamentais da história da computação. Seu trabalho abriu espaço para mulheres na área, num contexto em que sua atuação era muitas vezes invisibilizada. Hoje, sua biografia inspira pesquisas acadêmicas e movimentos pela valorização das pioneiras da ciência e tecnologia.
 
-<div align="center">
-  <font size="4"><p style="text-align: center; margin-bottom: 50px;"><b>Figura 2: Adele Goldstine</b></p></font>
-</div>
-
 <div
     align="center">
     <img
@@ -55,6 +51,10 @@ Adele Goldstine é reconhecida como uma das figuras fundamentais da história da
     alt="Retrato da Adele Goldstine"
     style=" max-width: 80%; height: auto; margin-bottom: 20px;"
     >
+</div>
+
+<div align="center">
+  <font size="4"><figcaption>Figura 2: Adele Goldstine</figcaption></font>
 </div>
 
 ---

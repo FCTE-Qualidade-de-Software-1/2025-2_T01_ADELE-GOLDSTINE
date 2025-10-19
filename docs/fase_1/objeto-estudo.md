@@ -27,6 +27,10 @@ A arquitetura do i-Educar é modular, o que facilita a análise de componentes e
 
 ![Arquitetura do i-Educar](../assets/arquitetura.png)
 
+<div align="center">
+  <font size="4"><figcaption>Figura 1: Diagrama de alto nível dos módulos do i-Educar</figcaption></font>
+</div>
+
 Essa estrutura de código aberto tem implicações diretas na nossa avaliação:
 
 * **O que é possível medir:** Dado o acesso completo ao código-fonte no GitHub, podemos realizar uma análise estática aprofundada da **Manutenibilidade** do software, utilizando ferramentas para medir a complexidade do código, a duplicação e a aderência a padrões de desenvolvimento. Da mesma forma, a **Segurança** pode ser avaliada através da busca por vulnerabilidades conhecidas no código.
@@ -64,6 +68,10 @@ O i-Educar se classifica como um **Sistema de Gestão Educacional (SGE)** de có
 Aqui descrevemos os Objetivos de Desenvolvimento Sustentável com os quais o i-Educar se conecta, com metas/indicadores relevantes e justificativas de como o software pode contribuir para alcançá-los.
 
 ![ODS relacionada](../assets/ods.png)
+
+<div align="center">
+  <font size="4"><figcaption>Figura 2: Objetivos de Desenvolvimento Sustentável relacionados ao projeto</figcaption></font>
+</div>
 
 ### ODS 4 — Educação de Qualidade
 

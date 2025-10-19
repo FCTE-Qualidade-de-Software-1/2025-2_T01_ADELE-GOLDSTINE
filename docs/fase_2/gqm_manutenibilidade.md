@@ -11,10 +11,14 @@ O objetivo de medição está definido conforme o template GQM (Goal-Question-Me
 | Elemento | Descrição |
 |----------|-----------|
 | Analisar | i-Educar |
-| Propósito | AVALIAR |
-| Respeito a | MANUTENIBILIDADE |
-| Ponto de Vista | EQUIPE DE DESENVOLVIMENTO |
-| Contexto | DISCIPLINA DE QUALIDADE DE SOFTWARE 1 |
+| Propósito | Avaliar |
+| Respeito a | Manutenibilidade |
+| Ponto de Vista | Equipe de desenvolvimento |
+| Contexto | Disciplina de Qualidade de Software 1 |
+
+<div align="center">
+  <font size="4"><figcaption>Tabela 2: Objetivo de Medição: Manutenibilidade</figcaption></font>
+</div>
 
 ## Perguntas, Hipóteses e Métricas
 
@@ -32,7 +36,7 @@ Este objetivo se desdobra em três perguntas chave, cada uma abordando um aspect
 | **M1: Coupling Between Objects (CBO)** | ✅ **Bom:** CBO ≤ 10<br>⚠️ **Aceitável:** 10 < CBO ≤ 15<br>❌ **Crítico:** CBO > 15 |
 | **M2: Percentual de Código Repetido** | ✅ **Bom:** M2 ≤ 3%<br>⚠️ **Aceitável:** 3% < M2 ≤ 5%<br>❌ **Crítico:** M2 > 5% |
 
-### Pergunta 2: Quão complexo e difícil é entender o código-fonte do i-Educar?
+### Pergunta 2: Quão complexo é entender o código-fonte do i-Educar?
 
 | Item | Descrição |
 |------|-----------|
@@ -71,5 +75,8 @@ Este objetivo se desdobra em três perguntas chave, cada uma abordando um aspect
 
 
 ![Diagrama](../assets/GQM-manutenibilidade.png)
-<figcaption>Figura 1: Diagrama GQM. Autor: <a href="http://github.com/andre-maia51">André Maia</figcaption>
+
+<div align="center">
+  <font size="4"><figcaption>Figura 3: Diagrama GQM. Autor: <a href="http://github.com/andre-maia51">André Maia</figcaption></font>
+</div>
 

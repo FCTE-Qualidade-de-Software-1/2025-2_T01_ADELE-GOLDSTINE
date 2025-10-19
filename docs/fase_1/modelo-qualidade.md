@@ -2,6 +2,10 @@
 
 ![Modelo de qualidade](../assets/modelo-qualidade.jpg)
 
+<div align="center">
+  <font size="4"><figcaption>Figura 3: Modelo de Qualidade</figcaption></font>
+</div>
+
 ## Características de Qualidade
 
 Para a avaliação de qualidade do software i-Educar, foram selecionadas e priorizadas três características do modelo de qualidade de produto da norma ISO/IEC 25010: **Confiabilidade**, **Segurança** e **Manutenibilidade**. A escolha foi guiada por um método explícito e quantitativo para garantir uma decisão robusta, alinhada aos objetivos do negócio e às necessidades dos stakeholders.
@@ -34,6 +38,10 @@ A análise resultou na seguinte classificação, que abrange todas as caracterí
 | Compatibilidade | 2 | 2 | 3 | 1,3 | — |
 | Portabilidade | 2 | 1 | 2 | 1,0 | — |
 
+<div align="center">
+  <font size="4"><figcaption>Tabela 1: Classificação das características</figcaption></font>
+</div>
+
 ### 3. Justificativas da Priorização
 
 A seleção das três características principais é justificada pelo contexto crítico do i-Educar como um sistema de gestão educacional para o setor público.
@@ -44,8 +52,16 @@ A seleção das três características principais é justificada pelo contexto c
 | **2. Segurança** | A Segurança (Peso 10,0) é fundamental, pois o sistema processa um grande volume de dados pessoais e sensíveis de menores de idade, enquadrando-se diretamente nas exigências da Lei Geral de Proteção de Dados (LGPD). Uma falha de segurança exporia dados, resultaria em sanções legais e quebraria a confiança da comunidade. <br> **Stakeholders:** Essencial para **Gestores educacionais** (compliance regulatório), **Alunos/Responsáveis** (proteção de sua privacidade) e **Desenvolvedores** (uma única vulnerabilidade pode comprometer toda a aplicação). |
 | **3. Manutenibilidade**| A Manutenibilidade (Peso 8,0) é crucial para a sustentabilidade de um projeto de software livre como o i-Educar. Sua arquitetura legada exige esforço contínuo de evolução, correção de bugs e adaptação a novas regulamentações. Um código de fácil manutenção reduz o custo de propriedade a longo prazo e incentiva a colaboração. <br> **Stakeholders:** Facilita o trabalho da **Comunidade OSS** (contribuições e correções), reduz custos para os **Órgãos públicos** e viabiliza a customização por **Fornecedores** locais. |
 
+<div align="center">
+  <font size="4"><figcaption>Tabela 2: Justificativas das características priorizadas</figcaption></font>
+</div>
+
 O diagrama abaixo representa o organograma das características e subcaracterísticas escolhidas para o processo de avaliação de qualidade do i-Educar:
 ![Organograma das características e subcaracterísticas](../assets/caracteristicas-organograma%20.png)
+
+<div align="center">
+  <font size="4"><figcaption>Figura 4: Organograma das características selecionadas</figcaption></font>
+</div>
 
 ### 4. Trade-offs Estratégicos Considerados
 

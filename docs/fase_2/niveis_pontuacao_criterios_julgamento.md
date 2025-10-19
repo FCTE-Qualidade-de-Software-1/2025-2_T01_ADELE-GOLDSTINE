@@ -17,6 +17,10 @@ A seguir, apresenta-se a escala de pontuação definida pela equipe:
 | **Regular** | 4 - 6 | Apresenta deficiências perceptíveis que podem indicar débito técnico ou risco moderado. |
 | **Insatisfatório** | 1 - 3 | Compromete significativamente a característica de qualidade, exigindo atenção e provável refatoração. |
 
+<div align="center">
+  <font size="4"><figcaption>Tabela 4: Níveis de pontuação e critérios de julgamento</figcaption></font>
+</div>
+
 ### Critérios para Julgamento
 
 Com base nas métricas e nos níveis de pontuação definidos, foram estabelecidos critérios de julgamento para interpretar os resultados da avaliação e apoiar a tomada de decisões. Os critérios são organizados por característica e baseiam-se na média de desempenho das métricas associadas a cada uma delas.

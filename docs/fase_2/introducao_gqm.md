@@ -15,4 +15,6 @@ A abordagem GQM garante que a avaliação de cada uma dessas características es
 Essa metodologia é, portanto, essencial para analisar de forma aprofundada as características priorizadas e garantir o sucesso, a conformidade e a longevidade do sistema.
 
 ![As quatro fases do GQM](../assets/fases_gqm.png)
-<figcaption>Figura 1: As Quatro Fases do GQM. Autor: Basili e Weiss, 1984</figcaption>
+<div align="center">
+  <font size="4"><figcaption>Figura 1: As Quatro Fases do GQM. Autor: Basili e Weiss, 1984</figcaption></font>
+</div>

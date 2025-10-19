@@ -7,7 +7,10 @@
 | **Do ponto de vista da** | Comunidade de desenvolvedores |
 | **No contexto da**     | Disciplina de Qualidade de Software |
 
-**Tabela 1** - Objetivo de Medição 1: Confiabilidade.
+<div align="center">
+  <font size="4"><figcaption>Tabela 1: Objetivo de Medição: Confiabilidade</figcaption></font>
+</div>
+
 ---
 
 ### Perguntas e Hipóteses de Medição
@@ -107,5 +110,6 @@ A professora achou que tinha muita coisa
 
 ![Relação entre a Confiabilidade, Perguntas e Métricas](../assets/diagrama_confiabilidade.png)
 
-<p align="center"><b>Figura 1</b> - Diagrama ilustrando a relação entre a característica de Confiabilidade, as perguntas formuladas e as métricas definidas na abordagem GQM.</p>
-
+<div align="center">
+  <font size="4"><figcaption>Figura 2: Diagrama ilustrando a relação entre a característica de Confiabilidade, as perguntas formuladas e as métricas definidas na abordagem GQM.</figcaption></font>
+</div>

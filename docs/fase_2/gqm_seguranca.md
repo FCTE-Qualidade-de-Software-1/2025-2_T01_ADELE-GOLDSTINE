@@ -14,9 +14,9 @@ A análise de segurança do sistema i-Educar tem como propósito fundamental gar
 | **Do ponto de vista da** | Equipe de desenvolvimento                                              |
 | **No contexto da**       | Disciplina de Qualidade de Software 1 (FCTE - UnB)                     |
 
-
-<p align="center"><b>Tabela 3</b> - Objetivo de Medição 3: Segurança</p>
-
+<div align="center">
+  <font size="4"><figcaption>Tabela 3: Objetivo de Medição: Segurança</figcaption></font>
+</div>
 
 Utilizando o modelo Goal Question Metric (GQM), essa análise traduz a preocupação abstrata com a segurança em metas mensuráveis, por meio das seguintes diretrizes:
 
@@ -111,5 +111,7 @@ Esta análise contextualiza a segurança não apenas como um requisito técnico,
 
 ![Relação entre a Segurança, Perguntas e Métricas](../assets/diagrama_seguranca.png)
 
-<p align="center"><b>Figura 3</b> - Diagrama ilustrando a relação entre a característica de Segurança, as perguntas formuladas e as métricas definidas na abordagem GQM.</p>
+<div align="center">
+  <font size="4"><figcaption>Figura 4: Diagrama ilustrando a relação entre a característica de Segurança, as perguntas formuladas e as métricas definidas na abordagem GQM.</figcaption></font>
+</div>
 

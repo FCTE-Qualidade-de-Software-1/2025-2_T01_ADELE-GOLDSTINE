@@ -1,22 +1,32 @@
 # Conclusão
 
+A Fase 2, "Especificação da Avaliação", concluiu o planejamento metodológico para a análise de qualidade do software i-Educar. Utilizando a abordagem GQM (Goal-Question-Metric), esta etapa traduziu os objetivos de alto nível definidos na Fase 1 em um plano de medição concreto.
+O trabalho foi centrado na decomposição das três características priorizadas: Confiabilidade, Manutenibilidade e Segurança. Para cada uma delas, foi estabelecido um objetivo (Goal), que foi então desdobrado em perguntas específicas (Questions) para guiar a investigação. Por fim, foram selecionadas métricas (Metrics) com seus respectivos planos de coleta para responder a essas perguntas.
 
 
 ---
 
 ## Bibliografia
 
+> BASILI, Victor R. et al. Linking Software Development and Business Strategy through Measurement. IEEE Computer, v. 43, n. 4, p. 57-65, abr. 2010.
 
+> BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. Goal Question Metric Paradigm. In: MARCINIAK, John J. (Ed.). Encyclopedia of Software Engineering. New York: John Wiley & Sons, 1994. p. 528-532.
+
+> FENTON, Norman E.; PFLEEGER, Shari Lawrence. Software Metrics: A Rigorous and Practical Approach. 3. ed. Boca Raton: CRC Press, 2014.
+
+> ISO. ISO/IEC 25010:2011 – Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. Geneva: International Organization for Standardization, 2011.
+
+> MARTIN, Robert C. Código Limpo: Habilidades Práticas do Agile Software. Alta Books, 2009.
+
+> OWASP FOUNDATION. OWASP Top Ten. Disponível em: <https://owasp.org/www-project-top-ten/>. Acesso em: (21/10/2025).
+
+> SOLINGEN, Rini van; BERGHOUT, Egon. The Goal/Question/Metric Method: A Practical Guide for Quality Improvement of Software Development. London: McGraw-Hill, 1999.
 
 ---
 
 ## Referências Bibliográficas
 
-> BASILI, Victor R. et al. Linking Software Development and Business Strategy through Measurement. IEEE Computer, v. 43, n. 4, p. 57-65, abr. 2010.
 
-> BASILI, Victor R.; CALDIERA, Gianluigi; ROMBACH, H. Dieter. Goal Question Metric Paradigm. In: MARCINIAK, John J. (Ed.). Encyclopedia of Software Engineering. New York: John Wiley & Sons, 1994. p. 528-532.
-
-> SOLINGEN, Rini van; BERGHOUT, Egon. The Goal/Question/Metric Method: A Practical Guide for Quality Improvement of Software Development. London: McGraw-Hill, 1999. (Referência principal para os documentos LC00 a LC05).
 
 ---
 

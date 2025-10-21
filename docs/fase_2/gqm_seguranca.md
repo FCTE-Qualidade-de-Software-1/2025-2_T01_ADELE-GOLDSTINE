@@ -7,10 +7,6 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
 
 
 <div align="center">
-  <font size="4"><figcaption>Tabela 3: Objetivo de Medição: Segurança</figcaption></font>
-</div>
-
-<div align="center">
   <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; text-align: left;">
     <tr>
       <th><b>Analisar</b></th>
@@ -121,6 +117,14 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
 
 ---
 
+### Critérios de Julgamento para Segurança
+
+* **Aceitável:** ≥ 70% das métricas classificadas como "Bom" ou "Excelente". O sistema adere às boas práticas de codificação segura.
+* **Parcialmente aceitável:** Entre 40% e 69% das métricas com nível "Regular" ou superior. Foram identificadas vulnerabilidades de baixo ou médio risco.
+* **Inaceitável:** > 30% das métricas atingindo o nível "Insatisfatório". Existem vulnerabilidades críticas que comprometem a integridade ou a confidencialidade dos dados.
+
+---
+
 ### Relação entre a Segurança, Perguntas e Métricas
 
 
@@ -149,13 +153,13 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
   </table>
 
   <div style="margin-top: 8px; text-align: center;">
-    <font size="4"><figcaption><b>Tabela 4:</b> Questões e Métricas Simplificadas</figcaption></font>
+    <font size="4"><figcaption>Tabela 4: Questões e Métricas Simplificadas</figcaption></font>
   </div>
 </div>
 
 
 <div align="center">
-  <img src="../assets/diagrama_seguranca.png" alt="Relação entre a Segurança, Perguntas e Métricas" style="max-width: 80%; height: auto; border-radius: 8px;">
+  <img src="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE/blob/main/docs/assets/diagrama_seguranca.png" alt="Relação entre a Segurança, Perguntas e Métricas" style="max-width: 80%; height: auto; border-radius: 8px;">
 
   <div style="margin-top: 8px; text-align: center;">
     <font size="4"><figcaption>Figura 4: Diagrama GQM - Segurança. Autor: <a href="http://github.com/ZenildaVieira">Zenilda Vieira</figcaption></font>

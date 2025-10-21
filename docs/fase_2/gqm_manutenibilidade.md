@@ -25,7 +25,7 @@
   </table>
 
   <div style="margin-top: 8px; text-align: center;">
-    <font size="4"><figcaption>Tabela 2: Objetivo de Medição: Manutenibilidade</figcaption></font>
+    <font size="4"><figcaption>Tabela 3: Objetivo de Medição: Manutenibilidade</figcaption></font>
   </div>
 </div>
 
@@ -62,7 +62,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
     * **Coleta:** Análise estática do código-fonte (ex: `phpmd` ou SonarQube) para calcular o CBO para cada classe.
     * **Pontuação de Julgamento:**
 
-      | Bom | Aceitável | Crítico |
+      | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
       | CBO ≤ 10 | 10 < CBO ≤ 15 | CBO > 15 |
 
@@ -73,7 +73,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
     * **Coleta:** Análise estática utilizando ferramentas de detecção de duplicação (ex: `phpcpd` ou SonarQube).
     * **Pontuação de Julgamento:**
 
-      | Bom | Aceitável | Crítico |
+      | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
       | M2 ≤ 3% | 3% < M2 ≤ 5% | M2 > 5% |
 
@@ -86,7 +86,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
     * **Coleta:** Análise estática por função/método (ex: `phpmd` ou SonarQube).
     * **Pontuação de Julgamento:**
 
-      | Bom | Aceitável | Crítico |
+      | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
       | CC ≤ 5 | 5 < CC ≤ 10 | CC > 10 |
 
@@ -99,7 +99,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
     * **Coleta:** Execução da suíte de testes (ex: PHPUnit) com a ferramenta de geração de relatório de cobertura habilitada (ex: Xdebug, PCOV).
     * **Pontuação de Julgamento:**
 
-      | Bom | Aceitável | Crítico |
+      | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
       | M3.1 ≥ 80% | 70% ≤ M3.1 < 80% | M3.1 < 70% |
 
@@ -112,7 +112,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
         3.  Calcular a densidade: `(Número de Testes / (Linhas de Código / 1000))`
     * **Pontuação de Julgamento (Sugestão):**
 
-      | Bom | Aceitável | Crítico |
+      | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
       | > 10 Testes/KLOC | 5 a 10 Testes/KLOC | < 5 Testes/KLOC |
 
@@ -123,7 +123,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
     * **Coleta:** Medição do tempo de execução do pipeline de CI (ex: GitHub Actions) ou localmente.
     * **Pontuação de Julgamento:**
 
-      | Bom | Aceitável | Crítico |
+      | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
       | M3.3 ≤ 1s | 1s < M3.3 ≤ 3s | M3.3 > 3s |
 
@@ -166,7 +166,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
   </table>
 
   <div style="margin-top: 8px; text-align: center;">
-    <font size="4"><figcaption>Tabela 3: Questões e Métricas Simplificadas</figcaption></font>
+    <font size="4"><figcaption>Tabela 4: Questões e Métricas Simplificadas</figcaption></font>
   </div>
 </div>
 

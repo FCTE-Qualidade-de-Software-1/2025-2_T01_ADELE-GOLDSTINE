@@ -31,7 +31,7 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
   </table>
 
   <div style="margin-top: 8px; text-align: center;">
-    <font size="4"><figcaption>Tabela 3: Objetivo de Medição: Segurança</figcaption></font>
+    <font size="4"><figcaption>Tabela 5: Objetivo de Medição: Segurança</figcaption></font>
   </div>
 </div>
 
@@ -153,7 +153,7 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
   </table>
 
   <div style="margin-top: 8px; text-align: center;">
-    <font size="4"><figcaption>Tabela 4: Questões e Métricas Simplificadas</figcaption></font>
+    <font size="4"><figcaption>Tabela 6: Questões e Métricas Simplificadas</figcaption></font>
   </div>
 </div>
 

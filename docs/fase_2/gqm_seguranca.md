@@ -18,7 +18,7 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
     </tr>
     <tr>
       <th><b>Com respeito a</b></th>
-      <td>Segurança (confidencialidade, integridade e disponibilidade dos dados)</td>
+      <td>Segurança</td>
     </tr>
     <tr>
       <th><b>Do ponto de vista da</b></th>
@@ -157,12 +157,13 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
   </div>
 </div>
 
+---
 
-<div align="center">
-  <img src="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE/blob/main/docs/assets/diagrama_seguranca.png" alt="Relação entre a Segurança, Perguntas e Métricas" style="max-width: 80%; height: auto; border-radius: 8px;">
+### Diagrama GQM - Segurança (Representação Estrutural)
 
-  <div style="margin-top: 8px; text-align: center;">
-    <font size="4"><figcaption>Figura 4: Diagrama GQM - Segurança. Autor: <a href="http://github.com/ZenildaVieira">Zenilda Vieira</figcaption></font>
-  </div>
+![Diagrama GQM - Segurança](../assets/diagrama_seguranca.png)
+
+<div style="margin-top: 8px; text-align: center;">
+  <font size="4"><figcaption>Figura 4: Diagrama GQM - Segurança. Autor: <a href="http://github.com/ZenildaVieira">Zenilda Vieira</figcaption></font>
 </div>
 

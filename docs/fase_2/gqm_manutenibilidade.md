@@ -1,82 +1,181 @@
-# Fase 2 - Especificar a Avaliação da Qualidade
-
-## Objetivo de Negócio do i-Educar
-
-Garantir a Evolução Contínua e Sustentável do sistema i-Educar, com foco em melhorar a manutenibilidade do código-fonte, reduzindo o esforço, o custo e o risco associados à realização de novas funcionalidades e correções de bugs pela equipe de desenvolvimento.
-
-## Objetivo de Medição 2: Manutenibilidade do i-Educar
-
-O objetivo de medição está definido conforme o template GQM (Goal-Question-Metric):
-
-| Elemento | Descrição |
-|----------|-----------|
-| Analisar | i-Educar |
-| Propósito | Avaliar |
-| Respeito a | Manutenibilidade |
-| Ponto de Vista | Equipe de desenvolvimento |
-| Contexto | Disciplina de Qualidade de Software 1 |
+## Objetivo de Medição 2: Manutenibilidade
 
 <div align="center">
-  <font size="4"><figcaption>Tabela 2: Objetivo de Medição: Manutenibilidade</figcaption></font>
+  <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; text-align: left;">
+    <tr>
+      <th><b>Analisar</b></th>
+      <td>o i-Educar</td>
+    </tr>
+    <tr>
+      <th><b>Para o propósito de</b></th>
+      <td>Avaliar</td>
+    </tr>
+    <tr>
+      <th><b>Com respeito a</b></th>
+      <td>Manutenibilidade</td>
+    </tr>
+    <tr>
+      <th><b>Do ponto de vista da</b></th>
+      <td>Equipe de desenvolvimento</td>
+    </tr>
+    <tr>
+      <th><b>No contexto da</b></th>
+      <td>Disciplina de Qualidade de Software 1 (FCTE - UnB)</td>
+    </tr>
+  </table>
+
+  <div style="margin-top: 8px; text-align: center;">
+    <font size="4"><figcaption>Tabela 2: Objetivo de Medição: Manutenibilidade</figcaption></font>
+  </div>
 </div>
 
-## Perguntas, Hipóteses e Métricas
+---
 
-Este objetivo se desdobra em três perguntas chave, cada uma abordando um aspecto crítico da manutenibilidade.
+### Perguntas e Hipóteses de Medição
 
-### Pergunta 1: Qual o impacto de realizar uma alteração no sistema?
+Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as seguintes perguntas e hipóteses.
 
-| Item | Descrição |
-|------|-----------|
-| **Hipótese** | Códigos com alto acoplamento e baixa coesão podem causar efeitos colaterais inesperados com mudanças realizadas. |
-| **Foco** | Acoplamento e Reuso de Código (Duplicação) |
+**Questão 1: Impacto das Alterações**
+> Qual o impacto de realizar uma alteração no sistema?
 
-| Métrica (M) | Critérios de Avaliação (Exemplo) |
-|-------------|----------------------------------|
-| **M1: Coupling Between Objects (CBO)** | ✅ **Bom:** CBO ≤ 10<br>⚠️ **Aceitável:** 10 < CBO ≤ 15<br>❌ **Crítico:** CBO > 15 |
-| **M2: Percentual de Código Repetido** | ✅ **Bom:** M2 ≤ 3%<br>⚠️ **Aceitável:** 3% < M2 ≤ 5%<br>❌ **Crítico:** M2 > 5% |
+* **Hipótese 1.1 (H1.1):** Códigos com alto acoplamento (CBO > 15) e alta duplicação de código (M2 > 5%) estão correlacionados a um aumento no tempo de implementação de correções, pois causam efeitos colaterais inesperados.
 
-### Pergunta 2: Quão complexo é entender o código-fonte do i-Educar?
+**Questão 2: Complexidade de Entendimento**
+> Quão complexo é entender o código-fonte do i-Educar?
 
-| Item | Descrição |
-|------|-----------|
-| **Hipótese** | Um código complexo aumenta o tempo necessário para um desenvolvedor entender onde e como realizar uma alteração. |
-| **Foco** | Complexidade Estrutural |
+* **Hipótese 2.1 (H2.1):** Um código estruturalmente complexo (Complexidade Ciclomática > 10) aumenta o tempo necessário para um novo desenvolvedor entender onde e como realizar uma alteração.
 
-| Métrica (M) | Critérios de Avaliação (Exemplo) |
-|-------------|----------------------------------|
-| **M3: Complexidade Ciclomática (CC) por função** | ✅ **Bom:** CC ≤ 5<br>⚠️ **Aceitável:** 5 < CC ≤ 10<br>❌ **Crítico:** CC > 10 |
+**Questão 3: Cobertura de Testes**
+> Como está a situação atual dos testes do i-Educar?
 
-### Pergunta 3: Como está a situação atual dos testes do i-Educar?
+* **Hipótese 3.1 (H3.1):** Módulos com baixa cobertura de teste (M3.1 < 70%) apresentarão uma maior probabilidade de introdução de bugs de regressão em produção.
+* **Hipótese 3.2 (H3.2):** O tempo médio de execução dos testes (M3.3 > 3s) é considerado alto pela equipe, desincentivando a execução frequente da suíte de testes during o desenvolvimento.
 
-| Item | Descrição |
-|------|-----------|
-| **Hipótese** | Códigos com baixa testabilidade possuem mais probabilidade de apresentar erros em produção. |
-| **Foco** | Cobertura e Eficiência dos Testes |
+---
 
-| Métrica (M) | Critérios de Avaliação (Exemplo) |
-|-------------|----------------------------------|
-| **M4: Percentual de Cobertura de Teste** | ✅ **Bom:** M4 ≥ 80%<br>⚠️ **Aceitável:** 70% ≤ M4 < 80%<br>❌ **Crítico:** M4 < 70% |
-| **M5: Número de Testes por Módulo** | Esta métrica deve ser avaliada em relação à criticidade e tamanho do módulo. |
-| **M6: Tempo Médio de Execução dos Testes** | ✅ **Bom:** M6 ≤ 1s<br>⚠️ **Aceitável:** 1s < M6 ≤ 3s<br>❌ **Crítico:** M6 > 3s |
+### Seleção das Métricas
 
-## Folha de Abstração
+**Questão 1: Impacto das Alterações**
 
-| Campo | Detalhamento para o i-Educar |
-|-------|------------------------------|
-| **Objeto** | Código-fonte do sistema i-Educar, histórico de desenvolvimento (commits, branches), e base de testes automatizados. |
-| **Propósito** | Avaliar o quão eficiente e segura é a manutenção do sistema i-Educar. |
-| **Ponto de Vista** | Equipe de Desenvolvimento (incluindo novos membros) – capacidade de realizar modificações, correções e expansões com autonomia e baixo risco. |
-| **Foco da Qualidade** | **Modularidade (Q1):** M1 (CBO), M2 (Duplicação)<br>**Legibilidade (Q2):** M3 (Complexidade Ciclomática)<br>**Testabilidade (Q3):** M4 (Cobertura), M5 (Testes por módulo), M6 (Tempo de execução) |
-| **Hipóteses de Referência** | • Uma redução de 50% nas linhas de código repetido (M2) reduzirá o tempo de manutenção de código legado em 15%.<br>• Manter a Complexidade Ciclomática (M3) abaixo de 10 reduzirá em 40% a dificuldade de onboarding de novos desenvolvedores.<br>• Aumentar a Cobertura de Teste (M4) para acima de 80% diminuirá o número de defeitos críticos em produção em 20%. |
-| **Fatores de Variação** | - Linguagens de programação utilizadas e suas ferramentas de métricas.<br>- Experiência da equipe com o código legado.<br>- Frequência e qualidade das revisões de código (Code Reviews).<br>- Políticas de refatoração do projeto. |
+* **Métrica 1.1: Coupling Between Objects (CBO)**
+    * **Definição:** Mede o número de outras classes às quais uma classe está acoplada (depende). Um valor alto indica que a classe é altamente dependente e modificá-la pode impactar muitas outras partes do sistema.
+    * **Coleta:** Análise estática do código-fonte (ex: `phpmd` ou SonarQube) para calcular o CBO para cada classe.
+    * **Pontuação de Julgamento:**
 
-## Diagrama GQM (Representação Estrutural)
+      | Bom | Aceitável | Crítico |
+      |:---|:---|:---|
+      | CBO ≤ 10 | 10 < CBO ≤ 15 | CBO > 15 |
 
+    * **Propósito:** Avaliar o nível de acoplamento. Um CBO baixo é desejável, pois indica melhor modularidade e menor risco de propagação de defeitos.
 
-![Diagrama](../assets/GQM-manutenibilidade.png)
+* **Métrica 1.2: Percentual de Código Repetido**
+    * **Definição:** Percentual de linhas de código que são idênticas ou muito similares a outros blocos de código no projeto.
+    * **Coleta:** Análise estática utilizando ferramentas de detecção de duplicação (ex: `phpcpd` ou SonarQube).
+    * **Pontuação de Julgamento:**
+
+      | Bom | Aceitável | Crítico |
+      |:---|:---|:---|
+      | M2 ≤ 3% | 3% < M2 ≤ 5% | M2 > 5% |
+
+    * **Propósito:** Medir a quantidade de código duplicado ("copy-paste"). A duplicação aumenta o custo de manutenção, pois correções e alterações precisam ser feitas em múltiplos lugares.
+
+**Questão 2: Complexidade de Entendimento**
+
+* **Métrica 2.1: Complexidade Ciclomática (CC)**
+    * **Definição:** Mede o número de caminhos linearmente independentes através do código-fonte de uma função ou método. Quantifica a complexidade lógica do código.
+    * **Coleta:** Análise estática por função/método (ex: `phpmd` ou SonarQube).
+    * **Pontuação de Julgamento:**
+
+      | Bom | Aceitável | Crítico |
+      |:---|:---|:---|
+      | CC ≤ 5 | 5 < CC ≤ 10 | CC > 10 |
+
+    * **Propósito:** Identificar métodos e funções que são difíceis de entender, testar e manter.
+
+**Questão 3: Cobertura de Testes**
+
+* **Métrica 3.1: Percentual de Cobertura de Teste (Line Coverage)**
+    * **Definição:** Percentual de linhas de código executáveis que são de fato executadas pela suíte de testes automatizados.
+    * **Coleta:** Execução da suíte de testes (ex: PHPUnit) com a ferramenta de geração de relatório de cobertura habilitada (ex: Xdebug, PCOV).
+    * **Pontuação de Julgamento:**
+
+      | Bom | Aceitável | Crítico |
+      |:---|:---|:---|
+      | M3.1 ≥ 80% | 70% ≤ M3.1 < 80% | M3.1 < 70% |
+
+    * **Propósito:** Medir o grau em que o código-fonte é testado, indicando a confiança contra regressões.
+
+* **Métrica 3.2: Densidade de Testes por Módulo (Testes/KLOC)**
+    * **Definição:** Número de casos de teste automatizados para cada mil linhas de código (KLOC) de produção de um módulo (Escola, Servidores, Educacenso).
+    * **Coleta:** 1.  Contar o número de testes para o Módulo X (ex: `grep -r "function test" tests/ModuleX | wc -l`).
+        2.  Contar as linhas de código de produção do Módulo X (ex: `cloc src/ModuleX` e pegar o valor de "code").
+        3.  Calcular a densidade: `(Número de Testes / (Linhas de Código / 1000))`
+    * **Pontuação de Julgamento (Sugestão):**
+
+      | Bom | Aceitável | Crítico |
+      |:---|:---|:---|
+      | > 10 Testes/KLOC | 5 a 10 Testes/KLOC | < 5 Testes/KLOC |
+
+    * **Propósito:** Avaliar se o esforço de teste está distribuído proporcionalmente à complexidade e ao tamanho do módulo, garantindo que módulos maiores tenham uma quantidade correspondente de validações.
+
+* **Métrica 3.3: Tempo Médio de Execução dos Testes**
+    * **Definição:** Tempo médio (em segundos) para a execução de um único caso de teste automatizado, ou da suíte inteira. (Nota: Critérios provavelmente referem-se ao tempo médio *por teste*).
+    * **Coleta:** Medição do tempo de execução do pipeline de CI (ex: GitHub Actions) ou localmente.
+    * **Pontuação de Julgamento:**
+
+      | Bom | Aceitável | Crítico |
+      |:---|:---|:---|
+      | M3.3 ≤ 1s | 1s < M3.3 ≤ 3s | M3.3 > 3s |
+
+    * **Propósito:** Avaliar a eficiência da suíte de testes. Testes lentos desestimulam os desenvolvedores a executá-los com frequência.
+
+---
+
+### Critérios de Julgamento para Manutenibilidade
+
+* **Aceitável:** ≥ 70% das métricas classificadas como "Bom" ou "Excelente". O código é considerado claro, organizado e com baixo custo de manutenção.
+* **Parcialmente aceitável:** Entre 40% e 69% das métricas com nível "Regular" ou superior. A manutenção é possível, mas com esforço considerável devido ao débito técnico.
+* **Inaceitável:** > 30% das métricas atingindo o nível "Insatisfatório". O código é de difícil compreensão e modificação, desestimulando novas contribuições.
+
+---
+
+### Relação entre a Manutenibilidade, Perguntas e Métricas
 
 <div align="center">
-  <font size="4"><figcaption>Figura 3: Diagrama GQM. Autor: <a href="http://github.com/andre-maia51">André Maia</figcaption></font>
+  <table border="1" cellspacing="0" cellpadding="8" style="border-collapse: collapse; text-align: left;">
+    <tr>
+      <th><b>Questão</b></th>
+      <th><b>Métricas Simplificadas</b></th>
+      <th><b>Tipo de Coleta</b></th>
+    </tr>
+    <tr>
+      <td>1 – Impacto das Alterações </td>
+      <td>M1.1: CBO; M1.2: Código Repetido</td>
+      <td>Análise Estática</td>
+    </tr>
+    <tr>
+      <td>2 – Complexidade de Entendimento</td>
+      <td>M2.1: Complexidade Ciclomática</td>
+      <td>Análise Estática</td>
+    </tr>
+    <tr>
+      <td>3 – Cobertura de Testes</td>
+      <td>M3.1: Cobertura de Teste; M3.2: Densidade de Testes; M3.3: Tempo de Execução</td>
+      <td>Análise Estática / Execução de Testes</td>
+    </tr>
+  </table>
+
+  <div style="margin-top: 8px; text-align: center;">
+    <font size="4"><figcaption>Tabela 3: Questões e Métricas Simplificadas</figcaption></font>
+  </div>
 </div>
 
+---
+
+### Diagrama GQM - Manutenibilidade (Representação Estrutural)
+
+![Diagrama GQM - Manutenibilidade](../assets/diagrama_manutenibilidade.png)
+
+<div align="center">
+  <font size="4"><figcaption>Figura 3: Diagrama GQM - Manutenibilidade. Autor: <a href="http://github.com/andre-maia51">André Maia</figcaption></font>
+</div>

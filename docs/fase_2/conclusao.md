@@ -29,3 +29,4 @@
 | `1.2`  | 12/10/2025 | Separação do documento e adição da seção Segurança (objetivos)  | [Zenilda Vieira](https://github.com/ZenildaVieira)         |       |
 | `1.3`  | 12/10/2025 | Criação do documento de manutenabilidade  | [Carla Clementino](https://github.com/ccarlaa)         |       |
 | `1.4`  | 13/10/2025 | Inclusão do diagrama de segurança  |  [Zenilda Vieira](https://github.com/ZenildaVieira)        |       |
+| `1.5`  | 21/10/2025 | Ajuste das métricas e perguntas do objetivo de confiabilidade, ateração da figura e inclusão dos critérios de julgamento. |  [Manuella Valadares](https://github.com/manuvaladares)        |       |

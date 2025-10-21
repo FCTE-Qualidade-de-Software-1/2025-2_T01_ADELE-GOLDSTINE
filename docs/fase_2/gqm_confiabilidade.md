@@ -93,8 +93,8 @@ A professora achou que tinha muita coisa
     * **Fórmula:** `(Número de commits de correção / Número total de commits) * 100`
     * **Coleta:**
         1. Definir um período de análise (ex: últimos 24 meses).
-        2. Contar o número total de commits com `git log --oneline | wc -l`
-        3. Contar o número de commits de correção com `git log --grep="fix\|bugfix\|corrige\|correção\|hotfix" --regexp-ignore-case --oneline | wc -l.`
+        2. Contar o número total de commits com `git log --oneline --no-merges | wc -l`
+        3. Contar o número de commits de correção com `git log --grep="..." --regexp-ignore-case --oneline --no-merges | wc -l`
         4. Aplicar a fórmula para validar a **H1.2**.
 
     * **Pontuação de Julgamento:** 
@@ -116,6 +116,8 @@ A professora achou que tinha muita coisa
         2. Nos diretórios dos módulos priorizados, executar scripts de busca (`grep` ou `ack`) para contar o número total de ocorrências dessas operações.
         3. Executar um segundo script para contar quantas dessas ocorrências estão sintaticamente dentro de um bloco `try { ... }`.
         4. Aplicar a fórmula para validar a **H2.1**.
+    * **Observação:** a métrica mede a existência do mecanismo, não sua eficácia.
+        
     * **Pontuação de Julgamento:** 
 
         | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |

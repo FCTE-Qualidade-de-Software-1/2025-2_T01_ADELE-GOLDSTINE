@@ -120,7 +120,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
     * **Propósito:** Avaliar se o esforço de teste está distribuído proporcionalmente à complexidade e ao tamanho do módulo, garantindo que módulos maiores tenham uma quantidade correspondente de validações.
 
 * **Métrica 3.3: Tempo Médio de Execução dos Testes**
-    * **Definição:** Tempo médio (em segundos) para a execução de um único caso de teste automatizado, ou da suíte inteira. (Nota: Critérios provavelmente referem-se ao tempo médio *por teste*).
+    * **Definição:** Tempo médio (em segundos) para a execução de um único caso de teste automatizado, ou da suíte inteira.
     * **Coleta:** Medição do tempo de execução do pipeline de CI (ex: GitHub Actions) ou localmente.
     * **Pontuação de Julgamento:**
 

@@ -75,7 +75,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
 
       | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
-      | M2 ≤ 3% | 3% < M2 ≤ 5% | M2 > 5% |
+      | M1.2 ≤ 3% | 3% < M1.2 ≤ 5% | M1.2 > 5% |
 
     * **Propósito:** Medir a quantidade de código duplicado ("copy-paste"). A duplicação aumenta o custo de manutenção, pois correções e alterações precisam ser feitas em múltiplos lugares.
 
@@ -107,7 +107,8 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
 
 * **Métrica 3.2: Densidade de Testes por Módulo (Testes/KLOC)**
     * **Definição:** Número de casos de teste automatizados para cada mil linhas de código (KLOC) de produção de um módulo (Escola, Servidores, Educacenso).
-    * **Coleta:** 1.  Contar o número de testes para o Módulo X (ex: `grep -r "function test" tests/ModuleX | wc -l`).
+    * **Coleta:** 
+        1.  Contar o número de testes para o Módulo X (ex: `grep -r "function test" tests/ModuleX | wc -l`).
         2.  Contar as linhas de código de produção do Módulo X (ex: `cloc src/ModuleX` e pegar o valor de "code").
         3.  Calcular a densidade: `(Número de Testes / (Linhas de Código / 1000))`
     * **Pontuação de Julgamento (Sugestão):**

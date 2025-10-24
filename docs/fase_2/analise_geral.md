@@ -1,8 +1,8 @@
-## Análise Integrada (Cross-GQM) e Diagrama Geral
+## Análise Integrada e Diagrama Geral
 
 A avaliação de qualidade de software raramente se restringe a características isoladas. As características definidas na ISO 25010, como Confiabilidade, Manutenibilidade e Segurança, são interdependentes. Uma melhoria em uma pode fortalecer outra, enquanto uma fraqueza em uma pode ser a causa-raiz de um problema em outra.
 
-Esta página apresenta o diagrama GQM geral do projeto, consolidando os planos de medição das três características priorizadas. Mais importante, ela fornece uma análise das **sinergias (cross-GQM)** — as conexões onde métricas de uma característica ajudam a responder perguntas de outra, permitindo uma visão holística e profunda da qualidade do i-Educar.
+Esta página apresenta o diagrama GQM geral do projeto, consolidando os planos de medição das três características priorizadas. Mais importante, ela fornece uma análise das **sinergias** — as conexões onde métricas de uma característica ajudam a responder perguntas de outra, permitindo uma visão holística e profunda da qualidade do i-Educar.
 
 ## Diagrama GQM Integrado
 
@@ -12,7 +12,7 @@ O diagrama abaixo ilustra a decomposição GQM para Confiabilidade (G1), Manuten
 
 -----
 
-## Análise das Sinergias (Cross-GQM)
+## Análise das Sinergias
 
 A verdadeira força desta avaliação GQM está nas conexões entre os planos. Elas revelam como a qualidade de uma característica é, muitas vezes, dependente de outra.
 

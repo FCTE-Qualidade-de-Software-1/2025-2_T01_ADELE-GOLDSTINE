@@ -42,29 +42,29 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
 
 **Questão 1: Mecanismos de Autenticação e Autorização**
 
->  O sistema i-Educar possui mecanismos eficazes de autenticação, autorização e controle de acesso?
+>  Qual é o nível de robustez do controle de acesso do sistema?
 
-* **Hipótese 1.1 (H1.1):** O sistema restringe adequadamente o acesso às funcionalidades de acordo com o perfil do usuário.  
+* **Hipótese 1.1 (H1.1):** Módulos com dados sensíveis terão pelo menos uma regra de autorização aplicada para cada papel de usuário.
 * **Hipótese 1.2 (H1.2):** As senhas são armazenadas de com hashing e criptografia.  
+* **Hipótese 1.3 (H1.3):** Sessões de usuários são encerradas automaticamente após 60 minutos de inatividade.
 
 
 **Questão 2: Monitoramento e Auditoria**
 
-> O sistema i-Educar possui práticas e ferramentas eficazes de monitoramento e auditoria de segurança?
+> Qual é o nível de rastreabilidade das ações críticas?
 
-* **Hipótese 2.1 (H2.1):** As ações críticas dos usuários são registradas em logs de auditoria.  
-* **Hipótese 2.2 (H2.2):** O sistema permite rastrear atividades suspeitas ou tentativas de acesso indevido.  
-* **Hipótese 2.3 (H2.3):** Há mecanismos de alerta ou resposta automatizada a incidentes de segurança.  
+* **Hipótese 2.1 (H2.1):** Pelo menos 70% das ações críticas (login, exclusão, alteração de dados) são registradas em logs.
+* **Hipótese 2.2 (H2.2):** Mais de 60% dos logs incluem usuário, ação e data/hora. 
 
 
 
 **Questão 3: Desenvolvimento Seguro**
 
-> O desenvolvimento do i-Educar segue práticas de desenvolvimento seguro e análise de vulnerabilidades?
+> Em que medida o desenvolvimento do sistema segue práticas de segurança?
 
-* **Hipótese 3.1 (H3.1):** O código é periodicamente revisado para identificar vulnerabilidades conhecidas.  
-* **Hipótese 3.2 (H3.2):** Há cobertura de testes automatizados voltados à segurança.  
-* **Hipótese 3.3 (H3.3):** Ferramentas de análise estática são utilizadas durante o ciclo de desenvolvimento.  
+* **Hipótese 3.1 (H3.1):** Pelo menos três casos de teste de segurança existem para cada módulo principal.
+* **Hipótese 3.2 (H3.2):** Dependências externas são atualizadas pelo menos uma vez a cada 6 meses.
+* **Hipótese 3.3 (H3.3):** Ferramentas de análise estática são executadas pelo menos antes de cada release.
 
 ---
 

@@ -46,6 +46,7 @@ nav:
     - Medição 1 - Confiabilidade: "fase_2/gqm_confiabilidade.md"
     - Medição 2 - Manutenabilidade: "fase_2/gqm_manutenibilidade.md"
     - Medição 3 - Segurança: "fase_2/gqm_seguranca.md"
+    - Análise Geral das Medições: "fase2/analise_geral.md"
     - Conclusão: "fase_2/conclusao.md"
   - Contribuições:
     - Fase 1: "contribuicoes/fase-1.md"

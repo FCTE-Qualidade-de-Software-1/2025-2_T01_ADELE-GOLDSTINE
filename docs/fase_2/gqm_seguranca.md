@@ -1,8 +1,3 @@
-<!--  Observação da Manuella
-
-AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM SUAS RESPECTIVAS TABELAS, PERGUNTAS, HIPÓTESES, MÉTRICAS E DIAGRAMAS
- -->
- 
 ## Objetivo de Medição 3 - Segurança
 
 
@@ -72,48 +67,82 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
 
 **Questão 1: Mecanismos de Autenticação e Autorização**
 
-* **Métrica 1.1 – Presença de autenticação**  
-    * **Definição:** Verificação se o sistema exige login para acessar páginas protegidas.  
-    * **Coleta:** 
-        a. Teste manual: tentar acessar URLs sem estar autenticado e verificar se o sistema redireciona para a tela de login.  
-    * **Propósito:** Confirmar a existência de controle de autenticação básico.  
+* **Métrica 1.1 – Percentual de módulos com regras de autorização**  
+    * **Definição:** Percentual de módulos que possuem pelo menos uma regra de autorização aplicada para cada papel de usuário identificado.  
+    * **Coleta:**  
+        a. Revisão do código fonte e documentação para identificar regras de autorização por módulo.  
+    * **Propósito:** Avaliar a abrangência do controle de acesso baseado em papéis.  
+    * **Critério de Julgamento:**  
+      - ≥ 90%: Excelente  
+      - 70% a 89%: Bom  
+      - 40% a 69%: Regular  
+      - < 40%: Insatisfatório
 
-* **Métrica 1.2 – Existência de papéis/perfis de usuário**  
-    * **Definição:** Quantidade de perfis de usuário com permissões distintas.  
-    * **Coleta:** 
-        a. Análise documental (ex: listagem de perfis no painel de administração ou código fonte).  
-    * **Propósito:** Avaliar se há segregação de funções e autorização diferenciada.  
+* **Métrica 1.2 – Método de armazenamento de senhas**  
+    * **Definição:** Verificação da presença de técnicas de hashing e criptografia no armazenamento das senhas.  
+    * **Coleta:**  
+        a. Análise do código fonte do sistema de autenticação.  
+    * **Propósito:** Confirmar a segurança no armazenamento de credenciais.  
+    * **Critério de Julgamento:**  
+      - Sim: Conforme  
+      - Não: Não conforme
 
+* **Métrica 1.3 – Tempo médio de expiração da sessão**  
+    * **Definição:** Tempo configurado para encerramento automático das sessões por inatividade, em minutos.  
+    * **Coleta:**  
+        a. Análise das configurações do sistema ou testes funcionais para medir o tempo de expiração.  
+    * **Propósito:** Verificar conformidade com a política de segurança de sessões.  
+    * **Critério de Julgamento:**  
+      - Menor ou igual a 60 minutos: Conforme  
+      - Acima de 60 minutos: Não conforme  
 
 
 **Questão 2: Monitoramento e Auditoria**
 
-* **Métrica 2.1 – Existência de logs de ações**  
-    * **Definição:** Verificação se o sistema armazena logs de ações como login, exclusão, alteração.  
-    * **Coleta:** 
-        a. Análise com o grupo de mantenedores do sistema.  
-    * **Propósito:** Identificar se há rastreabilidade mínima de eventos de segurança.  
+* **Métrica 2.1 – Percentual de ações críticas registradas em logs**  
+    * **Definição:** Percentual de eventos críticos (login, exclusão, alteração) que são registrados em logs.  
+    * **Coleta:**  
+        a. Análise dos arquivos de log e documentação do sistema.  
+    * **Propósito:** Avaliar a efetividade do monitoramento de eventos de segurança.  
+    * **Critério de Julgamento:**  
+      - ≥ 90%: Excelente  
+      - 70% a 89%: Bom  
+      - 40% a 69%: Regular  
+      - < 40%: Insatisfatório
 
-* **Métrica 2.2 – Existência de registro de falhas de login**  
-    * **Definição:** Verificação se tentativas de login incorretas são registradas.  
-    * **Coleta:** 
-        a. Tentar efetuar logins inválidos e verificar se o evento é exibido em logs ou relatórios.  
-    * **Propósito:** Avaliar a capacidade de monitorar possíveis ataques de força bruta.  
+* **Métrica 2.2 – Percentual de logs com informações completas**  
+    * **Definição:** Percentual de registros de log que incluem usuário, ação e data/hora.  
+    * **Coleta:**  
+        a. Amostragem e análise dos registros de log.  
+    * **Propósito:** Garantir a rastreabilidade adequada dos eventos registrados.  
+    * **Critério de Julgamento:**  
+      - ≥ 80%: Excelente  
+      - 60% a 79%: Bom  
+      - 40% a 59%: Regular  
+      - < 40%: Insatisfatório  
 
 
 **Questão 3: Desenvolvimento Seguro**
 
-* **Métrica 3.1 – Presença de testes automatizados**  
-    * **Definição:** Quantidade de testes automatizados existentes no projeto.  
-    * **Coleta:** 
-        a. Inspecionar repositório.  
-    * **Propósito:** Confirmar práticas básicas de validação de código.  
+* **Métrica 3.1 – Número médio de testes de segurança por módulo principal**  
+    * **Definição:** Quantidade média de casos de teste relacionados à segurança para cada módulo principal do sistema.  
+    * **Coleta:**  
+        a. Inspeção do repositório de testes automatizados e documentação.  
+    * **Propósito:** Avaliar a cobertura dos testes de segurança no projeto.  
+    * **Critério de Julgamento:**  
+      - ≥ 3 testes: Excelente  
+      - 2 testes: Bom  
+      - 1 teste: Regular  
+      - 0 testes: Insatisfatório
 
-* **Métrica 3.2 – Frequência de atualizações de dependências**  
-    * **Definição:** Intervalo médio entre atualizações de dependências do projeto.  
-    * **Coleta:** 
-        a. Analisar histórico de commits e datas de atualização.  
-    * **Propósito:** Avaliar se o projeto é mantido atualizado e protegido contra vulnerabilidades conhecidas.  
+* **Métrica 3.2 – Frequência média de atualização de dependências**  
+    * **Definição:** Intervalo médio, em meses, entre atualizações das dependências externas do projeto.  
+    * **Coleta:**  
+        a. Análise do histórico de commits e arquivos de configuração de dependências.  
+    * **Propósito:** Verificar a manutenção do projeto em relação a vulnerabilidades conhecidas.  
+    * **Critério de Julgamento:**  
+      - Atualização a cada ≤ 6 meses: Conforme  
+      - Atualização > 6 meses: Não conforme  
 
 ---
 
@@ -166,4 +195,3 @@ AQUI IRIAM OS OUTROS OBJETIVOS DE MEDIÇÃO (MANUTENIBILIDADE E SEGURANÇA) COM 
 <div style="margin-top: 8px; text-align: center;">
   <font size="4"><figcaption>Figura 4: Diagrama GQM - Segurança. Autor: <a href="http://github.com/ZenildaVieira">Zenilda Vieira</figcaption></font>
 </div>
-

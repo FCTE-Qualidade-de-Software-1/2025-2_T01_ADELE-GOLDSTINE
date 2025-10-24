@@ -69,85 +69,85 @@
 
 * **Métrica 1.1 – Percentual de módulos com regras de autorização**  
     * **Definição:** Percentual de módulos que possuem pelo menos uma regra de autorização aplicada para cada papel de usuário identificado.  
-    * **Coleta:**  
-        a. Revisão do código fonte e documentação para identificar regras de autorização por módulo.  
-    * **Propósito:** Avaliar a abrangência do controle de acesso baseado em papéis.  
+    * **Coleta:** Revisão do código fonte e documentação para identificar regras de autorização por módulo.  
     * **Pontuação de Julgamento:**  
 
       | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
       |:-------------:|:-------:|:-----------:|:-----------------:|
       | ≥ 90%         | 70% a 89% | 40% a 69% | < 40%             |
 
+    * **Propósito:** Avaliar a abrangência do controle de acesso baseado em papéis.  
+
 * **Métrica 1.2 – Método de armazenamento de senhas**  
     * **Definição:** Verificação da presença de técnicas de hashing e criptografia no armazenamento das senhas.  
-    * **Coleta:**  
-        a. Análise do código fonte do sistema de autenticação.  
-    * **Propósito:** Confirmar a segurança no armazenamento de credenciais.  
+    * **Coleta:** Análise do código fonte do sistema de autenticação.  
     * **Pontuação de Julgamento:**  
 
       | **Conforme** | **Não conforme** |
       |:------------:|:----------------:|
       | Sim          | Não              |
 
+    * **Propósito:** Confirmar a segurança no armazenamento de credenciais.  
+
 * **Métrica 1.3 – Tempo médio de expiração da sessão**  
     * **Definição:** Tempo configurado para encerramento automático das sessões por inatividade, em minutos.  
-    * **Coleta:**  
-        a. Análise das configurações do sistema ou testes funcionais para medir o tempo de expiração.  
-    * **Propósito:** Verificar conformidade com a política de segurança de sessões.  
+    * **Coleta:** Análise das configurações do sistema ou testes funcionais para medir o tempo de expiração.  
     * **Pontuação de Julgamento:**  
 
       | **Conforme** | **Não conforme** |
       |:------------:|:----------------:|
       | Menor ou igual a 60 | Acima de 60 |
 
+    * **Propósito:** Verificar conformidade com a política de segurança de sessões.  
+
 **Questão 2: Monitoramento e Auditoria**
 
 * **Métrica 2.1 – Percentual de ações críticas registradas em logs**  
     * **Definição:** Percentual de eventos críticos (login, exclusão, alteração) que são registrados em logs.  
-    * **Coleta:**  
-        a. Análise dos arquivos de log e documentação do sistema.  
-    * **Propósito:** Avaliar a efetividade do monitoramento de eventos de segurança.  
+    * **Coleta:** Análise dos arquivos de log e documentação do sistema.  
     * **Pontuação de Julgamento:**  
 
       | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
       |:-------------:|:-------:|:-----------:|:-----------------:|
       | ≥ 90%         | 70% a 89% | 40% a 69% | < 40%             |
 
+    * **Propósito:** Avaliar a efetividade do monitoramento de eventos de segurança.  
+
 * **Métrica 2.2 – Percentual de logs com informações completas**  
     * **Definição:** Percentual de registros de log que incluem usuário, ação e data/hora.  
-    * **Coleta:**  
-        a. Amostragem e análise dos registros de log.  
-    * **Propósito:** Garantir a rastreabilidade adequada dos eventos registrados.  
+    * **Coleta:** Amostragem e análise dos registros de log.  
     * **Pontuação de Julgamento:**  
 
       | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
       |:-------------:|:-------:|:-----------:|:-----------------:|
       | ≥ 80%         | 60% a 79% | 40% a 59% | < 40%             |
 
+    * **Propósito:** Garantir a rastreabilidade adequada dos eventos registrados.  
+
 
 **Questão 3: Desenvolvimento Seguro**
 
 * **Métrica 3.1 – Número médio de testes de segurança por módulo principal**  
     * **Definição:** Quantidade média de casos de teste relacionados à segurança para cada módulo principal do sistema.  
-    * **Coleta:**  
-        a. Inspeção do repositório de testes automatizados e documentação.  
-    * **Propósito:** Avaliar a cobertura dos testes de segurança no projeto.  
+    * **Coleta:** Inspeção do repositório de testes automatizados e documentação.  
     * **Pontuação de Julgamento:**  
 
       | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
       |:-------------:|:-------:|:-----------:|:-----------------:|
       | ≥ 3           | 2       | 1           | 0                 |
 
+    * **Propósito:** Avaliar a cobertura dos testes de segurança no projeto.  
+
 * **Métrica 3.2 – Frequência média de atualização de dependências**  
     * **Definição:** Intervalo médio, em meses, entre atualizações das dependências externas do projeto.  
-    * **Coleta:**  
-        a. Análise do histórico de commits e arquivos de configuração de dependências.  
-    * **Propósito:** Verificar a manutenção do projeto em relação a vulnerabilidades conhecidas.  
+    * **Coleta:** Análise do histórico de commits e arquivos de configuração de dependências.  
     * **Pontuação de Julgamento:**  
 
       | **Conforme** | **Não conforme** |
       |:------------:|:----------------:|
       | Atualização a cada ≤ 6 meses | Atualização > 6 meses |
+
+    * **Propósito:** Verificar a manutenção do projeto em relação a vulnerabilidades conhecidas.  
 
 ---
 

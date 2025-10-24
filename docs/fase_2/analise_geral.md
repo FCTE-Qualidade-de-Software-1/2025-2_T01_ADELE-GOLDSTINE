@@ -1,4 +1,4 @@
-# Análise Integrada (Cross-GQM) e Diagrama Geral
+## Análise Integrada (Cross-GQM) e Diagrama Geral
 
 A avaliação de qualidade de software raramente se restringe a características isoladas. As características definidas na ISO 25010, como Confiabilidade, Manutenibilidade e Segurança, são interdependentes. Uma melhoria em uma pode fortalecer outra, enquanto uma fraqueza em uma pode ser a causa-raiz de um problema em outra.
 

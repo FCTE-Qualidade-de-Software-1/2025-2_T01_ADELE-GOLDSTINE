@@ -72,30 +72,33 @@
     * **Coleta:**  
         a. Revisão do código fonte e documentação para identificar regras de autorização por módulo.  
     * **Propósito:** Avaliar a abrangência do controle de acesso baseado em papéis.  
-    * **Critério de Julgamento:**  
-      - ≥ 90%: Excelente  
-      - 70% a 89%: Bom  
-      - 40% a 69%: Regular  
-      - < 40%: Insatisfatório
+    * **Pontuação de Julgamento:**  
+
+      | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
+      |:-------------:|:-------:|:-----------:|:-----------------:|
+      | ≥ 90%         | 70% a 89% | 40% a 69% | < 40%             |
 
 * **Métrica 1.2 – Método de armazenamento de senhas**  
     * **Definição:** Verificação da presença de técnicas de hashing e criptografia no armazenamento das senhas.  
     * **Coleta:**  
         a. Análise do código fonte do sistema de autenticação.  
     * **Propósito:** Confirmar a segurança no armazenamento de credenciais.  
-    * **Critério de Julgamento:**  
-      - Sim: Conforme  
-      - Não: Não conforme
+    * **Pontuação de Julgamento:**  
+
+      | **Conforme** | **Não conforme** |
+      |:------------:|:----------------:|
+      | Sim          | Não              |
 
 * **Métrica 1.3 – Tempo médio de expiração da sessão**  
     * **Definição:** Tempo configurado para encerramento automático das sessões por inatividade, em minutos.  
     * **Coleta:**  
         a. Análise das configurações do sistema ou testes funcionais para medir o tempo de expiração.  
     * **Propósito:** Verificar conformidade com a política de segurança de sessões.  
-    * **Critério de Julgamento:**  
-      - Menor ou igual a 60 minutos: Conforme  
-      - Acima de 60 minutos: Não conforme  
+    * **Pontuação de Julgamento:**  
 
+      | **Conforme** | **Não conforme** |
+      |:------------:|:----------------:|
+      | Menor ou igual a 60 | Acima de 60 |
 
 **Questão 2: Monitoramento e Auditoria**
 
@@ -104,22 +107,22 @@
     * **Coleta:**  
         a. Análise dos arquivos de log e documentação do sistema.  
     * **Propósito:** Avaliar a efetividade do monitoramento de eventos de segurança.  
-    * **Critério de Julgamento:**  
-      - ≥ 90%: Excelente  
-      - 70% a 89%: Bom  
-      - 40% a 69%: Regular  
-      - < 40%: Insatisfatório
+    * **Pontuação de Julgamento:**  
+
+      | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
+      |:-------------:|:-------:|:-----------:|:-----------------:|
+      | ≥ 90%         | 70% a 89% | 40% a 69% | < 40%             |
 
 * **Métrica 2.2 – Percentual de logs com informações completas**  
     * **Definição:** Percentual de registros de log que incluem usuário, ação e data/hora.  
     * **Coleta:**  
         a. Amostragem e análise dos registros de log.  
     * **Propósito:** Garantir a rastreabilidade adequada dos eventos registrados.  
-    * **Critério de Julgamento:**  
-      - ≥ 80%: Excelente  
-      - 60% a 79%: Bom  
-      - 40% a 59%: Regular  
-      - < 40%: Insatisfatório  
+    * **Pontuação de Julgamento:**  
+
+      | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
+      |:-------------:|:-------:|:-----------:|:-----------------:|
+      | ≥ 80%         | 60% a 79% | 40% a 59% | < 40%             |
 
 
 **Questão 3: Desenvolvimento Seguro**
@@ -129,20 +132,22 @@
     * **Coleta:**  
         a. Inspeção do repositório de testes automatizados e documentação.  
     * **Propósito:** Avaliar a cobertura dos testes de segurança no projeto.  
-    * **Critério de Julgamento:**  
-      - ≥ 3 testes: Excelente  
-      - 2 testes: Bom  
-      - 1 teste: Regular  
-      - 0 testes: Insatisfatório
+    * **Pontuação de Julgamento:**  
+
+      | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
+      |:-------------:|:-------:|:-----------:|:-----------------:|
+      | ≥ 3           | 2       | 1           | 0                 |
 
 * **Métrica 3.2 – Frequência média de atualização de dependências**  
     * **Definição:** Intervalo médio, em meses, entre atualizações das dependências externas do projeto.  
     * **Coleta:**  
         a. Análise do histórico de commits e arquivos de configuração de dependências.  
     * **Propósito:** Verificar a manutenção do projeto em relação a vulnerabilidades conhecidas.  
-    * **Critério de Julgamento:**  
-      - Atualização a cada ≤ 6 meses: Conforme  
-      - Atualização > 6 meses: Não conforme  
+    * **Pontuação de Julgamento:**  
+
+      | **Conforme** | **Não conforme** |
+      |:------------:|:----------------:|
+      | Atualização a cada ≤ 6 meses | Atualização > 6 meses |
 
 ---
 

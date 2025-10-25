@@ -28,11 +28,13 @@ O trabalho foi centrado na decomposição das três características priorizadas
 
 | Versão |    Data    | Descrição                                                                     | Autor                                                  | Revisor                                               |
 | :----: | :--------: | :---------------------------------------------------------------------------- | :----------------------------------------------------- | :---------------------------------------------------- |
-| `1.0`  | 12/10/2025 | Criação do documento e adição da seção Confiabilidade do método GQM | [Manuella Valadares](https://github.com/manuvaladares)         |  [Marcos Marinho](https://github.com/devMarcosVM)     |
-| `1.1` | 12/10/2025 | Revisão e refinamento da seção Confiabilidade. As hipóteses foram tornadas mais específicas e o plano de coleta de cada métrica foi detalhado. |  [Marcos Marinho](https://github.com/devMarcosVM) |[Manuella Valadares](https://github.com/manuvaladares) |
-| `1.2`  | 12/10/2025 | Separação do documento e adição da seção Segurança (objetivos)  | [Zenilda Vieira](https://github.com/ZenildaVieira)         |       |
-| `1.3`  | 12/10/2025 | Criação do documento de manutenabilidade  | [Carla Clementino](https://github.com/ccarlaa)         |       |
-| `1.4`  | 13/10/2025 | Inclusão do diagrama de segurança  |  [Zenilda Vieira](https://github.com/ZenildaVieira)        |       |
+| `1.0`  | 12/10/2025 | Criação do documento e adição da seção Confiabilidade do método GQM           | [Manuella Valadares](https://github.com/manuvaladares)         |  [Marcos Marinho](https://github.com/devMarcosVM)     |
+| `1.1`  | 12/10/2025 | Revisão e refinamento da seção Confiabilidade. As hipóteses foram tornadas mais específicas e o plano de coleta de cada métrica foi detalhado. |  [Marcos Marinho](https://github.com/devMarcosVM) |[Manuella Valadares](https://github.com/manuvaladares) |
+| `1.2`  | 12/10/2025 | Separação do documento e adição da seção Segurança (objetivos)                | [Zenilda Vieira](https://github.com/ZenildaVieira)             | [Caio Antônio](http://github.com/Caio-Antonio) |
+| `1.3`  | 12/10/2025 | Criação do documento de manutenabilidade                                      | [Carla Clementino](https://github.com/ccarlaa)                 |       |
+| `1.4`  | 13/10/2025 | Inclusão do diagrama de segurança                                             | [Zenilda Vieira](https://github.com/ZenildaVieira)             | [Caio Antônio](http://github.com/Caio-Antonio) |
 | `1.5`  | 21/10/2025 | Ajuste das métricas e perguntas do objetivo de confiabilidade, ateração da figura e inclusão dos critérios de julgamento. |  [Manuella Valadares](https://github.com/manuvaladares)        |       |
 | `1.6`  | 21/10/2025 | Ajuste e padronização na página de manutenibilidade e padronização das legendas das tabelas |  [André Maia](https://github.com/andre-maia51)        |       |
-| `1.7` | 24/10/2025 | Criação do documento "Análise Geral das Medições" com diagrama GQM integrado, análise de sinergia e refinamento das características|  [Marcos Marinho](https://github.com/devMarcosVM) | |
+| `1.7`  | 21/10/2025 | Ajuste e padronização na página de segurança e inclusão de critérios de julgamento | [Zenilda Vieira](https://github.com/ZenildaVieira)             | [Caio Antônio](http://github.com/Caio-Antonio)       |
+| `1.8`  | 24/10/2025 | Criação do documento "Análise Geral das Medições" com diagrama GQM integrado, análise de sinergia e refinamento das características|  [Marcos Marinho](https://github.com/devMarcosVM) | |
+| `1.9`  | 24/10/2025 | Atualização do diagrama de segurança                                             | [Zenilda Vieira](https://github.com/ZenildaVieira)             | [Caio Antônio](http://github.com/Caio-Antonio)|

@@ -43,17 +43,16 @@ Será utilizada uma abordagem mista (quantitativa e qualitativa) baseada no plan
 
 ### 3\. Cronograma de Ações
 
-| Etapa | Responsável(eis) | Prazo Estimado |
-| --- | --- | --- |
-| 1. Configuração do Ambiente e Ferramentas | -- | Dia 1 |
-| 2. Execução da Análise Estática (CC, CBO, Duplicação, Cobertura) | -- | Dia 2 |
-| 3. Execução da Análise de Repositório (Commits, Issues, Densidade, Atualizações) | -- | Dia 2 |
-| 4. Execução da Análise Manual (Logs, Senhas, Backup, Autorização, Tratamento de Exceção) | -- | Dias 2-3 |
-| 5. Coleta e Tabulação dos Dados Brutos | Todos (cada um de sua análise) | Dia 3 |
-| 6. Análise dos Resultados (Aplicação das Pontuações GQM) | -- | Dia 4 |
-| 7. Redação do Relatório da Fase 3 e Conclusões | -- | Dia 5 |
+O cronograma será focado na coleta paralela dos dados de cada característica, seguida por uma fase de consolidação e análise.
 
------
+| Etapa (Agrupada por Característica) | Métricas Coletadas | Responsável(eis) | Prazo Estimado |
+| :--- | :--- | :--- | :--- |
+| **Configuração do Ambiente** | Instalação de ferramentas (phpmd, cloc, etc.) | Todos | Dia 1 |
+| **Coleta de Confiabilidade** | M1.1: Densidade de Defeitos <br> M1.2: % Commits de Correção <br> M1.3: Índice de Tratamento de Exceções <br> M1.4: Análise Qualitativa de Backup | Marcos | Dias 1-3 |
+| **Coleta de Manutenibilidade** | M2.1: Acoplamento (CBO) <br> M2.2: % Código Repetido <br> M2.3: Complexidade Ciclomática (CC) <br> M2.4: Cobertura de Teste <br> M2.5: Densidade de Testes <br> M2.6: Tempo de Execução dos Testes | Manuella <br> Andre | Dias 1-3 |
+| **Coleta de Segurança** | M3.1: % Módulos c/ Autorização <br> M3.2: Armazenamento de Senhas <br> M3.3: Expiração de Sessão <br> M3.4: % Ações em Logs <br> M3.5: % Logs Completos <br> M3.6: Testes de Segurança <br> M3.7: Frequência de Atualização | Caio Antonio <br> Zenilda | Dias 1-3 |
+| **Consolidação dos Dados** | Tabulação de todos os dados brutos em local central. | Todos | Dia 4 |
+| **Análise e Relatório** | Aplicação das pontuações GQM e redação do relatório final da Fase 3. | Todos | Dia 5 |
 
 ### 4\. Fontes de Evidência e Rastreabilidade
 

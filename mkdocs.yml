@@ -55,6 +55,8 @@ nav:
     - Medição 3 - Segurança: "fase_2/gqm_seguranca.md"
     - Análise Geral das Medições: "fase_2/analise_geral.md"
     - Conclusão: "fase_2/conclusao.md"
+  - Fase 2 - Especificação da Avaliação:
+    - Abordagem GQM: "fase_3/projetar.md"
   - Contribuições:
     - Fase 1: "contribuicoes/fase-1.md"
     - Fase 2: "contribuicoes/fase-2.md"

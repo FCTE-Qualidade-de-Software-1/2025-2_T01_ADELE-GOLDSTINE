@@ -58,11 +58,11 @@ nav:
   - Fase 3 - Projetar a Avaliação:
     - Projetar Avaliação: "fase_3/projetar.md"
   - Fase 4 - Execução da Avaliação:
-    - Introdução: "fase_4/introducao.md"
+    - Introdução: "fase_4/introducao-avaliacao.md"
     - Avaliação da Confiabilidade: "fase_4/avaliacao_confiabilidade.md"
     - Avaliação da Manutenabilidade: "fase_4/avaliacao_manutenabilidade.md"
     - Avaliação da Segurança: "fase_4/avaliacao_seguranca.md" 
-    - Conclusão: "fase_4/conclusao.md"
+    - Conclusão: "fase_4/conclusao-avaliacao.md"
   - Contribuições:
     - Fase 1: "contribuicoes/fase-1.md"
     - Fase 2: "contribuicoes/fase-2.md"

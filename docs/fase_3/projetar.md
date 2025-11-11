@@ -60,11 +60,11 @@ Os seguintes documentos e fontes serão usados para garantir a rastreabilidade e
 
 | **Fonte** | **Local/Ferramenta** | **Uso** | **Avaliação Esperada** |
 | --- | --- | --- | --- |
-| **Código-Fonte (i-Educar)** | Repositório Oficial do i-Educar (GitHub) | Fonte primária para todas as métricas de análise de código (estática e manual). | Os dados brutos (ex: contagens, trechos de código) serão extraídos desta fonte. |
+| **Código-Fonte (i-Educar)** | [Repositório Oficial do i-Educar (GitHub)](https://github.com/portabilis/i-educar) | Fonte primária para todas as métricas de análise de código (estática e manual). | Os dados brutos (ex: contagens, trechos de código) serão extraídos desta fonte. |
 | **Histórico (i-Educar)** | Repositório Oficial (Git Log, Issues) | Fonte primária para métricas de processo (commits, issues, atualizações). | Os dados (contagens, datas) serão extraídos desta fonte. |
-| **Definição da Avaliação** | Repositório da Disciplina (Fase 2 - GQM) | Define formalmente cada métrica, o método de coleta e as pontuações de julgamento. | O plano de coleta (Seção 1) deve ser 100% fiel ao GQM da Fase 2. |
-| **Dados Brutos Coletados** | Repositório da Disciplina (ex: `/dados_fase3/`) | Armazenamento dos resultados brutos (planilhas, logs das ferramentas, screenshots). | Garante a auditabilidade e rastreabilidade da avaliação. |
-| **Relatório Final** | Repositório da Disciplina (Fase 3) | Documento final que consolida os dados, aplica as pontuações e apresenta as conclusões. | O relatório deve referenciar os dados brutos. |
+| **Definição da Avaliação** | [Fase 2 - GQM](../fase_2/introducao_gqm.md) | Define formalmente cada métrica, o método de coleta e as pontuações de julgamento. | O plano de coleta (Seção 1) deve ser 100% fiel ao GQM da Fase 2. |
+| **Dados Brutos Coletados** | [Fase 4 - GQM](../fase_4/) e [Planilha de Avaliação](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?hl=pt-br&gid=0#gid=0) | Armazenamento dos resultados brutos. | Garante a auditabilidade e rastreabilidade da avaliação. |
+| **Relatório Final** | [Relatório]() | Documento final que consolida os dados, aplica as pontuações e apresenta as conclusões. | O relatório deve referenciar os dados brutos. |
 
 -----
 
@@ -72,5 +72,5 @@ Os seguintes documentos e fontes serão usados para garantir a rastreabilidade e
 
 | Data | Versão | Descrição | Autor(es) | Data de revisão | Revisor(es) |
 | :---: | :----: | :---: | :---: | :---: | :---: |
-| 10/11/2025 | `1.0` | Criação do plano de avaliação da Fase 3. | Marcos Marinho | | |
-| | | | | | |
+| 10/11/2025 | `1.0` | Criação do plano de avaliação da Fase 3. | Marcos Marinho | 11/11/2025 | Manuella Valadares |
+| 11/11/2025 | `1.1` | Revisão do plano e adição das fontes e evidências de rastreabilidade. | Manuella Valadares | | |

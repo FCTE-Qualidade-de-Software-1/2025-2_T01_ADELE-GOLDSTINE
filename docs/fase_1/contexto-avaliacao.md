@@ -20,8 +20,4 @@ O i-Educar é um projeto open-source e possui uma comunidade de desenvolvedores 
 
 ## Escopo e Profundidade
 
-O i-Educar é um Software extremamente amplo e possui um escopo extenso com uma grande diversidade de funcionalidades para o gerenciamento da escola. Por isso, o grupo decidiu diminuir o escopo do processo de avaliação para poder garantir maior profundidade na análise de 3 "módulos" do i-Educar de acordo com a importância de suas funcionalidades levando em consideração o objetivo do produto:
-
-* **Escola:** É o principal módulo do i-Educar e possui diversas funcionalidades importantes para o gerenciamento da escola, como cadastro de alunos, componentes curriculares, calendários e lançamento de faltas e notas;
-* **Servidores:** Possui diversas funcionalidades relacionadas ao gerenciamento de servidores da escola;
-* **Educacenso:** Módulo responsável por exportações e consultas de relatórios sobre eventos, como matrícula, para possíveis análises de dados.
+O i-Educar possui uma grande relevância no contexto educacional. Por isso, é de suma importância que o software possua um alto nível de qualidade, visando evitar grandes impactos negativos para todos os indivíduos que o utilizam. Levando isso em consideração, o grupo Adele Goldstine decidiu realizar o processo de avaliação de qualidade de software considerando todo o escopo do projeto i-Educar, visando um panorama da qualidade geral em todo o sistema. Reconhecemos que, embora essa abordagem possa não ser tão profunda nos dados como no caso da avaliação de módulos específicos do software.

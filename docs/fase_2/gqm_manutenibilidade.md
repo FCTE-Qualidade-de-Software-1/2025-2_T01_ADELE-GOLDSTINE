@@ -48,7 +48,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
 **Questão 3: Cobertura de Testes**
 > Como está a situação atual dos testes do i-Educar?
 
-* **Hipótese 3.1 (H3.1):** Módulos com baixa cobertura de teste (M3.1 < 70%) apresentarão uma maior probabilidade de introdução de bugs de regressão em produção.
+* **Hipótese 3.1 (H3.1):** Uma **baixa cobertura de teste geral** (M3.1 < 70%) apresentará uma maior probabilidade de introdução de bugs de regressão em produção.
 * **Hipótese 3.2 (H3.2):** O tempo médio de execução dos testes (M3.3 > 3s) é considerado alto pela equipe, desincentivando a execução frequente da suíte de testes during o desenvolvimento.
 
 ---
@@ -105,19 +105,18 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
 
     * **Propósito:** Medir o grau em que o código-fonte é testado, indicando a confiança contra regressões.
 
-* **Métrica 3.2: Densidade de Testes por Módulo (Testes/KLOC)**
-    * **Definição:** Número de casos de teste automatizados para cada mil linhas de código (KLOC) de produção de um módulo (Escola, Servidores, Educacenso).
-    * **Coleta:** 
-        1.  Contar o número de testes para o Módulo X (ex: `grep -r "function test" tests/ModuleX | wc -l`).
-        2.  Contar as linhas de código de produção do Módulo X (ex: `cloc src/ModuleX` e pegar o valor de "code").
-        3.  Calcular a densidade: `(Número de Testes / (Linhas de Código / 1000))`
+* **Métrica 3.2: Densidade de Testes (Testes/KLOC)**
+    * **Definição:** Número de casos de teste automatizados para cada mil linhas de código (KLOC) de produção de **todo o projeto**.
+    * **Coleta:** 1.  Contar o número **total** de testes (ex: `grep -r "function test" tests/ | wc -l`).
+        2.  Contar as linhas de código de produção **totais** do projeto (ex: `cloc src/` e pegar o valor de "code").
+        3.  Calcular a densidade: `(Número Total de Testes / (Linhas Totais de Código / 1000))`
     * **Pontuação de Julgamento (Sugestão):**
 
       | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
       | > 10 Testes/KLOC | 5 a 10 Testes/KLOC | < 5 Testes/KLOC |
 
-    * **Propósito:** Avaliar se o esforço de teste está distribuído proporcionalmente à complexidade e ao tamanho do módulo, garantindo que módulos maiores tenham uma quantidade correspondente de validações.
+    * **Propósito:** Avaliar se o esforço de teste é proporcional ao tamanho total do projeto.
 
 * **Métrica 3.3: Tempo Médio de Execução dos Testes**
     * **Definição:** Tempo médio (em segundos) para a execução de um único caso de teste automatizado, ou da suíte inteira.

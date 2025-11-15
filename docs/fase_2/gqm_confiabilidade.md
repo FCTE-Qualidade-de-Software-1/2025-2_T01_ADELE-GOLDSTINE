@@ -36,35 +36,21 @@
 Para decompor o objetivo de análise da Confiabilidade, foram formuladas as seguintes perguntas e hipóteses. As hipóteses tornam explícito o conhecimento atual sobre o sistema, que será validado pelas métricas.
 
 **Questão 1: Maturidade**
-<!--  Antiga pergunta
-a professora nao gostou da palavra frequencia e existente> 
-Com que frequência o código existente gera defeitos?
- -->
-
 > Qual é a estabilidade do código em relação à ocorrência de defeitos?
 
-* **Hipótese 1.1 (H1.1):** Os módulos de maior importância para o negócio (**Escola**, **Servidores** e **Educacenso**) apresentarão uma **densidade de defeitos** (bugs por KLOC) pelo menos 20% superior à média dos demais módulos do sistema.
+* **Hipótese 1.1 (H1.1):** A **densidade de defeitos** (bugs por KLOC) geral do sistema será superior a 3 bugs/KLOC, indicando um passivo de manutenção que afeta a estabilidade.
 
 * **Hipótese 1.2 (H1.2):** O **percentual de commits de correção** no histórico do projeto será superior a 15%, indicando que uma parcela significativa do esforço de desenvolvimento é reativa, focada na correção de falhas existentes.
 
 **Questão 2: Tolerância a Falhas**
-<!--  Antiga pergunta
-A professora nao falou sobre essa pergunta
-O código está preparado para lidar com erros inesperados durante a execução?
- -->
 > Qual é o nível de robustez do código contra falhas em tempo de execução?
 
-* **Hipótese 2.1 (H2.1):** Menos de 50% das operações críticas de entrada/saída (I/O), como conexões com banco de dados e manipulação de arquivos nos módulos priorizados, possuirão um mecanismo adequado de tratamento de exceções (try-catch).
+* **Hipótese 2.1 (H2.1):** Menos de 50% das operações críticas de entrada/saída (I/O), como conexões com banco de dados e manipulação de arquivos, possuirão um mecanismo adequado de tratamento de exceções (try-catch).
 
 **Questão 3: Recuperabilidade**
-<!--  Antiga pergunta
-A professora achou que tinha muita coisa
-> O sistema possui mecanismos de recuperação de dados que um desenvolvedor possa verificar e manter?
- -->
-
 > Qual é a eficácia dos mecanismos de recuperação de dados do sistema?
 
-* **Hipótese 3.1 (H3.1):** A **análise qualitativa das rotinas de backup** revelará uma baixa pontuação de manutenibilidade (inferior a 5 em 10), devido à falta de documentação clara e à complexidade do código, representando um risco para a manutenção desses mecanismos.
+* **Hipóteso 3.1 (H3.1):** A **análise qualitativa das rotinas de backup** revelará uma baixa pontuação de manutenibilidade (inferior a 5 em 10), devido à falta de documentação clara e à complexidade do código, representando um risco para a manutenção desses mecanismos.
 
 ---
 
@@ -75,17 +61,17 @@ A professora achou que tinha muita coisa
 * **Métrica 1.1: Densidade de Defeitos no Código**
     * **Definição:** Número de *issues* com a label `bug` no repositório GitHub, normalizado por mil linhas de código (KLOC).
     * **Fórmula:** `(Número total de issues "bug") / (Total de linhas de código / 1000)`
-    * **Coleta:** 
-        1. Listar todas as issues com a label `bug` via API do GitHub ou busca manual.
-        2. Contar as linhas de código PHP (`.php`) para os módulos priorizados (Escola, Servidores, Educacenso) e para o restante do sistema separadamente, utilizando a ferramenta `cloc`.
-        3. Aplicar a fórmula para os dois escopos (prioritários vs. não prioritários) e comparar os resultados para validar a **H1.1**.
+    * **Coleta:** 1. Listar todas as issues com a label `bug` via API do GitHub ou busca manual.
+        2. Contar o **total** de linhas de código PHP (`.php`) de todo o projeto, utilizando a ferramenta `cloc`.
+        3. Aplicar a fórmula para o escopo global do projeto para validar a **H1.1**.
+
     * **Pontuação de Julgamento:** 
 
-        | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
-        |:--------------:|:--------:|:-------------:|:-------------------:|
-        | ≤ 1 bug/KLOC | >1 e ≤3 bugs/KLOC | >3 e ≤6 bugs/KLOC | >6 bugs/KLOC |
+    | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
+    |:--------------:|:--------:|:-------------:|:-------------------:|
+    | ≤ 1 bug/KLOC | >1 e ≤3 bugs/KLOC | >3 e ≤6 bugs/KLOC | >6 bugs/KLOC |
 
-    * **Propósito:** Identificar se as áreas mais críticas do sistema são também as que concentram mais defeitos reportados.
+    * **Propósito:** Identificar a densidade geral de defeitos reportados no sistema em relação ao seu tamanho.
 
 * **Métrica 1.2: Percentual de Commits de Correção**
 
@@ -99,9 +85,9 @@ A professora achou que tinha muita coisa
 
     * **Pontuação de Julgamento:** 
 
-        | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
-        |:--------------:|:--------:|:-------------:|:-------------------:|
-        | ≤ 10% | >10% e ≤20% | >20% e ≤35% | >35% |
+    | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
+    |:--------------:|:--------:|:-------------:|:-------------------:|
+    | ≤ 10% | >10% e ≤20% | >20% e ≤35% | >35% |
 
     * **Propósito:** Avaliar se o esforço de desenvolvimento é mais reativo (corrigindo falhas) do que proativo (desenvolvendo novas funcionalidades).
 
@@ -113,16 +99,16 @@ A professora achou que tinha muita coisa
     * **Fórmula:** `(Número de operações críticas com try-catch / Número total de operações críticas) * 100`
     * **Coleta:** Revisão manual de código ou uso de scripts de análise estática para buscar padrões de tratamento de exceções.
         1. Definir a lista de "operações críticas": chamadas de função/método para conexão com banco de dados ex:( `new PDO(`, `pg_connect`), manipulação de arquivos (ex: `fopen`, `file_put_contents`) etc.
-        2. Nos diretórios dos módulos priorizados, executar scripts de busca (`grep` ou `ack`) para contar o número total de ocorrências dessas operações.
+        2. Em **todo o código-fonte do projeto**, executar scripts de busca (`grep` ou `ack`) para contar o número total de ocorrências dessas operações.
         3. Executar um segundo script para contar quantas dessas ocorrências estão sintaticamente dentro de um bloco `try { ... }`.
         4. Aplicar a fórmula para validar a **H2.1**.
     * **Observação:** a métrica mede a existência do mecanismo, não sua eficácia.
         
     * **Pontuação de Julgamento:** 
 
-        | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
-        |:--------------:|:--------:|:-------------:|:-------------------:|
-        | ≥ 90% | 70%–89% | 40%–69% | < 40% |
+    | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
+    |:--------------:|:--------:|:-------------:|:-------------------:|
+    | ≥ 90% | 70%–89% | 40%–69% | < 40% |
 
     * **Propósito:** Medir a robustez do código contra erros em tempo de execução.
 
@@ -143,10 +129,10 @@ A professora achou que tinha muita coisa
         4. A pontuação final (0 a 10) será a soma dos pontos do checklist, usada para validar a **H3.1**.
 
     * **Pontuação de Julgamento:** 
-
-        | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
-        |:--------------:|:--------:|:-------------:|:-------------------:|
-        | 9–10 | 7–8 | 4–6 | 0–3 |
+    
+    | **Excelente** | **Bom** | **Regular** | **Insatisfatório** |
+    |:--------------:|:--------:|:-------------:|:-------------------:|
+    | 9–10 | 7–8 | 4–6 | 0–3 |
 
     * **Propósito:** Avaliar a manutenibilidade e a confiabilidade percebida dos mecanismos de recuperação de dados do ponto de vista de um desenvolvedor.
 

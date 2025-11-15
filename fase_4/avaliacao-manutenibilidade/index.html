@@ -1,0 +1,1851 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../avaliacao-confiabilidade/">
+      
+      
+        <link rel="next" href="../avaliacao-seguranca/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Avaliação da Manutenabilidade - Adele Goldstine - Trabalho Final</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#avaliacao-da-manutenibilidade" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Adele Goldstine - Trabalho Final" class="md-header__button md-logo" aria-label="Adele Goldstine - Trabalho Final" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Adele Goldstine - Trabalho Final
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Avaliação da Manutenabilidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T01 Adele Goldstine
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_1/objeto-estudo/" class="md-tabs__link">
+          
+  
+  
+  Fase 1 - Propósito da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_2/introducao_gqm/" class="md-tabs__link">
+          
+  
+  
+  Fase 2 - Especificação da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_3/projetar/" class="md-tabs__link">
+          
+  
+  
+  Fase 3 - Projetar a Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introducao-avaliacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4 - Execução da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contribuicoes/fase-1/" class="md-tabs__link">
+          
+  
+  
+  Contribuições
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Adele Goldstine - Trabalho Final" class="md-nav__button md-logo" aria-label="Adele Goldstine - Trabalho Final" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Adele Goldstine - Trabalho Final
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T01 Adele Goldstine
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1 - Propósito da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 1 - Propósito da Avaliação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/objeto-estudo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Objeto de Estudo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/contexto-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contexto da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelo de Qualidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2 - Especificação da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 2 - Especificação da Avaliação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/introducao_gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Abordagem GQM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medição 1 - Confiabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medição 2 - Manutenabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Medição 3 - Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/analise_geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Geral das Medições
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3 - Projetar a Avaliação
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 3 - Projetar a Avaliação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_3/projetar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetar Avaliação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4 - Execução da Avaliação
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Fase 4 - Execução da Avaliação
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducao-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao-confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação da Confiabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação da Manutenabilidade
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação da Manutenabilidade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Introdução
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-referencial-teorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Referencial Teórico
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-coleta-e-analise-das-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Coleta e Análise das Métricas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Coleta e Análise das Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências e Dados Brutos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classificação da Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise e Discussão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências e Dados Brutos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classificação da Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise e Discussão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências e Dados Brutos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classificação da Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise e Discussão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências e Dados Brutos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classificação da Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise e Discussão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências e Dados Brutos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classificação da Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise e Discussão
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Evidências e Dados Brutos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classificação da Métrica
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise e Discussão
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conclusao-manutenibilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Conclusão (Manutenibilidade)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao-seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação da Segurança
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusao-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Conclusão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contribuições
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Contribuições
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fase 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="avaliacao-da-manutenibilidade">Avaliação da Manutenibilidade</h1>
+<p>Esta página apresenta a execução da avaliação e os resultados da coleta de dados para o objetivo GQM de <strong>Manutenibilidade</strong> do i-Educar.</p>
+<h2 id="1-introducao">1. Introdução</h2>
+<p>[PREENCHER: Faça uma breve introdução sobre este objetivo.
+* Qual era o objetivo (Goal) GQM definido na Fase 2 para Manutenibilidade?
+* Por que avaliar a manutenibilidade é vital para este projeto (software open-source, comunidade de desenvolvedores)?
+* Quais questões principais (Impacto das Alterações, Complexidade de Entendimento, Cobertura de Testes) foram investigadas?]</p>
+<h2 id="2-referencial-teorico">2. Referencial Teórico</h2>
+<p>[PREENCHER: Apresente a base teórica <em>para as métricas</em> que serão mostradas.
+* <strong>Acoplamento (CBO):</strong> Defina o que é CBO (Coupling Between Objects) e por que valores altos são ruins (impacto em cascata).
+* <strong>Código Repetido:</strong> Explique o "custo" do código duplicado (manutenção em N lugares).
+* <strong>Complexidade Ciclomática (CC):</strong> Defina o que é CC (McCabe) e por que valores acima de 10 são considerados "Insatisfatórios" (dificuldade de teste e entendimento).
+* <strong>Cobertura de Teste e Densidade:</strong> Explique o que é cobertura de linha e por que ela, sozinha, não é suficiente (daí a necessidade da "Densidade de Testes").
+* <strong>Tempo de Execução:</strong> Por que testes lentos impactam o ciclo de desenvolvimento (CI/CD, feedback lento).
+* Lembre-se de citar as fontes (livros como "Clean Code" de Robert C. Martin, artigos, etc.).]</p>
+<hr />
+<h2 id="3-coleta-e-analise-das-metricas">3. Coleta e Análise das Métricas</h2>
+<p>Aqui são apresentados os dados brutos, a classificação e a análise individual de cada métrica de Manutenibilidade.</p>
+<details open="open">
+<summary>Métrica 1.1: Coupling Between Objects (CBO)</summary>
+<h3 id="evidencias-e-dados-brutos">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> <code>phpmd</code> ou SonarQube.</li>
+<li><strong>Comando:</strong> <code>phpmd [caminho] xml codesize,coupling</code></li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Valor médio de CBO: [PREENCHER]</li>
+<li>Número/Percentual de classes com CBO &gt; 15: [PREENCHER]</li>
+</ul>
+</li>
+</ul>
+<p>![Saída da ferramenta de análise de CBO]</p>
+<h3 id="classificacao-da-metrica">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> Média [X] / [Y]% das classes é "Insatisfatório"</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: CBO ≤ 10</li>
+<li>Regular: 10 &lt; CBO ≤ 15</li>
+<li>Insatisfatório: CBO &gt; 15</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> [PREENCHER: Aderente a qual classificação? Focar nas classes "Insatisfatórias"]</li>
+</ul>
+<h3 id="analise-e-discussao">Análise e Discussão</h3>
+<p>[PREENCHER: O que o nível de acoplamento indica? Um CBO alto sugere que as classes estão muito interligadas, tornando difícil alterar uma parte do sistema sem quebrar outra (efeito cascata). Isso valida H1.1? Qual o impacto no esforço de manutenção?]</p>
+</details>
+<details>
+<summary>Métrica 1.2: Percentual de Código Repetido</summary>
+<h3 id="evidencias-e-dados-brutos_1">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> <code>phpcpd</code> (PHP Copy/Paste Detector) ou SonarQube.</li>
+<li><strong>Comando:</strong> <code>phpcpd [caminho]</code></li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Percentual de linhas duplicadas: [VALOR FINAL]%</li>
+</ul>
+</li>
+</ul>
+<p>![Saída da ferramenta de detecção de duplicação]</p>
+<h3 id="classificacao-da-metrica_1">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> [VALOR FINAL]%</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: ≤ 3%</li>
+<li>Regular: 3% &lt; M1.2 ≤ 5%</li>
+<li>Insatisfatório: &gt; 5%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> [PREENCHER: Excelente/Bom/Regular/Insatisfatório]</li>
+</ul>
+<h3 id="analise-e-discussao_1">Análise e Discussão</h3>
+<p>[PREENCHER: O que esse valor significa? Código duplicado é um grande indicador de débito técnico. Se um bug for encontrado em um trecho copiado, ele precisará ser corrigido em N lugares. Isso valida H1.1 (junto com o CBO)? Qual o impacto no custo de manutenção?]</p>
+</details>
+<details>
+<summary>Métrica 2.1: Complexidade Ciclomática (CC)</summary>
+<h3 id="evidencias-e-dados-brutos_2">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> <code>phpmd</code> ou SonarQube.</li>
+<li><strong>Comando:</strong> <code>phpmd [caminho] xml codesize</code></li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Complexidade Ciclomática média por método: [PREENCHER]</li>
+<li>Número/Percentual de métodos com CC &gt; 10: [PREENCHER]</li>
+</ul>
+</li>
+</ul>
+<p>![Saída da ferramenta de análise de Complexidade]</p>
+<h3 id="classificacao-da-metrica_2">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> Média [X] / [Y]% dos métodos é "Insatisfatório"</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: CC ≤ 5</li>
+<li>Regular: 5 &lt; CC ≤ 10</li>
+<li>Insatisfatório: CC &gt; 10</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> [PREENCHER: Focar na quantidade de métodos "Insatisfatórios"]</li>
+</ul>
+<h3 id="analise-e-discussao_2">Análise e Discussão</h3>
+<p>[PREENCHER: O que esses dados indicam? Métodos com alta CC (muitos <code>if</code>, <code>else</code>, <code>for</code>, <code>while</code>) são difíceis de entender, testar e modificar. Isso valida a H2.1? Qual o impacto no tempo de onboarding de novos desenvolvedores?]</p>
+</details>
+<details>
+<summary>Métrica 3.1: Percentual de Cobertura de Teste (Line Coverage)</summary>
+<h3 id="evidencias-e-dados-brutos_3">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> PHPUnit com Xdebug/PCOV.</li>
+<li><strong>Comando:</strong> <code>phpunit --coverage-html [diretório]</code></li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Cobertura total de linhas (Line Coverage): [VALOR FINAL]%</li>
+</ul>
+</li>
+</ul>
+<p>![Relatório de Cobertura de Teste]</p>
+<h3 id="classificacao-da-metrica_3">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> [VALOR FINAL]%</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: ≥ 80%</li>
+<li>Regular: 70% ≤ M3.1 &lt; 80%</li>
+<li>Insatisfatório: &lt; 70%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> [PREENCHER: Excelente/Bom/Regular/Insatisfatório]</li>
+</ul>
+<h3 id="analise-e-discussao_3">Análise e Discussão</h3>
+<p>[PREENCHER: O que esse percentual de cobertura significa? Ele mede a "confiança" que a equipe pode ter ao fazer refatorações. Um valor baixo (validando H3.1) indica um alto risco de introduzir regressões (quebrar algo que funcionava) a cada nova alteração.]</p>
+</details>
+<details>
+<summary>Métrica 3.2: Densidade de Testes por Módulo (Testes/KLOC)</summary>
+<h3 id="evidencias-e-dados-brutos_4">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> <code>grep</code> e <code>cloc</code>.</li>
+<li><strong>Dados Coletados (Exemplo Módulo Escola):</strong><ul>
+<li>Nº de testes (Módulo Escola): [PREENCHER]</li>
+<li>KLOC (Módulo Escola): [PREENCHER]</li>
+<li>Cálculo (Escola): [VALOR FINAL] Testes/KLOC</li>
+</ul>
+</li>
+<li><strong>Dados Coletados (Exemplo Módulo Servidores):</strong><ul>
+<li>Nº de testes (Módulo Servidores): [PREENCHER]</li>
+<li>KLOC (Módulo Servidores): [PREENCHER]</li>
+<li>Cálculo (Servidores): [VALOR FINAL] Testes/KLOC</li>
+</ul>
+</li>
+<li><strong>Dados Coletados (Exemplo Módulo Educacenso):</strong><ul>
+<li>Nº de testes (Módulo Educacenso): [PREENCHER]</li>
+<li>KLOC (Módulo Educacenso): [PREENCHER]</li>
+<li>Cálculo (Educacenso): [VALOR FINAL] Testes/KLOC</li>
+</ul>
+</li>
+</ul>
+<p>![Evidência da contagem de testes e linhas por módulo]</p>
+<h3 id="classificacao-da-metrica_4">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> (Escola: [X], Servidores: [Y], Educacenso: [Z])</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: &gt; 10 Testes/KLOC</li>
+<li>Regular: 5 a 10 Testes/KLOC</li>
+<li>Insatisfatório: &lt; 5 Testes/KLOC</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> [PREENCHER: Classificar cada módulo]</li>
+</ul>
+<h3 id="analise-e-discussao_4">Análise e Discussão</h3>
+<p>[PREENCHER: O que essa densidade mostra? Ela complementa a cobertura. Podemos ter alta cobertura (M3.1) mas baixa densidade, indicando testes grandes que cobrem muito código superficialmente. Ou podemos ter baixa cobertura mas alta densidade em um módulo específico, mostrando um foco de teste. Como esses módulos se comparam?]</p>
+</details>
+<details>
+<summary>Métrica 3.3: Tempo Médio de Execução dos Testes</summary>
+<h3 id="evidencias-e-dados-brutos_5">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> PHPUnit / Log do GitHub Actions.</li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Tempo total de execução da suíte: [PREENCHER: ex: 5m 30s]</li>
+<li>Número total de testes: [PREENCHER]</li>
+<li>Cálculo (Tempo por teste): <code>([Tempo Total] / [Nº Testes])</code> = [VALOR FINAL]s por teste</li>
+</ul>
+</li>
+</ul>
+<p>![Evidência do tempo de execução dos testes]</p>
+<h3 id="classificacao-da-metrica_5">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> [VALOR FINAL]s (Tempo médio por teste)</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: ≤ 1s</li>
+<li>Regular: 1s &lt; M3.3 ≤ 3s</li>
+<li>Insatisfatório: &gt; 3s</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> [PREENCHER: Excelente/Bom/Regular/Insatisfatório]</li>
+</ul>
+<h3 id="analise-e-discussao_5">Análise e Discussão</h3>
+<p>[PREENCHER: Qual o impacto do tempo de execução? Se a suíte inteira demorar muito (ex: &gt; 10 min) ou o tempo médio for alto (indicando testes lentos, talvez de integração disfarçados de unitários), os desenvolvedores param de rodá-la localmente. Isso valida H3.2? Se sim, o feedback de erros é atrasado até o pipeline de CI, tornando o desenvolvimento mais lento.]</p>
+</details>
+<hr />
+<h2 id="4-conclusao-manutenibilidade">4. Conclusão (Manutenibilidade)</h2>
+<p>[PREENCHER: Faça uma conclusão <em>específica</em> para a Manutenibilidade.
+* Com base nos resultados das 6 métricas, o objetivo de Manutenibilidade foi atingido?
+* Use os "Critérios para Julgamento" da Fase 2 (Aceitável, Parcialmente aceitável, Inaceitável) para dar um veredito sobre esta característica.
+* Quais foram os principais pontos fortes e fracos encontrados? (Ex: "A cobertura de teste é boa, mas a complexidade e o acoplamento são 'Insatisfatórios', indicando um código difícil de manter.")
+* (Opcional) Quais hipóteses (H1.1, H2.1, H3.1, H3.2) foram validadas ou invalidadas pela coleta?]</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

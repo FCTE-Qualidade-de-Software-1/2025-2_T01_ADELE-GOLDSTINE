@@ -23,7 +23,7 @@ Esta página apresenta a execução da avaliação e os resultados da coleta de 
 
 Aqui são apresentados os dados brutos, a classificação e a análise individual de cada métrica de Confiabilidade.
 
-???+ "Métrica 1.1: Densidade de Defeitos no Código"
+???+ "M1.1: Densidade de Defeitos no Código"
 
     ### Evidências e Dados Brutos
 
@@ -50,7 +50,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que esse número significa? Um valor X indica que o sistema tem muitos/poucos defeitos em relação ao seu tamanho. Isso valida/invalida a H1.1? Por quê? Qual o impacto disso para a estabilidade do código?]
 
-??? "Métrica 1.2: Percentual de Commits de Correção"
+??? "M1.2: Percentual de Commits de Correção"
 
     ### Evidências e Dados Brutos
 
@@ -79,7 +79,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que esse percentual indica? Um valor alto sugere que a equipe gasta mais tempo corrigindo bugs (reativo) do que criando features (proativo). Isso valida/invalida a H1.2? Qual o impacto disso para a maturidade do projeto?]
 
-??? "Métrica 2.1: Índice de Tratamento de Exceções"
+??? "M2.1: Índice de Tratamento de Exceções"
 
     ### Evidências e Dados Brutos
 
@@ -106,7 +106,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que esse índice revela sobre a robustez (tolerância a falhas) do sistema? Um valor baixo indica que falhas de I/O (ex: banco de dados offline) provavelmente causarão um crash no sistema. Isso valida/invalida a H2.1?]
 
-??? "Métrica 3.1: Análise Qualitativa de Código de Backup"
+??? "M3.1: Análise Qualitativa de Código de Backup"
 
     ### Evidências e Dados Brutos
 

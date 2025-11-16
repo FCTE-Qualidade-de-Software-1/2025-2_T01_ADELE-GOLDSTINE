@@ -38,3 +38,4 @@ O trabalho foi centrado na decomposição das três características priorizadas
 | `1.7`  | 21/10/2025 | Ajuste e padronização na página de segurança e inclusão de critérios de julgamento | [Zenilda Vieira](https://github.com/ZenildaVieira)             | [Caio Antônio](http://github.com/Caio-Antonio)       |
 | `1.8`  | 24/10/2025 | Criação do documento "Análise Geral das Medições" com diagrama GQM integrado, análise de sinergia e refinamento das características|  [Marcos Marinho](https://github.com/devMarcosVM) | |
 | `1.9`  | 24/10/2025 | Atualização do diagrama de segurança                                             | [Zenilda Vieira](https://github.com/ZenildaVieira)             | [Caio Antônio](http://github.com/Caio-Antonio)|
+| `1.10`  | 15/11/2025 | Adequação ao novo escopo de avaliação   | [André Maia](http://github.com/andre-maia51)  |    |

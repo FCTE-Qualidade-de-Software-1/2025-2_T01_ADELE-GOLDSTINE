@@ -24,15 +24,15 @@ Esta página apresenta a execução da avaliação e os resultados da coleta de 
 
 Aqui são apresentados os dados brutos, a classificação e a análise individual de cada métrica de Segurança.
 
-???+ "Métrica 1.1: Percentual de módulos com regras de autorização"
+???+ "M1.1: Percentual de rotas críticas com regras de autorização"
 
     ### Evidências e Dados Brutos
 
-    * **Método:** Revisão de código fonte e documentação.
-    * **Módulos sensíveis analisados:** [PREENCHER: Ex: Gestão de Alunos, Gestão de Notas, Gestão de Servidores]
+    * **Método:** Revisão de código fonte (ex: arquivos de rota, controllers).
+    * **Rotas críticas analisadas:** [PREENCHER: Ex: /admin/notas, /api/alunos/{id}, etc.]
     * **Dados Coletados:**
-        * Total de módulos sensíveis: [PREENCHER]
-        * Módulos com checagem de autorização por papel: [PREENCHER]
+        * Total de rotas críticas: [PREENCHER]
+        * Rotas com checagem de autorização: [PREENCHER]
         * Cálculo: `([Com Autorização] / [Total]) * 100` = [VALOR FINAL]%
 
     ![Exemplo de verificação de autorização no código]
@@ -52,7 +52,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que esse percentual indica? Um valor baixo é uma falha crítica de segurança (Broken Access Control). Significa que um usuário com permissão baixa (ex: professor) poderia acessar dados de outro nível (ex: administrador). Isso valida H1.1?]
 
-??? "Métrica 1.2: Método de armazenamento de senhas"
+??? "M1.2: Método de armazenamento de senhas"
 
     ### Evidências e Dados Brutos
 
@@ -74,7 +74,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: Isso valida a H1.2? Se for "Não conforme" (ex: usa MD5), as senhas dos usuários estão em risco extremo em caso de vazamento de banco de dados. Se for "Conforme", o sistema segue as boas práticas.]
 
-??? "Métrica 1.3: Tempo médio de expiração da sessão"
+??? "M1.3: Tempo médio de expiração da sessão"
 
     ### Evidências e Dados Brutos
 
@@ -96,7 +96,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: Isso valida a H1.3? Um tempo muito longo aumenta o risco de um atacante sequestrar uma sessão deixada aberta em um computador público. Um tempo muito curto prejudica a usabilidade.]
 
-??? "Métrica 2.1: Percentual de ações críticas registradas em logs"
+??? "M2.1: Percentual de ações críticas registradas em logs"
 
     ### Evidências e Dados Brutos
 
@@ -124,7 +124,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que isso significa? Se ações críticas não são logadas (invalidando H2.1), a rastreabilidade é impossível. Se um dado for alterado indevidamente, ninguém saberá quem fez ou quando fez. Isso impede qualquer auditoria.]
 
-??? "Métrica 2.2: Percentual de logs com informações completas"
+??? "M2.2: Percentual de logs com informações completas"
 
     ### Evidências e Dados Brutos
 
@@ -151,35 +151,35 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: Isso valida H2.2? Não adianta logar (M2.1) se o log é inútil. Um log que diz "Acesso Negado" sem dizer *quem* tentou acessar *o quê*, não serve para auditoria. Logs incompletos dificultam a resposta a incidentes.]
 
-??? "Métrica 3.1: Número médio de testes de segurança por módulo principal"
+??? "M3.1: Densidade de testes de segurança (Testes/KLOC)"
 
     ### Evidências e Dados Brutos
 
-    * **Método:** Inspeção do repositório de testes.
+    * **Método:** Inspeção do repositório (`grep`) e `cloc`.
     * **Testes de segurança:** Testes que validam falhas de permissão, SQL Injection, XSS, etc.
     * **Dados Coletados:**
-        * Nº de testes de segurança (Módulo Escola): [PREENCHER]
-        * Nº de testes de segurança (Módulo Servidores): [PREENCHER]
-        * Nº de testes de segurança (Módulo Educacenso): [PREENCHER]
-        * Média: [VALOR FINAL]
+        * Nº total de testes de segurança: [PREENCHER]
+        * KLOC total do código de produção: [PREENCHER]
+        * Cálculo: `(Nº Testes de Segurança / (KLOC Total / 1000))` = [VALOR FINAL] Testes/KLOC
 
     ![Exemplo de teste de segurança]
+    ![Evidência da contagem de KLOC]
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL] (média)
+    * **Resultado:** [VALOR FINAL] Testes/KLOC
     * **Critério (da Fase 2):**
-        * Excelente: ≥ 3
-        * Bom: 2
-        * Regular: 1
-        * Insatisfatório: 0
+        * Excelente: > 1
+        * Bom: > 0.5
+        * Regular: > 0.1
+        * Insatisfatório: ≤ 0.1
     * **Classificação:** [PREENCHER: Excelente/Bom/Regular/Insatisfatório]
 
     ### Análise e Discussão
 
     [PREENCHER: Isso valida H3.1? A ausência (ou baixo número) de testes de segurança indica que a equipe de desenvolvimento não está ativamente prevenindo vulnerabilidades. A segurança do sistema depende apenas da "sorte" ou da revisão manual, o que é arriscado.]
 
-??? "Métrica 3.2: Frequência média de atualização de dependências"
+??? "M3.2: Frequência média de atualização de dependências"
 
     ### Evidências e Dados Brutos
 
@@ -201,7 +201,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Análise e Discussão
 
-    [PREENCHER: Isso valida H3.2 e H3.3? Dependências desatualizadas são a porta de entrada mais comum para ataques (ex: Log4Shell, etc.). Manter as dependências atualizadas é uma prática de desenvolvimento seguro essencial.]
+    [PREENCHER: Isso valida H3.2? Dependências desatualizadas são a porta de entrada mais comum para ataques (ex: Log4Shell, etc.). Manter as dependências atualizadas é uma prática de desenvolvimento seguro essencial.]
 
 ---
 
@@ -211,4 +211,4 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 * Com base nos resultados das 7 métricas, o objetivo de Segurança foi atingido?
 * Use os "Critérios para Julgamento" da Fase 2 (Aceitável, Parcialmente aceitável, Inaceitável) para dar um veredito sobre esta característica.
 * Quais foram os principais pontos fortes e fracos encontrados? (Ex: "O sistema armazena senhas corretamente, mas falha gravemente no controle de acesso e no monitoramento de logs.")
-* (Opcional) Quais hipóteses (H1.1, H1.2, H1.3, H2.1, H2.2, H3.1, H3.2, H3.3) foram validadas ou invalidadas pela coleta?]
+* (Opcional) Quais hipóteses (H1.1, H1.2, H1.3, H2.1, H2.2, H3.1, H3.2) foram validadas ou invalidadas pela coleta?]

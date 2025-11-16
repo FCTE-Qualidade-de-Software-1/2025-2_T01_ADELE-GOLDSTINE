@@ -25,7 +25,7 @@ Esta página apresenta a execução da avaliação e os resultados da coleta de 
 
 Aqui são apresentados os dados brutos, a classificação e a análise individual de cada métrica de Manutenibilidade.
 
-???+ "Métrica 1.1: Coupling Between Objects (CBO)"
+???+ "M1.1: Coupling Between Objects (CBO)"
 
     ### Evidências e Dados Brutos
 
@@ -50,7 +50,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que o nível de acoplamento indica? Um CBO alto sugere que as classes estão muito interligadas, tornando difícil alterar uma parte do sistema sem quebrar outra (efeito cascata). Isso valida H1.1? Qual o impacto no esforço de manutenção?]
 
-??? "Métrica 1.2: Percentual de Código Repetido"
+??? "M1.2: Percentual de Código Repetido"
 
     ### Evidências e Dados Brutos
 
@@ -74,7 +74,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que esse valor significa? Código duplicado é um grande indicador de débito técnico. Se um bug for encontrado em um trecho copiado, ele precisará ser corrigido em N lugares. Isso valida H1.1 (junto com o CBO)? Qual o impacto no custo de manutenção?]
 
-??? "Métrica 2.1: Complexidade Ciclomática (CC)"
+??? "M2.1: Complexidade Ciclomática (CC)"
 
     ### Evidências e Dados Brutos
 
@@ -99,7 +99,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que esses dados indicam? Métodos com alta CC (muitos `if`, `else`, `for`, `while`) são difíceis de entender, testar e modificar. Isso valida a H2.1? Qual o impacto no tempo de onboarding de novos desenvolvedores?]
 
-??? "Métrica 3.1: Percentual de Cobertura de Teste (Line Coverage)"
+??? "M3.1: Percentual de Cobertura de Teste (Line Coverage)"
 
     ### Evidências e Dados Brutos
 
@@ -123,40 +123,32 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     [PREENCHER: O que esse percentual de cobertura significa? Ele mede a "confiança" que a equipe pode ter ao fazer refatorações. Um valor baixo (validando H3.1) indica um alto risco de introduzir regressões (quebrar algo que funcionava) a cada nova alteração.]
 
-??? "Métrica 3.2: Densidade de Testes por Módulo (Testes/KLOC)"
+??? "M3.2: Densidade de Testes (Testes/KLOC)"
 
     ### Evidências e Dados Brutos
 
     * **Ferramenta(s):** `grep` e `cloc`.
-    * **Dados Coletados (Exemplo Módulo Escola):**
-        * Nº de testes (Módulo Escola): [PREENCHER]
-        * KLOC (Módulo Escola): [PREENCHER]
-        * Cálculo (Escola): [VALOR FINAL] Testes/KLOC
-    * **Dados Coletados (Exemplo Módulo Servidores):**
-        * Nº de testes (Módulo Servidores): [PREENCHER]
-        * KLOC (Módulo Servidores): [PREENCHER]
-        * Cálculo (Servidores): [VALOR FINAL] Testes/KLOC
-    * **Dados Coletados (Exemplo Módulo Educacenso):**
-        * Nº de testes (Módulo Educacenso): [PREENCHER]
-        * KLOC (Módulo Educacenso): [PREENCHER]
-        * Cálculo (Educacenso): [VALOR FINAL] Testes/KLOC
+    * **Dados Coletados:**
+        * Nº total de testes (`grep -r "function test" tests/ | wc -l`): [PREENCHER]
+        * Linhas de código de produção totais (`cloc src/`): [PREENCHER]
+        * Cálculo: `(Nº Total de Testes / (Linhas Totais de Código / 1000))` = [VALOR FINAL] Testes/KLOC
 
-    ![Evidência da contagem de testes e linhas por módulo]
+    ![Evidência da contagem de testes e linhas totais]
 
     ### Classificação da Métrica
 
-    * **Resultado:** (Escola: [X], Servidores: [Y], Educacenso: [Z])
+    * **Resultado:** [VALOR FINAL] Testes/KLOC
     * **Critério (da Fase 2):**
         * Bom: > 10 Testes/KLOC
         * Regular: 5 a 10 Testes/KLOC
         * Insatisfatório: < 5 Testes/KLOC
-    * **Classificação:** [PREENCHER: Classificar cada módulo]
+    * **Classificação:** [PREENCHER: Bom/Regular/Insatisfatório]
 
     ### Análise e Discussão
 
-    [PREENCHER: O que essa densidade mostra? Ela complementa a cobertura. Podemos ter alta cobertura (M3.1) mas baixa densidade, indicando testes grandes que cobrem muito código superficialmente. Ou podemos ter baixa cobertura mas alta densidade em um módulo específico, mostrando um foco de teste. Como esses módulos se comparam?]
+    [PREENCHER: O que essa densidade global mostra? Ela complementa a cobertura. Podemos ter alta cobertura (M3.1) mas baixa densidade, indicando testes grandes que cobrem muito código superficialmente. Como o resultado se compara com a H3.1?]
 
-??? "Métrica 3.3: Tempo Médio de Execução dos Testes"
+??? "M3.3: Tempo Médio de Execução dos Testes"
 
     ### Evidências e Dados Brutos
 

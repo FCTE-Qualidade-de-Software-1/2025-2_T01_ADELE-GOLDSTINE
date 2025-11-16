@@ -49,5 +49,6 @@ O i-Educar demonstra alinhamento direto com os Objetivos de Desenvolvimento Sust
 | `1.6`  | 30/09/2025 | Reestruturação dos documentos após ponto de controle 1                        | [Zenilda Vieira](https://github.com/ZenildaVieira)     | [André Maia](http://github.com/andre-maia51)          |
 | `1.7`  | 30/09/2025 | Adição da seção "Contexto da Avaliação" no Pages                       | [André Maia](http://github.com/andre-maia51)  |  [Manuella Valadares](http://github.com/manuvaladares)  |
 | `1.8`  | 30/09/2025 | Adição da seção "Objeto de estudo" no Pages   | [Manuella Valadares](http://github.com/manuvaladares)  |    |
+| `1.9`  | 15/11/2025 | Adequação ao novo escopo de avaliação   | [André Maia](http://github.com/andre-maia51)  |    |
 
 ---

@@ -33,13 +33,18 @@ theme:
     - content.code.copy
 
 markdown_extensions:
-  - attr_list
-  - pymdownx.superfences
-  - pymdownx.tabbed:
-      alternate_style: true
-  - tables
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
   - admonition
   - pymdownx.details
+  - pymdownx.superfences
+plugins:
+  - search
+  - panzoom:
+      full_screen: True
+      key: "none"
 
 nav:
   - Home: "index.md"

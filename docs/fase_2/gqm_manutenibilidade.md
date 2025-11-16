@@ -174,7 +174,29 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
 
 ### Diagrama GQM - Manutenibilidade (Representação Estrutural)
 
-![Diagrama GQM - Manutenibilidade](../assets/diagrama_manutenibilidade.png)
+!!! info
+    Dê zoom com o scroll do mouse no diagrama para ver melhor. Caso prefira, abra em tela cheia.<br/>
+    Você também mode mover o diagrama com o mouse.
+
+``` mermaid
+
+graph TB
+  BusinessObjective["Objetivo: Avaliar Manutenibilidade do i-Educar"]
+  
+  BusinessObjective --> Question1["Q1: Qual o impacto de realizar uma alteração no sistema?"]
+  BusinessObjective --> Question2["Q2: Quão complexo é entender o código-fonte?"]
+  BusinessObjective --> Question3["Q3: Como está a situação atual dos testes?"]
+  
+  Question1 --> MetricCBO["M1.1: Coupling Between Objects (CBO)"]
+  Question1 --> MetricDuplCode["M1.2: Percentual de Código Repetido"]
+  
+  Question2 --> MetricComplexity["M2.1: Complexidade Ciclomática (CC)"]
+  
+  Question3 --> MetricCoverage["M3.1: Percentual de Cobertura de Teste"]
+  Question3 --> MetricDensity["M3.2: Densidade de Testes (Testes/KLOC)"]
+  Question3 --> MetricTestTime["M3.3: Tempo Médio de Execução dos Testes"]
+
+```
 
 <div align="center">
   <font size="4"><figcaption>Figura 3: Diagrama GQM - Manutenibilidade. Autor: <a href="http://github.com/andre-maia51">André Maia</figcaption></font>

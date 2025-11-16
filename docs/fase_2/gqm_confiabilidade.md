@@ -195,7 +195,27 @@ Para decompor o objetivo de análise da Confiabilidade, foram formuladas as segu
 
 ### Diagrama GQM - Confiabilidade (Representação Estrutural)
 
-![Relação entre a Confiabilidade, Perguntas e Métricas](../assets/diagrama_confiabilidade.png)
+!!! info
+    Dê zoom com o scroll do mouse no diagrama para ver melhor. Caso prefira, abra em tela cheia.<br/>
+    Você também mode mover o diagrama com o mouse.
+
+``` mermaid
+
+graph TB
+  BusinessObjective["Objetivo: Avaliar Confiabilidade do i-Educar"]
+  
+  BusinessObjective --> Question1["Q1: Qual é a estabilidade do código em relação à ocorrência de defeitos?"]
+  BusinessObjective --> Question2["Q2: Qual é o nível de robustez do código contra falhas em tempo de execução?"]
+  BusinessObjective --> Question3["Q3: Qual é a eficácia dos mecanismos de recuperação de dados do sistema?"]
+  
+  Question1 --> MetricDefects["M1.1: Densidade de Defeitos no Código"]
+  Question1 --> MetricFixCommits["M1.2: Percentual de Commits de Correção"]
+  
+  Question2 --> MetricExceptions["M2.1: Índice de Tratamento de Exceções"]
+  
+  Question3 --> MetricBackup["M3.1: Análise Qualitativa de Código de Backup"]
+
+```
 
 <div style="margin-top: 8px; text-align: center;">
   <font size="4"><figcaption>Figura 2: Diagrama GQM - Confiabilidade. Autor: <a href="http://github.com/manuvaladares">Manuela Valadares</a></figcaption></font>

@@ -172,19 +172,39 @@
       <th><b>Tipo de Coleta</b></th>
     </tr>
     <tr>
-      <td>1 – Autenticação e Autorização</td>
-      <td>Presença de autenticação; Perfis de usuário</td>
-      <td>Teste manual / Análise documental</td>
+      <td><b>1 – Autenticação e Autorização</b><br>Qual é o nível de robustez do controle de acesso?</td>
+      <td>
+        - % de rotas críticas com autorização (M1.1)<br>
+        - Método de armazenamento de senhas (M1.2)<br>
+        - Tempo de expiração da sessão (M1.3)
+      </td>
+      <td>
+        - Revisão de código (rotas/controllers)<br>
+        - Revisão de código (autenticação)<br>
+        - Revisão de configuração / Teste funcional
+      </td>
     </tr>
     <tr>
-      <td>2 – Monitoramento e Auditoria</td>
-      <td>Existência de logs; Registro de falhas de login</td>
-      <td>Teste funcional / Observação</td>
+      <td><b>2 – Monitoramento e Auditoria</b><br>Qual é o nível de rastreabilidade das ações críticas?</td>
+      <td>
+        - % de ações críticas em logs (M2.1)<br>
+        - % de logs com informações completas (M2.2)
+      </td>
+      <td>
+        - Revisão de código / Análise de logs<br>
+        - Amostragem e análise de logs
+      </td>
     </tr>
     <tr>
-      <td>3 – Desenvolvimento Seguro</td>
-      <td>Presença de testes; Frequência de atualização de dependências</td>
-      <td>Inspeção do repositório / Histórico de commits</td>
+      <td><b>3 – Desenvolvimento Seguro</b><br>Em que medida o desenvolvimento segue práticas de segurança?</td>
+      <td>
+        - Densidade de testes de segurança (M3.1)<br>
+        - Frequência de atualização de dependências (M3.2)
+      </td>
+      <td>
+        - Inspeção do repositório / `cloc`<br>
+        - Inspeção do histórico de commits (ex: `composer.lock`)
+      </td>
     </tr>
   </table>
 
@@ -197,7 +217,30 @@
 
 ### Diagrama GQM - Segurança (Representação Estrutural)
 
-![Diagrama GQM - Segurança](../assets/diagrama_seguranca.png)
+!!! info
+    Dê zoom com o scroll do mouse no diagrama para ver melhor. Caso prefira, abra em tela cheia.<br/>
+    Você também mode mover o diagrama com o mouse.
+
+``` mermaid
+
+graph TB
+  BusinessObjective["Objetivo: Avaliar Segurança do i-Educar"]
+  
+  BusinessObjective --> Question1["Q1: Qual é o nível de robustez do controle de acesso do sistema?"]
+  BusinessObjective --> Question2["Q2: Qual é o nível de rastreabilidade das ações críticas?"]
+  BusinessObjective --> Question3["Q3: Em que medida o desenvolvimento do sistema segue práticas de segurança?"]
+  
+  Question1 --> MetricAuthRoutes["M1.1: Percentual de rotas críticas com regras de autorização"]
+  Question1 --> MetricPassword["M1.2: Método de armazenamento de senhas"]
+  Question1 --> MetricSession["M1.3: Tempo médio de expiração da sessão"]
+  
+  Question2 --> MetricLogsCritical["M2.1: Percentual de ações críticas registradas em logs"]
+  Question2 --> MetricLogsComplete["M2.2: Percentual de logs com informações completas"]
+  
+  Question3 --> MetricSecurityTestDensity["M3.1: Densidade de testes de segurança (Testes/KLOC)"]
+  Question3 --> MetricDependencyUpdate["M3.2: Frequência média de atualização de dependências"]
+
+```
 
 <div style="margin-top: 8px; text-align: center;">
   <font size="4"><figcaption>Figura 4: Diagrama GQM - Segurança. Autor: <a href="http://github.com/ZenildaVieira">Zenilda Vieira</figcaption></font>

@@ -38,7 +38,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
 **Questão 1: Impacto das Alterações**
 > Qual o impacto de realizar uma alteração no sistema?
 
-* **Hipótese 1.1 (H1.1):** Códigos com alto acoplamento (CBO > 15) e alta duplicação de código (M2 > 5%) estão correlacionados a um aumento no tempo de implementação de correções, pois causam efeitos colaterais inesperados.
+* **Hipótese 1.1 (H1.1):** Códigos com alto acoplamento (CBO > 15) e alta duplicação de código (M1.2 > 5%) estão correlacionados a um aumento no tempo de implementação de correções, pois causam efeitos colaterais inesperados.
 
 **Questão 2: Complexidade de Entendimento**
 > Quão complexo é entender o código-fonte do i-Educar?

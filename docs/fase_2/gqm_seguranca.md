@@ -57,9 +57,8 @@
 
 > Em que medida o desenvolvimento do sistema segue práticas de segurança?
 
-* **Hipótese 3.1 (H3.1):** O **número total** de testes de segurança é inferior a 10, indicando uma baixa cobertura de validação de segurança.
+* **Hipótese 3.1 (H3.1):** A densidade de testes de segurança será classificada como "Insatisfatória" (≤ 0.1 Testes/KLOC), indicando uma baixa cobertura de validação de segurança.
 * **Hipótese 3.2 (H3.2):** Dependências externas são atualizadas pelo menos uma vez a cada 6 meses.
-* **Hipótese 3.3 (H3.3):** Ferramentas de análise estática são executadas pelo menos antes de cada release.
 
 ---
 

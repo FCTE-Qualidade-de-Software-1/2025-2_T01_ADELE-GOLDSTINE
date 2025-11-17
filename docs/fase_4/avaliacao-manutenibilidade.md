@@ -12,11 +12,17 @@ Esta página apresenta a execução da avaliação e os resultados da coleta de 
 ## 2. Referencial Teórico
 
 [PREENCHER: Apresente a base teórica *para as métricas* que serão mostradas.
-* **Acoplamento (CBO):** Defina o que é CBO (Coupling Between Objects) e por que valores altos são ruins (impacto em cascata).
+
+* **Acoplamento (CBO):** Coupling Between Objects (CBO) é uma métrica de design da orientação a objetos [1] que mede o grau de interdependência de uma classe, ou seja, quantas outras classes uma classe específica utiliza. Essa medição é importante pois valores de CBO altos podem indicar diversos problemas, como o efeito cascata, onde uma alteração em uma classe pode atrapalhar o funcionamento de diversas outras classes que dependem dela.
+
 * **Código Repetido:** Explique o "custo" do código duplicado (manutenção em N lugares).
+
 * **Complexidade Ciclomática (CC):** Defina o que é CC (McCabe) e por que valores acima de 10 são considerados "Insatisfatórios" (dificuldade de teste e entendimento).
+
 * **Cobertura de Teste e Densidade:** Explique o que é cobertura de linha e por que ela, sozinha, não é suficiente (daí a necessidade da "Densidade de Testes").
+
 * **Tempo de Execução:** Por que testes lentos impactam o ciclo de desenvolvimento (CI/CD, feedback lento).
+
 * Lembre-se de citar as fontes (livros como "Clean Code" de Robert C. Martin, artigos, etc.).]
 
 ---
@@ -29,26 +35,42 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Evidências e Dados Brutos
 
-    * **Ferramenta(s):** `phpmd` ou SonarQube.
-    * **Comando:** `phpmd [caminho] xml codesize,coupling`
-    * **Dados Coletados:**
-        * Valor médio de CBO: [PREENCHER]
-        * Número/Percentual de classes com CBO > 15: [PREENCHER]
+    * **Ferramenta(s):** `phpmd` e SonarQube.
+    * **Passo a Passo da Coleta:** 
 
-    ![Saída da ferramenta de análise de CBO]
+        1. Executar a análise do `phpmd` no diretório /app, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd app/ xml codesize,design > phpmd_app.xml`
+
+        2. Executar a análise do `phpmd` no diretório /src, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd src/ xml codesize,design > phpmd_src.xml`
+
+        3. Filtrar o XML do /app para extrair apenas as violações de CBO (CouplingBetweenObjects): `grep 'rule="CouplingBetweenObjects"' phpmd_app.xml > cbo_app.txt`
+
+        4. Filtrar o XML do /src para extrair apenas as violações de CBO: `grep 'rule="CouplingBetweenObjects"' phpmd_src.xml > cbo_src.txt`
+
+        5. Consolidar manualmente os dados dos arquivos cbo_app.txt e cbo_src.txt em uma planilha Excel (Diretório, Classe, Valor CBO).
+
+        6. Iniciar o serviço do SonarQube para a coleta da contagem total de classes: `sudo systemctl start sonarqube`
+
+        7. Acessar a interface do SonarQube (http://localhost:9000) e coletar a contagem total de classes dos diretórios /app e /src.
+    * **Dados Coletados:**
+        * Valor médio de CBO: 18
+        * Número/Percentual de classes com CBO ≥ 15: 1,70%
+    * **Execução da Coleta**: [link para o vídeo com a execução da coleta]
+    * **Armazenamento dos Dados**: Planilha Excel - [Coleta de Dados i-Educar](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing)
 
     ### Classificação da Métrica
 
-    * **Resultado:** Média [X] / [Y]% das classes é "Insatisfatório"
+    * **Resultado:** Média 18 | 1,70% das classes é "Insatisfatório"
     * **Critério (da Fase 2):**
-        * Bom: CBO ≤ 10
-        * Regular: 10 < CBO ≤ 15
-        * Insatisfatório: CBO > 15
-    * **Classificação:** [PREENCHER: Aderente a qual classificação? Focar nas classes "Insatisfatórias"]
+        * Bom: CBO < 13
+        * Regular: 13 ≤ CBO < 15
+        * Insatisfatório: CBO ≥ 15
+    * **Classificação:** Bom
 
     ### Análise e Discussão
 
-    [PREENCHER: O que o nível de acoplamento indica? Um CBO alto sugere que as classes estão muito interligadas, tornando difícil alterar uma parte do sistema sem quebrar outra (efeito cascata). Isso valida H1.1? Qual o impacto no esforço de manutenção?]
+    O nível de acoplamento geral do i-Educar não é ruim e nem um grande problema, a porcentagem de classes com CBO alto é uma porcentagem muito baixa comparado ao numero total de classes. Entretanto, as classes que possuem um CBO insatisfatório (14), possuem um valor de CBO excessivamente alto, como no caso da classe "AcademicYearService" que possui um CBO igual a 27, dificultando bastante uma futura alteração ou manutenção.
+
+    Isso valida parcialmente a hipótese `(H1.1)` pois uma alteração em uma das 14 classes com CBO classificado como insatisfatório pode afetar diretamente no tempo de implantação de correções, pois, tomando "AcademicYearSearch" como exemplo novamente, pode ser necessário a correção em outras 27 classes em alguma correção.
 
 ??? "M1.2: Percentual de Código Repetido"
 
@@ -182,3 +204,11 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 * Use os "Critérios para Julgamento" da Fase 2 (Aceitável, Parcialmente aceitável, Inaceitável) para dar um veredito sobre esta característica.
 * Quais foram os principais pontos fortes e fracos encontrados? (Ex: "A cobertura de teste é boa, mas a complexidade e o acoplamento são 'Insatisfatórios', indicando um código difícil de manter.")
 * (Opcional) Quais hipóteses (H1.1, H2.1, H3.1, H3.2) foram validadas ou invalidadas pela coleta?]
+
+---
+
+## Referências Bibliográficas
+
+> [1] CHIDAMBER, Shyam R.; KEMERER, Chris F. A Metrics Suite for Object Oriented Design. IEEE Transactions on Software Engineering, v. 20, n. 6, p. 476-493, jun. 1994.
+
+> [2] ...

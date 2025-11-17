@@ -64,7 +64,7 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
 
       | Bom | Regular | Insatisfatório |
       |:---|:---|:---|
-      | CBO ≤ 10 | 10 < CBO ≤ 15 | CBO > 15 |
+      | CBO < 13 | 13 ≤ CBO < 15 | CBO ≥ 15 |
 
     * **Propósito:** Avaliar o nível de acoplamento. Um CBO baixo é desejável, pois indica melhor modularidade e menor risco de propagação de defeitos.
 

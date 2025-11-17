@@ -25,56 +25,57 @@ Esta página apresenta a execução da avaliação e os resultados da coleta de 
 Aqui são apresentados os dados brutos, a classificação e a análise individual de cada métrica de Segurança.
 
 ???+ "M1.1: Percentual de rotas críticas com regras de autorização"
-
+    
     ### Evidências e Dados Brutos
 
     * **Método:** Revisão de código fonte (ex: arquivos de rota, controllers).
-    * **Rotas críticas analisadas:** 1. POST /matricula/{...}/enturmar/{...}
+    * **Rotas críticas analisadas:**
+    1. POST /matricula/{...}/enturmar/{...}
        * Permissão: modify:enrollment (Enturmar matrícula)
-   2. POST /matricula/{...}/remanejar/{...}
-       * Permissão: modify:relocate (Remanejar matrícula)
-   3. POST /atualiza-situacao-matriculas
-       * Permissão: modify:update_registration_status (Atualizar situação de matrículas)
-   4. POST /exportacoes/exportar
-       * Permissão: modify:data_export (Exportação de dados)
-   5. POST /arquivo/exportacoes/novo
-       * Permissão: modify:document_export (Exportação de documentos)
-   6. POST /avisos/publicacao/criar
-       * Permissão: create:announcement (Criar avisos)
-   7. POST /avisos/publicacao/{...}/editar
-       * Permissão: modify:announcement (Editar avisos)
-   8. POST /importacao-situacao-final/upload
-       * Permissão: modify:final_status_import (Importar situação final)
-   9. POST /importacao-situacao-final/importar
-       * Permissão: modify:final_status_import (Importar situação final)
-   10. POST /atualiza-data-entrada
-       * Permissão: modify:update_registration_date (Atualizar data de entrada)
-   11. POST /atualiza-etapa
-       * Permissão: modify:stage (Atualizar etapa)
-   12. POST /ano-letivo-em-lote/processar
-       * Permissão: modify:academic_year_import (Importar ano letivo em lote)
-   13. POST /atualizacao-em-lote-series-escola/processo
-       * Permissão: modify:school_grade (Atualizar séries da escola em lote)
-   14. POST /bloquear-enturmacao
-       * Permissão: modify:block_enrollment (Bloquear enturmação)
-   15. POST /dispensa-lote
-       * Permissão: modify:batch_exemption (Dispensar em lote)
+            2. POST /matricula/{...}/remanejar/{...}
+                * Permissão: modify:relocate (Remanejar matrícula)
+            3. POST /atualiza-situacao-matriculas
+                * Permissão: modify:update_registration_status (Atualizar situação de matrículas)
+            4. POST /exportacoes/exportar
+                * Permissão: modify:data_export (Exportação de dados)
+            5. POST /arquivo/exportacoes/novo
+                * Permissão: modify:document_export (Exportação de documentos)
+            6. POST /avisos/publicacao/criar
+                * Permissão: create:announcement (Criar avisos)
+            7. POST /avisos/publicacao/{...}/editar
+                * Permissão: modify:announcement (Editar avisos)
+            8. POST /importacao-situacao-final/upload
+                * Permissão: modify:final_status_import (Importar situação final)
+            9. POST /importacao-situacao-final/importar
+                * Permissão: modify:final_status_import (Importar situação final)
+            10. POST /atualiza-data-entrada
+                * Permissão: modify:update_registration_date (Atualizar data de entrada)
+            11. POST /atualiza-etapa
+                * Permissão: modify:stage (Atualizar etapa)
+            12. POST /ano-letivo-em-lote/processar
+                * Permissão: modify:academic_year_import (Importar ano letivo em lote)
+            13. POST /atualizacao-em-lote-series-escola/processo
+                * Permissão: modify:school_grade (Atualizar séries da escola em lote)
+            14. POST /bloquear-enturmacao
+                * Permissão: modify:block_enrollment (Bloquear enturmação)
+            15. POST /dispensa-lote
+                * Permissão: modify:batch_exemption (Dispensar em lote)
 
-    * **Dados Coletados:**
-        * Total de rotas críticas: 97
-        * Rotas com checagem de autorização: 15
-        * Cálculo: `([Com Autorização] / [Total]) * 100` = 15,46%
+        * **Dados Coletados:**
+            * Total de rotas críticas: 97
+            * Rotas com checagem de autorização: 15
+            * Cálculo: `([Com Autorização] / [Total]) * 100` = 15,46%
 
-    ![Imagem 1](../assets/evidencias_seguranca/print_1.png)
-    Linhas 45 e 48
-    ![Imagem 2](../assets/evidencias_seguranca/print_2.png)
-    Linha 119
-    ![Imagem 3](../assets/evidencias_seguranca/print_3.png)
-    Linhas 134 e 138
-    ![Imagem 4](../assets/evidencias_seguranca/print_4.png)
-    Linhas: 142, 144, 149, 152, 156, 159, 162, 167, 171
-    ![Imagem 5](../assets/evidencias_seguranca/print_5.png)
-    Linha 189
+        ![Imagem 1](../assets/evidencias_seguranca/print_1.png)
+        Linhas 45 e 48
+        ![Imagem 2](../assets/evidencias_seguranca/print_2.png)
+        Linha 119
+        ![Imagem 3](../assets/evidencias_seguranca/print_3.png)
+        Linhas 134 e 138
+        ![Imagem 4](../assets/evidencias_seguranca/print_4.png)
+        Linhas: 142, 144, 149, 152, 156, 159, 162, 167, 171
+        ![Imagem 5](../assets/evidencias_seguranca/print_5.png)
+        Linha 189
 
     ### Classificação da Métrica
 

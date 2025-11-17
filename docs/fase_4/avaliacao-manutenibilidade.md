@@ -125,25 +125,30 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Evidências e Dados Brutos
 
-    * **Ferramenta(s):** PHPUnit com Xdebug/PCOV.
-    * **Comando:** `phpunit --coverage-html [diretório]`
+    * **Ferramenta(s):** Pest com Xdebug/PCOV.
+    * **Comando:** `./vendor/bin/pest --coverage`
+    
     * **Dados Coletados:**
-        * Cobertura total de linhas (Line Coverage): [VALOR FINAL]%
+        * Cobertura total de linhas (Line Coverage): 31.2%%
 
-    ![Relatório de Cobertura de Teste]
+    * **Documento resultado da Coleta**: [coverage.odt](https://docs.google.com/document/d/1TqPZNILbWLGGVggxy26ZqZPHYV8Jh7kCiK3bIl_nB5M/edit?usp=sharing )
+    * **Armazenamento dos Dados**: Planilha Excel - [Coleta de Dados i-Educar](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing)
+    
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL]%
+    * **Resultado:** 31.2%
     * **Critério (da Fase 2):**
         * Bom: ≥ 80%
         * Regular: 70% ≤ M3.1 < 80%
         * Insatisfatório: < 70%
-    * **Classificação:** [PREENCHER: Excelente/Bom/Regular/Insatisfatório]
+    * **Classificação:** Insatisfatório
 
     ### Análise e Discussão
 
-    [PREENCHER: O que esse percentual de cobertura significa? Ele mede a "confiança" que a equipe pode ter ao fazer refatorações. Um valor baixo (validando H3.1) indica um alto risco de introduzir regressões (quebrar algo que funcionava) a cada nova alteração.]
+    A cobertura de teste de 31,2% classifica o projeto em um nível Insatisfatório, situando-se muito abaixo do limiar de segurança de 70-80% tipicamente recomendado para softwares em produção. Este indicador revela que mais de dois terços do código-fonte do i-Educar não são verificados pelas rotinas automatizadas de CI/CD, o que expõe o sistema a um risco elevado de regressões — ou seja, o surgimento de defeitos em funcionalidades antigas causados por novas alterações.
+
+    No contexto específico do i-Educar, esse percentual reflete claramente a natureza híbrida do repositório. A baixa cobertura global é, muito provavelmente, o resultado de uma média ponderada entre o código moderno (nas pastas app e src), que tende a ser bem testado, e o vasto volume de código legado (na pasta ieducar), que historicamente carece de testes. Isso cria um cenário de "cobertura desigual": enquanto as novas funcionalidades desenvolvidas com práticas modernas (como o uso do Laravel e Pest) estão protegidas, o núcleo antigo do sistema permanece como uma "zona de sombra". Consequentemente, a equipe de desenvolvimento pode ter alta confiança ao refatorar componentes novos, mas deve manter cautela extrema ao tocar no legado, onde a ausência de testes automatizados exige um esforço manual de validação muito maior e mais propenso a erro humano.
 
 ??? "M3.2: Densidade de Testes (Testes/KLOC)"
 
@@ -151,49 +156,57 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     * **Ferramenta(s):** `grep` e `cloc`.
     * **Dados Coletados:**
-        * Nº total de testes (`grep -r "function test" tests/ | wc -l`): [PREENCHER]
-        * Linhas de código de produção totais (`cloc src/`): [PREENCHER]
-        * Cálculo: `(Nº Total de Testes / (Linhas Totais de Código / 1000))` = [VALOR FINAL] Testes/KLOC
+        * Nº total de testes (`grep -r "function test" tests/ | wc -l`): 1357
+        * Linhas de código de produção totais (`cloc src/`): 142494
+        * Cálculo: `(Nº Total de Testes / (Linhas Totais de Código / 1000))` = 9,523207995 Testes/KLOC
 
-    ![Evidência da contagem de testes e linhas totais]
+    * **Execução da Coleta**: [link para o vídeo com a execução da coleta](https://youtu.be/i_uHcweJ7zE)
+    * **Armazenamento dos Dados**: Planilha Excel - [Coleta de Dados i-Educar](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing)
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL] Testes/KLOC
+    * **Resultado:** 9,523207995 Testes/KLOC
     * **Critério (da Fase 2):**
         * Bom: > 10 Testes/KLOC
         * Regular: 5 a 10 Testes/KLOC
         * Insatisfatório: < 5 Testes/KLOC
-    * **Classificação:** [PREENCHER: Bom/Regular/Insatisfatório]
+    * **Classificação:** Regular
 
     ### Análise e Discussão
 
-    [PREENCHER: O que essa densidade global mostra? Ela complementa a cobertura. Podemos ter alta cobertura (M3.1) mas baixa densidade, indicando testes grandes que cobrem muito código superficialmente. Como o resultado se compara com a H3.1?]
+    O projeto apresenta um comportamento que pode ser descrito como um “paradoxo” de qualidade, embora a Densidade de Testes seja classificada como Regular/Boa, a Cobertura de Código (vista na métrica anterior) permanece baixa, em apenas 31,2%. Esse contraste mostra algo comum em sistemas híbridos — a presença de uma “cobertura concentrada” ou até mesmo redundante. No caso do i-Educar, grande parte dos testes está provavelmente focada nos módulos modernos. Assim, áreas novas e bem cuidadas convivem com um grande volume de código antigo não testado, o que puxa a cobertura global para baixo e aumenta o risco operacional.
+
+    Além disso, a quantidade elevada de testes pode estar focada em caminhos de sucesso (happy paths), resultando em múltiplas validações semelhantes e deixando de lado cenários de exceção e fluxos de erro que representam parte significativa da lógica existente. Também é possível que existam muitos testes superficiais, voltados para métodos simples (como getters e setters), enquanto trechos de código mais complexos, embora mais relevantes para a confiabilidade do sistema, recebem pouca atenção devido à dificuldade de criação de testes.
+
+    Pela densidade, há, de fato, um esforço ativo de teste, mas ele está distribuído de forma desigual e não contribui de maneira eficiente para a solidez geral do sistema.
 
 ??? "M3.3: Tempo Médio de Execução dos Testes"
 
     ### Evidências e Dados Brutos
 
-    * **Ferramenta(s):** PHPUnit / Log do GitHub Actions.
+    * **Ferramenta(s):** Pest / Log do GitHub Actions.
     * **Dados Coletados:**
-        * Tempo total de execução da suíte: [PREENCHER: ex: 5m 30s]
-        * Número total de testes: [PREENCHER]
-        * Cálculo (Tempo por teste): `([Tempo Total] / [Nº Testes])` = [VALOR FINAL]s por teste
+        * Tempo total de execução da suíte: 36.68s
+        * Número total de testes(`grep -r "function test" tests/ | wc -l`): 1357
+        * Cálculo (Tempo por teste): `(36.68 / 1357)` = 0.027s por teste
 
-    ![Evidência do tempo de execução dos testes]
+    * **Execução da Coleta**: [link para o vídeo com a execução da coleta](https://www.youtube.com/watch?v=p1CINURPWvc)
+    * **Armazenamento dos Dados**: Planilha Excel - [Coleta de Dados i-Educar](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing)
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL]s (Tempo médio por teste)
+    * **Resultado:** 0.027s (Tempo médio por teste)
     * **Critério (da Fase 2):**
         * Bom: ≤ 1s
         * Regular: 1s < M3.3 ≤ 3s
         * Insatisfatório: > 3s
-    * **Classificação:** [PREENCHER: Excelente/Bom/Regular/Insatisfatório]
+    * **Classificação:** Bom
 
     ### Análise e Discussão
 
-    [PREENCHER: Qual o impacto do tempo de execução? Se a suíte inteira demorar muito (ex: > 10 min) ou o tempo médio for alto (indicando testes lentos, talvez de integração disfarçados de unitários), os desenvolvedores param de rodá-la localmente. Isso valida H3.2? Se sim, o feedback de erros é atrasado até o pipeline de CI, tornando o desenvolvimento mais lento.]
+    A análise do Tempo Médio de Execução dos testes teve um resultado bom: 0,027 segundos por caso de teste. Isso indica que a suíte é capaz de executar aproximadamente 37 testes por segundo, um desempenho acima do esperado para um sistema com características legadas como o i-Educar. A justificativa de que bateria de testes está surpreendentemente ágil pode refletir realmente poucos testes. Dá para perceber que a maior parte das validações automatizadas está concentrada nas porções modernas do código. Essas áreas utilizam boas práticas contemporâneas que favorecem a criação de testes unitários rápidos e isolados. Além disso, existe muito uso de mocks, stubs e bancos de dados em memória, estratégias que evitam operações de I/O e eliminam gargalos. O resultado também sugere a ausência de testes end-to-end, como os realizados com Dusk ou Selenium, que possuem tempos de execução significativamente maiores e poderiam elevar drasticamente a média geral.
+
+    Em resumo, o tempo médio de 0,027 segundos demonstra que a suíte de testes é extremamente eficiente, mas também aponta para um foco excessivo em camadas específicas do sistema. Embora o desempenho seja excelente do ponto de vista técnico, ele também reforça a necessidade de ampliar a abrangência dos testes para incluir fluxos críticos de negócio e, futuramente, testes de integração mais robustos e testes end-to-end que validem o funcionamento do sistema de ponta a ponta.
 
 ---
 
@@ -211,4 +224,4 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
 > [1] CHIDAMBER, Shyam R.; KEMERER, Chris F. A Metrics Suite for Object Oriented Design. IEEE Transactions on Software Engineering, v. 20, n. 6, p. 476-493, jun. 1994.
 
-> [2] ...
+> [2] PORTÁBILIS. i-Educar: Software livre de gestão escolar. Versão 2.10.0. [S.l.]: Portábilis Tecnologia, 2025. Disponível em: https://github.com/portabilis/i-educar. Acesso em: 17 nov. 2025.

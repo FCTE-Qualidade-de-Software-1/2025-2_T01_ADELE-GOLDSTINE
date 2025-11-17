@@ -29,24 +29,62 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
     ### Evidências e Dados Brutos
 
     * **Método:** Revisão de código fonte (ex: arquivos de rota, controllers).
-    * **Rotas críticas analisadas:** [PREENCHER: Ex: /admin/notas, /api/alunos/{id}, etc.]
-    * **Dados Coletados:**
-        * Total de rotas críticas: [PREENCHER]
-        * Rotas com checagem de autorização: [PREENCHER]
-        * Cálculo: `([Com Autorização] / [Total]) * 100` = [VALOR FINAL]%
+    * **Rotas críticas analisadas:** 1. POST /matricula/{...}/enturmar/{...}
+       * Permissão: modify:enrollment (Enturmar matrícula)
+   2. POST /matricula/{...}/remanejar/{...}
+       * Permissão: modify:relocate (Remanejar matrícula)
+   3. POST /atualiza-situacao-matriculas
+       * Permissão: modify:update_registration_status (Atualizar situação de matrículas)
+   4. POST /exportacoes/exportar
+       * Permissão: modify:data_export (Exportação de dados)
+   5. POST /arquivo/exportacoes/novo
+       * Permissão: modify:document_export (Exportação de documentos)
+   6. POST /avisos/publicacao/criar
+       * Permissão: create:announcement (Criar avisos)
+   7. POST /avisos/publicacao/{...}/editar
+       * Permissão: modify:announcement (Editar avisos)
+   8. POST /importacao-situacao-final/upload
+       * Permissão: modify:final_status_import (Importar situação final)
+   9. POST /importacao-situacao-final/importar
+       * Permissão: modify:final_status_import (Importar situação final)
+   10. POST /atualiza-data-entrada
+       * Permissão: modify:update_registration_date (Atualizar data de entrada)
+   11. POST /atualiza-etapa
+       * Permissão: modify:stage (Atualizar etapa)
+   12. POST /ano-letivo-em-lote/processar
+       * Permissão: modify:academic_year_import (Importar ano letivo em lote)
+   13. POST /atualizacao-em-lote-series-escola/processo
+       * Permissão: modify:school_grade (Atualizar séries da escola em lote)
+   14. POST /bloquear-enturmacao
+       * Permissão: modify:block_enrollment (Bloquear enturmação)
+   15. POST /dispensa-lote
+       * Permissão: modify:batch_exemption (Dispensar em lote)
 
-    ![Exemplo de verificação de autorização no código]
-    ![Exemplo de módulo sem verificação de autorização]
+    * **Dados Coletados:**
+        * Total de rotas críticas: 97
+        * Rotas com checagem de autorização: 15
+        * Cálculo: `([Com Autorização] / [Total]) * 100` = 15,46%
+
+    ![Imagem 1](../assets/evidencias_seguranca/print_1.png)
+    Linhas 45 e 48
+    ![Imagem 2](../assets/evidencias_seguranca/print_2.png)
+    Linha 119
+    ![Imagem 3](../assets/evidencias_seguranca/print_3.png)
+    Linhas 134 e 138
+    ![Imagem 4](../assets/evidencias_seguranca/print_4.png)
+    Linhas: 142, 144, 149, 152, 156, 159, 162, 167, 171
+    ![Imagem 5](../assets/evidencias_seguranca/print_5.png)
+    Linha 189
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL]%
+    * **Resultado:** 15,46%
     * **Critério (da Fase 2):**
         * Excelente: ≥ 90%
         * Bom: 70% a 89%
         * Regular: 40% a 69%
         * Insatisfatório: < 40%
-    * **Classificação:** [PREENCHER: Excelente/Bom/Regular/Insatisfatório]
+    * **Classificação:** Insatisfatório
 
     ### Análise e Discussão
 
@@ -78,19 +116,19 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Evidências e Dados Brutos
 
-    * **Método:** Análise de arquivos de configuração (ex: `.env`, `config.php`) ou teste funcional.
-    * **Parâmetro analisado:** `session.gc_maxlifetime` (ou equivalente do framework).
-    * **Dado Coletado:** Tempo de expiração configurado: [VALOR FINAL] minutos.
+    * **Método:** Análise do arquivo session.php.
+    * **Parâmetro analisado:** `SESSION_LIFETIME`.
+    * **Dado Coletado:** Tempo de expiração configurado: 120 minutos.
 
-    ![Arquivo de configuração da sessão]
+    ![Arquivo de configuração da sessão](../assets/evidencias_seguranca/session.png)
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL] minutos
+    * **Resultado:** 120 minutos
     * **Critério (da Fase 2):**
         * Conforme: Menor ou igual a 60
         * Não conforme: Acima de 60
-    * **Classificação:** [PREENCHER: Conforme/Não conforme]
+    * **Classificação:** Não conforme
 
     ### Análise e Discussão
 
@@ -155,25 +193,25 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Evidências e Dados Brutos
 
-    * **Método:** Inspeção do repositório (`grep`) e `cloc`.
+    * **Método:** Uso de IA para identificar testes de segurança e `cloc`.
     * **Testes de segurança:** Testes que validam falhas de permissão, SQL Injection, XSS, etc.
     * **Dados Coletados:**
-        * Nº total de testes de segurança: [PREENCHER]
-        * KLOC total do código de produção: [PREENCHER]
-        * Cálculo: `(Nº Testes de Segurança / (KLOC Total / 1000))` = [VALOR FINAL] Testes/KLOC
+        * Nº total de testes de segurança: 25
+        * KLOC total do código de produção: 341
+        * Cálculo: `(Nº Testes de Segurança / (KLOC Total / 1000))` = 0,07 Testes/KLOC
 
-    ![Exemplo de teste de segurança]
-    ![Evidência da contagem de KLOC]
+    ![Medição do KLOC](../assets/evidencias_seguranca/cloc.png)
+    ![Busca dos testes](../assets/evidencias_seguranca/contagem.png)
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL] Testes/KLOC
+    * **Resultado:** 0,07 Testes/KLOC
     * **Critério (da Fase 2):**
         * Excelente: > 1
         * Bom: > 0.5
         * Regular: > 0.1
         * Insatisfatório: ≤ 0.1
-    * **Classificação:** [PREENCHER: Excelente/Bom/Regular/Insatisfatório]
+    * **Classificação:** Insatisfatório
 
     ### Análise e Discussão
 
@@ -183,21 +221,22 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Evidências e Dados Brutos
 
-    * **Método:** Análise do histórico de commits do `composer.lock` ou `package-lock.json`.
+    * **Método:** Análise do histórico de commits no Github`.
+    * **Descoberta:** O sistema possui um mecanismo de atualização automática das dependências, portanto possui atualizações praticamente todos os meses.
     * **Dados Coletados:**
-        * Data da última atualização de dependência: [PREENCHER DATA]
-        * Data da penúltima atualização: [PREENCHER DATA]
-        * Frequência média: [VALOR FINAL] meses
+        * Data da última atualização de dependência: 12/11/2025
+        * Data da penúltima atualização: 21/10/2025
+        * Frequência média: a cada nova atualização disponível
 
-    ![Histórico de commits do composer.lock]
+    ![Histórico de commits](../assets/evidencias_seguranca/commits.png)
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL] meses
+    * **Resultado:** a cada 15 dias
     * **Critério (da Fase 2):**
         * Conforme: Atualização a cada ≤ 6 meses
         * Não conforme: Atualização > 6 meses
-    * **Classificação:** [PREENCHER: Conforme/Não conforme]
+    * **Classificação:** Conforme
 
     ### Análise e Discussão
 

@@ -38,23 +38,27 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
     * **Ferramenta(s):** `phpmd` e SonarQube.
     * **Passo a Passo da Coleta:** 
 
-        1. Executar a análise do `phpmd` no diretório /app, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd app/ xml codesize,design > phpmd_app.xml`
+        1. Executar a análise do `phpmd` no diretório `/app`, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd app/ xml codesize,design > phpmd_app.xml`
 
-        2. Executar a análise do `phpmd` no diretório /src, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd src/ xml codesize,design > phpmd_src.xml`
+        2. Executar a análise do `phpmd` no diretório `/src`, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd src/ xml codesize,design > phpmd_src.xml`
 
-        3. Filtrar o XML do /app para extrair apenas as violações de CBO (CouplingBetweenObjects): `grep 'rule="CouplingBetweenObjects"' phpmd_app.xml > cbo_app.txt`
+        3. Filtrar o XML do `/app` para extrair apenas as violações de CBO: `grep 'rule="CouplingBetweenObjects"' phpmd_app.xml > cbo_app.txt`
 
-        4. Filtrar o XML do /src para extrair apenas as violações de CBO: `grep 'rule="CouplingBetweenObjects"' phpmd_src.xml > cbo_src.txt`
+        4. Filtrar o XML do `/src` para extrair apenas as violações de CBO: `grep 'rule="CouplingBetweenObjects"' phpmd_src.xml > cbo_src.txt`
 
-        5. Consolidar manualmente os dados dos arquivos cbo_app.txt e cbo_src.txt em uma planilha Excel (Diretório, Classe, Valor CBO).
+        5. Consolidar manualmente os dados dos arquivos `cbo_app.txt` e `cbo_src.txt` em uma planilha Excel (Diretório, Classe, Valor CBO).
 
         6. Iniciar o serviço do SonarQube para a coleta da contagem total de classes: `sudo systemctl start sonarqube`
 
-        7. Acessar a interface do SonarQube (http://localhost:9000) e coletar a contagem total de classes dos diretórios /app e /src.
+        7. Acessar a interface do SonarQube (`http://localhost:9000`) e coletar a contagem total de classes dos diretórios `/app` e `/src`.
+
     * **Dados Coletados:**
+        * Nº Total de Classes em `/app` e `/src`: 824
+        * Nº de Classes captadas pelo `phpmd`: 22
+        * Nº de Classes classificadas como "Insatisfatório": 14
         * Valor médio de CBO: 18
-        * Número/Percentual de classes com CBO ≥ 15: 1,70%
-    * **Execução da Coleta**: [link para o vídeo com a execução da coleta]
+        * Número/Percentual de classes com CBO ≥ 15: `(14/824)*100 = 1,70%`
+    * **Execução da Coleta**: Link para o vídeo da execução da coleta [Manutenibilidade - Métrica 1.1: Coupling Between Objects (CBO)](https://youtu.be/BjQ9_M7l6DQ)
     * **Armazenamento dos Dados**: Planilha Excel - [Coleta de Dados i-Educar](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing)
 
     ### Classificação da Métrica
@@ -76,50 +80,78 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Evidências e Dados Brutos
 
-    * **Ferramenta(s):** `phpcpd` (PHP Copy/Paste Detector) ou SonarQube.
-    * **Comando:** `phpcpd [caminho]`
+    * **Ferramenta(s):** SonarQube.
     * **Dados Coletados:**
-        * Percentual de linhas duplicadas: [VALOR FINAL]%
-
-    ![Saída da ferramenta de detecção de duplicação]
+        * Densidade: 7,4%
+        * Linhas Duplicadas: 25796
+        * Blocos Duplicados: 2485
+        * Arquivos Duplicados: 378
+    * **Execução da Coleta**: Link para o vídeo da execução da coleta [Manutenibilidade - Métrica 1.2: Percentual de Código Repetido](https://youtu.be/CkMkUP5ixHU)
+    * **Armazenamento dos Dados**: Planilha Excel - [Coleta de Dados i-Educar](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing)
 
     ### Classificação da Métrica
 
-    * **Resultado:** [VALOR FINAL]%
+    * **Resultado:** 7,4%
     * **Critério (da Fase 2):**
         * Bom: ≤ 3%
         * Regular: 3% < M1.2 ≤ 5%
         * Insatisfatório: > 5%
-    * **Classificação:** [PREENCHER: Excelente/Bom/Regular/Insatisfatório]
+    * **Classificação:** Insatisfatório
 
     ### Análise e Discussão
 
-    [PREENCHER: O que esse valor significa? Código duplicado é um grande indicador de débito técnico. Se um bug for encontrado em um trecho copiado, ele precisará ser corrigido em N lugares. Isso valida H1.1 (junto com o CBO)? Qual o impacto no custo de manutenção?]
+    De acordo com a análise pelo SonarQube, a densidade de código duplicado em todo o repositório do i-Educar é consideravelmente alta levando em consideração os critérios de julgamento definidos pela equipe. 
+
+    Assim como o alto acoplamento, a duplicação de código está diretamente ligada aos problemas de manutenção de código (`H1.1`). De acordo com os dados obtidos pelo SonarQube, 2485 blocos de código são duplicados no código do i-Educar e, caso algum desses blocos precisem passar por algum tipo de correção, o retrabalho de manutenção nesse bloco será muito grande.
 
 ??? "M2.1: Complexidade Ciclomática (CC)"
 
     ### Evidências e Dados Brutos
 
-    * **Ferramenta(s):** `phpmd` ou SonarQube.
+    * **Ferramenta(s):** `phpmd` e SonarQube.
     * **Comando:** `phpmd [caminho] xml codesize`
-    * **Dados Coletados:**
-        * Complexidade Ciclomática média por método: [PREENCHER]
-        * Número/Percentual de métodos com CC > 10: [PREENCHER]
 
-    ![Saída da ferramenta de análise de Complexidade]
+    * Passo a Passo da Coleta:
+        1. Executar a análise do `phpmd` (com a ruleset `codesize`) no diretório `/app`, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd app/ xml codesize > phpmd_app_codesize.xml`
+
+        2. Executar a análise do `phpmd` (com a ruleset `codesize`) no diretório `/src`, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd src/ xml codesize > phpmd_src_codesize.xml`
+
+        3. Filtrar o XML do `/app` (`phpmd_app_codesize.xml`) para extrair apenas as violações de CC (CyclomaticComplexity): `grep 'rule="CyclomaticComplexity"' phpmd_app_codesize.xml > cc_app.txt`
+
+        4. Filtrar o XML do /`src` (`phpmd_src_codesize.xml`) para extrair apenas as violações de CC: `grep 'rule="CyclomaticComplexity"' phpmd_src_codesize.xml > cc_src.txt`
+
+        5. Consolidar manualmente os dados dos arquivos `cc_app.txt` e `cc_src.txt` em uma planilha Excel (Diretório, Classe, Método, Valor CC).
+
+        6. Iniciar o serviço do SonarQube para a coleta dos dados globais: `sudo systemctl start sonarqube`
+
+        7. Acessar a interface do SonarQube (`http://localhost:9000`) e coletar a contagem total de "Funções" (Functions) e a "Complexidade Ciclomática" (Cyclomatic Complexity) total dos diretórios `/app` e `/src`.
+
+    * **Dados Coletados:**
+        * Nº Total de Métodos em `/app` e `/src`: 3450
+        * Valor Total de CC em `/app` e `/src`: 5588
+        * Nº de Métodos Capturados pelo `phpmd`: 34
+        * Nº de Métodos Considerados Insatisfatórios: 23
+        * Complexidade Ciclomática média por método: `Valor Total de CC em '/app' e '/src'/ Nº Total de Métodos em '/app' e '/src' =  1,62`
+        * Número/Percentual de métodos com CC > 10: `(Nº de Métodos Insatisfatórios / Nº Total de métodos em '/app' e '/src')*100 = 0,67%` 
+
+    * **Execução da Coleta**: Link para o vídeo da execução da coleta [Manutenibilidade - Métrica 2.1:  Complexidade Ciclomática (CC)](https://youtu.be/NKvr9xHC6bA)
+    * **Armazenamento dos Dados**: Planilha Excel - [Coleta de Dados i-Educar](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing)
+
 
     ### Classificação da Métrica
 
-    * **Resultado:** Média [X] / [Y]% dos métodos é "Insatisfatório"
+    * **Resultado:** Média 1,62 / 0,67% dos métodos é "Insatisfatório"
     * **Critério (da Fase 2):**
         * Bom: CC ≤ 5
         * Regular: 5 < CC ≤ 10
         * Insatisfatório: CC > 10
-    * **Classificação:** [PREENCHER: Focar na quantidade de métodos "Insatisfatórios"]
+    * **Classificação:** Bom
 
     ### Análise e Discussão
 
-    [PREENCHER: O que esses dados indicam? Métodos com alta CC (muitos `if`, `else`, `for`, `while`) são difíceis de entender, testar e modificar. Isso valida a H2.1? Qual o impacto no tempo de onboarding de novos desenvolvedores?]
+    A complexidade ciclomática (CC) do i-Educar é boa e o percentual de métodos que possuem uma complexidade ciclomática maior que 10, ou seja, insatisfatória para nossa análise, corresponde a menos de um por cento de todos os métodos coletados para a análise. Além disso, a média de CC por método também possui um valor bem abaixo do que definimos como "Bom" na definição das métricas. 
+    
+    Entretanto, cabe mencionar que alguns métodos capturados pelo phpmd na análise possuem um alto nível de CC, como o método "getExportFormatData" da classe "Registro10" em "/src" que possui uma CC de 186, demonstrando que apesar de em termos gerais a complexidade ciclomática ser boa, existem métodos que podem passar por análises pelo time de desenvolvimento do i-Educar visando diminuir a CC deles, como dito pela hipótese `H2.1`, um código com complexidade muito alta, faz o desenvolvedor gastar muito esforço cognitivo para entendê-lo.
 
 ??? "M3.1: Percentual de Cobertura de Teste (Line Coverage)"
 

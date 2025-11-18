@@ -56,7 +56,7 @@ nav:
   - Fase 2 - Especificação da Avaliação:
     - Abordagem GQM: "fase_2/introducao_gqm.md"
     - Medição 1 - Confiabilidade: "fase_2/gqm_confiabilidade.md"
-    - Medição 2 - Manutenabilidade: "fase_2/gqm_manutenibilidade.md"
+    - Medição 2 - Manutenibilidade: "fase_2/gqm_manutenibilidade.md"
     - Medição 3 - Segurança: "fase_2/gqm_seguranca.md"
     - Análise Geral das Medições: "fase_2/analise_geral.md"
     - Conclusão: "fase_2/conclusao.md"
@@ -65,7 +65,7 @@ nav:
   - Fase 4 - Execução da Avaliação:
     - Introdução: "fase_4/introducao-avaliacao.md"
     - Avaliação da Confiabilidade: "fase_4/avaliacao-confiabilidade.md"
-    - Avaliação da Manutenabilidade: "fase_4/avaliacao-manutenibilidade.md"
+    - Avaliação da Manutenibilidade: "fase_4/avaliacao-manutenibilidade.md"
     - Avaliação da Segurança: "fase_4/avaliacao-seguranca.md" 
     - Conclusão: "fase_4/conclusao-avaliacao.md"
   - Contribuições:

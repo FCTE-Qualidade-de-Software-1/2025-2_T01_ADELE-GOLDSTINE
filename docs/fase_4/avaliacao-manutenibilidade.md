@@ -4,26 +4,27 @@ Esta página apresenta a execução da avaliação e os resultados da coleta de 
 
 ## 1. Introdução
 
-[PREENCHER: Faça uma breve introdução sobre este objetivo.
-* Qual era o objetivo (Goal) GQM definido na Fase 2 para Manutenibilidade?
-* Por que avaliar a manutenibilidade é vital para este projeto (software open-source, comunidade de desenvolvedores)?
-* Quais questões principais (Impacto das Alterações, Complexidade de Entendimento, Cobertura de Testes) foram investigadas?]
+O objetivo definido para essa avaliação foi analisar o i-Educar com o foco na Manutenibilidade do ponto de vista da equipe de desenvolvimento utilizando o GQM na definição das questões, hipóteses e métricas.
+
+A avaliação da manutenibilidade é vital para o i-Educar devido à sua natureza de software livre. Como um projeto open-source, a sustentabilidade do sistema depende da capacidade da comunidade de compreender, corrigir e evoluir o código de forma autônoma e a arquitetura do sistema, que combina código legado com implementações modernas, exige monitoramento constante da qualidade interna para evitar que o esforço técnico inviabilize futuras manutenções.
+
+Tendo isso em vista, a investigação foi guiada por três questões fundamentais definidas na [fase 2](../fase_2/gqm_manutenibilidade.md) do processo de avaliação de qualidade de software.
+
+1. **Impacto das alterações (Q1):** Avalia o risco de propagação de erros ao modificar o sistema, investigando acoplamento entre classes e duplicação de código.
+2. **Complexidade de entendimento (Q2):** Mensura o quão difícil é para um desenvolvedor compreender a lógica interna dos métodos, utilizando a complexidade ciclomática.
+3. **Situação dos testes (Q3):** Verifica a existência eficácia de uma rede de segurança automatizada (testes unitários e de integração).
 
 ## 2. Referencial Teórico
 
-[PREENCHER: Apresente a base teórica *para as métricas* que serão mostradas.
-
 * **Acoplamento (CBO):** Coupling Between Objects (CBO) é uma métrica de design da orientação a objetos [1] que mede o grau de interdependência de uma classe, ou seja, quantas outras classes uma classe específica utiliza. Essa medição é importante pois valores de CBO altos podem indicar diversos problemas, como o efeito cascata, onde uma alteração em uma classe pode atrapalhar o funcionamento de diversas outras classes que dependem dela.
 
-* **Código Repetido:** Explique o "custo" do código duplicado (manutenção em N lugares).
+* **Código Repetido:** A duplicação de código representa trabalho, risco e complexidade extra, ela pode ser apresentada de várias formas, como linhas de código idênticas ou semelhantes e duplicação de implementação [3]. É importante a medição de código repetido, pois a duplicação aumenta o acúmulo de código, exige mais trabalho para manutenção e aumenta as chances de erros serem introduzidos ou omitidos.
 
-* **Complexidade Ciclomática (CC):** Defina o que é CC (McCabe) e por que valores acima de 10 são considerados "Insatisfatórios" (dificuldade de teste e entendimento).
+* **Complexidade Ciclomática (CC):** A complexidade ciclomática segundo McCabe [4] é uma medida de complexidade baseada na teoria dos grafos. Ela serve para medir e controlar o número de caminhos em um programa e permite identificar módulos de software que serão difíceis de testar e manter. A medição da complexidade ciclomática de um código é importante, pois códigos com alta complexidade tendem a ter um número excessivo de caminhos de controle, tornando-o extremamente difícil de testá-lo e mantê-lo.
 
 * **Cobertura de Teste e Densidade:** Explique o que é cobertura de linha e por que ela, sozinha, não é suficiente (daí a necessidade da "Densidade de Testes").
 
 * **Tempo de Execução:** Por que testes lentos impactam o ciclo de desenvolvimento (CI/CD, feedback lento).
-
-* Lembre-se de citar as fontes (livros como "Clean Code" de Robert C. Martin, artigos, etc.).]
 
 ---
 
@@ -109,9 +110,8 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
     ### Evidências e Dados Brutos
 
     * **Ferramenta(s):** `phpmd` e SonarQube.
-    * **Comando:** `phpmd [caminho] xml codesize`
 
-    * Passo a Passo da Coleta:
+    * **Passo a Passo da Coleta:**
         1. Executar a análise do `phpmd` (com a ruleset `codesize`) no diretório `/app`, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd app/ xml codesize > phpmd_app_codesize.xml`
 
         2. Executar a análise do `phpmd` (com a ruleset `codesize`) no diretório `/src`, salvando a saída em XML: `docker compose exec horizon vendor/bin/phpmd src/ xml codesize > phpmd_src_codesize.xml`
@@ -257,3 +257,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 > [1] CHIDAMBER, Shyam R.; KEMERER, Chris F. A Metrics Suite for Object Oriented Design. IEEE Transactions on Software Engineering, v. 20, n. 6, p. 476-493, jun. 1994.
 
 > [2] PORTÁBILIS. i-Educar: Software livre de gestão escolar. Versão 2.10.0. [S.l.]: Portábilis Tecnologia, 2025. Disponível em: https://github.com/portabilis/i-educar. Acesso em: 17 nov. 2025.
+
+> [3] MARTIN, Robert C. Clean Code: A Handbook of Agile Software Craftsmanship. Upper Saddle River, NJ: Prentice Hall, 2008.
+
+> [4] MCCABE, Thomas J. A Complexity Measure. IEEE Transactions on Software Engineering, v. SE-2, n. 4, p. 308-320, dez. 1976.

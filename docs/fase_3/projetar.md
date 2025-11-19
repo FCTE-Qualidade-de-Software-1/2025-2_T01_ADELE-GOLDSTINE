@@ -70,8 +70,9 @@ Os seguintes documentos e fontes serão usados para garantir a rastreabilidade e
 
 ## Histórico de Versão
 
-| Data | Versão | Descrição | Autor(es) | Data de revisão | Revisor(es) |
-| :---: | :----: | :---: | :---: | :---: | :---: |
-| 10/11/2025 | `1.0` | Criação do plano de avaliação da Fase 3. | Marcos Marinho | 11/11/2025 | Manuella Valadares |
-| 11/11/2025 | `1.1` | Revisão do plano e adição das fontes e evidências de rastreabilidade. | Manuella Valadares | | |
-| `1.3`  | 16/11/2025 | Adequação ao novo escopo de avaliação   | [André Maia](http://github.com/andre-maia51)  |  |  |
+| Data  |   Versão   | Descrição                                                             | Autor(es)                                    | Revisor(es)        |
+| :---: | :--------: | :-------------------------------------------------------------------- | :------------------------------------------- | :----------------- |  
+| `1.0` | 10/11/2025 | Criação do plano de avaliação da Fase 3.                              | [Marcos Marinho](https://github.com/devMarcosVM)                               | [Manuella Valadares](https://github.com/manuvaladares)  |
+| `1.1` | 10/11/2025 | Revisão dos itens Método de Avaliação e Cronograma de Ações                               | [Zenilda Vieira](https://github.com/ZenildaVieira)                               |  |
+| `1.2` | 11/11/2025 | Revisão do plano e adição das fontes e evidências de rastreabilidade. | [Manuella Valadares](https://github.com/manuvaladares) |                    |
+| `1.3` | 16/11/2025 | Adequação ao novo escopo de avaliação                                 | [André Maia](http://github.com/andre-maia51) |                    |

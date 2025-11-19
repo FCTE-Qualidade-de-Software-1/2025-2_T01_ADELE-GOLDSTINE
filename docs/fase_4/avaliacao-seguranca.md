@@ -218,8 +218,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
         * Logs com informações completas: O log contém Data/Hora e Ação, mas não inclui o Usuário, o que é essencial para auditoria.
         * Cálculo: `(0 / 1) * 100` = 0%
 
-    ![Exemplo de arquivo de log do i-Educar]
-
+    ![ReportsRenderServerFactory.php](../assets/evidencias_seguranca/ReportsRenderServerFactory_php.PNG)
 
 
     ### Classificação da Métrica

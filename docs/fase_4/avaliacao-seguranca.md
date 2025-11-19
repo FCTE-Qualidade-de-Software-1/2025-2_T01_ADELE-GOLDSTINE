@@ -21,9 +21,7 @@ Desenvolvimento Seguro — Avaliar indícios de maturidade do processo de desenv
 
 A avaliação de segurança toma como base principalmente o OWASP Top 10 [2], referência internacional sobre riscos em aplicações web, e princípios da Lei Geral de Proteção de Dados (LGPD) relacionados à proteção de informações pessoais [1]. Cada métrica está associada diretamente a um tipo específico de risco descrito pela OWASP.
 
-**Controle de Acesso e Credenciais
-
-(OWASP A01 – Broken Access Control / OWASP A02 – Cryptographic Failures)**
+**Controle de Acesso e Credenciais (OWASP A01 – Broken Access Control / OWASP A02 – Cryptographic Failures)**
 
 O controle de acesso é uma das áreas mais sensíveis em sistemas que manipulam dados confidenciais. Segundo o OWASP, falhas nessa camada — conhecidas como Broken Access Control — permitem que usuários realizem ações fora de seu perfil, como acessar registros de outros alunos ou modificar dados que não deveriam.
 
@@ -33,9 +31,7 @@ Verificar se rotas críticas possuem regras de autorização e se as sessões s�
 Armazenamento Criptográfico de Senhas (M1.2):
 O armazenamento incorreto de senhas é caracterizado pelo OWASP A02 – Cryptographic Failures [2]. Senhas devem ser protegidas por funções de hashing modernas e lentas, como Argon2 ou Bcrypt, que, segundo literatura clássica de criptografia, são resistentes a ataques de força bruta por serem memory-hard [9]. Algoritmos antigos como MD5 e SHA-1 não são mais considerados seguros e violam diretrizes da LGPD sobre proteção de dados pessoais.
 
-**Logs e Monitoramento
-
-(OWASP A09 – Insufficient Logging & Monitoring)**
+**Logs e Monitoramento (OWASP A09 – Insufficient Logging & Monitoring)**
 
 O registro de atividades críticas do sistema é essencial para rastreamento de incidentes, auditorias e detecção de comportamentos suspeitos. De acordo com o OWASP, a falta de logs ou a presença de logs incompletos inviabiliza qualquer resposta a incidentes.
 
@@ -45,9 +41,7 @@ A métrica avalia o quanto das ações sensíveis (como login, exclusão e alter
 Completude das Entradas de Log (M2.2):
 Não basta apenas registrar um evento; é necessário incluir campos mínimos como usuário, ação executada e data/hora. Logs incompletos dificultam auditorias forenses e atendem diretamente ao problema descrito pelo OWASP A09 [2]. De acordo com o OWASP Logging Cheat Sheet [5], um log eficiente deve conter usuário, ação e data/hora, requisitos que foram utilizados para avaliar essa métrica.
 
-**Desenvolvimento Seguro
-
-(OWASP A06 – Vulnerable and Outdated Components)**
+**Desenvolvimento Seguro (OWASP A06 – Vulnerable and Outdated Components)**
 
 A maturidade do processo de desenvolvimento também influencia diretamente a segurança do sistema. A importância dos testes de segurança é discutida amplamente na literatura acadêmica, como nos trabalhos de Vieira, Melo e Madeira [7], que mostram como testes específicos podem prevenir vulnerabilidades exploráveis.
 
@@ -139,7 +133,9 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
     * **Funções procuradas:** `md5()`, `sha1()`, `password_hash()`, `password_verify()`.
     * **Dado Coletado:** O sistema utiliza o algoritmo Argon2, configurado como argon em `config/hashing.php`, aplicado por meio de `Hash::make()` em todos os fluxos de criação de senha — novos cadastros, redefinições administrativas e rotinas de integração com o sistema legado.
 
-    ![Código de armazenamento de senha]
+    ![Hashing.php](../assets/evidencias_seguranca/hashing_php.PNG)
+    ![Hash_make_1](../assets/evidencias_seguranca/Hash_make_1.PNG)
+    ![Hash_make_2](../assets/evidencias_seguranca/Hash_make_2.PNG)
 
     ### Classificação da Métrica
 
@@ -189,8 +185,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
         * Ações que geram entrada de log: (somente logs de erro técnico): 1
         * Cálculo: `(1/5)∗100` = 20%
 
-    ![Exemplo de ação crítica com log]
-    ![Exemplo de ação crítica SEM log]
+    ![Busca_log](../assets/evidencias_seguranca/busca_log.PNG)
 
     ### Classificação da Métrica
 
@@ -301,7 +296,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
 ---
 
-## 4. Conclusão (Segurança)
+## 4. Conclusão
 
 Com base nos resultados obtidos nas sete métricas avaliadas, a característica Segurança do i-Educar foi classificada como Inaceitável, conforme os Critérios de Julgamento definidos na Fase 2. A maior parte das métricas apresentou desempenho Insatisfatório ou Não conforme, especialmente em áreas fundamentais como controle de acesso, expiração de sessão, monitoramento de ações críticas e presença de testes de segurança.
 
@@ -348,20 +343,20 @@ Assim, a característica Segurança, conforme definida na Fase 2, deve ser class
 ## Referências Bibliográficas
 
 > [1] BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.
-
+>
 > [2] OWASP Foundation. OWASP Top 10 – 2021: The Ten Most Critical Web Application Security Risks. 2021. Disponível em: https://owasp.org/www-project-top-ten/
 . Acesso em: 18 nov. 2025.
-
+>
 > [3] NIST. Digital Identity Guidelines (NIST SP 800-63-3). Gaithersburg, MD, 2017.
-
+>
 > [4] NIST. Security and Privacy Controls for Information Systems (NIST SP 800-53, Rev. 5). Gaithersburg, MD, 2020.
-
+>
 > [5] OWASP FOUNDATION. OWASP Logging Cheat Sheet. 2023.
-
+>
 > [6] SOMMERVILLE, Ian. Engenharia de Software. 10. ed. São Paulo: Pearson, 2020.
-
+>
 > [7] VIEIRA, Marco; MELO, Anderson; MADEIRA, Henrique. Ensaios e Testes de Segurança em Software. Revista Brasileira de Segurança da Informação, 2022.
-
+>
 > [8] OWASP FOUNDATION. OWASP Authentication Cheat Sheet. 2023.
-
+>
 > [9] STALLINGS, William. Cryptography and Network Security: Principles and Practice. 8. ed. Boston: Pearson, 2023.

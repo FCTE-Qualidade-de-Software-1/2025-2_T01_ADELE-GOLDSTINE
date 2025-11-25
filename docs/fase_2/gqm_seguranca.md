@@ -67,7 +67,7 @@
 **Questão 1: Mecanismos de Autenticação e Autorização**
 
 * **Métrica 1.1 – Percentual de rotas críticas com regras de autorização** 
-* **Definição:** Percentual de **rotas (endpoints) críticas** que possuem pelo menos uma regra de autorização aplicada para cada papel de usuário identificado.  
+    * **Definição:** Percentual de **rotas (endpoints) críticas** que possuem pelo menos uma regra de autorização aplicada para cada papel de usuário identificado.  
     * **Coleta:** Revisão do código fonte (ex: arquivos de rota, *controllers*) para identificar regras de autorização por rota.  
     * **Pontuação de Julgamento:** 
     
@@ -78,7 +78,7 @@
     * **Propósito:** Avaliar a abrangência do controle de acesso baseado em papéis.  
 
 * **Métrica 1.2 – Método de armazenamento de senhas**
-* **Definição:** Verificação da presença de técnicas de hashing e criptografia no armazenamento das senhas.  
+    * **Definição:** Verificação da presença de técnicas de hashing e criptografia no armazenamento das senhas.  
     * **Coleta:** Análise do código fonte do sistema de autenticação.  
     * **Pontuação de Julgamento:** 
     
@@ -89,7 +89,7 @@
     * **Propósito:** Confirmar a segurança no armazenamento de credenciais.  
 
 * **Métrica 1.3 – Tempo médio de expiração da sessão**
-* **Definição:** Tempo configurado para encerramento automático das sessões por inatividade, em minutos.  
+    * **Definição:** Tempo configurado para encerramento automático das sessões por inatividade, em minutos.  
     * **Coleta:** Análise das configurações do sistema ou testes funcionais para medir o tempo de expiração.  
     * **Pontuação de Julgamento:** 
     
@@ -102,7 +102,7 @@
 **Questão 2: Monitoramento e Auditoria**
 
 * **Métrica 2.1 – Percentual de ações críticas registradas em logs**
-* **Definição:** Percentual de eventos críticos (login, exclusão, alteração) que são registrados em logs.  
+    * **Definição:** Percentual de eventos críticos (login, exclusão, alteração) que são registrados em logs.  
     * **Coleta:** Análise dos arquivos de log e documentação do sistema.  
     * **Pontuação de Julgamento:** 
     
@@ -113,7 +113,7 @@
     * **Propósito:** Avaliar a efetividade do monitoramento de eventos de segurança.  
 
 * **Métrica 2.2 – Percentual de logs com informações completas**
-* **Definição:** Percentual de registros de log que incluem usuário, ação e data/hora.  
+    * **Definição:** Percentual de registros de log que incluem usuário, ação e data/hora.  
     * **Coleta:** Amostragem e análise dos registros de log.  
     * **Pontuação de Julgamento:** 
     
@@ -127,8 +127,9 @@
 **Questão 3: Desenvolvimento Seguro**
 
 * **Métrica 3.1 – Densidade de testes de segurança (Testes/KLOC)**
-* **Definição:** Quantidade de casos de teste relacionados à segurança, normalizada por mil linhas de código (KLOC) de produção.  
-    * **Coleta:** 1. Identificar e contar o número total de testes de segurança na suíte.
+    * **Definição:** Quantidade de casos de teste relacionados à segurança, normalizada por mil linhas de código (KLOC) de produção.  
+    * **Coleta:**
+        1. Identificar e contar o número total de testes de segurança na suíte.
         2. Contar o KLOC total do código de produção (ex: `cloc src/`).
         3. Calcular a densidade: `(Nº Testes de Segurança / (KLOC Total))`
     * **Pontuação de Julgamento:** 
@@ -140,7 +141,7 @@
     * **Propósito:** Avaliar a cobertura proporcional dos testes de segurança no projeto.  
 
 * **Métrica 3.2 – Frequência média de atualização de dependências**
-* **Definição:** Intervalo médio, em meses, entre atualizações das dependências externas do projeto.  
+    * **Definição:** Intervalo médio, em meses, entre atualizações das dependências externas do projeto.  
     * **Coleta:** Análise do histórico de commits e arquivos de configuração de dependências.  
     * **Pontuação de Julgamento:** 
     
@@ -171,38 +172,38 @@
       <th><b>Tipo de Coleta</b></th>
     </tr>
     <tr>
-      <td><b>1 – Autenticação e Autorização</b><br>Qual é o nível de robustez do controle de acesso?</td>
+      <td><b>Autenticação e Autorização</b><br>Qual é o nível de robustez do controle de acesso?</td>
       <td>
-        - % de rotas críticas com autorização (M1.1)<br>
-        - Método de armazenamento de senhas (M1.2)<br>
-        - Tempo de expiração da sessão (M1.3)
+        M1.1: % de rotas críticas com autorização<br>
+        M1.2: Método de armazenamento de senhas<br>
+        M1.3: Tempo de expiração da sessão
       </td>
       <td>
-        - Revisão de código (rotas/controllers)<br>
-        - Revisão de código (autenticação)<br>
-        - Revisão de configuração / Teste funcional
-      </td>
-    </tr>
-    <tr>
-      <td><b>2 – Monitoramento e Auditoria</b><br>Qual é o nível de rastreabilidade das ações críticas?</td>
-      <td>
-        - % de ações críticas em logs (M2.1)<br>
-        - % de logs com informações completas (M2.2)
-      </td>
-      <td>
-        - Revisão de código / Análise de logs<br>
-        - Amostragem e análise de logs
+        Revisão de código (rotas/controllers)<br>
+        <br>Revisão de código (autenticação)<br>
+        <br>Revisão de configuração / Teste funcional
       </td>
     </tr>
     <tr>
-      <td><b>3 – Desenvolvimento Seguro</b><br>Em que medida o desenvolvimento segue práticas de segurança?</td>
+      <td><b>Monitoramento e Auditoria</b><br>Qual é o nível de rastreabilidade das ações críticas?</td>
       <td>
-        - Densidade de testes de segurança (M3.1)<br>
-        - Frequência de atualização de dependências (M3.2)
+        M2.1: % de ações críticas em logs<br>
+        M2.2: % de logs com informações completas
       </td>
       <td>
-        - Inspeção do repositório / `cloc`<br>
-        - Inspeção do histórico de commits (ex: `composer.lock`)
+        Revisão de código / Análise de logs<br>
+        <br>Amostragem e análise de logs
+      </td>
+    </tr>
+    <tr>
+      <td><b>Desenvolvimento Seguro</b><br>Em que medida o desenvolvimento segue práticas de segurança?</td>
+      <td>
+        M3.1: Densidade de testes de segurança<br>
+        M3.2: Frequência de atualização de dependências
+      </td>
+      <td>
+        Inspeção do repositório / `cloc`<br>
+        <br>Inspeção do histórico de commits (ex: `composer.lock`)
       </td>
     </tr>
   </table>

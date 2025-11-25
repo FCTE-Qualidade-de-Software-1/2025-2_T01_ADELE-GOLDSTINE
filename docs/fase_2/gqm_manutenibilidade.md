@@ -149,19 +149,27 @@ Para decompor o objetivo de análise da Manutenibilidade, foram formuladas as se
       <th><b>Tipo de Coleta</b></th>
     </tr>
     <tr>
-      <td>1 – Impacto das Alterações </td>
-      <td>M1.1: CBO; M1.2: Código Repetido</td>
+      <td><b>Impacto das Alterações</b><br>Qual o impacto de realizar uma alteração no sistema?</td>
+      <td>
+        M1.1: CBO<br>
+        M1.2: Código Repetido
+      </td>
       <td>Análise Estática</td>
     </tr>
     <tr>
-      <td>2 – Complexidade de Entendimento</td>
+      <td><b>Complexidade de Entendimento</b><br>Quão complexo é entender o código-fonte do i-Educar?</td>
       <td>M2.1: Complexidade Ciclomática</td>
       <td>Análise Estática</td>
     </tr>
     <tr>
-      <td>3 – Cobertura de Testes</td>
-      <td>M3.1: Cobertura de Teste; M3.2: Densidade de Testes; M3.3: Tempo de Execução</td>
-      <td>Análise Estática / Execução de Testes</td>
+      <td><b>Cobertura de Testes</b><br>Como está a situação atual dos testes do i-Educar?</td>
+      <td>
+        M3.1: Cobertura de Teste<br>
+        M3.2: Densidade de Testes<br>
+        M3.3: Tempo de Execução
+      </td>
+      <td>Análise Estática<br>
+      <br>Execução de Testes</td>
     </tr>
   </table>
 

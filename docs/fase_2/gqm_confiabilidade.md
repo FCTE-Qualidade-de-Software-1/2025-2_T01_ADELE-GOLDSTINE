@@ -157,31 +157,31 @@ Para decompor o objetivo de análise da Confiabilidade, foram formuladas as segu
     <tr>
       <td><b>Maturidade</b><br>Qual é a estabilidade do código em relação a defeitos?</td>
       <td>
-        - Densidade de defeitos (issues "bug" por KLOC)<br>
-        - Percentual de commits de correção (mensagens com fix/corrige/bugfix)
+        M1.1: Densidade de defeitos (issues "bug" por KLOC)<br>
+        M1.2: Percentual de commits de correção (mensagens com fix/corrige/bugfix)
       </td>
       <td>
-        - GitHub issues + contagem de linhas com cloc (ou similar)<br>
-        - Histórico de commits via git log com filtros/regex
+        GitHub issues + contagem de linhas com cloc (ou similar)<br>
+        <br>Histórico de commits via git log com filtros/regex
       </td>
     </tr>
     <tr>
       <td><b>Tolerância a Falhas</b><br>Qual é o nível de robustez contra falhas em tempo de execução?</td>
       <td>
-        - Índice de tratamento de exceções (% operações I/O críticas dentro de try-catch)
+        M2.1: Índice de tratamento de exceções (% operações I/O críticas dentro de try-catch)
       </td>
       <td>
-        - Análise estática / scripts (grep/ack) para localizar operações críticas e verificar blocos try-catch<br>
-        - Revisão manual de trechos críticos quando necessário
+        Análise estática / scripts (grep/ack) para localizar operações críticas e verificar blocos try-catch<br>
+        <br>Revisão manual de trechos críticos quando necessário
       </td>
     </tr>
     <tr>
       <td><b>Recuperabilidade</b><br>Qual é a eficácia dos mecanismos de recuperação de dados?</td>
       <td>
-        - Pontuação qualitativa das rotinas de backup (checklist, escala 0–10)
+        M3.1: Pontuação qualitativa das rotinas de backup (checklist, escala 0–10)
       </td>
       <td>
-        - Inspeção manual do código e documentação aplicando checklist de avaliação (documentação, clareza, tratamento de erros, configuração, testabilidade)
+        Inspeção manual do código e documentação aplicando checklist de avaliação (documentação, clareza, tratamento de erros, configuração, testabilidade)
       </td>
     </tr>
   </table>

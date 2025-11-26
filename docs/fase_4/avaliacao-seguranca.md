@@ -122,7 +122,10 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Análise e Discussão
 
-    [PREENCHER: O que esse percentual indica? Um valor baixo é uma falha crítica de segurança (Broken Access Control). Significa que um usuário com permissão baixa (ex: professor) poderia acessar dados de outro nível (ex: administrador). Isso valida H1.1?]
+    O resultado de 15,46% indica um nível de robustez extremamente baixo do controle de acesso do sistema, respondendo negativamente à **Questão 1: "Qual é o nível de robustez do controle de acesso do sistema?"**. Este percentual caracteriza uma falha crítica de segurança conhecida como Broken Access Control (OWASP A01), onde a grande maioria das rotas críticas (84,54%) não possui mecanismos adequados de autorização.
+
+    Na prática, isso significa que usuários com permissões limitadas (como professores ou secretários) poderiam potencialmente acessar ou executar ações reservadas a perfis mais elevados (como administradores ou gestores).
+
 
 ??? "M1.2: Método de armazenamento de senhas"
 
@@ -172,7 +175,11 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Análise e Discussão
 
-    [PREENCHER: Isso valida a H1.3? Um tempo muito longo aumenta o risco de um atacante sequestrar uma sessão deixada aberta em um computador público. Um tempo muito curto prejudica a usabilidade.]
+    O tempo de expiração de 120 minutos contribui negativamente para responder à **Questão 1: "Qual é o nível de robustez do controle de acesso do sistema?"**, pois representa um ponto fraco na gestão de sessões. Um tempo de expiração excessivamente longo amplia significativamente a janela de oportunidade para ataques de sequestro de sessão, especialmente em ambientes compartilhados ou computadores públicos.
+
+    Se um usuário deixar uma sessão aberta em um terminal público ou compartilhado, um atacante teria até 2 horas para explorar essa sessão ativa, potencialmente acessando dados sensíveis, realizando alterações indevidas ou exportando informações confidenciais. Embora tempos muito curtos (como 15 ou 30 minutos) possam prejudicar a usabilidade, especialmente em contextos educacionais onde sessões podem ser longas, o limite de 60 minutos recomendado representa um equilíbrio adequado entre segurança e usabilidade.
+
+    Portanto, em relação à Questão 1, este aspecto do controle de acesso apresenta **robustez insuficiente** na gestão de sessões.
 
 ??? "M2.1: Percentual de ações críticas registradas em logs"
 
@@ -266,7 +273,11 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Análise e Discussão
 
-    [PREENCHER: Isso valida H3.1? A ausência (ou baixo número) de testes de segurança indica que a equipe de desenvolvimento não está ativamente prevenindo vulnerabilidades. A segurança do sistema depende apenas da "sorte" ou da revisão manual, o que é arriscado.]
+    O resultado de 0,07 Testes/KLOC responde negativamente à **Questão 3: "Em que medida o desenvolvimento do sistema segue práticas de segurança?"**, indicando que o processo de desenvolvimento apresenta maturidade muito baixa na prevenção proativa de vulnerabilidades. Este valor está significativamente abaixo do limiar mínimo considerado regular (0,1 Testes/KLOC) e muito distante dos níveis recomendados (≥ 0,5 Testes/KLOC).
+
+    A ausência ou baixíssima densidade de testes de segurança significa que a segurança do sistema depende quase exclusivamente de revisão manual de código, "sorte" ou detecção reativa de problemas em produção, o que é altamente arriscado para um sistema que trata dados sensíveis.
+
+    Em um contexto onde o i-Educar precisa garantir conformidade com a LGPD e proteger informações de menores de idade, a falta de testes automatizados de segurança representa uma falha estrutural no processo de desenvolvimento. Portanto, a resposta à Questão 3 é que o desenvolvimento **não segue adequadamente práticas de segurança** no que se refere à prevenção de vulnerabilidades através de testes automatizados.
 
 ??? "M3.2: Frequência média de atualização de dependências"
 
@@ -291,7 +302,11 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Análise e Discussão
 
-    [PREENCHER: Isso valida H3.2? Dependências desatualizadas são a porta de entrada mais comum para ataques (ex: Log4Shell, etc.). Manter as dependências atualizadas é uma prática de desenvolvimento seguro essencial.]
+    A frequência de atualização de dependências (aproximadamente a cada 15 dias) responde positivamente à **Questão 3: "Em que medida o desenvolvimento do sistema segue práticas de segurança?"**, demonstrando que o projeto adota uma prática essencial de desenvolvimento seguro. O ciclo curto de atualização (bem abaixo do limite de 6 meses estabelecido como critério) indica que a equipe mantém um processo ativo de monitoramento e atualização de componentes externos.
+
+    Dependências desatualizadas são uma das portas de entrada mais comuns para ataques modernos, como evidenciado por incidentes históricos como Log4Shell (CVE-2021-44228), que explorou vulnerabilidades em bibliotecas amplamente utilizadas. Ao manter um ciclo de atualização frequente, o projeto reduz significativamente a superfície de ataque e mitiga riscos relacionados ao OWASP A06 – Vulnerable and Outdated Components.
+
+    Portanto, em relação à Questão 3, este aspecto específico do desenvolvimento **segue adequadamente práticas de segurança**, representando um ponto forte do projeto na prevenção de vulnerabilidades conhecidas em componentes de terceiros.
 
 ---
 

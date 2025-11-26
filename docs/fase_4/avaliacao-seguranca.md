@@ -62,6 +62,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
     ### Evidências e Dados Brutos
 
     * **Método:** Revisão de código fonte (ex: arquivos de rota, controllers).
+    * **Rotas consideradas críticas:** Rotas que alteram dados, como POST, PUT, PATCH e DELETE.
     * **Rotas críticas analisadas:**
     1. POST /matricula/{...}/enturmar/{...}
        * Permissão: modify:enrollment (Enturmar matrícula)
@@ -152,8 +153,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     O sistema segue boas práticas modernas de segurança ao utilizar Argon2, atualmente o algoritmo mais recomendado por ser memory-hard e resistente a ataques massivos de força bruta. A aplicação é consistente em todo o código, incluindo trechos legados, reduzindo riscos de regressão para algoritmos inseguros.
 
-    Em caso de vazamento do banco, as senhas apresentariam forte resistência a ataques.
-    Portanto, a Hipótese H1.2 (que supunha uso inadequado de hashing) é invalidada.
+    Em caso de vazamento do banco, as senhas apresentariam forte resistência a ataques. Portanto, em relação à **Questão 1: "Qual é o nível de robustez do controle de acesso do sistema?"**, este aspecto específico do armazenamento de credenciais contribui positivamente para a robustez do controle de acesso, representando um ponto forte na proteção das informações dos usuários.
 
 ??? "M1.3: Tempo médio de expiração da sessão"
 
@@ -212,7 +212,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
     O único log encontrado refere-se a um erro de infraestrutura, não a ações do usuário.
     Assim, se ocorrer uma alteração indevida, acesso irregular ou fraude, não existe trilha de auditoria que permita identificar responsáveis.
 
-    Portanto, a Hipótese H2.1 (de que o sistema não registra adequadamente ações críticas) é validada.
+    Portanto, a resposta à Questão 2 é que o nível de rastreabilidade das ações críticas é **insuficiente**, comprometendo a capacidade do sistema de suportar investigações de segurança e conformidade com requisitos de auditoria.
 
 ??? "M2.2: Percentual de logs com informações completas"
 
@@ -245,7 +245,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     Um log sem o quem é insuficiente para suporte à investigação de incidentes, dificultando monitoramento e detecção de comportamentos suspeitos.
 
-    Assim, a Hipótese H2.2 é validada, indicando que, além de poucos logs, os registros existentes são incompletos.
+    Portanto, em relação à Questão 2, a qualidade dos logs também contribui negativamente para o nível de rastreabilidade, reforçando a conclusão de que o sistema apresenta **rastreabilidade insuficiente** das ações críticas.
 
 ??? "M3.1: Densidade de testes de segurança (Testes/KLOC)"
 
@@ -314,7 +314,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
 Com base nos resultados obtidos nas sete métricas avaliadas, a característica Segurança do i-Educar foi classificada como Inaceitável, conforme os Critérios de Julgamento definidos na Fase 2. A maior parte das métricas apresentou desempenho Insatisfatório ou Não conforme, especialmente em áreas fundamentais como controle de acesso, expiração de sessão, monitoramento de ações críticas e presença de testes de segurança.
 
-Do conjunto analisado, cinco hipóteses foram validadas (H1.1, H1.3, H2.1, H2.2 e H3.1), indicando falhas reais na implementação de segurança. Apenas duas hipóteses foram invalidadas (H1.2 e H3.2), correspondentes aos únicos pontos fortes observados: o armazenamento adequado de senhas por Argon2 e a atualização frequente de dependências.
+A avaliação das três questões do GQM revela um panorama preocupante: a **Questão 1** sobre robustez do controle de acesso apresenta resultados mistos, com pontos fortes no armazenamento de senhas (Argon2), mas falhas críticas na autorização de rotas e na gestão de sessões. A **Questão 2** sobre rastreabilidade das ações críticas foi respondida negativamente, com níveis insuficientes tanto na cobertura quanto na qualidade dos logs. A **Questão 3** sobre práticas de desenvolvimento seguro também apresenta resultados mistos, com baixa densidade de testes de segurança, mas com atualização frequente de dependências.
 
 ### Síntese das Avaliações
 

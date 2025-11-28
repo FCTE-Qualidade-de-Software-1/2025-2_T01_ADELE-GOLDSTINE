@@ -22,9 +22,9 @@ Tendo isso em vista, a investigação foi guiada por três questões fundamentai
 
 * **Complexidade Ciclomática (CC):** A complexidade ciclomática segundo McCabe [4] é uma medida de complexidade baseada na teoria dos grafos. Ela serve para medir e controlar o número de caminhos em um programa e permite identificar módulos de software que serão difíceis de testar e manter. A medição da complexidade ciclomática de um código é importante, pois códigos com alta complexidade tendem a ter um número excessivo de caminhos de controle, tornando-o extremamente difícil de testá-lo e mantê-lo.
 
-* **Cobertura de Teste e Densidade:** Explique o que é cobertura de linha e por que ela, sozinha, não é suficiente (daí a necessidade da "Densidade de Testes").
+* **Cobertura de Teste e Densidade:** A cobertura de teste de linha (Line Coverage) é uma métrica quantitativa que indica o percentual de linhas de código executadas durante a execução de uma suíte de testes. Embora seja uma medida valiosa para identificar código não testado, ela, por si só, não é suficiente para garantir a qualidade dos testes [5]. Uma alta cobertura pode mascarar a existência de testes superficiais que executam o código mas não verificam adequadamente seu comportamento. Por isso, a Densidade de Testes (Testes/KLOC - número de testes por mil linhas de código) é uma métrica complementar importante, pois mede o esforço de teste em relação ao tamanho do código, ajudando a identificar se há um número adequado de casos de teste por unidade de código e fornecendo insights sobre a distribuição dos testes ao longo da base de código [6].
 
-* **Tempo de Execução:** Por que testes lentos impactam o ciclo de desenvolvimento (CI/CD, feedback lento).
+* **Tempo de Execução:** O tempo de execução dos testes é um fator crítico que impacta diretamente a produtividade da equipe de desenvolvimento e a eficiência do ciclo de desenvolvimento contínuo (CI/CD). Testes lentos criam um ciclo de feedback mais longo, desestimulando os desenvolvedores a executá-los com frequência e retardando a detecção de defeitos [7]. Em pipelines de integração contínua, suítes de teste demoradas aumentam o tempo de entrega, causam filas de builds e atrasam o deploy de correções críticas. A indústria recomenda que testes unitários sejam executados em menos de 1 segundo cada, permitindo ciclos rápidos de desenvolvimento e feedback imediato [8].
 
 ---
 
@@ -244,11 +244,50 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
 ## 4. Conclusão (Manutenibilidade)
 
-[PREENCHER: Faça uma conclusão *específica* para a Manutenibilidade.
-* Com base nos resultados das 6 métricas, o objetivo de Manutenibilidade foi atingido?
-* Use os "Critérios para Julgamento" da Fase 2 (Aceitável, Parcialmente aceitável, Inaceitável) para dar um veredito sobre esta característica.
-* Quais foram os principais pontos fortes e fracos encontrados? (Ex: "A cobertura de teste é boa, mas a complexidade e o acoplamento são 'Insatisfatórios', indicando um código difícil de manter.")
-* (Opcional) Quais hipóteses (H1.1, H2.1, H3.1, H3.2) foram validadas ou invalidadas pela coleta?]
+Com base nos resultados das seis métricas coletadas, a avaliação da Manutenibilidade do i-Educar apresenta um cenário **parcialmente aceitável**, refletindo a natureza híbrida do sistema que combina código legado com implementações modernas.
+
+### Classificação das Métricas:
+
+| Métrica | Resultado | Classificação |
+|---------|-----------|---------------|
+| M1.1: Coupling Between Objects (CBO) | Média 18 / 1,70% classes insatisfatórias | **Bom** |
+| M1.2: Código Repetido | 7,4% | **Insatisfatório** |
+| M2.1: Complexidade Ciclomática (CC) | Média 1,62 / 0,67% métodos insatisfatórios | **Bom** |
+| M3.1: Cobertura de Teste | 31,2% | **Insatisfatório** |
+| M3.2: Densidade de Testes | 9,52 Testes/KLOC | **Regular** |
+| M3.3: Tempo de Execução dos Testes | 0,027s por teste | **Bom** |
+
+### Pontos Fortes:
+
+1. **Baixo acoplamento geral:** Apenas 1,70% das classes apresentam CBO insatisfatório, demonstrando que a maior parte do código mantém baixa interdependência.
+2. **Complexidade controlada:** Com média de 1,62 por método, a complexidade ciclomática está bem abaixo do limiar de preocupação, facilitando a compreensão do código.
+3. **Testes rápidos e eficientes:** O tempo médio de 0,027s por teste permite feedback rápido aos desenvolvedores, favorecendo práticas de desenvolvimento ágil.
+
+### Pontos Fracos:
+
+1. **Alta duplicação de código:** Com 7,4% de código repetido (2.485 blocos duplicados), qualquer correção ou melhoria pode exigir retrabalho significativo em múltiplos pontos do sistema.
+2. **Cobertura de teste insuficiente:** Apenas 31,2% do código está coberto por testes, deixando mais de dois terços do sistema exposto a riscos de regressão e dificultando refatorações seguras.
+3. **Distribuição desigual de testes:** A densidade de testes regular (9,52 Testes/KLOC) combinada com baixa cobertura indica concentração de testes em módulos específicos (provavelmente o código moderno), enquanto o código legado permanece sem proteção adequada.
+
+### Validação das Hipóteses:
+
+- **H1.1 (Parcialmente validada):** "Alterações no código exigem tempo adicional de implantação devido ao alto acoplamento e duplicação." A duplicação elevada (7,4%) valida fortemente esta hipótese, enquanto o acoplamento geral baixo (1,70% das classes) a valida apenas parcialmente. Entretanto, as poucas classes com CBO muito alto (como AcademicYearService com CBO=27) representam pontos críticos de risco.
+
+- **H2.1 (Parcialmente validada):** "Desenvolvedores gastam tempo excessivo entendendo o código devido à alta complexidade." A complexidade ciclomática média baixa (1,62) refuta esta hipótese para a maior parte do código. No entanto, a existência de métodos com CC extremamente alta (como getExportFormatData com CC=186) confirma que existem pontos específicos onde a compreensão é excepcionalmente difícil.
+
+- **H3.1 (Validada):** "A ausência ou baixa cobertura de testes aumenta o risco de introduzir erros durante manutenções." Com apenas 31,2% de cobertura, esta hipótese foi plenamente validada. A maior parte do sistema não possui rede de segurança automatizada.
+
+- **H3.2 (Parcialmente invalidada):** "Testes lentos desestimulam a execução frequente durante o desenvolvimento." O tempo médio de 0,027s por teste demonstra que a suíte é extremamente rápida, invalidando esta preocupação. Entretanto, isso pode indicar ausência de testes mais complexos (integração e end-to-end).
+
+### Veredito Final:
+
+O i-Educar apresenta uma Manutenibilidade **Parcialmente Aceitável**. O sistema demonstra boas práticas de design orientado a objetos (baixo acoplamento e complexidade), mas sofre com problemas críticos de qualidade de teste e duplicação de código. A arquitetura híbrida cria uma divisão clara: módulos modernos bem estruturados e testados convivem com um vasto legado carente de cobertura de testes e propenso a duplicação.
+
+Para evoluir para um nível "Aceitável", o projeto precisa priorizar:
+1. Refatoração para eliminar código duplicado (especialmente nos 2.485 blocos identificados)
+2. Expansão significativa da cobertura de testes, focando no código legado
+3. Revisão dos poucos métodos com complexidade extrema (CC > 100)
+4. Manutenção das boas práticas já estabelecidas nos módulos modernos
 
 ---
 
@@ -261,3 +300,11 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 > [3] MARTIN, Robert C. Clean Code: A Handbook of Agile Software Craftsmanship. Upper Saddle River, NJ: Prentice Hall, 2008.
 
 > [4] MCCABE, Thomas J. A Complexity Measure. IEEE Transactions on Software Engineering, v. SE-2, n. 4, p. 308-320, dez. 1976.
+
+> [5] BUGBUG. What is Test Coverage in Software Testing? BugBug Blog, 2024. Disponível em: https://bugbug.io/blog/software-testing/test-coverage/. Acesso em: 28 nov. 2025.
+
+> [6] GRAPHITE. Measuring and Calculating Defect Density. Graphite Guides, 2024. Disponível em: https://graphite.com/guides/measuring-and-calculating-defect-density. Acesso em: 28 nov. 2025.
+
+> [7] BECK, Kent. Test Driven Development: By Example. Boston: Addison-Wesley Professional, 2002.
+
+> [8] SHORE, James; WARDEN, Shane. The Art of Agile Development. 2. ed. Sebastopol, CA: O'Reilly Media, 2021.

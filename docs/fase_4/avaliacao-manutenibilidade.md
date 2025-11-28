@@ -242,52 +242,55 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
 ---
 
-## 4. Conclusão (Manutenibilidade)
+## 4. Conclusão
 
-Com base nos resultados das seis métricas coletadas, a avaliação da Manutenibilidade do i-Educar apresenta um cenário **parcialmente aceitável**, refletindo a natureza híbrida do sistema que combina código legado com implementações modernas.
+Com base nos resultados obtidos nas seis métricas avaliadas, a característica Manutenibilidade do i-Educar foi classificada como **Parcialmente Aceitável**, conforme os Critérios de Julgamento definidos na [Fase 2](../fase_2/gqm_manutenibilidade.md). Metade das métricas apresentou desempenho Bom ou Excelente (acoplamento, complexidade e tempo de execução de testes), mas problemas críticos foram identificados na duplicação de código e na cobertura de testes.
 
-### Classificação das Métricas:
+A avaliação das três questões do GQM revela um cenário misto: a **Questão 1** sobre impacto das alterações apresenta resultados contraditórios, com baixo acoplamento (ponto forte), mas alta duplicação de código (ponto fraco crítico). A **Questão 2** sobre complexidade de entendimento foi respondida positivamente, com baixa complexidade geral, mas pontos pontuais de complexidade extrema. A **Questão 3** sobre situação dos testes apresenta um paradoxo: testes rápidos e densidade regular, mas cobertura insuficiente e desigual.
 
-| Métrica | Resultado | Classificação |
-|---------|-----------|---------------|
-| M1.1: Coupling Between Objects (CBO) | Média 18 / 1,70% classes insatisfatórias | **Bom** |
-| M1.2: Código Repetido | 7,4% | **Insatisfatório** |
-| M2.1: Complexidade Ciclomática (CC) | Média 1,62 / 0,67% métodos insatisfatórios | **Bom** |
-| M3.1: Cobertura de Teste | 31,2% | **Insatisfatório** |
-| M3.2: Densidade de Testes | 9,52 Testes/KLOC | **Regular** |
-| M3.3: Tempo de Execução dos Testes | 0,027s por teste | **Bom** |
+### Síntese das Avaliações
 
-### Pontos Fortes:
+| Métrica | Resultado | Julgamento | Hipótese |
+| ------- | --------- | ---------- | -------- |
+| **M1.1 – Acoplamento (CBO)** | Média 18 / 1,70% classes insatisfatórias | Bom | H1.1 **parcialmente validada** |
+| **M1.2 – Código Repetido** | 7,4% | Insatisfatório | H1.1 **validada** |
+| **M2.1 – Complexidade Ciclomática** | Média 1,62 / 0,67% métodos insatisfatórios | Bom | H2.1 **parcialmente validada** |
+| **M3.1 – Cobertura de Teste** | 31,2% | Insatisfatório | H3.1 **validada** |
+| **M3.2 – Densidade de Testes** | 9,52 Testes/KLOC | Regular | N/A |
+| **M3.3 – Tempo de Execução** | 0,027s por teste | Bom | H3.2 **invalidada** |
 
-1. **Baixo acoplamento geral:** Apenas 1,70% das classes apresentam CBO insatisfatório, demonstrando que a maior parte do código mantém baixa interdependência.
-2. **Complexidade controlada:** Com média de 1,62 por método, a complexidade ciclomática está bem abaixo do limiar de preocupação, facilitando a compreensão do código.
-3. **Testes rápidos e eficientes:** O tempo médio de 0,027s por teste permite feedback rápido aos desenvolvedores, favorecendo práticas de desenvolvimento ágil.
+### Principais Pontos Fortes
 
-### Pontos Fracos:
+* **Baixo Acoplamento (M1.1):** Apenas 1,70% das classes apresentam CBO insatisfatório (≥15), demonstrando que a arquitetura mantém baixa interdependência entre a maioria dos componentes. Isso facilita alterações isoladas e reduz o risco de efeitos colaterais em cascata.
 
-1. **Alta duplicação de código:** Com 7,4% de código repetido (2.485 blocos duplicados), qualquer correção ou melhoria pode exigir retrabalho significativo em múltiplos pontos do sistema.
-2. **Cobertura de teste insuficiente:** Apenas 31,2% do código está coberto por testes, deixando mais de dois terços do sistema exposto a riscos de regressão e dificultando refatorações seguras.
-3. **Distribuição desigual de testes:** A densidade de testes regular (9,52 Testes/KLOC) combinada com baixa cobertura indica concentração de testes em módulos específicos (provavelmente o código moderno), enquanto o código legado permanece sem proteção adequada.
+* **Complexidade Controlada (M2.1):** A complexidade ciclomática média de 1,62 por método está muito abaixo do limiar de preocupação (5), indicando que a maior parte do código é compreensível e segue estruturas simples, facilitando a manutenção e o onboarding de novos desenvolvedores.
 
-### Validação das Hipóteses:
+* **Testes Rápidos e Eficientes (M3.3):** O tempo médio de 0,027s por teste (37 testes/segundo) permite feedback instantâneo aos desenvolvedores, favorecendo práticas de desenvolvimento ágil e TDD. Isso demonstra uso eficiente de mocks, stubs e isolamento adequado dos testes unitários.
 
-- **H1.1 (Parcialmente validada):** "Alterações no código exigem tempo adicional de implantação devido ao alto acoplamento e duplicação." A duplicação elevada (7,4%) valida fortemente esta hipótese, enquanto o acoplamento geral baixo (1,70% das classes) a valida apenas parcialmente. Entretanto, as poucas classes com CBO muito alto (como AcademicYearService com CBO=27) representam pontos críticos de risco.
+### Principais Pontos Fracos
 
-- **H2.1 (Parcialmente validada):** "Desenvolvedores gastam tempo excessivo entendendo o código devido à alta complexidade." A complexidade ciclomática média baixa (1,62) refuta esta hipótese para a maior parte do código. No entanto, a existência de métodos com CC extremamente alta (como getExportFormatData com CC=186) confirma que existem pontos específicos onde a compreensão é excepcionalmente difícil.
+* **Alta Duplicação de Código (M1.2):** Com 7,4% de código repetido distribuído em 2.485 blocos duplicados, qualquer correção ou melhoria exige retrabalho significativo em múltiplos pontos do sistema. Isso aumenta o esforço de manutenção, eleva o risco de inconsistências entre as cópias e dificulta a evolução do código.
 
-- **H3.1 (Validada):** "A ausência ou baixa cobertura de testes aumenta o risco de introduzir erros durante manutenções." Com apenas 31,2% de cobertura, esta hipótese foi plenamente validada. A maior parte do sistema não possui rede de segurança automatizada.
+* **Cobertura de Teste Insuficiente (M3.1):** Apenas 31,2% do código está coberto por testes, deixando mais de dois terços do sistema (68,8%) exposto a riscos de regressão. A baixa cobertura dificulta refatorações seguras, aumenta a dependência de testes manuais e compromete a confiança na estabilidade do sistema após alterações.
 
-- **H3.2 (Parcialmente invalidada):** "Testes lentos desestimulam a execução frequente durante o desenvolvimento." O tempo médio de 0,027s por teste demonstra que a suíte é extremamente rápida, invalidando esta preocupação. Entretanto, isso pode indicar ausência de testes mais complexos (integração e end-to-end).
+* **Distribuição Desigual de Testes (M3.1 + M3.2):** A densidade regular de testes (9,52 Testes/KLOC) combinada com baixa cobertura global evidencia o padrão de "cobertura concentrada": os módulos modernos (`/app` e `/src`) possuem testes rápidos e bem estruturados, enquanto o código legado (`/ieducar`) permanece praticamente sem proteção automatizada.
 
-### Veredito Final:
+* **Complexidade Extrema Pontual (M2.1):** Embora a média seja baixa, a existência de métodos com CC extremamente alta — como `getExportFormatData` (CC=186) — representa "ilhas de complexidade" que dificultam significativamente a compreensão, manutenção e testabilidade desses pontos críticos.
 
-O i-Educar apresenta uma Manutenibilidade **Parcialmente Aceitável**. O sistema demonstra boas práticas de design orientado a objetos (baixo acoplamento e complexidade), mas sofre com problemas críticos de qualidade de teste e duplicação de código. A arquitetura híbrida cria uma divisão clara: módulos modernos bem estruturados e testados convivem com um vasto legado carente de cobertura de testes e propenso a duplicação.
+### Avaliação Final
 
-Para evoluir para um nível "Aceitável", o projeto precisa priorizar:
-1. Refatoração para eliminar código duplicado (especialmente nos 2.485 blocos identificados)
-2. Expansão significativa da cobertura de testes, focando no código legado
-3. Revisão dos poucos métodos com complexidade extrema (CC > 100)
-4. Manutenção das boas práticas já estabelecidas nos módulos modernos
+Diante da análise das métricas, a Manutenibilidade do i-Educar atinge o critério de **Parcialmente Aceitável** (50% das métricas classificadas como Bom ou Excelente). O sistema apresenta fundação sólida em design orientado a objetos, mas falhas críticas em cobertura de testes e duplicação de código comprometem a capacidade de manutenção sustentável a longo prazo.
+
+A arquitetura híbrida do projeto cria uma dualidade clara: módulos modernos demonstram maturidade técnica (baixo acoplamento, baixa complexidade, testes rápidos), mas convivem com um vasto legado carente de cobertura de testes, propenso a duplicação e com pontos de complexidade extrema. Esta situação é típica de sistemas em transição, onde novas práticas são aplicadas em código novo, mas o legado permanece sem refatoração significativa.
+
+**Recomendações para evolução para nível "Aceitável":**
+
+1. **Refatoração sistemática de código duplicado:** Priorizar os 2.485 blocos identificados, criando abstrações reutilizáveis e eliminando redundância.
+2. **Expansão gradual da cobertura de testes:** Focar inicialmente em módulos críticos do código legado (`/ieducar`), priorizando lógica de negócio essencial.
+3. **Decomposição de métodos complexos:** Revisar e refatorar métodos com CC > 100, aplicando técnicas como Extract Method e Strategy Pattern.
+4. **Manutenção das boas práticas:** Preservar os padrões estabelecidos nos módulos modernos, garantindo que novo código mantenha baixo acoplamento e complexidade controlada.
+
+Em síntese, o i-Educar demonstra **maturidade técnica em design**, mas requer **investimento estruturado em qualidade de testes e eliminação de débito técnico** para garantir manutenibilidade sustentável, especialmente considerando sua natureza de software livre dependente de contribuições comunitárias.
 
 ---
 

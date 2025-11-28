@@ -208,43 +208,61 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     Sobre a hipótese H3.1 ("A análise qualitativa das rotinas de backup revelará uma baixa pontuação de manutenibilidade, inferior a 5 em 10"): a hipótese é **invalidada** pelos dados coletados — a pontuação observada (7/10) está acima do limiar de 5, indicando manutenibilidade aceitável do código de backup. 
 
----
+## 4. Conclusão
 
-## 4. Conclusão (Confiabilidade)
+Com base nos resultados obtidos nas métricas avaliadas, a característica **Confiabilidade** do i-Educar foi classificada como **Aceitável**, segundo os Critérios de Julgamento definidos na Fase 2. Três das quatro métricas apresentaram desempenho **Bom ou Excelente**, demonstrando estabilidade consistente do sistema, baixa incidência de defeitos e mecanismos razoáveis de recuperação em caso de falhas.
 
-Com base nos resultados das quatro métricas coletadas, a **Confiabilidade do i-Educar** é classificada como **Aceitável**. Seguindo os critérios estabelecidos na Fase 2 (sistema aceitável se pelo menos 70% das métricas atingirem "Bom" ou "Excelente"), observamos que 75% das métricas (3 de 4) alcançaram esses níveis:
+A avaliação das questões do GQM apresenta um panorama predominantemente positivo. A **Questão 1**, que avalia a maturidade do software, obteve resultados fortemente favoráveis, com baixa densidade de defeitos e baixa proporção de commits de correção. A **Questão 2**, referente à tolerância a falhas, revelou um ponto crítico que precisa de atenção imediata, pois o tratamento de exceções em operações críticas encontra-se em nível insatisfatório. Já a **Questão 3**, sobre recuperabilidade, apresentou resultado Bom, com código de backup organizado, documentado e modular — ainda que com margem para aperfeiçoamentos.
 
-- **M1.1 - Densidade de Defeitos:** 0,364 bugs/KLOC (Excelente)
-- **M1.2 - Percentual de Commits de Correção:** 8,55% (Excelente)
-- **M2.1 - Índice de Tratamento de Exceções:** 20% (Insatisfatório)
-- **M3.1 - Qualidade do Código de Backup:** 7/10 (Bom)
+### Síntese das Avaliações
 
-**Principais pontos fortes identificados:**
+| Métrica                                      | Resultado       | Julgamento     |
+| -------------------------------------------- | --------------- | -------------- |
+| **M1.1 – Densidade de Defeitos**             | 0,364 bugs/KLOC | Excelente      |
+| **M1.2 – Percentual de Commits de Correção** | 8,55%           | Excelente      |
+| **M2.1 – Tratamento de Exceções**            | 20%             | Insatisfatório |
+| **M3.1 – Qualidade do Código de Backup**     | 7/10            | Bom            |
 
-- **Maturidade elevada:** densidade de defeitos muito baixa (0,364 bugs/KLOC) indica código estável e robusto, bem abaixo do limiar de 3 bugs/KLOC para sistemas aceitáveis.
-- **Baixo percentual de commits corretivos:** apenas 8,55% dos commits são correções de bugs, demonstrando que a maior parte do esforço de desenvolvimento está concentrada em novas funcionalidades e melhorias, não em remediação de defeitos.
-- **Código de backup manutenível:** a pontuação de 7/10 na análise qualitativa indica estrutura modular, documentação adequada e uso correto de boas práticas do Laravel.
+### Principais Pontos Fortes
 
-**Principal ponto fraco crítico:**
+* Elevada maturidade do código, com baixíssima densidade de defeitos.
+* Esforço majoritário do desenvolvimento focado em evolução, e não em correção.
+* Mecanismos de backup bem estruturados, contribuindo para a recuperação do sistema após falhas.
 
-- **Tolerância a falhas deficiente:** o índice de tratamento de exceções extremamente baixo (20%) revela que poucas operações críticas de I/O possuem proteção explícita contra falhas. Embora o Laravel forneça abstrações com tratamento interno, o código legado (`ieducar/`) e operações de shell (backup/restore via `passthru()`) não possuem validação ou captura de erros, o que representa risco operacional em cenários de desastre.
+### Principal Ponto Fraco
 
-**Validação das hipóteses:**
-
-- **H1.1 (invalidada):** a densidade de defeitos (0,364 bugs/KLOC) está **abaixo** do limiar de 3 bugs/KLOC previsto, indicando maturidade superior à esperada.
-- **H1.2 (invalidada):** o percentual de commits de correção (8,55%) está **abaixo** dos 15% previstos, reforçando a maturidade do código.
-- **H2.1 (validada):** confirmou-se que menos de 50% das operações críticas possuem tratamento de exceções adequado (apenas 20%), validando a preocupação com tolerância a falhas.
-- **H3.1 (invalidada):** a qualidade do código de backup (7/10) está **acima** do limiar de 5/10 previsto, indicando recuperabilidade razoável.
-
-**Recomendações prioritárias:**
-
-1. **Melhorar tratamento de exceções:** adicionar blocos `try/catch` e validação de entrada em operações de I/O, especialmente no código legado e nas rotinas de backup/restore.
-2. **Validação de operações de shell:** implementar verificação de códigos de retorno em comandos `passthru()` utilizados nas rotinas de backup, com notificação de falhas.
-3. **Revisão do código legado:** mapear e refatorar operações críticas no diretório `ieducar/` que ainda não possuem tratamento de erros adequado.
-
-Em síntese, o i-Educar demonstra **alta maturidade e estabilidade**, mas apresenta **vulnerabilidade operacional** devido à baixa cobertura de tratamento de exceções. A manutenção de um sistema confiável requer atenção especial à robustez das operações críticas, garantindo que falhas de infraestrutura (banco de dados, sistema de arquivos, rede) sejam tratadas graciosamente sem comprometer a integridade dos dados educacionais.
+* Baixa tolerância a falhas, com cobertura insuficiente de tratamento de exceções em operações críticas do sistema.
 
 ---
+
+## Recomendações para Melhoria da Confiabilidade
+
+Para elevar o nível de Confiabilidade do i-Educar, recomenda-se priorizar melhorias em tolerância a falhas e recuperação operacional. As ações sugeridas são:
+
+1. **Fortalecer o tratamento de exceções**
+    * Garantir proteção explícita em operações de I/O e banco de dados.
+    * Registrar erros com mensagens contextualizadas para facilitar diagnóstico.
+    * Implementar estratégias de fallback e retentativas programadas quando possível.
+
+2. **Aprimorar as rotinas de backup e restore**
+    * Verificar a integridade do arquivo antes da restauração.
+    * Tratar corretamente falhas de execução de comandos externos.
+    * Criar testes automatizados específicos para o fluxo de recuperação.
+
+3. **Mitigar riscos no código legado**
+    * Migrar gradativamente módulos antigos para APIs modernas do framework.
+    * Padronizar tratamento de exceções em módulos legados que permaneçam ativos.
+
+4. **Instituir governança contínua de confiabilidade**
+    * Adotar checklist obrigatório de confiabilidade em pull requests.
+    * Monitorar periodicamente métricas de falhas e retrabalho corretivo.
+    * Automatizar verificações de robustez e falhas em pipelines de CI.
+
+---
+
+### Conclusão Final
+
+A Confiabilidade do i-Educar é **adequada às operações atuais**, mas há espaço relevante para aprimoramentos que aumentem a resiliência do sistema. A priorização das ações listadas, especialmente no que diz respeito ao tratamento de exceções, é essencial para prevenir falhas silenciosas e garantir maior segurança operacional em cenários adversos, fortalecendo a continuidade e disponibilidade do serviço de maneira sustentável.
 
 ## Referências Bibliográficas
 

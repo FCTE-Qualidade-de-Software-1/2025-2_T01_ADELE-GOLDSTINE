@@ -64,7 +64,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Classificação da Métrica
 
-    * **Resultado:** Média 18 | 1,70% das classes é "Insatisfatório"
+    * **Resultado:** Média = 18 | 1,70% das classes é "Insatisfatório"
     * **Critério (da Fase 2):**
         * Bom: CBO < 13
         * Regular: 13 ≤ CBO < 15
@@ -118,7 +118,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
         3. Filtrar o XML do `/app` (`phpmd_app_codesize.xml`) para extrair apenas as violações de CC (CyclomaticComplexity): `grep 'rule="CyclomaticComplexity"' phpmd_app_codesize.xml > cc_app.txt`
 
-        4. Filtrar o XML do /`src` (`phpmd_src_codesize.xml`) para extrair apenas as violações de CC: `grep 'rule="CyclomaticComplexity"' phpmd_src_codesize.xml > cc_src.txt`
+        4. Filtrar o XML do `/src` (`phpmd_src_codesize.xml`) para extrair apenas as violações de CC: `grep 'rule="CyclomaticComplexity"' phpmd_src_codesize.xml > cc_src.txt`
 
         5. Consolidar manualmente os dados dos arquivos `cc_app.txt` e `cc_src.txt` em uma planilha Excel (Diretório, Classe, Método, Valor CC).
 
@@ -140,7 +140,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
 
     ### Classificação da Métrica
 
-    * **Resultado:** Média 1,62 / 0,67% dos métodos é "Insatisfatório"
+    * **Resultado:** Média = 1,62 | 0,67% dos métodos é "Insatisfatório"
     * **Critério (da Fase 2):**
         * Bom: CC ≤ 5
         * Regular: 5 < CC ≤ 10
@@ -161,7 +161,7 @@ Aqui são apresentados os dados brutos, a classificação e a análise individua
     * **Comando:** `./vendor/bin/pest --coverage`
     
     * **Dados Coletados:**
-        * Cobertura total de linhas (Line Coverage): 31.2%%
+        * Cobertura total de linhas (Line Coverage): 31.2%
 
     * **Documento resultado da Coleta**: [coverage.odt](https://docs.google.com/document/d/1TqPZNILbWLGGVggxy26ZqZPHYV8Jh7kCiK3bIl_nB5M/edit?usp=sharing )
     * **Armazenamento dos Dados**: Planilha Excel - [Coleta de Dados i-Educar](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing)

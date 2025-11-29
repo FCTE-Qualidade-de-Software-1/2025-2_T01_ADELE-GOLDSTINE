@@ -64,7 +64,7 @@ Os seguintes documentos e fontes serão usados para garantir a rastreabilidade e
 | **Histórico (i-Educar)** | Repositório Oficial (Git Log, Issues) | Fonte primária para métricas de processo (commits, issues, atualizações). | Os dados (contagens, datas) serão extraídos desta fonte. |
 | **Definição da Avaliação** | [Fase 2 - GQM](../fase_2/introducao_gqm.md) | Define formalmente cada métrica, o método de coleta e as pontuações de julgamento. | O plano de coleta (Seção 1) deve ser 100% fiel ao GQM da Fase 2. |
 | **Dados Brutos Coletados** | [Fase 4 - GQM](../fase_4/introducao-avaliacao.md) e [Planilha de Avaliação](https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?hl=pt-br&gid=0#gid=0) | Armazenamento dos resultados brutos. | Garante a auditabilidade e rastreabilidade da avaliação. |
-| **Relatório Final** | [Relatório]() | Documento final que consolida os dados, aplica as pontuações e apresenta as conclusões. | O relatório deve referenciar os dados brutos. |
+| **Relatório Final** | [Relatório](https://drive.google.com/file/d/1gMninnQbt1pRFtT7hLXkb0zmxl-Mg3Am/view?usp=sharing) | Documento final que consolida os dados, aplica as pontuações e apresenta as conclusões. | O relatório deve referenciar os dados brutos. |
 
 -----
 

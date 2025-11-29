@@ -1,0 +1,1898 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../avaliacao-confiabilidade/">
+      
+      
+        <link rel="next" href="../avaliacao-seguranca/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Avaliação da Manutenibilidade - Adele Goldstine - Trabalho Final</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/panzoom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <meta name="panzoom-theme" content="material">
+<meta name="panzoom-data" content='{"selectors": [".d2", ".mermaid"], "initial_zoom_level": 1.0}'> </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#avaliacao-da-manutenibilidade" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Adele Goldstine - Trabalho Final" class="md-header__button md-logo" aria-label="Adele Goldstine - Trabalho Final" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Adele Goldstine - Trabalho Final
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Avaliação da Manutenibilidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T01 Adele Goldstine
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_1/objeto-estudo/" class="md-tabs__link">
+          
+  
+  
+  Fase 1 - Propósito da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_2/introducao_gqm/" class="md-tabs__link">
+          
+  
+  
+  Fase 2 - Especificação da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_3/projetar/" class="md-tabs__link">
+          
+  
+  
+  Fase 3 - Projetar a Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introducao-avaliacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4 - Execução da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contribuicoes/fase-1/" class="md-tabs__link">
+          
+  
+  
+  Contribuições
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Adele Goldstine - Trabalho Final" class="md-nav__button md-logo" aria-label="Adele Goldstine - Trabalho Final" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Adele Goldstine - Trabalho Final
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T01 Adele Goldstine
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1 - Propósito da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1 - Propósito da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/objeto-estudo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objeto de Estudo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/contexto-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contexto da Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2 - Especificação da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2 - Especificação da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/introducao_gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Abordagem GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 1 - Confiabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 2 - Manutenibilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 3 - Segurança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/analise_geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Análise Geral das Medições
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 3 - Projetar a Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 3 - Projetar a Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_3/projetar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projetar Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 4 - Execução da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 4 - Execução da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducao-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao-confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Confiabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Manutenibilidade
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Manutenibilidade
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-referencial-teorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Referencial Teórico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-coleta-e-analise-das-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Coleta e Análise das Métricas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Coleta e Análise das Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Conclusão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Conclusão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintese-das-avaliacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Síntese das Avaliações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principais-pontos-fortes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Pontos Fortes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principais-pontos-fracos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Pontos Fracos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avaliação Final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao-seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Segurança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusao-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contribuições
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Contribuições
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="avaliacao-da-manutenibilidade">Avaliação da Manutenibilidade</h1>
+<p>Esta página apresenta a execução da avaliação e os resultados da coleta de dados para o objetivo GQM de <strong>Manutenibilidade</strong> do i-Educar.</p>
+<h2 id="1-introducao">1. Introdução</h2>
+<p>O objetivo definido para essa avaliação foi analisar o i-Educar com o foco na Manutenibilidade do ponto de vista da equipe de desenvolvimento utilizando o GQM na definição das questões, hipóteses e métricas.</p>
+<p>A avaliação da manutenibilidade é vital para o i-Educar devido à sua natureza de software livre. Como um projeto open-source, a sustentabilidade do sistema depende da capacidade da comunidade de compreender, corrigir e evoluir o código de forma autônoma e a arquitetura do sistema, que combina código legado com implementações modernas, exige monitoramento constante da qualidade interna para evitar que o esforço técnico inviabilize futuras manutenções.</p>
+<p>Tendo isso em vista, a investigação foi guiada por três questões fundamentais definidas na <a href="../../fase_2/gqm_manutenibilidade/">fase 2</a> do processo de avaliação de qualidade de software.</p>
+<ol>
+<li><strong>Impacto das alterações (Q1):</strong> Avalia o risco de propagação de erros ao modificar o sistema, investigando acoplamento entre classes e duplicação de código.</li>
+<li><strong>Complexidade de entendimento (Q2):</strong> Mensura o quão difícil é para um desenvolvedor compreender a lógica interna dos métodos, utilizando a complexidade ciclomática.</li>
+<li><strong>Situação dos testes (Q3):</strong> Verifica a existência eficácia de uma rede de segurança automatizada (testes unitários e de integração).</li>
+</ol>
+<h2 id="2-referencial-teorico">2. Referencial Teórico</h2>
+<ul>
+<li>
+<p><strong>Acoplamento (CBO):</strong> Coupling Between Objects (CBO) é uma métrica de design da orientação a objetos [1] que mede o grau de interdependência de uma classe, ou seja, quantas outras classes uma classe específica utiliza. Essa medição é importante pois valores de CBO altos podem indicar diversos problemas, como o efeito cascata, onde uma alteração em uma classe pode atrapalhar o funcionamento de diversas outras classes que dependem dela.</p>
+</li>
+<li>
+<p><strong>Código Repetido:</strong> A duplicação de código representa trabalho, risco e complexidade extra, ela pode ser apresentada de várias formas, como linhas de código idênticas ou semelhantes e duplicação de implementação [3]. É importante a medição de código repetido, pois a duplicação aumenta o acúmulo de código, exige mais trabalho para manutenção e aumenta as chances de erros serem introduzidos ou omitidos.</p>
+</li>
+<li>
+<p><strong>Complexidade Ciclomática (CC):</strong> A complexidade ciclomática segundo McCabe [4] é uma medida de complexidade baseada na teoria dos grafos. Ela serve para medir e controlar o número de caminhos em um programa e permite identificar módulos de software que serão difíceis de testar e manter. A medição da complexidade ciclomática de um código é importante, pois códigos com alta complexidade tendem a ter um número excessivo de caminhos de controle, tornando-o extremamente difícil de testá-lo e mantê-lo.</p>
+</li>
+<li>
+<p><strong>Cobertura de Teste e Densidade:</strong> A cobertura de teste de linha (Line Coverage) é uma métrica quantitativa que indica o percentual de linhas de código executadas durante a execução de uma suíte de testes. Embora seja uma medida valiosa para identificar código não testado, ela, por si só, não é suficiente para garantir a qualidade dos testes [5]. Uma alta cobertura pode mascarar a existência de testes superficiais que executam o código mas não verificam adequadamente seu comportamento. Por isso, a Densidade de Testes (Testes/KLOC - número de testes por mil linhas de código) é uma métrica complementar importante, pois mede o esforço de teste em relação ao tamanho do código, ajudando a identificar se há um número adequado de casos de teste por unidade de código e fornecendo insights sobre a distribuição dos testes ao longo da base de código [6].</p>
+</li>
+<li>
+<p><strong>Tempo de Execução:</strong> O tempo de execução dos testes é um fator crítico que impacta diretamente a produtividade da equipe de desenvolvimento e a eficiência do ciclo de desenvolvimento contínuo (CI/CD). Testes lentos criam um ciclo de feedback mais longo, desestimulando os desenvolvedores a executá-los com frequência e retardando a detecção de defeitos [7]. Em pipelines de integração contínua, suítes de teste demoradas aumentam o tempo de entrega, causam filas de builds e atrasam o deploy de correções críticas. A indústria recomenda que testes unitários sejam executados em menos de 1 segundo cada, permitindo ciclos rápidos de desenvolvimento e feedback imediato [8].</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-coleta-e-analise-das-metricas">3. Coleta e Análise das Métricas</h2>
+<p>Aqui são apresentados os dados brutos, a classificação e a análise individual de cada métrica de Manutenibilidade.</p>
+<details open="open">
+<summary>M1.1: Coupling Between Objects (CBO)</summary>
+<h3 id="evidencias-e-dados-brutos">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> <code>phpmd</code> e SonarQube.</li>
+<li>
+<p><strong>Passo a Passo da Coleta:</strong> </p>
+<ol>
+<li>
+<p>Executar a análise do <code>phpmd</code> no diretório <code>/app</code>, salvando a saída em XML: <code>docker compose exec horizon vendor/bin/phpmd app/ xml codesize,design &gt; phpmd_app.xml</code></p>
+</li>
+<li>
+<p>Executar a análise do <code>phpmd</code> no diretório <code>/src</code>, salvando a saída em XML: <code>docker compose exec horizon vendor/bin/phpmd src/ xml codesize,design &gt; phpmd_src.xml</code></p>
+</li>
+<li>
+<p>Filtrar o XML do <code>/app</code> para extrair apenas as violações de CBO: <code>grep 'rule="CouplingBetweenObjects"' phpmd_app.xml &gt; cbo_app.txt</code></p>
+</li>
+<li>
+<p>Filtrar o XML do <code>/src</code> para extrair apenas as violações de CBO: <code>grep 'rule="CouplingBetweenObjects"' phpmd_src.xml &gt; cbo_src.txt</code></p>
+</li>
+<li>
+<p>Consolidar manualmente os dados dos arquivos <code>cbo_app.txt</code> e <code>cbo_src.txt</code> em uma planilha Excel (Diretório, Classe, Valor CBO).</p>
+</li>
+<li>
+<p>Iniciar o serviço do SonarQube para a coleta da contagem total de classes: <code>sudo systemctl start sonarqube</code></p>
+</li>
+<li>
+<p>Acessar a interface do SonarQube (<code>http://localhost:9000</code>) e coletar a contagem total de classes dos diretórios <code>/app</code> e <code>/src</code>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Dados Coletados:</strong></p>
+<ul>
+<li>Nº Total de Classes em <code>/app</code> e <code>/src</code>: 824</li>
+<li>Nº de Classes captadas pelo <code>phpmd</code>: 22</li>
+<li>Nº de Classes classificadas como "Insatisfatório": 14</li>
+<li>Valor médio de CBO: 18</li>
+<li>Número/Percentual de classes com CBO ≥ 15: <code>(14/824)*100 = 1,70%</code></li>
+</ul>
+</li>
+<li><strong>Execução da Coleta</strong>: Link para o vídeo da execução da coleta <a href="https://youtu.be/BjQ9_M7l6DQ">Manutenibilidade - Métrica 1.1: Coupling Between Objects (CBO)</a></li>
+<li><strong>Armazenamento dos Dados</strong>: Planilha Excel - <a href="https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing">Coleta de Dados i-Educar</a></li>
+</ul>
+<h3 id="classificacao-da-metrica">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> Média = 18 | 1,70% das classes é "Insatisfatório"</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: CBO &lt; 13</li>
+<li>Regular: 13 ≤ CBO &lt; 15</li>
+<li>Insatisfatório: CBO ≥ 15</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Bom</li>
+</ul>
+<h3 id="analise-e-discussao">Análise e Discussão</h3>
+<p>O nível de acoplamento geral do i-Educar não é ruim e nem um grande problema, a porcentagem de classes com CBO alto é uma porcentagem muito baixa comparado ao numero total de classes. Entretanto, as classes que possuem um CBO insatisfatório (14), possuem um valor de CBO excessivamente alto, como no caso da classe "AcademicYearService" que possui um CBO igual a 27, dificultando bastante uma futura alteração ou manutenção.</p>
+<p>Isso valida parcialmente a hipótese <code>(H1.1)</code> pois uma alteração em uma das 14 classes com CBO classificado como insatisfatório pode afetar diretamente no tempo de implantação de correções, pois, tomando "AcademicYearSearch" como exemplo novamente, pode ser necessário a correção em outras 27 classes em alguma correção.</p>
+</details>
+<details>
+<summary>M1.2: Percentual de Código Repetido</summary>
+<h3 id="evidencias-e-dados-brutos_1">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> SonarQube.</li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Densidade: 7,4%</li>
+<li>Linhas Duplicadas: 25796</li>
+<li>Blocos Duplicados: 2485</li>
+<li>Arquivos Duplicados: 378</li>
+</ul>
+</li>
+<li><strong>Execução da Coleta</strong>: Link para o vídeo da execução da coleta <a href="https://youtu.be/CkMkUP5ixHU">Manutenibilidade - Métrica 1.2: Percentual de Código Repetido</a></li>
+<li><strong>Armazenamento dos Dados</strong>: Planilha Excel - <a href="https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing">Coleta de Dados i-Educar</a></li>
+</ul>
+<h3 id="classificacao-da-metrica_1">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 7,4%</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: ≤ 3%</li>
+<li>Regular: 3% &lt; M1.2 ≤ 5%</li>
+<li>Insatisfatório: &gt; 5%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Insatisfatório</li>
+</ul>
+<h3 id="analise-e-discussao_1">Análise e Discussão</h3>
+<p>De acordo com a análise pelo SonarQube, a densidade de código duplicado em todo o repositório do i-Educar é consideravelmente alta levando em consideração os critérios de julgamento definidos pela equipe. </p>
+<p>Assim como o alto acoplamento, a duplicação de código está diretamente ligada aos problemas de manutenção de código (<code>H1.1</code>). De acordo com os dados obtidos pelo SonarQube, 2485 blocos de código são duplicados no código do i-Educar e, caso algum desses blocos precisem passar por algum tipo de correção, o retrabalho de manutenção nesse bloco será muito grande.</p>
+</details>
+<details>
+<summary>M2.1: Complexidade Ciclomática (CC)</summary>
+<h3 id="evidencias-e-dados-brutos_2">Evidências e Dados Brutos</h3>
+<ul>
+<li>
+<p><strong>Ferramenta(s):</strong> <code>phpmd</code> e SonarQube.</p>
+</li>
+<li>
+<p><strong>Passo a Passo da Coleta:</strong></p>
+<ol>
+<li>
+<p>Executar a análise do <code>phpmd</code> (com a ruleset <code>codesize</code>) no diretório <code>/app</code>, salvando a saída em XML: <code>docker compose exec horizon vendor/bin/phpmd app/ xml codesize &gt; phpmd_app_codesize.xml</code></p>
+</li>
+<li>
+<p>Executar a análise do <code>phpmd</code> (com a ruleset <code>codesize</code>) no diretório <code>/src</code>, salvando a saída em XML: <code>docker compose exec horizon vendor/bin/phpmd src/ xml codesize &gt; phpmd_src_codesize.xml</code></p>
+</li>
+<li>
+<p>Filtrar o XML do <code>/app</code> (<code>phpmd_app_codesize.xml</code>) para extrair apenas as violações de CC (CyclomaticComplexity): <code>grep 'rule="CyclomaticComplexity"' phpmd_app_codesize.xml &gt; cc_app.txt</code></p>
+</li>
+<li>
+<p>Filtrar o XML do <code>/src</code> (<code>phpmd_src_codesize.xml</code>) para extrair apenas as violações de CC: <code>grep 'rule="CyclomaticComplexity"' phpmd_src_codesize.xml &gt; cc_src.txt</code></p>
+</li>
+<li>
+<p>Consolidar manualmente os dados dos arquivos <code>cc_app.txt</code> e <code>cc_src.txt</code> em uma planilha Excel (Diretório, Classe, Método, Valor CC).</p>
+</li>
+<li>
+<p>Iniciar o serviço do SonarQube para a coleta dos dados globais: <code>sudo systemctl start sonarqube</code></p>
+</li>
+<li>
+<p>Acessar a interface do SonarQube (<code>http://localhost:9000</code>) e coletar a contagem total de "Funções" (Functions) e a "Complexidade Ciclomática" (Cyclomatic Complexity) total dos diretórios <code>/app</code> e <code>/src</code>.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Dados Coletados:</strong></p>
+<ul>
+<li>Nº Total de Métodos em <code>/app</code> e <code>/src</code>: 3450</li>
+<li>Valor Total de CC em <code>/app</code> e <code>/src</code>: 5588</li>
+<li>Nº de Métodos Capturados pelo <code>phpmd</code>: 34</li>
+<li>Nº de Métodos Considerados Insatisfatórios: 23</li>
+<li>Complexidade Ciclomática média por método: <code>Valor Total de CC em '/app' e '/src'/ Nº Total de Métodos em '/app' e '/src' =  1,62</code></li>
+<li>Número/Percentual de métodos com CC &gt; 10: <code>(Nº de Métodos Insatisfatórios / Nº Total de métodos em '/app' e '/src')*100 = 0,67%</code> </li>
+</ul>
+</li>
+<li>
+<p><strong>Execução da Coleta</strong>: Link para o vídeo da execução da coleta <a href="https://youtu.be/NKvr9xHC6bA">Manutenibilidade - Métrica 2.1:  Complexidade Ciclomática (CC)</a></p>
+</li>
+<li><strong>Armazenamento dos Dados</strong>: Planilha Excel - <a href="https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing">Coleta de Dados i-Educar</a></li>
+</ul>
+<h3 id="classificacao-da-metrica_2">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> Média = 1,62 | 0,67% dos métodos é "Insatisfatório"</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: CC ≤ 5</li>
+<li>Regular: 5 &lt; CC ≤ 10</li>
+<li>Insatisfatório: CC &gt; 10</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Bom</li>
+</ul>
+<h3 id="analise-e-discussao_2">Análise e Discussão</h3>
+<p>A complexidade ciclomática (CC) do i-Educar é boa e o percentual de métodos que possuem uma complexidade ciclomática maior que 10, ou seja, insatisfatória para nossa análise, corresponde a menos de um por cento de todos os métodos coletados para a análise. Além disso, a média de CC por método também possui um valor bem abaixo do que definimos como "Bom" na definição das métricas. </p>
+<p>Entretanto, cabe mencionar que alguns métodos capturados pelo phpmd na análise possuem um alto nível de CC, como o método "getExportFormatData" da classe "Registro10" em "/src" que possui uma CC de 186, demonstrando que apesar de em termos gerais a complexidade ciclomática ser boa, existem métodos que podem passar por análises pelo time de desenvolvimento do i-Educar visando diminuir a CC deles, como dito pela hipótese <code>H2.1</code>, um código com complexidade muito alta, faz o desenvolvedor gastar muito esforço cognitivo para entendê-lo.</p>
+</details>
+<details>
+<summary>M3.1: Percentual de Cobertura de Teste (Line Coverage)</summary>
+<h3 id="evidencias-e-dados-brutos_3">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> Pest com Xdebug/PCOV.</li>
+<li>
+<p><strong>Comando:</strong> <code>./vendor/bin/pest --coverage</code></p>
+</li>
+<li>
+<p><strong>Dados Coletados:</strong></p>
+<ul>
+<li>Cobertura total de linhas (Line Coverage): 31.2%</li>
+</ul>
+</li>
+<li>
+<p><strong>Documento resultado da Coleta</strong>: <a href="https://docs.google.com/document/d/1TqPZNILbWLGGVggxy26ZqZPHYV8Jh7kCiK3bIl_nB5M/edit?usp=sharing">coverage.odt</a></p>
+</li>
+<li><strong>Armazenamento dos Dados</strong>: Planilha Excel - <a href="https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing">Coleta de Dados i-Educar</a></li>
+</ul>
+<h3 id="classificacao-da-metrica_3">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 31.2%</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: ≥ 80%</li>
+<li>Regular: 70% ≤ M3.1 &lt; 80%</li>
+<li>Insatisfatório: &lt; 70%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Insatisfatório</li>
+</ul>
+<h3 id="analise-e-discussao_3">Análise e Discussão</h3>
+<p>A cobertura de teste de 31,2% classifica o projeto em um nível Insatisfatório, situando-se muito abaixo do limiar de segurança de 70-80% tipicamente recomendado para softwares em produção. Este indicador revela que mais de dois terços do código-fonte do i-Educar não são verificados pelas rotinas automatizadas de CI/CD, o que expõe o sistema a um risco elevado de regressões — ou seja, o surgimento de defeitos em funcionalidades antigas causados por novas alterações.</p>
+<p>No contexto específico do i-Educar, esse percentual reflete claramente a natureza híbrida do repositório. A baixa cobertura global é, muito provavelmente, o resultado de uma média ponderada entre o código moderno (nas pastas app e src), que tende a ser bem testado, e o vasto volume de código legado (na pasta ieducar), que historicamente carece de testes. Isso cria um cenário de "cobertura desigual": enquanto as novas funcionalidades desenvolvidas com práticas modernas (como o uso do Laravel e Pest) estão protegidas, o núcleo antigo do sistema permanece como uma "zona de sombra". Consequentemente, a equipe de desenvolvimento pode ter alta confiança ao refatorar componentes novos, mas deve manter cautela extrema ao tocar no legado, onde a ausência de testes automatizados exige um esforço manual de validação muito maior e mais propenso a erro humano.</p>
+</details>
+<details>
+<summary>M3.2: Densidade de Testes (Testes/KLOC)</summary>
+<h3 id="evidencias-e-dados-brutos_4">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> <code>grep</code> e <code>cloc</code>.</li>
+<li>
+<p><strong>Dados Coletados:</strong></p>
+<ul>
+<li>Nº total de testes (<code>grep -r "function test" tests/ | wc -l</code>): 1357</li>
+<li>Linhas de código de produção totais (<code>cloc src/</code>): 142494</li>
+<li>Cálculo: <code>(Nº Total de Testes / (Linhas Totais de Código / 1000))</code> = 9,523207995 Testes/KLOC</li>
+</ul>
+</li>
+<li>
+<p><strong>Execução da Coleta</strong>: <a href="https://youtu.be/i_uHcweJ7zE">link para o vídeo com a execução da coleta</a></p>
+</li>
+<li><strong>Armazenamento dos Dados</strong>: Planilha Excel - <a href="https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing">Coleta de Dados i-Educar</a></li>
+</ul>
+<h3 id="classificacao-da-metrica_4">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 9,523207995 Testes/KLOC</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: &gt; 10 Testes/KLOC</li>
+<li>Regular: 5 a 10 Testes/KLOC</li>
+<li>Insatisfatório: &lt; 5 Testes/KLOC</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Regular</li>
+</ul>
+<h3 id="analise-e-discussao_4">Análise e Discussão</h3>
+<p>O projeto apresenta um comportamento que pode ser descrito como um “paradoxo” de qualidade, embora a Densidade de Testes seja classificada como Regular/Boa, a Cobertura de Código (vista na métrica anterior) permanece baixa, em apenas 31,2%. Esse contraste mostra algo comum em sistemas híbridos — a presença de uma “cobertura concentrada” ou até mesmo redundante. No caso do i-Educar, grande parte dos testes está provavelmente focada nos módulos modernos. Assim, áreas novas e bem cuidadas convivem com um grande volume de código antigo não testado, o que puxa a cobertura global para baixo e aumenta o risco operacional.</p>
+<p>Além disso, a quantidade elevada de testes pode estar focada em caminhos de sucesso (happy paths), resultando em múltiplas validações semelhantes e deixando de lado cenários de exceção e fluxos de erro que representam parte significativa da lógica existente. Também é possível que existam muitos testes superficiais, voltados para métodos simples (como getters e setters), enquanto trechos de código mais complexos, embora mais relevantes para a confiabilidade do sistema, recebem pouca atenção devido à dificuldade de criação de testes.</p>
+<p>Pela densidade, há, de fato, um esforço ativo de teste, mas ele está distribuído de forma desigual e não contribui de maneira eficiente para a solidez geral do sistema.</p>
+</details>
+<details>
+<summary>M3.3: Tempo Médio de Execução dos Testes</summary>
+<h3 id="evidencias-e-dados-brutos_5">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> Pest / Log do GitHub Actions.</li>
+<li>
+<p><strong>Dados Coletados:</strong></p>
+<ul>
+<li>Tempo total de execução da suíte: 36.68s</li>
+<li>Número total de testes(<code>grep -r "function test" tests/ | wc -l</code>): 1357</li>
+<li>Cálculo (Tempo por teste): <code>(36.68 / 1357)</code> = 0.027s por teste</li>
+</ul>
+</li>
+<li>
+<p><strong>Execução da Coleta</strong>: <a href="https://www.youtube.com/watch?v=p1CINURPWvc">link para o vídeo com a execução da coleta</a></p>
+</li>
+<li><strong>Armazenamento dos Dados</strong>: Planilha Excel - <a href="https://docs.google.com/spreadsheets/d/1xK9J1rp2x5ZSQL_L3FXkUHIDdK44DdboHlh9b1tmC_k/edit?usp=sharing">Coleta de Dados i-Educar</a></li>
+</ul>
+<h3 id="classificacao-da-metrica_5">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 0.027s (Tempo médio por teste)</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Bom: ≤ 1s</li>
+<li>Regular: 1s &lt; M3.3 ≤ 3s</li>
+<li>Insatisfatório: &gt; 3s</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Bom</li>
+</ul>
+<h3 id="analise-e-discussao_5">Análise e Discussão</h3>
+<p>A análise do Tempo Médio de Execução dos testes teve um resultado bom: 0,027 segundos por caso de teste. Isso indica que a suíte é capaz de executar aproximadamente 37 testes por segundo, um desempenho acima do esperado para um sistema com características legadas como o i-Educar. A justificativa de que bateria de testes está surpreendentemente ágil pode refletir realmente poucos testes. Dá para perceber que a maior parte das validações automatizadas está concentrada nas porções modernas do código. Essas áreas utilizam boas práticas contemporâneas que favorecem a criação de testes unitários rápidos e isolados. Além disso, existe muito uso de mocks, stubs e bancos de dados em memória, estratégias que evitam operações de I/O e eliminam gargalos. O resultado também sugere a ausência de testes end-to-end, como os realizados com Dusk ou Selenium, que possuem tempos de execução significativamente maiores e poderiam elevar drasticamente a média geral.</p>
+<p>Em resumo, o tempo médio de 0,027 segundos demonstra que a suíte de testes é extremamente eficiente, mas também aponta para um foco excessivo em camadas específicas do sistema. Embora o desempenho seja excelente do ponto de vista técnico, ele também reforça a necessidade de ampliar a abrangência dos testes para incluir fluxos críticos de negócio e, futuramente, testes de integração mais robustos e testes end-to-end que validem o funcionamento do sistema de ponta a ponta.</p>
+</details>
+<hr />
+<h2 id="4-conclusao">4. Conclusão</h2>
+<p>Com base nos resultados obtidos nas seis métricas avaliadas, a característica Manutenibilidade do i-Educar foi classificada como <strong>Parcialmente Aceitável</strong>, conforme os Critérios de Julgamento definidos na <a href="../../fase_2/gqm_manutenibilidade/">Fase 2</a>. Metade das métricas apresentou desempenho Bom ou Excelente (acoplamento, complexidade e tempo de execução de testes), mas problemas críticos foram identificados na duplicação de código e na cobertura de testes.</p>
+<p>A avaliação das três questões do GQM revela um cenário misto: a <strong>Questão 1</strong> sobre impacto das alterações apresenta resultados contraditórios, com baixo acoplamento (ponto forte), mas alta duplicação de código (ponto fraco crítico). A <strong>Questão 2</strong> sobre complexidade de entendimento foi respondida positivamente, com baixa complexidade geral, mas pontos pontuais de complexidade extrema. A <strong>Questão 3</strong> sobre situação dos testes apresenta um paradoxo: testes rápidos e densidade regular, mas cobertura insuficiente e desigual.</p>
+<h3 id="sintese-das-avaliacoes">Síntese das Avaliações</h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Resultado</th>
+<th>Julgamento</th>
+<th>Hipótese</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M1.1 – Acoplamento (CBO)</strong></td>
+<td>Média 18 / 1,70% classes insatisfatórias</td>
+<td>Bom</td>
+<td>H1.1 <strong>parcialmente validada</strong></td>
+</tr>
+<tr>
+<td><strong>M1.2 – Código Repetido</strong></td>
+<td>7,4%</td>
+<td>Insatisfatório</td>
+<td>H1.1 <strong>validada</strong></td>
+</tr>
+<tr>
+<td><strong>M2.1 – Complexidade Ciclomática</strong></td>
+<td>Média 1,62 / 0,67% métodos insatisfatórios</td>
+<td>Bom</td>
+<td>H2.1 <strong>parcialmente validada</strong></td>
+</tr>
+<tr>
+<td><strong>M3.1 – Cobertura de Teste</strong></td>
+<td>31,2%</td>
+<td>Insatisfatório</td>
+<td>H3.1 <strong>validada</strong></td>
+</tr>
+<tr>
+<td><strong>M3.2 – Densidade de Testes</strong></td>
+<td>9,52 Testes/KLOC</td>
+<td>Regular</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td><strong>M3.3 – Tempo de Execução</strong></td>
+<td>0,027s por teste</td>
+<td>Bom</td>
+<td>H3.2 <strong>invalidada</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="principais-pontos-fortes">Principais Pontos Fortes</h3>
+<ul>
+<li>
+<p><strong>Baixo Acoplamento (M1.1):</strong> Apenas 1,70% das classes apresentam CBO insatisfatório (≥15), demonstrando que a arquitetura mantém baixa interdependência entre a maioria dos componentes. Isso facilita alterações isoladas e reduz o risco de efeitos colaterais em cascata.</p>
+</li>
+<li>
+<p><strong>Complexidade Controlada (M2.1):</strong> A complexidade ciclomática média de 1,62 por método está muito abaixo do limiar de preocupação (5), indicando que a maior parte do código é compreensível e segue estruturas simples, facilitando a manutenção e o onboarding de novos desenvolvedores.</p>
+</li>
+<li>
+<p><strong>Testes Rápidos e Eficientes (M3.3):</strong> O tempo médio de 0,027s por teste (37 testes/segundo) permite feedback instantâneo aos desenvolvedores, favorecendo práticas de desenvolvimento ágil e TDD. Isso demonstra uso eficiente de mocks, stubs e isolamento adequado dos testes unitários.</p>
+</li>
+</ul>
+<h3 id="principais-pontos-fracos">Principais Pontos Fracos</h3>
+<ul>
+<li>
+<p><strong>Alta Duplicação de Código (M1.2):</strong> Com 7,4% de código repetido distribuído em 2.485 blocos duplicados, qualquer correção ou melhoria exige retrabalho significativo em múltiplos pontos do sistema. Isso aumenta o esforço de manutenção, eleva o risco de inconsistências entre as cópias e dificulta a evolução do código.</p>
+</li>
+<li>
+<p><strong>Cobertura de Teste Insuficiente (M3.1):</strong> Apenas 31,2% do código está coberto por testes, deixando mais de dois terços do sistema (68,8%) exposto a riscos de regressão. A baixa cobertura dificulta refatorações seguras, aumenta a dependência de testes manuais e compromete a confiança na estabilidade do sistema após alterações.</p>
+</li>
+<li>
+<p><strong>Distribuição Desigual de Testes (M3.1 + M3.2):</strong> A densidade regular de testes (9,52 Testes/KLOC) combinada com baixa cobertura global evidencia o padrão de "cobertura concentrada": os módulos modernos (<code>/app</code> e <code>/src</code>) possuem testes rápidos e bem estruturados, enquanto o código legado (<code>/ieducar</code>) permanece praticamente sem proteção automatizada.</p>
+</li>
+<li>
+<p><strong>Complexidade Extrema Pontual (M2.1):</strong> Embora a média seja baixa, a existência de métodos com CC extremamente alta — como <code>getExportFormatData</code> (CC=186) — representa "ilhas de complexidade" que dificultam significativamente a compreensão, manutenção e testabilidade desses pontos críticos.</p>
+</li>
+</ul>
+<h3 id="avaliacao-final">Avaliação Final</h3>
+<p>Diante da análise das métricas, a Manutenibilidade do i-Educar atinge o critério de <strong>Parcialmente Aceitável</strong> (50% das métricas classificadas como Bom ou Excelente). O sistema apresenta fundação sólida em design orientado a objetos, mas falhas críticas em cobertura de testes e duplicação de código comprometem a capacidade de manutenção sustentável a longo prazo.</p>
+<p>A arquitetura híbrida do projeto cria uma dualidade clara: módulos modernos demonstram maturidade técnica (baixo acoplamento, baixa complexidade, testes rápidos), mas convivem com um vasto legado carente de cobertura de testes, propenso a duplicação e com pontos de complexidade extrema. Esta situação é típica de sistemas em transição, onde novas práticas são aplicadas em código novo, mas o legado permanece sem refatoração significativa.</p>
+<p><strong>Recomendações para evolução para nível "Aceitável":</strong></p>
+<ol>
+<li><strong>Refatoração sistemática de código duplicado:</strong> Priorizar os 2.485 blocos identificados, criando abstrações reutilizáveis e eliminando redundância.</li>
+<li><strong>Expansão gradual da cobertura de testes:</strong> Focar inicialmente em módulos críticos do código legado (<code>/ieducar</code>), priorizando lógica de negócio essencial.</li>
+<li><strong>Decomposição de métodos complexos:</strong> Revisar e refatorar métodos com CC &gt; 100, aplicando técnicas como Extract Method e Strategy Pattern.</li>
+<li><strong>Manutenção das boas práticas:</strong> Preservar os padrões estabelecidos nos módulos modernos, garantindo que novo código mantenha baixo acoplamento e complexidade controlada.</li>
+</ol>
+<p>Em síntese, o i-Educar demonstra <strong>maturidade técnica em design</strong>, mas requer <strong>investimento estruturado em qualidade de testes e eliminação de débito técnico</strong> para garantir manutenibilidade sustentável, especialmente considerando sua natureza de software livre dependente de contribuições comunitárias.</p>
+<hr />
+<h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
+<blockquote>
+<p>[1] CHIDAMBER, Shyam R.; KEMERER, Chris F. A Metrics Suite for Object Oriented Design. IEEE Transactions on Software Engineering, v. 20, n. 6, p. 476-493, jun. 1994.</p>
+<p>[2] PORTÁBILIS. i-Educar: Software livre de gestão escolar. Versão 2.10.0. [S.l.]: Portábilis Tecnologia, 2025. Disponível em: https://github.com/portabilis/i-educar. Acesso em: 17 nov. 2025.</p>
+<p>[3] MARTIN, Robert C. Clean Code: A Handbook of Agile Software Craftsmanship. Upper Saddle River, NJ: Prentice Hall, 2008.</p>
+<p>[4] MCCABE, Thomas J. A Complexity Measure. IEEE Transactions on Software Engineering, v. SE-2, n. 4, p. 308-320, dez. 1976.</p>
+<p>[5] BUGBUG. What is Test Coverage in Software Testing? BugBug Blog, 2024. Disponível em: https://bugbug.io/blog/software-testing/test-coverage/. Acesso em: 28 nov. 2025.</p>
+<p>[6] GRAPHITE. Measuring and Calculating Defect Density. Graphite Guides, 2024. Disponível em: https://graphite.com/guides/measuring-and-calculating-defect-density. Acesso em: 28 nov. 2025.</p>
+<p>[7] BECK, Kent. Test Driven Development: By Example. Boston: Addison-Wesley Professional, 2002.</p>
+<p>[8] SHORE, James; WARDEN, Shane. The Art of Agile Development. 2. ed. Sebastopol, CA: O'Reilly Media, 2021.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../assets/javascripts/panzoom.min.js"></script>
+      
+        <script src="../../assets/javascripts/zoompan.js"></script>
+      
+    
+  </body>
+</html>

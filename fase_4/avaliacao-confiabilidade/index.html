@@ -1,0 +1,1813 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../introducao-avaliacao/">
+      
+      
+        <link rel="next" href="../avaliacao-manutenibilidade/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Avaliação da Confiabilidade - Adele Goldstine - Trabalho Final</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/panzoom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <meta name="panzoom-theme" content="material">
+<meta name="panzoom-data" content='{"selectors": [".d2", ".mermaid"], "initial_zoom_level": 1.0}'> </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#avaliacao-da-confiabilidade" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Adele Goldstine - Trabalho Final" class="md-header__button md-logo" aria-label="Adele Goldstine - Trabalho Final" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Adele Goldstine - Trabalho Final
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Avaliação da Confiabilidade
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T01 Adele Goldstine
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_1/objeto-estudo/" class="md-tabs__link">
+          
+  
+  
+  Fase 1 - Propósito da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_2/introducao_gqm/" class="md-tabs__link">
+          
+  
+  
+  Fase 2 - Especificação da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_3/projetar/" class="md-tabs__link">
+          
+  
+  
+  Fase 3 - Projetar a Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introducao-avaliacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4 - Execução da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contribuicoes/fase-1/" class="md-tabs__link">
+          
+  
+  
+  Contribuições
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Adele Goldstine - Trabalho Final" class="md-nav__button md-logo" aria-label="Adele Goldstine - Trabalho Final" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Adele Goldstine - Trabalho Final
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T01 Adele Goldstine
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1 - Propósito da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1 - Propósito da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/objeto-estudo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objeto de Estudo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/contexto-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contexto da Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2 - Especificação da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2 - Especificação da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/introducao_gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Abordagem GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 1 - Confiabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 2 - Manutenibilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 3 - Segurança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/analise_geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Análise Geral das Medições
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 3 - Projetar a Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 3 - Projetar a Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_3/projetar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projetar Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 4 - Execução da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 4 - Execução da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducao-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Confiabilidade
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Confiabilidade
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-referencial-teorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Referencial Teórico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-coleta-e-analise-das-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Coleta e Análise das Métricas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Coleta e Análise das Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Conclusão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Conclusão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintese-das-avaliacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Síntese das Avaliações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principais-pontos-fortes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Pontos Fortes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principal-ponto-fraco" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principal Ponto Fraco
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recomendacoes-para-melhoria-da-confiabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Recomendações para Melhoria da Confiabilidade
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Recomendações para Melhoria da Confiabilidade">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conclusao-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusão Final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao-manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Manutenibilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao-seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Segurança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusao-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contribuições
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Contribuições
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="avaliacao-da-confiabilidade">Avaliação da Confiabilidade</h1>
+<p>Esta página apresenta a execução da avaliação e os resultados da coleta de dados para o objetivo GQM de <strong>Confiabilidade</strong> do i-Educar.</p>
+<h2 id="1-introducao">1. Introdução</h2>
+<p>O objetivo definido para essa avaliação foi analisar o i-Educar com foco na Confiabilidade do ponto de vista da comunidade de desenvolvedores utilizando o GQM na definição das questões, hipóteses e métricas.</p>
+<p>A avaliação da confiabilidade é fundamental para o i-Educar devido à sua função crítica na gestão escolar de instituições públicas e privadas. Como um sistema que gerencia dados sensíveis de estudantes, professores e processos educacionais, falhas podem resultar em perda de informações, interrupção de serviços essenciais e comprometimento da continuidade das operações escolares. A natureza híbrida do sistema, que combina código legado com implementações modernas, exige monitoramento constante da estabilidade e robustez para garantir que o software opere de forma previsível e resiliente.</p>
+<p>Tendo isso em vista, a investigação foi guiada por três questões fundamentais definidas na <a href="../../fase_2/gqm_confiabilidade/">fase 2</a> do processo de avaliação de qualidade de software:</p>
+<ol>
+<li><strong>Maturidade (Q1):</strong> Avalia a estabilidade do código em relação à ocorrência de defeitos, investigando a densidade de bugs reportados e o percentual de commits dedicados a correções.</li>
+<li><strong>Tolerância a Falhas (Q2):</strong> Mensura o nível de robustez do código contra falhas em tempo de execução, verificando a presença de mecanismos de tratamento de exceções em operações críticas.</li>
+<li><strong>Recuperabilidade (Q3):</strong> Avalia a eficácia dos mecanismos de recuperação de dados do sistema através de análise qualitativa do código de backup e restore.</li>
+</ol>
+<h2 id="2-referencial-teorico">2. Referencial Teórico</h2>
+<ul>
+<li>
+<p><strong>Maturidade do Software:</strong> A maturidade refere-se ao grau de estabilidade e previsibilidade de um sistema de software em relação à ocorrência de defeitos [5]. Um software maduro apresenta baixa frequência de falhas e necessita de menos correções reativas. A <strong>Densidade de Defeitos</strong> (bugs por mil linhas de código) é uma métrica amplamente utilizada para quantificar a qualidade interna do código, permitindo comparações entre projetos de diferentes tamanhos [6]. O <strong>Percentual de Commits de Correção</strong> complementa essa análise ao revelar a proporção do esforço de desenvolvimento dedicado a corrigir problemas existentes versus desenvolver novas funcionalidades, sendo um indicador do caráter reativo ou proativo da equipe de desenvolvimento.</p>
+</li>
+<li>
+<p><strong>Tolerância a Falhas:</strong> Tolerância a falhas é a capacidade de um sistema continuar operando corretamente mesmo quando ocorrem erros ou condições anormais [7]. Em sistemas de software, isso é frequentemente implementado através de <strong>tratamento de exceções</strong>, um mecanismo que permite ao programa detectar, capturar e responder a situações de erro de forma controlada, evitando crashes e comportamentos imprevisíveis. O <strong>Índice de Tratamento de Exceções</strong> mede a cobertura de operações críticas (como I/O de banco de dados e arquivos) por blocos try-catch, sendo um proxy da robustez do sistema frente a falhas operacionais.</p>
+</li>
+<li>
+<p><strong>Recuperabilidade:</strong> Recuperabilidade é a capacidade do software de restabelecer seu nível de desempenho e recuperar dados afetados em caso de falha [8]. Para sistemas que gerenciam dados críticos, como o i-Educar, mecanismos confiáveis de backup e restore são essenciais. A <strong>Análise Qualitativa de Código de Backup</strong> avalia aspectos como documentação, clareza, tratamento de erros, externalização de configurações e testabilidade das rotinas de backup, fatores que impactam diretamente a manutenibilidade e confiabilidade desses componentes críticos em cenários de recuperação de desastre.</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-coleta-e-analise-das-metricas">3. Coleta e Análise das Métricas</h2>
+<p>Aqui são apresentados os dados brutos, a classificação e a análise individual de cada métrica de Confiabilidade.</p>
+<details open="open">
+<summary>M1.1: Densidade de Defeitos no Código</summary>
+<h3 id="evidencias-e-dados-brutos">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> API do GitHub (Search API) e <code>cloc</code>.</li>
+<li>
+<p><strong>Comandos executados (executados dentro do diretório <code>i-educar</code>):</strong></p>
+<ul>
+<li>Obter o remote do repositório: <code>git remote get-url origin</code> → <code>git@github.com:portabilis/i-educar.git</code></li>
+<li>Contagem de linhas PHP: <code>cloc --json .</code> → PHP code = 203217 linhas</li>
+<li>Contagem de issues com label <code>bug</code> (GitHub Search API):
+  <code>curl -s "https://api.github.com/search/issues?q=repo:portabilis/i-educar+label:bug+type:issue" | python3 -c "import sys,json; print(json.load(sys.stdin).get('total_count',0))"</code> → <code>74</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Dados Coletados:</strong></p>
+<ul>
+<li>Número total de issues com a label <code>bug</code>: 74 (open + closed; obtido via GitHub Search API)</li>
+<li>Total de linhas de código (PHP): 203.217 LOC → 203.217 KLOC (contados em <code>.</code> — diretório do repositório <code>i-educar</code>)</li>
+<li>Cálculo: <code>(74 / 203.217)</code> = 0.364 bugs/KLOC (aprox.)</li>
+</ul>
+</li>
+<li>
+<p><strong>Evidência da coleta (vídeo):</strong></p>
+</li>
+</ul>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/SQXXsj0_fPU?si=nBMmah9c4phw-rQ-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h3 id="classificacao-da-metrica">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 0.364 bugs/KLOC</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Excelente: ≤ 1 bug/KLOC</li>
+<li>Bom: &gt;1 e ≤3 bugs/KLOC</li>
+<li>Regular: &gt;3 e ≤6 bugs/KLOC</li>
+<li>Insatisfatório: &gt;6 bugs/KLOC</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Excelente</li>
+</ul>
+<h3 id="analise-e-discussao">Análise e Discussão</h3>
+<p>O índice calculado (aprox. 0.364 bugs/KLOC) é baixo e, segundo os critérios definidos na Fase 2, coloca o repositório na faixa "Excelente" (≤ 1 bug/KLOC). Na prática, isso significa que, em termos de issues rotuladas como <code>bug</code> por unidade de tamanho do código, o i-Educar apresenta uma densidade de defeitos reportados relativamente pequena.</p>
+<p>Sobre a hipótese H1.1 ("A densidade de defeitos geral do sistema será superior a 3 bugs/KLOC"): a hipótese é <strong>invalidada</strong> pelos dados coletados — o valor observado (≈0.364 bugs/KLOC) é muito inferior ao limiar de 3 bugs/KLOC. Isso indica que, com base nas issues rotuladas e na contagem de linhas PHP, não há um passivo de defeitos reportados na magnitude esperada por H1.1.</p>
+</details>
+<details>
+<summary>M1.2: Percentual de Commits de Correção</summary>
+<h3 id="evidencias-e-dados-brutos_1">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> <code>git</code> </li>
+<li>
+<p><strong>Comandos executados:</strong></p>
+<ul>
+<li>Total de commits (sem merges):
+  <code>git log --oneline --no-merges | wc -l</code> → <code>22582</code></li>
+<li>Commits de correção (mensagens contendo: fix|corrige|bugfix|hotfix|patch):
+  <code>git log --grep="fix\|corrige\|bugfix\|hotfix\|patch" --regexp-ignore-case --oneline --no-merges | wc -l</code> → <code>1929</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Dados Coletados:</strong></p>
+<ul>
+<li>Total de commits: 22.582</li>
+<li>Commits de correção (heurística por palavra-chave): 1.929</li>
+<li>Cálculo: <code>(1.929 / 22.582) * 100</code> = 8.55% (aprox.)</li>
+</ul>
+</li>
+<li>
+<p><strong>Evidência da coleta (vídeo):</strong></p>
+</li>
+</ul>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/J5sr0SFpObI?si=DvRSH1mRRYofIlRR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h3 id="classificacao-da-metrica_1">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 8.55%</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Excelente: ≤ 10%</li>
+<li>Bom: &gt;10% e ≤20%</li>
+<li>Regular: &gt;20% e ≤35%</li>
+<li>Insatisfatório: &gt;35%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Excelente</li>
+</ul>
+<h3 id="analise-e-discussao_1">Análise e Discussão</h3>
+<p>O percentual de commits de correção encontrado (≈ 8.55%) indica que menos de 10% dos commits correspondem a mensagens com termos associados a correções, o que, segundo os critérios definidos, coloca o projeto na faixa "Excelente" para essa métrica.</p>
+<p>Sobre a hipótese H1.2 ("O percentual de commits de correção será superior a 15%"), a hipótese é <strong>invalidada</strong> pelos dados coletados: o percentual observável (≈8.55%) está bem abaixo do limiar de 15%, sugerindo que a maior parte do esforço de desenvolvimento não está sendo registrada como commits de correção via as palavras-chave escolhidas. Em conjunto com a baixa densidade de defeitos (M1.1), isso dá indício de que o projeto possui estabilidade relativa.</p>
+</details>
+<details>
+<summary>M2.1: Índice de Tratamento de Exceções</summary>
+<h3 id="evidencias-e-dados-brutos_2">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Ferramenta(s):</strong> <code>grep</code> (heurística por arquivo; executado dentro do diretório <code>i-educar</code>)</li>
+<li><strong>Operações críticas definidas:</strong> <code>new PDO(</code>, <code>pg_connect(</code>, <code>fopen(</code>, <code>file_put_contents(</code>, <code>curl_exec(</code>, <code>fsockopen(</code></li>
+<li>
+<p><strong>Comandos executados (coleta em 19 Nov 2025, dentro de <code>/home/marcos/Documentos/i-educar</code>):</strong></p>
+<ul>
+<li>Contar ocorrências (linhas) de operações críticas:
+  <code>grep -R --line-number --include="*.php" -E "new PDO\(|pg_connect\(|fopen\(|file_put_contents\(|curl_exec\(|fsockopen\(" . 2&gt;/dev/null | wc -l</code> → <code>6</code></li>
+<li>Arquivos únicos com operações críticas:
+  <code>grep -R --include="*.php" -l -E "new PDO\(|pg_connect\(|fopen\(|file_put_contents\(|curl_exec\(|fsockopen\(" . 2&gt;/dev/null | sort -u &gt; /tmp/files_io_ieducar.txt</code>
+  <code>wc -l /tmp/files_io_ieducar.txt</code> → <code>5</code></li>
+<li>Arquivos com blocos <code>try</code>:
+  <code>grep -R --include="*.php" -l -E "try\s*\{" . 2&gt;/dev/null | sort -u &gt; /tmp/files_try_ieducar.txt</code>
+  <code>wc -l /tmp/files_try_ieducar.txt</code> → <code>95</code></li>
+<li>Arquivos com ambas as características (aproximação):
+  <code>comm -12 /tmp/files_io_ieducar.txt /tmp/files_try_ieducar.txt | wc -l</code> → <code>1</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Dados Coletados:</strong></p>
+<ul>
+<li>Número total de ocorrências (linhas) de operações críticas: 6</li>
+<li>Número de arquivos únicos que contêm operações críticas: 5</li>
+<li>Número de arquivos com blocos <code>try</code>: 95</li>
+<li>Número de arquivos com ambas (I/O + try): 1</li>
+<li>Cálculo aproximado (por arquivo): <code>(1 / 5) * 100</code> = 20.0%</li>
+</ul>
+</li>
+<li>
+<p><strong>Evidência da coleta (vídeo):</strong></p>
+</li>
+</ul>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/-zk3bTqagT4?si=sPhRWzBngIZUcuPc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h3 id="classificacao-da-metrica_2">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 20.0% (aproximação por arquivo)</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Excelente: ≥ 90%</li>
+<li>Bom: 70%–89%</li>
+<li>Regular: 40%–69%</li>
+<li>Insatisfatório: &lt; 40%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Insatisfatório</li>
+</ul>
+<h3 id="analise-e-discussao_2">Análise e Discussão</h3>
+<p>O índice de tratamento de exceções calculado (20.0%) indica que apenas 1 dos 5 arquivos PHP que contêm operações críticas de I/O também possui blocos <code>try</code>, o que coloca a métrica na faixa "Insatisfatório" segundo os critérios estabelecidos.</p>
+<p>Sobre a hipótese H2.1 ("Menos de 50% das operações críticas de I/O possuirão tratamento adequado de exceções"): a hipótese é <strong>validada</strong> pelos dados coletados — o percentual observado (20%) está bem abaixo de 50%, indicando deficiência na cobertura de tratamento de exceções nas operações de I/O detectadas. No entanto, é importante considerar que o código moderno do i-Educar utiliza abstrações do Laravel (Eloquent, Storage, HTTP client) que já possuem tratamento interno de exceções.</p>
+</details>
+<details>
+<summary>M3.1: Análise Qualitativa de Código de Backup</summary>
+<h3 id="evidencias-e-dados-brutos_3">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Método:</strong> Inspeção manual do código (executado dentro do diretório <code>i-educar</code>)</li>
+<li>
+<p><strong>Comandos de localização executados:</strong></p>
+<ul>
+<li>Busca por referências a backup/restore/dump:
+  <code>grep -R -n --exclude-dir=vendor --exclude-dir=node_modules -i "backup\|restore\|dump" . 2&gt;/dev/null | head -n 50</code></li>
+<li>Busca de arquivos com nomes relacionados:
+  <code>find . -type f \( -iname "*backup*" -o -iname "*restore*" -o -iname "*dump*" \) -not -path "*/vendor/*" -not -path "*/node_modules/*" 2&gt;/dev/null</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Arquivos identificados (módulo de backup/restore):</strong></p>
+<ul>
+<li><code>app/Console/Commands/DatabaseRestoreCommand.php</code> (121 linhas) — comando CLI para restauração de banco</li>
+<li><code>app/Http/Controllers/BackupController.php</code> (17 linhas) — controller para download de backups</li>
+<li><code>app/Services/BackupUrlPresigner.php</code> (18 linhas) — serviço para geração de URLs pré-assinadas</li>
+<li><code>app/Services/S3BackupUrlPresigner.php</code> — implementação específica para S3</li>
+<li><code>app/Models/Backup.php</code> (21 linhas) — modelo Eloquent para registro de backups</li>
+<li><code>ieducar/intranet/educar_backup_lst.php</code> — listagem de backups (código legado)</li>
+<li><code>database/migrations/legacy/2020_01_01_110000_create_pmieducar_backup_table.php</code> — migration da tabela</li>
+<li><code>tests/Unit/Eloquent/BackupTest.php</code> — testes unitários do modelo</li>
+</ul>
+</li>
+<li>
+<p><strong>Checklist de Análise (Pontuação 0-2) — aplicado ao arquivo principal <code>DatabaseRestoreCommand.php</code>:</strong></p>
+<ul>
+<li><strong>Documentação (Comentários):</strong> 2/2<ul>
+<li>Possui docblocks PHPDoc em todos os métodos públicos e privados explicando propósito, parâmetros e retorno.</li>
+<li>Comentários claros sobre a operação (ex.: "Drop old database if exists and create it again").</li>
+</ul>
+</li>
+<li><strong>Clareza do Código (Nomes de variáveis e métodos):</strong> 2/2<ul>
+<li>Nomes autoexplicativos: <code>dropAndCreateDatabase</code>, <code>restoreDatabaseUsingBackupFile</code>, <code>getHost</code>, <code>getPort</code>, <code>getUser</code>.</li>
+<li>Estrutura bem organizada em métodos pequenos e focados (Single Responsibility Principle).</li>
+</ul>
+</li>
+<li><strong>Tratamento de Erros:</strong> 0/2<ul>
+<li>Nenhum tratamento de exceções ou validação de erros explícito.</li>
+<li>Uso de <code>passthru()</code> sem captura ou verificação de código de retorno, o que pode resultar em falha silenciosa se o comando <code>pg_restore</code> ou <code>psql</code> falhar.</li>
+<li>Não há validação de existência do arquivo de backup antes de tentar restaurar.</li>
+</ul>
+</li>
+<li><strong>Configuração (Externalizada vs. Hard-coded):</strong> 2/2<ul>
+<li>Configurações críticas (host, porta, usuário) são lidas de variáveis de ambiente via <code>env()</code>.</li>
+<li>Sem credenciais ou caminhos hard-coded no código.</li>
+</ul>
+</li>
+<li><strong>Testabilidade:</strong> 1/2<ul>
+<li>Estrutura modular com métodos privados bem separados facilita testes unitários (mock de <code>passthru</code>).</li>
+<li>Porém, uso de funções globais (<code>passthru</code>, <code>env</code>) dificulta isolamento em testes sem preparação adicional.</li>
+<li>Existe arquivo de teste (<code>BackupTest.php</code>), mas apenas para o modelo <code>Backup</code>, não para o comando de restore.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Cálculo (Soma):</strong> 7 / 10</p>
+</li>
+<li>
+<p><strong>Evidência da coleta (vídeo):</strong></p>
+</li>
+</ul>
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/7DVlzixS87Q?si=-Cdm04zhjcyeVTSH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+<h3 id="classificacao-da-metrica_3">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 7 / 10</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Excelente: 9–10</li>
+<li>Bom: 7–8</li>
+<li>Regular: 4–6</li>
+<li>Insatisfatório: 0–3</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Bom</li>
+</ul>
+<h3 id="analise-e-discussao_3">Análise e Discussão</h3>
+<p>A análise qualitativa do código de backup/restore do i-Educar resultou em uma pontuação de 7/10, classificada como "Bom" segundo os critérios estabelecidos. O código possui documentação adequada, nomenclatura clara e estrutura modular, seguindo boas práticas do Laravel (uso correto de variáveis de ambiente para configurações).</p>
+<p>No entanto, o ponto crítico identificado foi a <strong>ausência total de tratamento de erros</strong> nas operações de shell (<code>pg_restore</code>, <code>psql</code> via <code>passthru()</code>). Não há verificação de códigos de retorno ou validação de existência de arquivos antes da restauração, o que representa um risco operacional em cenários de desastre — falhas podem ocorrer silenciosamente, resultando em perda de dados ou restauração incompleta.</p>
+<p>Sobre a hipótese H3.1 ("A análise qualitativa das rotinas de backup revelará uma baixa pontuação de manutenibilidade, inferior a 5 em 10"): a hipótese é <strong>invalidada</strong> pelos dados coletados — a pontuação observada (7/10) está acima do limiar de 5, indicando manutenibilidade aceitável do código de backup. </p>
+</details>
+<h2 id="4-conclusao">4. Conclusão</h2>
+<p>Com base nos resultados obtidos nas métricas avaliadas, a característica <strong>Confiabilidade</strong> do i-Educar foi classificada como <strong>Aceitável</strong>, segundo os Critérios de Julgamento definidos na Fase 2. Três das quatro métricas apresentaram desempenho <strong>Bom ou Excelente</strong>, demonstrando estabilidade consistente do sistema, baixa incidência de defeitos e mecanismos razoáveis de recuperação em caso de falhas.</p>
+<p>A avaliação das questões do GQM apresenta um panorama predominantemente positivo. A <strong>Questão 1</strong>, que avalia a maturidade do software, obteve resultados fortemente favoráveis, com baixa densidade de defeitos e baixa proporção de commits de correção. A <strong>Questão 2</strong>, referente à tolerância a falhas, revelou um ponto crítico que precisa de atenção imediata, pois o tratamento de exceções em operações críticas encontra-se em nível insatisfatório. Já a <strong>Questão 3</strong>, sobre recuperabilidade, apresentou resultado Bom, com código de backup organizado, documentado e modular — ainda que com margem para aperfeiçoamentos.</p>
+<h3 id="sintese-das-avaliacoes">Síntese das Avaliações</h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Resultado</th>
+<th>Julgamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M1.1 – Densidade de Defeitos</strong></td>
+<td>0,364 bugs/KLOC</td>
+<td>Excelente</td>
+</tr>
+<tr>
+<td><strong>M1.2 – Percentual de Commits de Correção</strong></td>
+<td>8,55%</td>
+<td>Excelente</td>
+</tr>
+<tr>
+<td><strong>M2.1 – Tratamento de Exceções</strong></td>
+<td>20%</td>
+<td>Insatisfatório</td>
+</tr>
+<tr>
+<td><strong>M3.1 – Qualidade do Código de Backup</strong></td>
+<td>7/10</td>
+<td>Bom</td>
+</tr>
+</tbody>
+</table>
+<h3 id="principais-pontos-fortes">Principais Pontos Fortes</h3>
+<ul>
+<li>Elevada maturidade do código, com baixíssima densidade de defeitos.</li>
+<li>Esforço majoritário do desenvolvimento focado em evolução, e não em correção.</li>
+<li>Mecanismos de backup bem estruturados, contribuindo para a recuperação do sistema após falhas.</li>
+</ul>
+<h3 id="principal-ponto-fraco">Principal Ponto Fraco</h3>
+<ul>
+<li>Baixa tolerância a falhas, com cobertura insuficiente de tratamento de exceções em operações críticas do sistema.</li>
+</ul>
+<hr />
+<h2 id="recomendacoes-para-melhoria-da-confiabilidade">Recomendações para Melhoria da Confiabilidade</h2>
+<p>Para elevar o nível de Confiabilidade do i-Educar, recomenda-se priorizar melhorias em tolerância a falhas e recuperação operacional. As ações sugeridas são:</p>
+<ol>
+<li>
+<p><strong>Fortalecer o tratamento de exceções</strong></p>
+<ul>
+<li>Garantir proteção explícita em operações de I/O e banco de dados.</li>
+<li>Registrar erros com mensagens contextualizadas para facilitar diagnóstico.</li>
+<li>Implementar estratégias de fallback e retentativas programadas quando possível.</li>
+</ul>
+</li>
+<li>
+<p><strong>Aprimorar as rotinas de backup e restore</strong></p>
+<ul>
+<li>Verificar a integridade do arquivo antes da restauração.</li>
+<li>Tratar corretamente falhas de execução de comandos externos.</li>
+<li>Criar testes automatizados específicos para o fluxo de recuperação.</li>
+</ul>
+</li>
+<li>
+<p><strong>Mitigar riscos no código legado</strong></p>
+<ul>
+<li>Migrar gradativamente módulos antigos para APIs modernas do framework.</li>
+<li>Padronizar tratamento de exceções em módulos legados que permaneçam ativos.</li>
+</ul>
+</li>
+<li>
+<p><strong>Instituir governança contínua de confiabilidade</strong></p>
+<ul>
+<li>Adotar checklist obrigatório de confiabilidade em pull requests.</li>
+<li>Monitorar periodicamente métricas de falhas e retrabalho corretivo.</li>
+<li>Automatizar verificações de robustez e falhas em pipelines de CI.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="conclusao-final">Conclusão Final</h3>
+<p>A Confiabilidade do i-Educar é <strong>adequada às operações atuais</strong>, mas há espaço relevante para aprimoramentos que aumentem a resiliência do sistema. A priorização das ações listadas, especialmente no que diz respeito ao tratamento de exceções, é essencial para prevenir falhas silenciosas e garantir maior segurança operacional em cenários adversos, fortalecendo a continuidade e disponibilidade do serviço de maneira sustentável.</p>
+<h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
+<blockquote>
+<p>[1] ISO/IEC 25010:2011. Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models. International Organization for Standardization, 2011.</p>
+<p>[2] PORTÁBILIS. i-Educar: Software livre de gestão escolar. Versão 2.10.0. [S.l.]: Portábilis Tecnologia, 2025. Disponível em: https://github.com/portabilis/i-educar. Acesso em: 17 nov. 2025.</p>
+<p>[3] IEEE Std 829-2008. IEEE Standard for Software and System Test Documentation. Institute of Electrical and Electronics Engineers, 2008.</p>
+<p>[4] PRESSMAN, Roger S.; MAXIM, Bruce R. Software Engineering: A Practitioner's Approach. 9th ed. New York: McGraw-Hill Education, 2020.</p>
+<p>[5] SOMMERVILLE, Ian. Software Engineering. 10th ed. Boston: Pearson, 2016.</p>
+<p>[6] SPINELLIS, Diomidis. Code Quality: The Open Source Perspective. Boston: Addison-Wesley Professional, 2006.</p>
+<p>[7] BASS, Len; CLEMENTS, Paul; KAZMAN, Rick. Software Architecture in Practice. 3rd ed. Boston: Addison-Wesley Professional, 2012.</p>
+<p>[8] JØRGENSEN, Magne. Software Reliability: Measurement, Prediction, Application. Boston: Academic Press, 2016.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../assets/javascripts/panzoom.min.js"></script>
+      
+        <script src="../../assets/javascripts/zoompan.js"></script>
+      
+    
+  </body>
+</html>

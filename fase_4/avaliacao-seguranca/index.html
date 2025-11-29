@@ -1,0 +1,1919 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../avaliacao-manutenibilidade/">
+      
+      
+        <link rel="next" href="../conclusao-avaliacao/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Avaliação da Segurança - Adele Goldstine - Trabalho Final</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/panzoom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <meta name="panzoom-theme" content="material">
+<meta name="panzoom-data" content='{"selectors": [".d2", ".mermaid"], "initial_zoom_level": 1.0}'> </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#avaliacao-da-seguranca" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Adele Goldstine - Trabalho Final" class="md-header__button md-logo" aria-label="Adele Goldstine - Trabalho Final" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Adele Goldstine - Trabalho Final
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Avaliação da Segurança
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T01 Adele Goldstine
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_1/objeto-estudo/" class="md-tabs__link">
+          
+  
+  
+  Fase 1 - Propósito da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_2/introducao_gqm/" class="md-tabs__link">
+          
+  
+  
+  Fase 2 - Especificação da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../fase_3/projetar/" class="md-tabs__link">
+          
+  
+  
+  Fase 3 - Projetar a Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../introducao-avaliacao/" class="md-tabs__link">
+          
+  
+  
+  Fase 4 - Execução da Avaliação
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../contribuicoes/fase-1/" class="md-tabs__link">
+          
+  
+  
+  Contribuições
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Adele Goldstine - Trabalho Final" class="md-nav__button md-logo" aria-label="Adele Goldstine - Trabalho Final" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Adele Goldstine - Trabalho Final
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/FCTE-Qualidade-de-Software-1/2025-2_T01_ADELE-GOLDSTINE" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    T01 Adele Goldstine
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 1 - Propósito da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 1 - Propósito da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/objeto-estudo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objeto de Estudo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/contexto-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Contexto da Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/modelo-qualidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Modelo de Qualidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_1/conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 2 - Especificação da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 2 - Especificação da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/introducao_gqm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Abordagem GQM
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 1 - Confiabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 2 - Manutenibilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/gqm_seguranca/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Medição 3 - Segurança
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/analise_geral/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Análise Geral das Medições
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_2/conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 3 - Projetar a Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 3 - Projetar a Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../fase_3/projetar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Projetar Avaliação
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Fase 4 - Execução da Avaliação
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Fase 4 - Execução da Avaliação
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introducao-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao-confiabilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Confiabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../avaliacao-manutenibilidade/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Manutenibilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Segurança
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Avaliação da Segurança
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-referencial-teorico" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Referencial Teórico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-coleta-e-analise-das-metricas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Coleta e Análise das Métricas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Coleta e Análise das Métricas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#evidencias-e-dados-brutos_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Evidências e Dados Brutos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classificacao-da-metrica_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Classificação da Métrica
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-e-discussao_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Análise e Discussão
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Conclusão
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Conclusão">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sintese-das-avaliacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Síntese das Avaliações
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principais-pontos-fortes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Pontos Fortes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#principais-pontos-fracos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principais Pontos Fracos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#avaliacao-final" class="md-nav__link">
+    <span class="md-ellipsis">
+      Avaliação final
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias-bibliograficas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referências Bibliográficas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../conclusao-avaliacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Contribuições
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Contribuições
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 2
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 3
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contribuicoes/fase-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Fase 4
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="avaliacao-da-seguranca">Avaliação da Segurança</h1>
+<p>Esta página apresenta a execução da avaliação e os resultados da coleta de dados para o objetivo GQM de <strong>Segurança</strong> do i-Educar.</p>
+<h2 id="1-introducao">1. Introdução</h2>
+<p>O objetivo de qualidade definido na Fase 2 para a característica Segurança foi o de analisar o código-fonte do i-Educar com o propósito de avaliar a proteção do sistema contra ameaças comuns, do ponto de vista do mantenedor, garantindo conformidade com a LGPD [1] e com práticas de desenvolvimento seguro.</p>
+<p>A avaliação da segurança é particularmente crítica no contexto do i-Educar porque o sistema lida diretamente com informações sensíveis de alunos, responsáveis e servidores da educação básica, incluindo dados pessoais e registros acadêmicos de menores de idade. Assim, qualquer falha de segurança pode gerar violação de privacidade, danos legais e exposição indevida de informações protegidas pela legislação brasileira.</p>
+<p>A partir desse objetivo, a investigação foi direcionada para três eixos principais:</p>
+<p>Controle de Acesso e Credenciais — Analisar como o sistema gerencia senhas, autenticação e expiração de sessão, garantindo que somente usuários autorizados acessem as funcionalidades (Métricas M1.1, M1.2 e M1.3), conforme recomendações do OWASP Top 10 [2] e de guias técnicos de segurança [3][4].</p>
+<p>Monitoramento e Auditoria — Verificar se ações críticas do sistema são registradas adequadamente para permitir rastreabilidade e suporte a auditorias de segurança (Métricas M2.1 e M2.2), seguindo recomendações de monitoramento seguro [5].</p>
+<p>Desenvolvimento Seguro — Avaliar indícios de maturidade do processo de desenvolvimento, como testes de segurança e atualização de dependências, fatores essenciais para prevenção de vulnerabilidades (Métricas M3.1 e M3.2), de acordo com princípios essenciais em engenharia de software moderna [6][7].</p>
+<h2 id="2-referencial-teorico">2. Referencial Teórico</h2>
+<p>A avaliação de segurança toma como base principalmente o OWASP Top 10 [2], referência internacional sobre riscos em aplicações web, e princípios da Lei Geral de Proteção de Dados (LGPD) relacionados à proteção de informações pessoais [1]. Cada métrica está associada diretamente a um tipo específico de risco descrito pela OWASP.</p>
+<p><strong>Controle de Acesso e Credenciais (OWASP A01 – Broken Access Control / OWASP A02 – Cryptographic Failures)</strong></p>
+<p>O controle de acesso é uma das áreas mais sensíveis em sistemas que manipulam dados confidenciais. Segundo o OWASP, falhas nessa camada — conhecidas como Broken Access Control — permitem que usuários realizem ações fora de seu perfil, como acessar registros de outros alunos ou modificar dados que não deveriam.</p>
+<p>Controle de Acesso e Sessão (M1.1 e M1.3):
+Verificar se rotas críticas possuem regras de autorização e se as sessões são expiradas após períodos adequados ajuda a identificar potenciais brechas relacionadas ao OWASP A01 [2]. Sessões longas ou uso inadequado de perfis podem facilitar ataques de sequestro de sessão (session hijacking) [8][10].</p>
+<p>Armazenamento Criptográfico de Senhas (M1.2):
+O armazenamento incorreto de senhas é caracterizado pelo OWASP A02 – Cryptographic Failures [2]. Senhas devem ser protegidas por funções de hashing modernas e lentas, como Argon2 ou Bcrypt, que, segundo literatura clássica de criptografia, são resistentes a ataques de força bruta por serem memory-hard [9]. Algoritmos antigos como MD5 e SHA-1 não são mais considerados seguros e violam diretrizes da LGPD sobre proteção de dados pessoais.</p>
+<p><strong>Logs e Monitoramento (OWASP A09 – Insufficient Logging &amp; Monitoring)</strong></p>
+<p>O registro de atividades críticas do sistema é essencial para rastreamento de incidentes, auditorias e detecção de comportamentos suspeitos. De acordo com o OWASP, a falta de logs ou a presença de logs incompletos inviabiliza qualquer resposta a incidentes.</p>
+<p>Registro de Ações Críticas (M2.1):
+A métrica avalia o quanto das ações sensíveis (como login, exclusão e alteração de dados) são efetivamente registradas.</p>
+<p>Completude das Entradas de Log (M2.2):
+Não basta apenas registrar um evento; é necessário incluir campos mínimos como usuário, ação executada e data/hora. Logs incompletos dificultam auditorias forenses e atendem diretamente ao problema descrito pelo OWASP A09 [2]. De acordo com o OWASP Logging Cheat Sheet [5], um log eficiente deve conter usuário, ação e data/hora, requisitos que foram utilizados para avaliar essa métrica.</p>
+<p><strong>Desenvolvimento Seguro (OWASP A06 – Vulnerable and Outdated Components)</strong></p>
+<p>A maturidade do processo de desenvolvimento também influencia diretamente a segurança do sistema. A importância dos testes de segurança é discutida amplamente na literatura acadêmica, como nos trabalhos de Vieira, Melo e Madeira [7], que mostram como testes específicos podem prevenir vulnerabilidades exploráveis.</p>
+<p>Testes de Segurança (M3.1):
+Avaliar a proporção de testes automatizados relacionados à segurança revela o quanto o projeto busca prevenir vulnerabilidades como XSS, SQL Injection ou manipulação indevida de entrada. Projetos com baixa densidade de testes tendem a acumular riscos.</p>
+<p>Atualização de Dependências (M3.2):
+Dependências desatualizadas representam um risco destacado pelo OWASP A06 – Vulnerable and Outdated Components [2]. Como a maioria dos ataques modernos explora falhas conhecidas em bibliotecas de terceiros, manter o ciclo de atualização curto (≤ 6 meses) reduz significativamente a superfície de ataque.</p>
+<hr />
+<h2 id="3-coleta-e-analise-das-metricas">3. Coleta e Análise das Métricas</h2>
+<p>Aqui são apresentados os dados brutos, a classificação e a análise individual de cada métrica de Segurança.</p>
+<details open="open">
+<summary>M1.1: Percentual de rotas críticas com regras de autorização</summary>
+<h3 id="evidencias-e-dados-brutos">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Método:</strong> Revisão de código fonte (ex: arquivos de rota, controllers).</li>
+<li><strong>Rotas consideradas críticas:</strong> Rotas que alteram dados, como POST, PUT, PATCH e DELETE.</li>
+<li><strong>Rotas críticas analisadas:</strong></li>
+<li>POST /matricula/{...}/enturmar/{...}</li>
+<li>
+<p>Permissão: modify:enrollment (Enturmar matrícula)
+        2. POST /matricula/{...}/remanejar/{...}
+            * Permissão: modify:relocate (Remanejar matrícula)
+        3. POST /atualiza-situacao-matriculas
+            * Permissão: modify:update_registration_status (Atualizar situação de matrículas)
+        4. POST /exportacoes/exportar
+            * Permissão: modify:data_export (Exportação de dados)
+        5. POST /arquivo/exportacoes/novo
+            * Permissão: modify:document_export (Exportação de documentos)
+        6. POST /avisos/publicacao/criar
+            * Permissão: create:announcement (Criar avisos)
+        7. POST /avisos/publicacao/{...}/editar
+            * Permissão: modify:announcement (Editar avisos)
+        8. POST /importacao-situacao-final/upload
+            * Permissão: modify:final_status_import (Importar situação final)
+        9. POST /importacao-situacao-final/importar
+            * Permissão: modify:final_status_import (Importar situação final)
+        10. POST /atualiza-data-entrada
+            * Permissão: modify:update_registration_date (Atualizar data de entrada)
+        11. POST /atualiza-etapa
+            * Permissão: modify:stage (Atualizar etapa)
+        12. POST /ano-letivo-em-lote/processar
+            * Permissão: modify:academic_year_import (Importar ano letivo em lote)
+        13. POST /atualizacao-em-lote-series-escola/processo
+            * Permissão: modify:school_grade (Atualizar séries da escola em lote)
+        14. POST /bloquear-enturmacao
+            * Permissão: modify:block_enrollment (Bloquear enturmação)
+        15. POST /dispensa-lote
+            * Permissão: modify:batch_exemption (Dispensar em lote)</p>
+<ul>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Total de rotas críticas: 97</li>
+<li>Rotas com checagem de autorização: 15</li>
+<li>Cálculo: <code>([Com Autorização] / [Total]) * 100</code> = 15,46%</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Imagem 1" src="../../assets/evidencias_seguranca/print_1.png" />
+Linhas 45 e 48
+<img alt="Imagem 2" src="../../assets/evidencias_seguranca/print_2.png" />
+Linha 119
+<img alt="Imagem 3" src="../../assets/evidencias_seguranca/print_3.png" />
+Linhas 134 e 138
+<img alt="Imagem 4" src="../../assets/evidencias_seguranca/print_4.png" />
+Linhas: 142, 144, 149, 152, 156, 159, 162, 167, 171
+<img alt="Imagem 5" src="../../assets/evidencias_seguranca/print_5.png" />
+Linha 189</p>
+</li>
+</ul>
+<h3 id="classificacao-da-metrica">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 15,46%</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Excelente: ≥ 90%</li>
+<li>Bom: 70% a 89%</li>
+<li>Regular: 40% a 69%</li>
+<li>Insatisfatório: &lt; 40%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Insatisfatório</li>
+</ul>
+<h3 id="analise-e-discussao">Análise e Discussão</h3>
+<p>O resultado de 15,46% indica um nível de robustez extremamente baixo do controle de acesso do sistema, respondendo negativamente à <strong>Questão 1: "Qual é o nível de robustez do controle de acesso do sistema?"</strong>. Este percentual caracteriza uma falha crítica de segurança conhecida como Broken Access Control (OWASP A01), onde a grande maioria das rotas críticas (84,54%) não possui mecanismos adequados de autorização.</p>
+<p>Na prática, isso significa que usuários com permissões limitadas (como professores ou secretários) poderiam potencialmente acessar ou executar ações reservadas a perfis mais elevados (como administradores ou gestores).</p>
+</details>
+<details>
+<summary>M1.2: Método de armazenamento de senhas</summary>
+<h3 id="evidencias-e-dados-brutos_1">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Método:</strong> Análise de código fonte </li>
+<li>Localização: <code>config/hashing.php</code>, <code>RegisterController.php</code>, <code>educar_usuario_cad.php</code>.</li>
+<li><strong>Funções procuradas:</strong> <code>md5()</code>, <code>sha1()</code>, <code>password_hash()</code>, <code>password_verify()</code>.</li>
+<li><strong>Dado Coletado:</strong> O sistema utiliza o algoritmo Argon2, configurado como argon em <code>config/hashing.php</code>, aplicado por meio de <code>Hash::make()</code> em todos os fluxos de criação de senha — novos cadastros, redefinições administrativas e rotinas de integração com o sistema legado.</li>
+</ul>
+<p><img alt="Hashing.php" src="../../assets/evidencias_seguranca/hashing_php.PNG" />
+<img alt="Hash_make_1" src="../../assets/evidencias_seguranca/Hash_make_1.PNG" />
+<img alt="Hash_make_2" src="../../assets/evidencias_seguranca/Hash_make_2.PNG" /></p>
+<h3 id="classificacao-da-metrica_1">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> Utiliza Argon2</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Conforme: Uso de <code>password_hash()</code> ou equivalente moderno (BCrypt/Argon2)</li>
+<li>Não conforme: Uso de <code>md5()</code>, <code>sha1()</code> ou texto plano</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Conforme</li>
+</ul>
+<h3 id="analise-e-discussao_1">Análise e Discussão</h3>
+<p>O sistema segue boas práticas modernas de segurança ao utilizar Argon2, atualmente o algoritmo mais recomendado por ser memory-hard e resistente a ataques massivos de força bruta. A aplicação é consistente em todo o código, incluindo trechos legados, reduzindo riscos de regressão para algoritmos inseguros.</p>
+<p>Em caso de vazamento do banco, as senhas apresentariam forte resistência a ataques. Portanto, em relação à <strong>Questão 1: "Qual é o nível de robustez do controle de acesso do sistema?"</strong>, este aspecto específico do armazenamento de credenciais contribui positivamente para a robustez do controle de acesso, representando um ponto forte na proteção das informações dos usuários.</p>
+</details>
+<details>
+<summary>M1.3: Tempo médio de expiração da sessão</summary>
+<h3 id="evidencias-e-dados-brutos_2">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Método:</strong> Análise do arquivo session.php.</li>
+<li><strong>Parâmetro analisado:</strong> <code>SESSION_LIFETIME</code>.</li>
+<li><strong>Dado Coletado:</strong> Tempo de expiração configurado: 120 minutos.</li>
+</ul>
+<p><img alt="Arquivo de configuração da sessão" src="../../assets/evidencias_seguranca/session.png" /></p>
+<h3 id="classificacao-da-metrica_2">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 120 minutos</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Conforme: Menor ou igual a 60</li>
+<li>Não conforme: Acima de 60</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Não conforme</li>
+</ul>
+<h3 id="analise-e-discussao_2">Análise e Discussão</h3>
+<p>O tempo de expiração de 120 minutos contribui negativamente para responder à <strong>Questão 1: "Qual é o nível de robustez do controle de acesso do sistema?"</strong>, pois representa um ponto fraco na gestão de sessões. Um tempo de expiração excessivamente longo amplia significativamente a janela de oportunidade para ataques de sequestro de sessão, especialmente em ambientes compartilhados ou computadores públicos.</p>
+<p>Se um usuário deixar uma sessão aberta em um terminal público ou compartilhado, um atacante teria até 2 horas para explorar essa sessão ativa, potencialmente acessando dados sensíveis, realizando alterações indevidas ou exportando informações confidenciais. Embora tempos muito curtos (como 15 ou 30 minutos) possam prejudicar a usabilidade, especialmente em contextos educacionais onde sessões podem ser longas, o limite de 60 minutos recomendado representa um equilíbrio adequado entre segurança e usabilidade.</p>
+<p>Portanto, em relação à Questão 1, este aspecto do controle de acesso apresenta <strong>robustez insuficiente</strong> na gestão de sessões.</p>
+</details>
+<details>
+<summary>M2.1: Percentual de ações críticas registradas em logs</summary>
+<h3 id="evidencias-e-dados-brutos_3">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Método:</strong> Análise de código fonte, procurando por Log:: e mecanismos de auditoria nos principais controllers.</li>
+<li><strong>Ações críticas definidas (amostra realista):</strong> Login, Cadastro de Usuário, Alteração de Senha, Matrícula, Geração de Relatório.</li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Total de ações críticas analisadas: 5</li>
+<li>Ações que geram entrada de log: (somente logs de erro técnico): 1</li>
+<li>Cálculo: <code>(1/5)∗100</code> = 20%</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Busca_log" src="../../assets/evidencias_seguranca/busca_log.PNG" /></p>
+<h3 id="classificacao-da-metrica_3">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 20%</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Excelente: ≥ 90%</li>
+<li>Bom: 70% a 89%</li>
+<li>Regular: 40% a 69%</li>
+<li>Insatisfatório: &lt; 40%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Insatisfatório</li>
+</ul>
+<h3 id="analise-e-discussao_3">Análise e Discussão</h3>
+<p>O resultado demonstra uma falha severa de rastreabilidade (relacionada ao OWASP A09).
+As principais ações de negócio — login, matrícula, alteração de dados — não são registradas, impossibilitando a execução de auditorias.</p>
+<p>O único log encontrado refere-se a um erro de infraestrutura, não a ações do usuário.
+Assim, se ocorrer uma alteração indevida, acesso irregular ou fraude, não existe trilha de auditoria que permita identificar responsáveis.</p>
+<p>Portanto, a resposta à Questão 2 é que o nível de rastreabilidade das ações críticas é <strong>insuficiente</strong>, comprometendo a capacidade do sistema de suportar investigações de segurança e conformidade com requisitos de auditoria.</p>
+</details>
+<details>
+<summary>M2.2: Percentual de logs com informações completas</summary>
+<h3 id="evidencias-e-dados-brutos_4">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Método:</strong> Amostragem e análise dos logs gerados pela aplicação.</li>
+<li><strong>Informações completas:</strong> Usuário, Ação, Data/Hora.</li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Total de logs (amostra): 1 (erro registrado em <code>ReportsRenderServerFactory.php</code>)</li>
+<li>Logs com informações completas: O log contém Data/Hora e Ação, mas não inclui o Usuário, o que é essencial para auditoria.</li>
+<li>Cálculo: <code>(0 / 1) * 100</code> = 0%</li>
+</ul>
+</li>
+</ul>
+<p><img alt="ReportsRenderServerFactory.php" src="../../assets/evidencias_seguranca/ReportsRenderServerFactory_php.PNG" /></p>
+<h3 id="classificacao-da-metrica_4">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 0%</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Excelente: ≥ 80%</li>
+<li>Bom: 60% a 79%</li>
+<li>Regular: 40% a 59%</li>
+<li>Insatisfatório: &lt; 40%</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Insatisfatório</li>
+</ul>
+<h3 id="analise-e-discussao_4">Análise e Discussão</h3>
+<p>Mesmo o único log existente apresenta baixa qualidade de auditoria.
+A ausência do campo “Usuário” torna impossível correlacionar o evento com a ação humana que o gerou.</p>
+<p>Um log sem o quem é insuficiente para suporte à investigação de incidentes, dificultando monitoramento e detecção de comportamentos suspeitos.</p>
+<p>Portanto, em relação à Questão 2, a qualidade dos logs também contribui negativamente para o nível de rastreabilidade, reforçando a conclusão de que o sistema apresenta <strong>rastreabilidade insuficiente</strong> das ações críticas.</p>
+</details>
+<details>
+<summary>M3.1: Densidade de testes de segurança (Testes/KLOC)</summary>
+<h3 id="evidencias-e-dados-brutos_5">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Método:</strong> Uso de IA para identificar testes de segurança e <code>cloc</code>.</li>
+<li><strong>Testes de segurança:</strong> Testes que validam falhas de permissão, SQL Injection, XSS, etc.</li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Nº total de testes de segurança: 25</li>
+<li>KLOC total do código de produção: 341</li>
+<li>Cálculo: <code>(Nº Testes de Segurança / (KLOC Total / 1000))</code> = 0,07 Testes/KLOC</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Medição do KLOC" src="../../assets/evidencias_seguranca/cloc.png" />
+<img alt="Busca dos testes" src="../../assets/evidencias_seguranca/contagem.png" /></p>
+<h3 id="classificacao-da-metrica_5">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> 0,07 Testes/KLOC</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Excelente: &gt; 1</li>
+<li>Bom: &gt; 0.5</li>
+<li>Regular: &gt; 0.1</li>
+<li>Insatisfatório: ≤ 0.1</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Insatisfatório</li>
+</ul>
+<h3 id="analise-e-discussao_5">Análise e Discussão</h3>
+<p>O resultado de 0,07 Testes/KLOC responde negativamente à <strong>Questão 3: "Em que medida o desenvolvimento do sistema segue práticas de segurança?"</strong>, indicando que o processo de desenvolvimento apresenta maturidade muito baixa na prevenção proativa de vulnerabilidades. Este valor está significativamente abaixo do limiar mínimo considerado regular (0,1 Testes/KLOC) e muito distante dos níveis recomendados (≥ 0,5 Testes/KLOC).</p>
+<p>A ausência ou baixíssima densidade de testes de segurança significa que a segurança do sistema depende quase exclusivamente de revisão manual de código, "sorte" ou detecção reativa de problemas em produção, o que é altamente arriscado para um sistema que trata dados sensíveis.</p>
+<p>Em um contexto onde o i-Educar precisa garantir conformidade com a LGPD e proteger informações de menores de idade, a falta de testes automatizados de segurança representa uma falha estrutural no processo de desenvolvimento. Portanto, a resposta à Questão 3 é que o desenvolvimento <strong>não segue adequadamente práticas de segurança</strong> no que se refere à prevenção de vulnerabilidades através de testes automatizados.</p>
+</details>
+<details>
+<summary>M3.2: Frequência média de atualização de dependências</summary>
+<h3 id="evidencias-e-dados-brutos_6">Evidências e Dados Brutos</h3>
+<ul>
+<li><strong>Método:</strong> Análise do histórico de commits no Github`.</li>
+<li><strong>Descoberta:</strong> O sistema possui um mecanismo de atualização automática das dependências, portanto possui atualizações praticamente todos os meses.</li>
+<li><strong>Dados Coletados:</strong><ul>
+<li>Data da última atualização de dependência: 12/11/2025</li>
+<li>Data da penúltima atualização: 21/10/2025</li>
+<li>Frequência média: a cada nova atualização disponível</li>
+</ul>
+</li>
+</ul>
+<p><img alt="Histórico de commits" src="../../assets/evidencias_seguranca/commits.png" /></p>
+<h3 id="classificacao-da-metrica_6">Classificação da Métrica</h3>
+<ul>
+<li><strong>Resultado:</strong> a cada 15 dias</li>
+<li><strong>Critério (da Fase 2):</strong><ul>
+<li>Conforme: Atualização a cada ≤ 6 meses</li>
+<li>Não conforme: Atualização &gt; 6 meses</li>
+</ul>
+</li>
+<li><strong>Classificação:</strong> Conforme</li>
+</ul>
+<h3 id="analise-e-discussao_6">Análise e Discussão</h3>
+<p>A frequência de atualização de dependências (aproximadamente a cada 15 dias) responde positivamente à <strong>Questão 3: "Em que medida o desenvolvimento do sistema segue práticas de segurança?"</strong>, demonstrando que o projeto adota uma prática essencial de desenvolvimento seguro. O ciclo curto de atualização (bem abaixo do limite de 6 meses estabelecido como critério) indica que a equipe mantém um processo ativo de monitoramento e atualização de componentes externos.</p>
+<p>Dependências desatualizadas são uma das portas de entrada mais comuns para ataques modernos, como evidenciado por incidentes históricos como Log4Shell (CVE-2021-44228), que explorou vulnerabilidades em bibliotecas amplamente utilizadas. Ao manter um ciclo de atualização frequente, o projeto reduz significativamente a superfície de ataque e mitiga riscos relacionados ao OWASP A06 – Vulnerable and Outdated Components.</p>
+<p>Portanto, em relação à Questão 3, este aspecto específico do desenvolvimento <strong>segue adequadamente práticas de segurança</strong>, representando um ponto forte do projeto na prevenção de vulnerabilidades conhecidas em componentes de terceiros.</p>
+</details>
+<hr />
+<h2 id="4-conclusao">4. Conclusão</h2>
+<p>Com base nos resultados obtidos nas sete métricas avaliadas, a característica Segurança do i-Educar foi classificada como Inaceitável, conforme os Critérios de Julgamento definidos na Fase 2. A maior parte das métricas apresentou desempenho Insatisfatório ou Não conforme, especialmente em áreas fundamentais como controle de acesso, expiração de sessão, monitoramento de ações críticas e presença de testes de segurança.</p>
+<p>A avaliação das três questões do GQM revela um panorama preocupante: a <strong>Questão 1</strong> sobre robustez do controle de acesso apresenta resultados mistos, com pontos fortes no armazenamento de senhas (Argon2), mas falhas críticas na autorização de rotas e na gestão de sessões. A <strong>Questão 2</strong> sobre rastreabilidade das ações críticas foi respondida negativamente, com níveis insuficientes tanto na cobertura quanto na qualidade dos logs. A <strong>Questão 3</strong> sobre práticas de desenvolvimento seguro também apresenta resultados mistos, com baixa densidade de testes de segurança, mas com atualização frequente de dependências.</p>
+<h3 id="sintese-das-avaliacoes">Síntese das Avaliações</h3>
+<table>
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Resultado</th>
+<th>Julgamento</th>
+<th>Hipótese</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>M1.1 – Autorização</strong></td>
+<td>15,46%</td>
+<td>Insatisfatório</td>
+<td>H1.1 <strong>validada</strong></td>
+</tr>
+<tr>
+<td><strong>M1.2 – Hashing</strong></td>
+<td>Argon2</td>
+<td>Conforme</td>
+<td>H1.2 <strong>invalidada</strong></td>
+</tr>
+<tr>
+<td><strong>M1.3 – Expiração de Sessão</strong></td>
+<td>120 min</td>
+<td>Não conforme</td>
+<td>H1.3 <strong>validada</strong></td>
+</tr>
+<tr>
+<td><strong>M2.1 – Ações Críticas Logadas</strong></td>
+<td>20%</td>
+<td>Insatisfatório</td>
+<td>H2.1 <strong>validada</strong></td>
+</tr>
+<tr>
+<td><strong>M2.2 – Qualidade dos Logs</strong></td>
+<td>0%</td>
+<td>Insatisfatório</td>
+<td>H2.2 <strong>validada</strong></td>
+</tr>
+<tr>
+<td><strong>M3.1 – Testes de Segurança</strong></td>
+<td>0,07 T/KLOC</td>
+<td>Insatisfatório</td>
+<td>H3.1 <strong>validada</strong></td>
+</tr>
+<tr>
+<td><strong>M3.2 – Atualização de Dependências</strong></td>
+<td>15 dias</td>
+<td>Conforme</td>
+<td>H3.2 <strong>invalidada</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="principais-pontos-fortes">Principais Pontos Fortes</h3>
+<ul>
+<li>
+<p>Criptografia de Senhas (M1.2): O uso consistente de Argon2 demonstra maturidade no tratamento das credenciais dos usuários, reduzindo riscos de exposição em caso de vazamento.</p>
+</li>
+<li>
+<p>Atualização Contínua das Dependências (M3.2): O ciclo curto de atualização (≈15 dias) mitiga vulnerabilidades decorrentes de componentes desatualizados, alinhando-se às recomendações do OWASP A06.</p>
+</li>
+</ul>
+<h3 id="principais-pontos-fracos">Principais Pontos Fracos</h3>
+<ul>
+<li>
+<p>Controle de Acesso Quebrado (M1.1): A cobertura extremamente baixa de regras de autorização nas rotas críticas caracteriza um caso evidente de Broken Access Control (OWASP A01), permitindo que usuários acessem ou executem ações fora de seu perfil.</p>
+</li>
+<li>
+<p>Expiração de Sessão Excessiva (M1.3): O tempo de 120 minutos amplia a janela de exploração para ataques de sequestro de sessão, contrariando práticas recomendadas para sistemas que tratam dados sensíveis.</p>
+</li>
+<li>
+<p>Falta de Rastreabilidade e Auditoria (M2.1 e M2.2): A ausência de logs de ações críticas e a incompletude dos registros existentes impedem investigações e respostas a incidentes, configurando Insufficient Logging &amp; Monitoring (OWASP A09).</p>
+</li>
+<li>
+<p>Baixíssima Presença de Testes de Segurança (M3.1): O valor de 0,07 T/KLOC indica que falhas relacionadas a autorização, sanitização de entrada e outras vulnerabilidades comuns não são validadas automaticamente, deixando a segurança dependente apenas de revisão manual.</p>
+</li>
+</ul>
+<h3 id="avaliacao-final">Avaliação final</h3>
+<p>Diante da predominância de métricas insatisfatórias, especialmente naquelas que tratam de autorização, monitoramento, expiração de sessão e prevenção de vulnerabilidades, conclui-se que o objetivo de Segurança não foi atingido.</p>
+<p>O sistema apresenta pontos fortes importantes, mas estes não compensam os riscos estruturais identificados, especialmente considerando que o i-Educar armazena e processa dados pessoais de menores de idade, sujeitos à LGPD.</p>
+<p>Assim, a característica Segurança, conforme definida na Fase 2, deve ser classificada como Inaceitável e requer ações prioritárias de correção para garantir conformidade e proteção adequada dos dados tratados.</p>
+<hr />
+<h2 id="referencias-bibliograficas">Referências Bibliográficas</h2>
+<blockquote>
+<p>[1] BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD). Diário Oficial da União: seção 1, Brasília, DF, 15 ago. 2018.</p>
+<p>[2] OWASP Foundation. OWASP Top 10 – 2021: The Ten Most Critical Web Application Security Risks. 2021. Disponível em: https://owasp.org/www-project-top-ten/
+. Acesso em: 18 nov. 2025.</p>
+<p>[3] NIST. Digital Identity Guidelines (NIST SP 800-63-3). Gaithersburg, MD, 2017.</p>
+<p>[4] NIST. Security and Privacy Controls for Information Systems (NIST SP 800-53, Rev. 5). Gaithersburg, MD, 2020.</p>
+<p>[5] OWASP FOUNDATION. OWASP Logging Cheat Sheet. 2023.</p>
+<p>[6] SOMMERVILLE, Ian. Engenharia de Software. 10. ed. São Paulo: Pearson, 2020.</p>
+<p>[7] VIEIRA, Marco; MELO, Anderson; MADEIRA, Henrique. Ensaios e Testes de Segurança em Software. Revista Brasileira de Segurança da Informação, 2022.</p>
+<p>[8] OWASP FOUNDATION. OWASP Authentication Cheat Sheet. 2023.</p>
+<p>[9] STALLINGS, William. Cryptography and Network Security: Principles and Practice. 8. ed. Boston: Pearson, 2023.</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../../assets/javascripts/panzoom.min.js"></script>
+      
+        <script src="../../assets/javascripts/zoompan.js"></script>
+      
+    
+  </body>
+</html>
